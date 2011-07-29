@@ -14,4 +14,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-gtk-doc \
 	--enable-introspection=yes
 
+ifeq ($(DEB_HOST_ARCH),armel)
+        DEB_CONFIGURE_EXTRA_FLAGS += --with-flavour=eglx --with-gles=2.0
+endif
+
 common-binary-predeb-arch:: list-missing
