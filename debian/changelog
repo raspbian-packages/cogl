@@ -1,0 +1,7 @@
+cogl (1.7.4-1) UNRELEASED; urgency=low
+
+  * Initial upload.
+  * debian/patches:
+    - add 02_disable_armv5t_specific_optimization.patch from clutter-1.0
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Thu, 28 Jul 2011 14:57:41 +0200
