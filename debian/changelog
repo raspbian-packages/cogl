@@ -3,5 +3,7 @@ cogl (1.7.4-1) UNRELEASED; urgency=low
   * Initial upload.
   * debian/patches:
     - add 02_disable_armv5t_specific_optimization.patch from clutter-1.0
+    - add check_gl2_h_in_gl_cogl_defines.patch,
+      defining-correct-shader-precision-gles.patch from ubuntu
 
  -- Rico Tzschichholz <ricotz@ubuntu.com>  Thu, 28 Jul 2011 14:57:41 +0200

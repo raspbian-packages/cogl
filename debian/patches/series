@@ -1,1 +1,3 @@
 02_disable_armv5t_specific_optimization.patch
+check_gl2_h_in_gl_cogl_defines.patch
+defining-correct-shader-precision-gles.patch
