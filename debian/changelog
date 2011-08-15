@@ -1,4 +1,4 @@
-cogl (1.7.4-1) UNRELEASED; urgency=low
+cogl (1.7.6-1) UNRELEASED; urgency=low
 
   * Initial upload.
   * debian/patches:
