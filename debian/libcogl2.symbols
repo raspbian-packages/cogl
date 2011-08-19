@@ -214,7 +214,6 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_get_static_identity_quaternion@Base 1.7.4
  cogl_get_static_zero_quaternion@Base 1.7.4
  cogl_get_viewport@Base 1.7.4
- cogl_gl_error_to_string@Base 1.7.6
  cogl_gtype_matrix_get_type@Base 1.7.4
  cogl_handle_get_type@Base 1.7.4
  cogl_handle_ref@Base 1.7.4
