@@ -34,7 +34,7 @@ Depends: ${shlibs:Depends},
 Recommends: libcogl-common
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
-Description: An object oriented GL/GLES Abstraction/Utility Layer
+Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
  OpenGL and is designed to make it easy to write orthogonal components that
@@ -45,7 +45,7 @@ Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Multi-Arch: foreign
-Description: An object oriented GL/GLES Abstraction/Utility Layer (common files)
+Description: Object oriented GL/GLES Abstraction/Utility Layer (common files)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
  OpenGL and is designed to make it easy to write orthogonal components that
@@ -73,7 +73,7 @@ Recommends: pkg-config
 Suggests: libcogl-doc
 Replaces: libclutter-1.0-dev (<< 1.7)
 Breaks: libclutter-1.0-dev (<< 1.7)
-Description: An object oriented GL/GLES Abstraction/Utility Layer (development files)
+Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
  OpenGL and is designed to make it easy to write orthogonal components that
@@ -88,7 +88,7 @@ Architecture: any
 Depends: libcogl2 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: An object oriented GL/GLES Abstraction/Utility Layer (debug files)
+Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
  OpenGL and is designed to make it easy to write orthogonal components that
@@ -103,7 +103,7 @@ Depends: ${misc:Depends}
 Suggests: devhelp
 Replaces: libclutter-1.0-doc (<< 1.7)
 Breaks: libclutter-1.0-doc (<< 1.7)
-Description: An object oriented GL/GLES Abstraction/Utility Layer (documentation)
+Description: Object oriented GL/GLES Abstraction/Utility Layer (documentation)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
  OpenGL and is designed to make it easy to write orthogonal components that
