@@ -71,7 +71,7 @@ Depends: libcogl2 (= ${binary:Version}),
          ${shlibs:Depends}
 Recommends: pkg-config
 Suggests: libcogl-doc
-Conflicts: libclutter-1.0-dev (<< 1.7)
+Replaces: libclutter-1.0-dev (<< 1.7)
 Breaks: libclutter-1.0-dev (<< 1.7)
 Description: An object oriented GL/GLES Abstraction/Utility Layer (development files)
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -101,7 +101,7 @@ Section: doc
 Architecture: all
 Depends: ${misc:Depends}
 Suggests: devhelp
-Conflicts: libclutter-1.0-doc (<< 1.7)
+Replaces: libclutter-1.0-doc (<< 1.7)
 Breaks: libclutter-1.0-doc (<< 1.7)
 Description: An object oriented GL/GLES Abstraction/Utility Layer (documentation)
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -116,7 +116,7 @@ Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
          ${misc:Depends}
-Conflicts: gir1.2-clutter-1.0 (<< 1.7)
+Replaces: gir1.2-clutter-1.0 (<< 1.7)
 Breaks: gir1.2-clutter-1.0 (<< 1.7)
 Description: GObject introspection data for the Cogl 1.0 library
  This package contains introspection data for the Clutter scene
