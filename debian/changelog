@@ -4,4 +4,4 @@ cogl (1.7.6-1) experimental; urgency=low
   * debian/patches:
     - add 02_disable_armv5t_specific_optimization.patch from clutter-1.0
 
- -- Rico Tzschichholz <ricotz@ubuntu.com>  Sat, 20 Aug 2011 22:58:45 +0200
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Mon, 22 Aug 2011 22:51:05 +0200
