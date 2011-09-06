@@ -1,10 +1,10 @@
-cogl (1.7.8-1) UNRELEASED; urgency=low
+cogl (1.7.8-1) experimental; urgency=low
 
   * New upstream release
   * debian/*.symbols:
     - updated
 
- -- Rico Tzschichholz <ricotz@ubuntu.com>  Tue, 06 Sep 2011 08:24:07 +0200
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Wed, 07 Sep 2011 00:07:39 +0200
 
 cogl (1.7.6-2) experimental; urgency=low
 
