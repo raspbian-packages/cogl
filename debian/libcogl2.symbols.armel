@@ -126,6 +126,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_color_set_red_byte@Base 1.7.4
  cogl_color_set_red_float@Base 1.7.4
  cogl_color_unpremultiply@Base 1.7.4
+ cogl_context_get_display_EXP@Base 1.7.8
  cogl_context_new_EXP@Base 1.7.4
  cogl_create_program@Base 1.7.4
  cogl_create_shader@Base 1.7.4
@@ -143,6 +144,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_depth_test_function_get_type@Base 1.7.4
  cogl_disable_fog@Base 1.7.4
  cogl_display_error_quark@Base 1.7.4
+ cogl_display_get_renderer@Base 1.7.8
  cogl_display_new_EXP@Base 1.7.4
  cogl_display_setup_EXP@Base 1.7.4
  cogl_double_to_fixed@Base 1.7.4
@@ -181,6 +183,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_framebuffer_clear_EXP@Base 1.7.6
  cogl_framebuffer_get_alpha_bits_EXP@Base 1.7.6
  cogl_framebuffer_get_blue_bits_EXP@Base 1.7.4
+ cogl_framebuffer_get_color_format_EXP@Base 1.7.8
  cogl_framebuffer_get_color_mask_EXP@Base 1.7.4
  cogl_framebuffer_get_context_EXP@Base 1.7.6
  cogl_framebuffer_get_dither_enabled@Base 1.7.4
@@ -504,6 +507,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_renderer_connect_EXP@Base 1.7.4
  cogl_renderer_error_get_type@Base 1.7.4
  cogl_renderer_error_quark_EXP@Base 1.7.4
+ cogl_renderer_get_n_fragment_texture_units_EXP@Base 1.7.8
  cogl_renderer_get_winsys_id_EXP@Base 1.7.4
  cogl_renderer_new_EXP@Base 1.7.4
  cogl_renderer_set_winsys_id_EXP@Base 1.7.4
