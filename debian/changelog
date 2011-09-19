@@ -1,3 +1,10 @@
+cogl (1.7.8-2) UNRELEASED; urgency=low
+
+  * debian/*.symbols*,debian/rules:
+    - build with EGL/GLES2 on armhf
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Tue, 13 Sep 2011 19:20:51 +0200
+
 cogl (1.7.8-1) experimental; urgency=low
 
   * New upstream release

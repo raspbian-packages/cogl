@@ -152,6 +152,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_double_to_uint@Base 1.7.4
  cogl_draw_attributes@Base 1.7.4
  cogl_draw_indexed_attributes@Base 1.7.4
+(arch=armel armhf)#include "libcogl2.symbols.egl"
  cogl_end_gl@Base 1.7.4
  cogl_error_get_type@Base 1.7.4
  cogl_euler_copy@Base 1.7.4
