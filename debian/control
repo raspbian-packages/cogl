@@ -32,6 +32,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
+Conflicts: libcogl2
+Replaces: libcogl2
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
@@ -85,7 +87,7 @@ Package: libcogl5-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: libcogl2 (= ${binary:Version}),
+Depends: libcogl5 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
