@@ -1,9 +1,12 @@
-cogl (1.7.8-2) UNRELEASED; urgency=low
+cogl (1.8.0-1) UNRELEASED; urgency=low
 
+  * New upstream release
   * debian/*.symbols*,debian/rules:
     - build with EGL/GLES2 on armhf
+  * debian/{rules,control*, libcogl2* > libcogl5*}:
+    - updated for soname bump
 
- -- Rico Tzschichholz <ricotz@ubuntu.com>  Tue, 13 Sep 2011 19:20:51 +0200
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Mon, 19 Sep 2011 21:49:47 +0200
 
 cogl (1.7.8-1) experimental; urgency=low
 

@@ -1,4 +1,4 @@
-libcogl-pango.so.0 libcogl2 #MINVER#
+libcogl-pango.so.0 libcogl5 #MINVER#
  cogl_pango_ensure_glyph_cache_for_layout@Base 1.7.4
  cogl_pango_font_map_clear_glyph_cache@Base 1.7.4
  cogl_pango_font_map_create_context@Base 1.7.4
@@ -16,7 +16,7 @@ libcogl-pango.so.0 libcogl2 #MINVER#
  cogl_pango_render_layout_subpixel@Base 1.7.4
  cogl_pango_renderer_get_type@Base 1.7.4
  cogl_pango_renderer_slice_cb@Base 1.7.4
-libcogl.so.2 libcogl2 #MINVER#
+libcogl.so.5 libcogl5 #MINVER#
  _cogl_atlas_add_reorganize_callback@Base 1.7.4
  _cogl_atlas_new@Base 1.7.4
  _cogl_atlas_reserve_space@Base 1.7.4
@@ -144,7 +144,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_depth_test_function_get_type@Base 1.7.4
  cogl_disable_fog@Base 1.7.4
  cogl_display_error_quark@Base 1.7.4
- cogl_display_get_renderer@Base 1.7.8
+ cogl_display_get_renderer_EXP@Base 1.8.0
  cogl_display_new_EXP@Base 1.7.4
  cogl_display_setup_EXP@Base 1.7.4
  cogl_double_to_fixed@Base 1.7.4
@@ -152,7 +152,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_double_to_uint@Base 1.7.4
  cogl_draw_attributes@Base 1.7.4
  cogl_draw_indexed_attributes@Base 1.7.4
-(arch=armel armhf)#include "libcogl2.symbols.egl"
+(arch=armel armhf)#include "libcogl5.symbols.egl"
  cogl_end_gl@Base 1.7.4
  cogl_error_get_type@Base 1.7.4
  cogl_euler_copy@Base 1.7.4
@@ -244,7 +244,7 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_is_offscreen@Base 1.7.4
  cogl_is_onscreen_template@Base 1.7.4
  cogl_is_path@Base 1.7.4
- cogl_is_pipeline@Base 1.7.4
+ cogl_is_pipeline_EXP@Base 1.8.0
  cogl_is_pixel_buffer_EXP@Base 1.7.4
  cogl_is_primitive@Base 1.7.4
  cogl_is_program@Base 1.7.4
@@ -375,58 +375,55 @@ libcogl.so.2 libcogl2 #MINVER#
  cogl_path_stroke@Base 1.7.4
  cogl_path_stroke_preserve@Base 1.7.4
  cogl_perspective@Base 1.7.4
- cogl_pipeline_alpha_func_get_type@Base 1.7.4
  cogl_pipeline_cache_free@Base 1.7.4
  cogl_pipeline_cache_new@Base 1.7.4
- cogl_pipeline_copy@Base 1.7.4
- cogl_pipeline_filter_get_type@Base 1.7.4
- cogl_pipeline_foreach_layer@Base 1.7.4
- cogl_pipeline_get_alpha_test_function@Base 1.7.4
- cogl_pipeline_get_alpha_test_reference@Base 1.7.4
- cogl_pipeline_get_ambient@Base 1.7.4
- cogl_pipeline_get_color@Base 1.7.4
+ cogl_pipeline_copy_EXP@Base 1.8.0
+ cogl_pipeline_foreach_layer_EXP@Base 1.8.0
+ cogl_pipeline_get_alpha_test_function_EXP@Base 1.8.0
+ cogl_pipeline_get_alpha_test_reference_EXP@Base 1.8.0
+ cogl_pipeline_get_ambient_EXP@Base 1.8.0
+ cogl_pipeline_get_color_EXP@Base 1.8.0
  cogl_pipeline_get_color_mask_EXP@Base 1.7.4
- cogl_pipeline_get_depth_state@Base 1.7.4
- cogl_pipeline_get_diffuse@Base 1.7.4
- cogl_pipeline_get_emission@Base 1.7.4
- cogl_pipeline_get_layer_point_sprite_coords_enabled@Base 1.7.4
- cogl_pipeline_get_layer_wrap_mode_p@Base 1.7.4
- cogl_pipeline_get_layer_wrap_mode_s@Base 1.7.4
- cogl_pipeline_get_layer_wrap_mode_t@Base 1.7.4
- cogl_pipeline_get_n_layers@Base 1.7.4
- cogl_pipeline_get_point_size@Base 1.7.4
- cogl_pipeline_get_shininess@Base 1.7.4
- cogl_pipeline_get_specular@Base 1.7.4
- cogl_pipeline_get_user_program@Base 1.7.4
- cogl_pipeline_new@Base 1.7.4
- cogl_pipeline_remove_layer@Base 1.7.4
- cogl_pipeline_set_alpha_test_function@Base 1.7.4
- cogl_pipeline_set_ambient@Base 1.7.4
- cogl_pipeline_set_ambient_and_diffuse@Base 1.7.4
- cogl_pipeline_set_blend@Base 1.7.4
- cogl_pipeline_set_blend_constant@Base 1.7.4
- cogl_pipeline_set_color4f@Base 1.7.4
- cogl_pipeline_set_color4ub@Base 1.7.4
- cogl_pipeline_set_color@Base 1.7.4
+ cogl_pipeline_get_depth_state_EXP@Base 1.8.0
+ cogl_pipeline_get_diffuse_EXP@Base 1.8.0
+ cogl_pipeline_get_emission_EXP@Base 1.8.0
+ cogl_pipeline_get_layer_point_sprite_coords_enabled_EXP@Base 1.8.0
+ cogl_pipeline_get_layer_wrap_mode_p_EXP@Base 1.8.0
+ cogl_pipeline_get_layer_wrap_mode_s_EXP@Base 1.8.0
+ cogl_pipeline_get_layer_wrap_mode_t_EXP@Base 1.8.0
+ cogl_pipeline_get_n_layers_EXP@Base 1.8.0
+ cogl_pipeline_get_point_size_EXP@Base 1.8.0
+ cogl_pipeline_get_shininess_EXP@Base 1.8.0
+ cogl_pipeline_get_specular_EXP@Base 1.8.0
+ cogl_pipeline_get_user_program_EXP@Base 1.8.0
+ cogl_pipeline_new_EXP@Base 1.8.0
+ cogl_pipeline_remove_layer_EXP@Base 1.8.0
+ cogl_pipeline_set_alpha_test_function_EXP@Base 1.8.0
+ cogl_pipeline_set_ambient_EXP@Base 1.8.0
+ cogl_pipeline_set_ambient_and_diffuse_EXP@Base 1.8.0
+ cogl_pipeline_set_blend_EXP@Base 1.8.0
+ cogl_pipeline_set_blend_constant_EXP@Base 1.8.0
+ cogl_pipeline_set_color4f_EXP@Base 1.8.0
+ cogl_pipeline_set_color4ub_EXP@Base 1.8.0
+ cogl_pipeline_set_color_EXP@Base 1.8.0
  cogl_pipeline_set_color_mask_EXP@Base 1.7.4
- cogl_pipeline_set_depth_state@Base 1.7.4
- cogl_pipeline_set_diffuse@Base 1.7.4
- cogl_pipeline_set_emission@Base 1.7.4
- cogl_pipeline_set_layer_combine@Base 1.7.4
- cogl_pipeline_set_layer_combine_constant@Base 1.7.4
- cogl_pipeline_set_layer_filters@Base 1.7.4
- cogl_pipeline_set_layer_matrix@Base 1.7.4
- cogl_pipeline_set_layer_point_sprite_coords_enabled@Base 1.7.4
- cogl_pipeline_set_layer_texture@Base 1.7.4
- cogl_pipeline_set_layer_wrap_mode@Base 1.7.4
- cogl_pipeline_set_layer_wrap_mode_p@Base 1.7.4
- cogl_pipeline_set_layer_wrap_mode_s@Base 1.7.4
- cogl_pipeline_set_layer_wrap_mode_t@Base 1.7.4
- cogl_pipeline_set_point_size@Base 1.7.4
- cogl_pipeline_set_shininess@Base 1.7.4
- cogl_pipeline_set_specular@Base 1.7.4
- cogl_pipeline_set_user_program@Base 1.7.4
- cogl_pipeline_wrap_mode_get_type@Base 1.7.4
+ cogl_pipeline_set_depth_state_EXP@Base 1.8.0
+ cogl_pipeline_set_diffuse_EXP@Base 1.8.0
+ cogl_pipeline_set_emission_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_combine_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_combine_constant_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_filters_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_matrix_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_point_sprite_coords_enabled_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_texture_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_wrap_mode_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_wrap_mode_p_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_wrap_mode_s_EXP@Base 1.8.0
+ cogl_pipeline_set_layer_wrap_mode_t_EXP@Base 1.8.0
+ cogl_pipeline_set_point_size_EXP@Base 1.8.0
+ cogl_pipeline_set_shininess_EXP@Base 1.8.0
+ cogl_pipeline_set_specular_EXP@Base 1.8.0
+ cogl_pipeline_set_user_program_EXP@Base 1.8.0
  cogl_pixel_buffer_new_with_size_EXP@Base 1.7.4
  cogl_pixel_format_get_type@Base 1.7.4
  cogl_polygon@Base 1.7.4
