@@ -9,9 +9,15 @@ cogl (1.8.0-1) UNRELEASED; urgency=low
     - conflicts/replaces with libcogl2
 
   [ Laurent Bigonville ]
+  * Split libcogl-pango out of the main libcogl package
   * debian/copyright: Fix copyright file format
+  * debian/control.in:
+    - Move Vcs-* to the unstable branch
+  * debian/rules:
+    - Explicitly pass --enable-gdk-pixbuf and --enable-cogl-pango flags
+      to the configure
 
- -- Laurent Bigonville <bigon@debian.org>  Tue, 27 Sep 2011 19:15:02 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Wed, 28 Sep 2011 19:20:07 +0200
 
 cogl (1.7.8-1) experimental; urgency=low
 

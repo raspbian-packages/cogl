@@ -7,7 +7,7 @@ Source: cogl
 Section: libs
 Priority: optional
 Maintainer: Rico Tzschichholz <ricotz@ubuntu.com>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Laurent Bigonville <bigon@debian.org>
 Build-Depends: debhelper (>= 8.1.3~),
                cdbs (>= 0.4.93~),
                gnome-pkg-tools,
@@ -24,8 +24,8 @@ Build-Depends: debhelper (>= 8.1.3~),
                gobject-introspection (>= 0.9.12-4~),
                libgirepository1.0-dev (>= 0.9.12)
 Standards-Version: 3.9.2
-Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/packages/experimental/cogl
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/packages/experimental/cogl/
+Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/packages/unstable/cogl
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/packages/unstable/cogl/
 
 Package: libcogl5
 Architecture: any
@@ -60,10 +60,9 @@ Section: libdevel
 Architecture: any
 Depends: libcogl5 (= ${binary:Version}),
          gir1.2-cogl-1.0 (= ${binary:Version}),
-         libcairo2-dev (>= 1.10),
+         libglib2.0-dev (>= 2.26.0),
          libdrm-dev [!hurd-any],
          libgdk-pixbuf2.0-dev (>= 2.0),
-         libpango1.0-dev (>= 1.20),
          libx11-dev,
          libxcomposite-dev,
          libxext-dev,
@@ -81,7 +80,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  OpenGL and is designed to make it easy to write orthogonal components that
  can render without stepping on each others toes.
  .
- This package contains the development files.
+ This package contains the development files for libcogl.
 
 Package: libcogl5-dbg
 Section: debug
@@ -96,7 +95,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
  OpenGL and is designed to make it easy to write orthogonal components that
  can render without stepping on each others toes.
  .
- This package contains the debug files.
+ This package contains the debug files for libcogl.
 
 Package: libcogl-doc
 Section: doc
@@ -125,4 +124,81 @@ Description: GObject introspection data for the Cogl 1.0 library
  graph library.
  .
  It can be used by packages using the GIRepository format to generate
- dynamic bindings.
+ dynamic bindings for libcogl.
+
+Package: libcogl-pango0
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Recommends: libcogl-common
+Conflicts: libcogl2
+Replaces: libcogl2, libcogl5 (<< 1.8.0-1)
+Breaks: libcogl5 (<< 1.8.0-1)
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: Object oriented GL/GLES Abstraction/Utility Layer
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+
+Package: libcogl-pango-dev
+Section: libdevel
+Architecture: any
+Depends: libcogl-pango0 (= ${binary:Version}),
+         gir1.2-coglpango-1.0 (= ${binary:Version}),
+         libcogl-dev (= ${binary:Version}),
+         libglib2.0-dev (>= 2.26.0),
+         libcairo2-dev (>= 1.10),
+         libdrm-dev [!hurd-any],
+         libgdk-pixbuf2.0-dev (>= 2.0),
+         libpango1.0-dev (>= 1.20),
+         libx11-dev,
+         libxcomposite-dev,
+         libxext-dev,
+         libxfixes-dev,
+         libxdamage-dev,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: pkg-config
+Suggests: libcogl-doc
+Replaces: libcogl-dev (<< 1.8.0-1)
+Breaks: libcogl-dev (<< 1.8.0-1)
+Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+ .
+ This package contains the development files for libcogl-pango.
+
+Package: libcogl-pango0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: libcogl-pango0 (= ${binary:Version}),
+         ${misc:Depends}
+Replaces: libcogl5-dbg (<< 1.8.0-1)
+Breaks: libcogl5-dbg (<< 1.8.0-1)
+Multi-Arch: same
+Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+ .
+ This package contains the debug files for libcogl-pango.
+
+Package: gir1.2-coglpango-1.0
+Architecture: any
+Depends: ${gir:Depends},
+         ${shlibs:Depends},
+         ${misc:Depends}
+Replaces: gir1.2-cogl-1.0 (<< 1.8.0-1)
+Breaks: gir1.2-cogl-1.0 (<< 1.8.0-1)
+Description: GObject introspection data for the CoglPango 1.0 library
+ This package contains introspection data for the Clutter scene
+ graph library.
+ .
+ It can be used by packages using the GIRepository format to generate
+ dynamic bindings for libcogl-pango.
