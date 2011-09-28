@@ -1,4 +1,4 @@
-cogl (1.8.0-1) UNRELEASED; urgency=low
+cogl (1.8.0-1) unstable; urgency=low
 
   [ Rico Tzschichholz ]
   * New upstream release
@@ -17,7 +17,7 @@ cogl (1.8.0-1) UNRELEASED; urgency=low
     - Explicitly pass --enable-gdk-pixbuf and --enable-cogl-pango flags
       to the configure
 
- -- Laurent Bigonville <bigon@debian.org>  Wed, 28 Sep 2011 19:20:07 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Wed, 28 Sep 2011 19:57:34 +0200
 
 cogl (1.7.8-1) experimental; urgency=low
 
