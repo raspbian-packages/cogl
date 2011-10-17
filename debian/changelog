@@ -1,3 +1,9 @@
+cogl (1.8.2-1) UNRELEASED; urgency=low
+
+  * New upstream release
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Mon, 17 Oct 2011 18:18:39 +0200
+
 cogl (1.8.0-1) unstable; urgency=low
 
   [ Rico Tzschichholz ]
