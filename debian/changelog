@@ -1,4 +1,4 @@
-cogl (1.8.2-1) UNRELEASED; urgency=low
+cogl (1.8.2-1) unstable; urgency=low
 
   [ Rico Tzschichholz ]
   * New upstream release
@@ -6,7 +6,7 @@ cogl (1.8.2-1) UNRELEASED; urgency=low
   [ Laurent Bigonville ]
   * debian/watch: Switch to .xz tarball
 
- -- Laurent Bigonville <bigon@debian.org>  Thu, 20 Oct 2011 23:38:47 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 20 Oct 2011 23:50:14 +0200
 
 cogl (1.8.0-1) unstable; urgency=low
 
