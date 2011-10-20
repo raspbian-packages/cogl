@@ -1,2 +1,2 @@
 version=3
-http://download.gnome.org/sources/cogl/([\d\.]+)/cogl-(.*)\.tar\.bz2
+http://download.gnome.org/sources/cogl/([\d\.]+)/cogl-(.*)\.tar\.xz
