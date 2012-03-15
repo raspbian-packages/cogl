@@ -1,1 +1,2 @@
+01_fix_arm_build.patch
 #02_disable_armv5t_specific_optimization.patch

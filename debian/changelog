@@ -13,6 +13,7 @@ cogl (1.9.8-1) UNRELEASED; urgency=low
   * debian/control.in:
     - Bump minimum glib to 2.28
     - Standards-Version 3.9.3
+  * debian/patches/01_fix_arm_build.patch: Git patch to fix ARM build failure
   * debian/patches/02_disable_armv5t_specific_optimization.patch: Disabled
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 11 Mar 2012 20:51:49 -0400
