@@ -46,6 +46,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_bitmap_get_rowstride@Base 1.9.8
  cogl_bitmap_get_size_from_file@Base 1.7.4
  cogl_bitmap_get_width@Base 1.9.8
+ cogl_bitmap_new_for_data@Base 1.10.0
  cogl_bitmap_new_from_buffer@Base 1.9.3
  cogl_bitmap_new_from_file@Base 1.7.4
  cogl_bitmap_new_with_size@Base 1.9.8
@@ -167,7 +168,12 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_framebuffer_discard_buffers@Base 1.9.4
  cogl_framebuffer_draw_attributes@Base 1.9.6
  cogl_framebuffer_draw_indexed_attributes@Base 1.9.6
+ cogl_framebuffer_draw_multitextured_rectangle@Base 1.10.0
  cogl_framebuffer_draw_primitive@Base 1.9.6
+ cogl_framebuffer_draw_rectangle@Base 1.10.0
+ cogl_framebuffer_draw_rectangles@Base 1.10.0
+ cogl_framebuffer_draw_textured_rectangle@Base 1.10.0
+ cogl_framebuffer_draw_textured_rectangles@Base 1.10.0
  cogl_framebuffer_error_quark@Base 1.9.4
  cogl_framebuffer_finish@Base 1.9.2
  cogl_framebuffer_frustum@Base 1.9.4
@@ -199,6 +205,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_framebuffer_push_primitive_clip@Base 1.9.4
  cogl_framebuffer_push_rectangle_clip@Base 1.9.4
  cogl_framebuffer_push_scissor_clip@Base 1.9.4
+ cogl_framebuffer_read_pixels@Base 1.10.0
  cogl_framebuffer_read_pixels_into_bitmap@Base 1.9.8
  cogl_framebuffer_resolve_samples@Base 1.9.4
  cogl_framebuffer_resolve_samples_region@Base 1.9.4
@@ -213,6 +220,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_framebuffer_transform@Base 1.9.4
  cogl_framebuffer_translate@Base 1.9.4
  cogl_framebuffer_vdraw_attributes@Base 1.9.6
+ cogl_framebuffer_vdraw_indexed_attributes@Base 1.10.0
  cogl_frustum@Base 1.7.4
  cogl_get_backface_culling_enabled@Base 1.7.4
  cogl_get_bitmasks@Base 1.7.4
@@ -250,12 +258,14 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_is_buffer@Base 1.9.3
  cogl_is_context@Base 1.7.4
  cogl_is_display@Base 1.7.4
+ cogl_is_framebuffer@Base 1.10.0
  cogl_is_index_buffer@Base 1.7.4
  cogl_is_indices@Base 1.7.4
  cogl_is_journal@Base 1.7.4
  cogl_is_material@Base 1.7.4
  cogl_is_offscreen@Base 1.7.4
  cogl_is_onscreen_template@Base 1.7.4
+ cogl_is_onscreen@Base 1.10.0
  cogl_is_path@Base 1.7.4
  cogl_is_pipeline@Base 1.9.4
  cogl_is_pixel_buffer_EXP@Base 1.7.4
