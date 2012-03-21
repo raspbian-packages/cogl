@@ -1,4 +1,4 @@
-cogl (1.9.8-1) UNRELEASED; urgency=low
+cogl (1.10.0-1) UNRELEASED; urgency=low
 
   [ Michael Biebl ]
   * Change section of gir1.2-cogl-1.0 and gir1.2-coglpango-1.0 to
@@ -8,12 +8,11 @@ cogl (1.9.8-1) UNRELEASED; urgency=low
   * Update repository URL.
 
   [ Jeremy Bicha ]
-  * New upstream release
+  * New upstream release.
   * Updated symbols & library name for soname update
   * debian/control.in:
     - Bump minimum glib to 2.28
     - Standards-Version 3.9.3
-  * debian/patches/01_fix_arm_build.patch: Git patch to fix ARM build failure
   * debian/patches/02_disable_armv5t_specific_optimization.patch: Disabled
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 11 Mar 2012 20:51:49 -0400
