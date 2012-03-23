@@ -15,7 +15,11 @@ cogl (1.10.0-1) UNRELEASED; urgency=low
     - Standards-Version 3.9.3
   * debian/patches/02_disable_armv5t_specific_optimization.patch: Disabled
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 11 Mar 2012 20:51:49 -0400
+  [ Rico Tzschichholz ]
+  * debian/control.in:
+    - Make libcogl-dev depend on gl/gles dev-packages
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Fri, 23 Mar 2012 07:30:41 +0100
 
 cogl (1.8.2-1) unstable; urgency=low
 
