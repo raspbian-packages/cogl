@@ -264,8 +264,8 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_is_journal@Base 1.7.4
  cogl_is_material@Base 1.7.4
  cogl_is_offscreen@Base 1.7.4
- cogl_is_onscreen_template@Base 1.7.4
  cogl_is_onscreen@Base 1.10.0
+ cogl_is_onscreen_template@Base 1.7.4
  cogl_is_path@Base 1.7.4
  cogl_is_pipeline@Base 1.9.4
  cogl_is_pixel_buffer_EXP@Base 1.7.4
@@ -561,12 +561,12 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_renderer_connect@Base 1.9.4
  cogl_renderer_error_get_type@Base 1.7.4
  cogl_renderer_error_quark@Base 1.9.4
- cogl_renderer_get_driver@Base 1.9.7
+ cogl_renderer_get_driver@Base 1.9.8
  cogl_renderer_get_n_fragment_texture_units@Base 1.9.4
  cogl_renderer_get_winsys_id@Base 1.9.4
  cogl_renderer_new@Base 1.9.4
  cogl_renderer_remove_constraint@Base 1.9.4
- cogl_renderer_set_driver@Base 1.9.7
+ cogl_renderer_set_driver@Base 1.9.8
  cogl_renderer_set_winsys_id@Base 1.9.4
  cogl_rotate@Base 1.7.4
  cogl_scale@Base 1.7.4
