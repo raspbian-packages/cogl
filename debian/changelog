@@ -1,4 +1,4 @@
-cogl (1.10.0-1) UNRELEASED; urgency=low
+cogl (1.10.0-1) experimental; urgency=low
 
   [ Michael Biebl ]
   * Change section of gir1.2-cogl-1.0 and gir1.2-coglpango-1.0 to
@@ -19,7 +19,7 @@ cogl (1.10.0-1) UNRELEASED; urgency=low
   * debian/control.in:
     - Make libcogl-dev depend on gl/gles dev-packages
 
- -- Rico Tzschichholz <ricotz@ubuntu.com>  Fri, 23 Mar 2012 07:30:41 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 30 Mar 2012 21:14:20 +0200
 
 cogl (1.8.2-1) unstable; urgency=low
 
