@@ -1,3 +1,9 @@
+cogl (1.10.0-2) UNRELEASED; urgency=low
+
+  * debian/control.in: libcogl-dev breaks libclutter-1.0-dev (<< 1.10)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 01 Apr 2012 12:33:11 +0200
+
 cogl (1.10.0-1) experimental; urgency=low
 
   [ Michael Biebl ]

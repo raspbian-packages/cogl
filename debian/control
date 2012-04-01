@@ -75,7 +75,7 @@ Depends: libcogl9 (= ${binary:Version}),
 Recommends: pkg-config
 Suggests: libcogl-doc
 Replaces: libclutter-1.0-dev (<< 1.7)
-Breaks: libclutter-1.0-dev (<< 1.7)
+Breaks: libclutter-1.0-dev (<< 1.10.0)
 Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
