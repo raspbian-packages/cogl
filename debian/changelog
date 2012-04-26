@@ -1,3 +1,9 @@
+cogl (1.10.2-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 27 Apr 2012 00:35:48 +0200
+
 cogl (1.10.0-2) experimental; urgency=low
 
   * debian/control.in: libcogl-dev breaks libclutter-1.0-dev (<< 1.10)
