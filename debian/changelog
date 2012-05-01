@@ -1,9 +1,9 @@
-cogl (1.10.2-2) UNRELEASED; urgency=low
+cogl (1.10.2-2) unstable; urgency=low
 
   * Upload to unstable.
   * debian/watch: Track stable releases.
 
- -- Michael Biebl <biebl@debian.org>  Tue, 01 May 2012 22:52:47 +0200
+ -- Michael Biebl <biebl@debian.org>  Tue, 01 May 2012 22:53:13 +0200
 
 cogl (1.10.2-1) experimental; urgency=low
 
