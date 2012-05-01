@@ -15,4 +15,3 @@ libcogl-pango.so.0 libcogl-pango0 #MINVER#
  cogl_pango_render_layout_line@Base 1.7.4
  cogl_pango_render_layout_subpixel@Base 1.7.4
  cogl_pango_renderer_get_type@Base 1.7.4
- cogl_pango_renderer_slice_cb@Base 1.7.4

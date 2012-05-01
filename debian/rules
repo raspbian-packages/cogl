@@ -8,13 +8,13 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 GNOME_MODULE = cogl
 
-DEB_DH_MAKESHLIBS_ARGS_libcogl5 += -V -- -c4
+DEB_DH_MAKESHLIBS_ARGS_libcogl9 += -V -- -c4
 DEB_DH_MAKESHLIBS_ARGS_libcogl-pango0 += -V -- -c4
 DEB_CONFIGURE_EXTRA_FLAGS += \
-        --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 	--enable-gtk-doc \
-        --enable-gdk-pixbuf \
-        --enable-cogl-pango \
+	--enable-gdk-pixbuf \
+	--enable-cogl-pango \
 	--enable-introspection=yes
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH),armel armhf))
