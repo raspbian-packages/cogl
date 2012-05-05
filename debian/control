@@ -32,8 +32,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Conflicts: libcogl2
-Replaces: libcogl2
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
@@ -134,9 +132,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Conflicts: libcogl2
-Replaces: libcogl2, libcogl5 (<< 1.8.0-1)
-Breaks: libcogl5 (<< 1.8.0-1)
+Replaces: libcogl5 (<< 1.8.0-1)
+Breaks: libcogl5 (<< 1.10.0-1)
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
