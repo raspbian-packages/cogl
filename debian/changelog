@@ -1,4 +1,4 @@
-cogl (1.10.2-3) UNRELEASED; urgency=low
+cogl (1.10.2-3) unstable; urgency=low
 
   * Make libcogl-pango0 break libcogl5 (<< 1.10.1-1) to avoid partial
     upgrades which can lead to applications like gnome-shell linking against
@@ -6,7 +6,7 @@ cogl (1.10.2-3) UNRELEASED; urgency=low
   * Drop old Conflicts/Replaces: libcogl2.
   * Fix the Breaks/Replaces for the libcogl-pango split.
 
- -- Michael Biebl <biebl@debian.org>  Sat, 05 May 2012 16:28:47 +0200
+ -- Michael Biebl <biebl@debian.org>  Sat, 05 May 2012 16:30:26 +0200
 
 cogl (1.10.2-2) unstable; urgency=low
 
