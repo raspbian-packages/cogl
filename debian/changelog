@@ -1,3 +1,12 @@
+cogl (1.10.2-4) UNRELEASED; urgency=low
+
+  * debian/patches/03_select_default_renderer_driver.patch:
+    + Added. Allow the default renderer driver to be selected at configure time
+  * Build both GL and GLESv2 renderer support on all platforms, default to
+    GLESv2 on ARM and to GL on everything else.
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 20 Jun 2012 10:37:34 +0200
+
 cogl (1.10.2-3) unstable; urgency=low
 
   * Make libcogl-pango0 break libcogl5 (<< 1.10.1-1) to avoid partial

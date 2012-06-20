@@ -1,0 +1,102 @@
+From 8406eb9d2fa5ac752f762da1db98a0ee8921ceac Mon Sep 17 00:00:00 2001
+From: Sjoerd Simons <sjoerd.simons@collabora.co.uk>
+Date: Wed, 20 Jun 2012 09:47:41 +0200
+Subject: [PATCH] Make the default driver selectable at configure time
+
+When building COGL with multiple backends it can be useful to force a
+default driver to be selected. For example while for Debian we do want to
+build the GL renderer on ARM, GLESv2 is much more suitable as the
+default renderer on that platform.
+
+Conflicts:
+
+	cogl/cogl-renderer.c
+---
+ cogl/Makefile.am     |    6 ++++++
+ cogl/cogl-renderer.c |    5 +++++
+ configure.ac         |   15 ++++++++++++++-
+ 3 files changed, 25 insertions(+), 1 deletion(-)
+
+diff --git a/cogl/Makefile.am b/cogl/Makefile.am
+index f6dbb0d..5ab2d97 100644
+--- a/cogl/Makefile.am
++++ b/cogl/Makefile.am
+@@ -32,6 +32,12 @@ AM_CPPFLAGS = \
+ 	-DCOGL_LOCALEDIR=\""$(localedir)"\" \
+ 	$(NULL)
+ 
++if HAVE_COGL_DEFAULT_DRIVER
++AM_CPPFLAGS += \
++	-DCOGL_DEFAULT_DRIVER=\"$(COGL_DEFAULT_DRIVER)\"
++endif
++
++
+ AM_CFLAGS = $(COGL_DEP_CFLAGS) $(COGL_EXTRA_CFLAGS) $(MAINTAINER_CFLAGS)
+ 
+ BUILT_SOURCES += cogl-defines.h
+diff --git a/cogl/cogl-renderer.c b/cogl/cogl-renderer.c
+index d07a3ca..b448483 100644
+--- a/cogl/cogl-renderer.c
++++ b/cogl/cogl-renderer.c
+@@ -243,6 +243,11 @@ _cogl_renderer_choose_driver (CoglRenderer *renderer,
+   if (!driver_name)
+     driver_name = _cogl_config_driver;
+ 
++#ifdef COGL_DEFAULT_DRIVER
++  if (!driver_name)
++    driver_name = COGL_DEFAULT_DRIVER;
++#endif
++
+ #ifdef HAVE_COGL_GL
+   if (renderer->driver_override == COGL_DRIVER_GL ||
+       (renderer->driver_override == COGL_DRIVER_ANY &&
+diff --git a/configure.ac b/configure.ac
+index 7b67457..299366c 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -614,7 +614,7 @@ AM_CONDITIONAL([COGL_DRIVER_GL_SUPPORTED], [test "x$enable_gl" = "xyes"])
+ AM_CONDITIONAL([COGL_DRIVER_GLES_SUPPORTED],
+                [test "x$enable_gles1" = "xyes" || test "x$enable_gles2" = "xyes"])
+ 
+-dnl Allow the GL library names to be overridden with configure options
++dnl Allow the GL library names and default driver to be overridden with configure options
+ AC_ARG_WITH([gl-libname],
+             [AS_HELP_STRING([--with-gl-libname],
+                             override the name of the GL library to dlopen)],
+@@ -627,6 +627,15 @@ AC_ARG_WITH([gles2-libname],
+             [AS_HELP_STRING([--with-gles2-libname],
+                             override the name of the GLESv2 library to dlopen)],
+             [COGL_GLES2_LIBNAME="$withval"])
++AC_ARG_WITH([default-driver],
++            [AS_HELP_STRING([--with-default-driver],
++                            specify a default cogl driver)],
++            [COGL_DEFAULT_DRIVER="${withval}"],
++            [COGL_DEFAULT_DRIVER="" ])
++
++AM_CONDITIONAL(HAVE_COGL_DEFAULT_DRIVER,
++  [ test "x$COGL_DEFAULT_DRIVER" != "x" ])
++
+ 
+ AC_SUBST([COGL_GL_LIBNAME])
+ AC_SUBST([HAVE_GL])
+@@ -634,6 +643,7 @@ AC_SUBST([COGL_GLES1_LIBNAME])
+ AC_SUBST([HAVE_GLES1])
+ AC_SUBST([COGL_GLES2_LIBNAME])
+ AC_SUBST([HAVE_GLES2])
++AC_SUBST([COGL_DEFAULT_DRIVER])
+ 
+ if test "x$GL_LIBRARY_DIRECTLY_LINKED" = "xyes"; then
+    AC_DEFINE([HAVE_DIRECTLY_LINKED_GL_LIBRARY], [1],
+@@ -1150,6 +1160,9 @@ echo "Cogl - $COGL_1_VERSION/$COGL_VERSION (${COGL_RELEASE_STATUS})"
+ echo ""
+ echo " • Global:"
+ echo "        Prefix: ${prefix}"
++if test "x$COGL_DEFAULT_DRIVER" != "x"; then
++echo "        Default driver: ${COGL_DEFAULT_DRIVER}"
++fi
+ 
+ echo ""
+ # Features
+-- 
+1.7.10
+
