@@ -1,4 +1,4 @@
-cogl (1.10.2-6) UNRELEASED; urgency=low
+cogl (1.10.2-6) unstable; urgency=low
 
   * debian/rules: Set the gles2-libname to libGLESv2.so.2 as shipped by Mesa
     (Closes: #678018)
@@ -6,7 +6,7 @@ cogl (1.10.2-6) UNRELEASED; urgency=low
     + Added. Fix crash when freeing an unconnected renderer.
       (Closes: #673433 #676282)
 
- -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 09:21:37 +0200
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 09:29:45 +0200
 
 cogl (1.10.2-5) unstable; urgency=low
 
