@@ -1,11 +1,11 @@
-cogl (1.10.2-6exp1) UNRELEASED; urgency=low
+cogl (1.10.2-6exp1) experimental; urgency=low
 
   * Bring back multiple backend support from 1.10.2-4 packaging
   * debian/rules: Only build gles2 support on non-hurd (kfreebsd & linux)
   * debian/control.in: Let the -dev package also depends on both GL and GLES
     apart from on hurd
 
- -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 08:48:37 +0200
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 09:42:33 +0200
 
 cogl (1.10.2-6) unstable; urgency=low
 
