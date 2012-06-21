@@ -31,9 +31,9 @@ Package: libcogl9
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         libgl1-mesa-glx [!armel !armhf ],
+         libgles2-mesa [armel armhf] | libgles2 [armel armhf]
 Recommends: libcogl-common
-Conflicts: libcogl2
-Replaces: libcogl2
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
@@ -134,9 +134,9 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Conflicts: libcogl2
-Replaces: libcogl2, libcogl5 (<< 1.8.0-1)
-Breaks: libcogl5 (<< 1.8.0-1)
+Replaces: libcogl2 (<< 1.8.0-1)
+Breaks: libcogl2 (<< 1.8.0-1),
+        libcogl5 (<< 1.10.0-1)
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
@@ -181,8 +181,8 @@ Priority: extra
 Architecture: any
 Depends: libcogl-pango0 (= ${binary:Version}),
          ${misc:Depends}
-Replaces: libcogl5-dbg (<< 1.8.0-1)
-Breaks: libcogl5-dbg (<< 1.8.0-1)
+Replaces: libcogl2-dbg (<< 1.8.0-1)
+Breaks: libcogl2-dbg (<< 1.8.0-1)
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
  Cogl is a small open source library for using 3D graphics hardware to draw
