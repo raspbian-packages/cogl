@@ -2,8 +2,11 @@ cogl (1.10.2-6) UNRELEASED; urgency=low
 
   * debian/rules: Set the gles2-libname to libGLESv2.so.2 as shipped by Mesa
     (Closes: #678018)
+  * debian/patches/04_fix_crash_on_free.patch:
+    + Added. Fix crash when freeing an unconnected renderer.
+      (Closes: #673433 #676282)
 
- -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 09:12:00 +0200
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 09:21:37 +0200
 
 cogl (1.10.2-5) unstable; urgency=low
 
