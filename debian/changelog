@@ -1,3 +1,14 @@
+cogl (1.10.2-5) UNRELEASED; urgency=low
+
+  * Revert to 1.10.2-3, turning on GLESv2 on intel pull in 50MB due to libgbm1
+    and libegl1-mesa-drivers which is slightly over the top for enabling a
+    uncommon feature. Hopefully the changes can be reapplied after the
+    dependencies have gone on a diet.
+  * debian/control.in: Make libcogl9 depend on the renderer driver it uses
+    (GLES v2 on arm, GL on everything else)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 08:37:46 +0200
+
 cogl (1.10.2-4) unstable; urgency=low
 
   * debian/patches/03_select_default_renderer_driver.patch:

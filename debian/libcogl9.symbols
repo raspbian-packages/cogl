@@ -136,7 +136,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_double_to_fixed@Base 1.7.4
  cogl_double_to_int@Base 1.7.4
  cogl_double_to_uint@Base 1.7.4
- cogl_egl_context_get_egl_display@Base 1.9.2
+(arch=armel armhf)#include "libcogl9.symbols.egl"
  cogl_end_gl@Base 1.7.4
  cogl_error_get_type@Base 1.7.4
  cogl_euler_copy@Base 1.7.4
