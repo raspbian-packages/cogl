@@ -1,2 +1,3 @@
 #02_disable_armv5t_specific_optimization.patch
 03_select_default_renderer_driver.patch
+04_fix_crash_on_free.patch

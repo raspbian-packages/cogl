@@ -1,4 +1,4 @@
-cogl (1.10.2-5exp1) UNRELEASED; urgency=low
+cogl (1.10.2-6exp1) UNRELEASED; urgency=low
 
   * Bring back multiple backend support from 1.10.2-4 packaging
   * debian/rules: Only build gles2 support on non-hurd (kfreebsd & linux)
@@ -6,6 +6,16 @@ cogl (1.10.2-5exp1) UNRELEASED; urgency=low
     apart from on hurd
 
  -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 08:48:37 +0200
+
+cogl (1.10.2-6) unstable; urgency=low
+
+  * debian/rules: Set the gles2-libname to libGLESv2.so.2 as shipped by Mesa
+    (Closes: #678018)
+  * debian/patches/04_fix_crash_on_free.patch:
+    + Added. Fix crash when freeing an unconnected renderer.
+      (Closes: #673433 #676282)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 21 Jun 2012 09:29:45 +0200
 
 cogl (1.10.2-5) unstable; urgency=low
 
