@@ -1,4 +1,147 @@
-libcogl.so.9 libcogl9 #MINVER#
+libcogl-gles2.so.11 libcogl11 #MINVER#
+ glActiveTexture@Base 1.11.2
+ glAttachShader@Base 1.11.2
+ glBindAttribLocation@Base 1.11.2
+ glBindBuffer@Base 1.11.2
+ glBindFramebuffer@Base 1.11.2
+ glBindRenderbuffer@Base 1.11.2
+ glBindTexture@Base 1.11.2
+ glBlendColor@Base 1.11.2
+ glBlendEquation@Base 1.11.2
+ glBlendEquationSeparate@Base 1.11.2
+ glBlendFunc@Base 1.11.2
+ glBlendFuncSeparate@Base 1.11.2
+ glBufferData@Base 1.11.2
+ glBufferSubData@Base 1.11.2
+ glCheckFramebufferStatus@Base 1.11.2
+ glClear@Base 1.11.2
+ glClearColor@Base 1.11.2
+ glClearDepthf@Base 1.11.2
+ glClearStencil@Base 1.11.2
+ glColorMask@Base 1.11.2
+ glCompileShader@Base 1.11.2
+ glCompressedTexImage2D@Base 1.11.2
+ glCompressedTexSubImage2D@Base 1.11.2
+ glCopyTexImage2D@Base 1.11.2
+ glCopyTexSubImage2D@Base 1.11.2
+ glCreateProgram@Base 1.11.2
+ glCreateShader@Base 1.11.2
+ glCullFace@Base 1.11.2
+ glDeleteBuffers@Base 1.11.2
+ glDeleteFramebuffers@Base 1.11.2
+ glDeleteProgram@Base 1.11.2
+ glDeleteRenderbuffers@Base 1.11.2
+ glDeleteShader@Base 1.11.2
+ glDeleteTextures@Base 1.11.2
+ glDepthFunc@Base 1.11.2
+ glDepthMask@Base 1.11.2
+ glDepthRangef@Base 1.11.2
+ glDetachShader@Base 1.11.2
+ glDisable@Base 1.11.2
+ glDisableVertexAttribArray@Base 1.11.2
+ glDrawArrays@Base 1.11.2
+ glDrawElements@Base 1.11.2
+ glEnable@Base 1.11.2
+ glEnableVertexAttribArray@Base 1.11.2
+ glFinish@Base 1.11.2
+ glFlush@Base 1.11.2
+ glFramebufferRenderbuffer@Base 1.11.2
+ glFramebufferTexture2D@Base 1.11.2
+ glFrontFace@Base 1.11.2
+ glGenBuffers@Base 1.11.2
+ glGenFramebuffers@Base 1.11.2
+ glGenRenderbuffers@Base 1.11.2
+ glGenTextures@Base 1.11.2
+ glGenerateMipmap@Base 1.11.2
+ glGetActiveAttrib@Base 1.11.2
+ glGetActiveUniform@Base 1.11.2
+ glGetAttachedShaders@Base 1.11.2
+ glGetAttribLocation@Base 1.11.2
+ glGetBooleanv@Base 1.11.2
+ glGetBufferParameteriv@Base 1.11.2
+ glGetError@Base 1.11.2
+ glGetFloatv@Base 1.11.2
+ glGetFramebufferAttachmentParameteriv@Base 1.11.2
+ glGetIntegerv@Base 1.11.2
+ glGetProgramInfoLog@Base 1.11.2
+ glGetProgramiv@Base 1.11.2
+ glGetRenderbufferParameteriv@Base 1.11.2
+ glGetShaderInfoLog@Base 1.11.2
+ glGetShaderPrecisionFormat@Base 1.11.2
+ glGetShaderSource@Base 1.11.2
+ glGetShaderiv@Base 1.11.2
+ glGetString@Base 1.11.2
+ glGetTexParameterfv@Base 1.11.2
+ glGetTexParameteriv@Base 1.11.2
+ glGetUniformLocation@Base 1.11.2
+ glGetUniformfv@Base 1.11.2
+ glGetUniformiv@Base 1.11.2
+ glGetVertexAttribPointerv@Base 1.11.2
+ glGetVertexAttribfv@Base 1.11.2
+ glGetVertexAttribiv@Base 1.11.2
+ glHint@Base 1.11.2
+ glIsBuffer@Base 1.11.2
+ glIsEnabled@Base 1.11.2
+ glIsFramebuffer@Base 1.11.2
+ glIsProgram@Base 1.11.2
+ glIsRenderbuffer@Base 1.11.2
+ glIsShader@Base 1.11.2
+ glIsTexture@Base 1.11.2
+ glLineWidth@Base 1.11.2
+ glLinkProgram@Base 1.11.2
+ glPixelStorei@Base 1.11.2
+ glPolygonOffset@Base 1.11.2
+ glReadPixels@Base 1.11.2
+ glReleaseShaderCompiler@Base 1.11.2
+ glRenderbufferStorage@Base 1.11.2
+ glSampleCoverage@Base 1.11.2
+ glScissor@Base 1.11.2
+ glShaderBinary@Base 1.11.2
+ glShaderSource@Base 1.11.2
+ glStencilFunc@Base 1.11.2
+ glStencilFuncSeparate@Base 1.11.2
+ glStencilMask@Base 1.11.2
+ glStencilMaskSeparate@Base 1.11.2
+ glStencilOp@Base 1.11.2
+ glStencilOpSeparate@Base 1.11.2
+ glTexImage2D@Base 1.11.2
+ glTexParameterf@Base 1.11.2
+ glTexParameterfv@Base 1.11.2
+ glTexParameteri@Base 1.11.2
+ glTexParameteriv@Base 1.11.2
+ glTexSubImage2D@Base 1.11.2
+ glUniform1f@Base 1.11.2
+ glUniform1fv@Base 1.11.2
+ glUniform1i@Base 1.11.2
+ glUniform1iv@Base 1.11.2
+ glUniform2f@Base 1.11.2
+ glUniform2fv@Base 1.11.2
+ glUniform2i@Base 1.11.2
+ glUniform2iv@Base 1.11.2
+ glUniform3f@Base 1.11.2
+ glUniform3fv@Base 1.11.2
+ glUniform3i@Base 1.11.2
+ glUniform3iv@Base 1.11.2
+ glUniform4f@Base 1.11.2
+ glUniform4fv@Base 1.11.2
+ glUniform4i@Base 1.11.2
+ glUniform4iv@Base 1.11.2
+ glUniformMatrix2fv@Base 1.11.2
+ glUniformMatrix3fv@Base 1.11.2
+ glUniformMatrix4fv@Base 1.11.2
+ glUseProgram@Base 1.11.2
+ glValidateProgram@Base 1.11.2
+ glVertexAttrib1f@Base 1.11.2
+ glVertexAttrib1fv@Base 1.11.2
+ glVertexAttrib2f@Base 1.11.2
+ glVertexAttrib2fv@Base 1.11.2
+ glVertexAttrib3f@Base 1.11.2
+ glVertexAttrib3fv@Base 1.11.2
+ glVertexAttrib4f@Base 1.11.2
+ glVertexAttrib4fv@Base 1.11.2
+ glVertexAttribPointer@Base 1.11.2
+ glViewport@Base 1.11.2
+libcogl.so.11 libcogl11 #MINVER#
  _cogl_atlas_add_reorganize_callback@Base 1.7.4
  _cogl_atlas_new@Base 1.7.4
  _cogl_atlas_reserve_space@Base 1.7.4
@@ -175,6 +318,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_framebuffer_draw_textured_rectangle@Base 1.10.0
  cogl_framebuffer_draw_textured_rectangles@Base 1.10.0
  cogl_framebuffer_error_quark@Base 1.9.4
+ cogl_framebuffer_fill_path@Base 1.11.0
  cogl_framebuffer_finish@Base 1.9.2
  cogl_framebuffer_frustum@Base 1.9.4
  cogl_framebuffer_get_alpha_bits@Base 1.9.4
@@ -210,6 +354,8 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_framebuffer_resolve_samples@Base 1.9.4
  cogl_framebuffer_resolve_samples_region@Base 1.9.4
  cogl_framebuffer_rotate@Base 1.9.4
+ cogl_framebuffer_rotate_euler@Base 1.12.0
+ cogl_framebuffer_rotate_quaternion@Base 1.12.0
  cogl_framebuffer_scale@Base 1.9.4
  cogl_framebuffer_set_color_mask@Base 1.9.4
  cogl_framebuffer_set_dither_enabled@Base 1.7.4
@@ -217,6 +363,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_framebuffer_set_projection_matrix@Base 1.9.3
  cogl_framebuffer_set_samples_per_pixel@Base 1.9.4
  cogl_framebuffer_set_viewport@Base 1.9.4
+ cogl_framebuffer_stroke_path@Base 1.12.0
  cogl_framebuffer_transform@Base 1.9.4
  cogl_framebuffer_translate@Base 1.9.4
  cogl_framebuffer_vdraw_attributes@Base 1.9.6
@@ -237,6 +384,11 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_get_static_identity_quaternion@Base 1.7.4
  cogl_get_static_zero_quaternion@Base 1.7.4
  cogl_get_viewport@Base 1.7.4
+ cogl_gles2_context_get_vtable@Base 1.12.0
+ cogl_gles2_context_new@Base 1.12.0
+ cogl_gles2_get_current_vtable@Base 1.12.0
+ cogl_gles2_texture_2d_new_from_handle@Base 1.12.0
+ cogl_gles2_texture_get_handle@Base 1.12.0
  cogl_glib_source_new@Base 1.9.3
  cogl_handle_get_type@Base 1.7.4
  cogl_handle_ref@Base 1.7.4
@@ -259,6 +411,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_is_context@Base 1.7.4
  cogl_is_display@Base 1.7.4
  cogl_is_framebuffer@Base 1.10.0
+ cogl_is_gles2_context@Base 1.12.0
  cogl_is_index_buffer@Base 1.7.4
  cogl_is_indices@Base 1.7.4
  cogl_is_journal@Base 1.7.4
@@ -270,6 +423,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_is_pipeline@Base 1.9.4
  cogl_is_pixel_buffer_EXP@Base 1.7.4
  cogl_is_primitive@Base 1.7.4
+ cogl_is_primitive_texture@Base 1.12.0
  cogl_is_program@Base 1.7.4
  cogl_is_renderer@Base 1.9.4
  cogl_is_shader@Base 1.7.4
@@ -348,8 +502,10 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_matrix_get_array@Base 1.7.4
  cogl_matrix_get_inverse@Base 1.7.4
  cogl_matrix_init_from_array@Base 1.7.4
+ cogl_matrix_init_from_euler@Base 1.12.0
  cogl_matrix_init_from_quaternion@Base 1.7.4
  cogl_matrix_init_identity@Base 1.7.4
+ cogl_matrix_init_translation@Base 1.12.0
  cogl_matrix_is_identity@Base 1.7.4
  cogl_matrix_look_at@Base 1.9.4
  cogl_matrix_multiply@Base 1.7.4
@@ -358,6 +514,8 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_matrix_perspective@Base 1.7.4
  cogl_matrix_project_points@Base 1.9.4
  cogl_matrix_rotate@Base 1.7.4
+ cogl_matrix_rotate_euler@Base 1.12.0
+ cogl_matrix_rotate_quaternion@Base 1.12.0
  cogl_matrix_scale@Base 1.7.4
  cogl_matrix_transform_point@Base 1.7.4
  cogl_matrix_transform_points@Base 1.9.4
@@ -373,11 +531,15 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_offscreen_new_to_texture@Base 1.7.4
  cogl_offscreen_ref@Base 1.7.4
  cogl_offscreen_unref@Base 1.7.4
+ cogl_onscreen_add_resize_handler@Base 1.12.0
  cogl_onscreen_add_swap_buffers_callback@Base 1.9.6
  cogl_onscreen_clutter_backend_set_size_CLUTTER@Base 1.7.4
+ cogl_onscreen_get_resizable@Base 1.12.0
  cogl_onscreen_hide@Base 1.9.4
  cogl_onscreen_new@Base 1.9.4
+ cogl_onscreen_remove_resize_handler@Base 1.12.0
  cogl_onscreen_remove_swap_buffers_callback@Base 1.9.6
+ cogl_onscreen_set_resizable@Base 1.12.0
  cogl_onscreen_set_swap_throttled@Base 1.9.4
  cogl_onscreen_show@Base 1.9.4
  cogl_onscreen_swap_buffers@Base 1.9.6
@@ -483,6 +645,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_polygon@Base 1.7.4
  cogl_pop_draw_buffer@Base 1.7.4
  cogl_pop_framebuffer@Base 1.7.4
+ cogl_pop_gles2_context@Base 1.12.0
  cogl_pop_matrix@Base 1.7.4
  cogl_pop_source@Base 1.7.4
  cogl_primitive_copy@Base 1.9.6
@@ -506,6 +669,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_primitive_set_indices_EXP@Base 1.9.2
  cogl_primitive_set_mode@Base 1.7.4
  cogl_primitive_set_n_vertices_EXP@Base 1.9.2
+ cogl_primitive_texture_set_auto_mipmap@Base 1.12.0
  cogl_program_attach_shader@Base 1.7.4
  cogl_program_get_uniform_location@Base 1.7.4
  cogl_program_link@Base 1.7.4
@@ -524,6 +688,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_program_use@Base 1.7.4
  cogl_push_draw_buffer@Base 1.7.4
  cogl_push_framebuffer@Base 1.7.4
+ cogl_push_gles2_context@Base 1.12.0
  cogl_push_matrix@Base 1.7.4
  cogl_push_source@Base 1.7.4
  cogl_quaternion_copy@Base 1.7.4
@@ -609,11 +774,13 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_swap_chain_new_EXP@Base 1.7.4
  cogl_swap_chain_set_has_alpha_EXP@Base 1.7.4
  cogl_swap_chain_set_length_EXP@Base 1.7.4
+ cogl_texture_2d_new_from_bitmap@Base 1.12.0
  cogl_texture_2d_new_from_data_EXP@Base 1.7.4
  cogl_texture_2d_new_from_foreign_EXP@Base 1.7.4
  cogl_texture_2d_new_with_size_EXP@Base 1.7.4
  cogl_texture_2d_sliced_new_with_size@Base 1.9.3
  cogl_texture_3d_error_quark@Base 1.7.4
+ cogl_texture_3d_new_from_bitmap@Base 1.12.0
  cogl_texture_3d_new_from_data@Base 1.9.6
  cogl_texture_3d_new_with_size@Base 1.9.6
  cogl_texture_error_get_type@Base 1.7.4
@@ -638,6 +805,7 @@ libcogl.so.9 libcogl9 #MINVER#
  cogl_texture_pixmap_x11_new@Base 1.9.6
  cogl_texture_pixmap_x11_set_damage_object@Base 1.9.6
  cogl_texture_pixmap_x11_update_area@Base 1.9.6
+ cogl_texture_rectangle_new_from_bitmap@Base 1.12.0
  cogl_texture_rectangle_new_with_size_EXP@Base 1.9.2
  cogl_texture_ref@Base 1.7.4
  cogl_texture_set_region@Base 1.7.4

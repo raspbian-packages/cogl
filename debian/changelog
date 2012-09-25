@@ -1,3 +1,13 @@
+cogl (1.12.0-1) UNRELEASED; urgency=low
+
+  * New upstream release
+  * debian/patches/03_select_default_renderer_driver.patch:
+    + Dropped, merged upstream
+  * debian/patches/04_fix_crash_on_free.patch:
+    + Dropped, merged upstream
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Tue, 25 Sep 2012 09:12:30 +0200
+
 cogl (1.10.2-6exp1) experimental; urgency=low
 
   * Bring back multiple backend support from 1.10.2-4 packaging
