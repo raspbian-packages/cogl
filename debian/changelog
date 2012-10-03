@@ -1,3 +1,13 @@
+cogl (1.12.0-2) UNRELEASED; urgency=low
+
+  [ Hector Oron]
+  * Enable cogl-gles2-experimental used by webkit-clutter for WebGL support
+  * d/rules: enable cogl-gles2 and DEB_DH_MAKESHLIBS_ARGS_libcogl11.
+  * d/libcogl-dev.install: add usr/lib/*/libcogl-gles2.so,
+    usr/lib/*/pkgconfig/cogl-gles2-experimental.pc
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Wed, 03 Oct 2012 09:34:03 +0200
+
 cogl (1.12.0-1) experimental; urgency=low
 
   * New upstream release
