@@ -4,5 +4,6 @@ usr/lib/*/pkgconfig/cogl-gl-*
 usr/lib/*/pkgconfig/cogl-gles2-experimental.pc
 usr/lib/*/pkgconfig/cogl-1.0.pc
 usr/lib/*/pkgconfig/cogl-2.0-experimental.pc
-usr/include/cogl/cogl/
+usr/include/cogl/cogl
+usr/include/cogl/cogl-gles2
 usr/share/gir-1.0/Cogl-*
