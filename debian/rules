@@ -8,8 +8,8 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 GNOME_MODULE = cogl
 
-DEB_DH_MAKESHLIBS_ARGS_libcogl11 += -V -- -c4
-DEB_DH_MAKESHLIBS_ARGS_libcogl-pango0 += -V -- -c4
+DEB_DH_MAKESHLIBS_ARGS_libcogl12 += -V -- -c4
+DEB_DH_MAKESHLIBS_ARGS_libcogl-pango12 += -V -- -c4
 DEB_CONFIGURE_EXTRA_FLAGS += \
 	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 	--enable-gtk-doc \
