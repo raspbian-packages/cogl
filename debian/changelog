@@ -7,8 +7,6 @@ cogl (1.13.4-1) UNRELEASED; urgency=low
     - Bump minimum glib to 2.32
     - Drop obsolete breaks/replaces
     - Bump libclutter-1.0-dev breaks for soname transition
-  * debian/libcogl-dev.install:
-    - Add some missing files
 
   [ Rico Tzschichholz ]
   * debian/control.in:
