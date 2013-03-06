@@ -32,6 +32,12 @@ cogl (1.13.4-1) UNRELEASED; urgency=low
     + Added. Don't assume the GL stack supports KHR_create_context to build
       with older mesa (Disables the GL3 driver with EGL)
 
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in:
+    - Drop libcogl-dev's Breaks on libclutter-1.0-dev, as the latter has
+      a minimum dependency on the former that is enough, so the breaks are
+      not needed and will only cause upgrade problems.
+
  -- Sjoerd Simons <sjoerd@debian.org>  Sun, 24 Feb 2013 13:54:07 +0100
 
 cogl (1.12.0-1) experimental; urgency=low
