@@ -1,4 +1,4 @@
-cogl (1.13.4-1) UNRELEASED; urgency=low
+cogl (1.13.4-1) experimental; urgency=low
 
   [ Jeremy Bicha ]
   * New upstream release
@@ -38,7 +38,7 @@ cogl (1.13.4-1) UNRELEASED; urgency=low
       a minimum dependency on the former that is enough, so the breaks are
       not needed and will only cause upgrade problems.
 
- -- Sjoerd Simons <sjoerd@debian.org>  Sun, 24 Feb 2013 13:54:07 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 15 Mar 2013 23:02:34 +0100
 
 cogl (1.12.0-1) experimental; urgency=low
 
