@@ -1,4 +1,4 @@
-cogl (1.10.2-7) UNRELEASED; urgency=low
+cogl (1.10.2-7) unstable; urgency=high
 
   [ Josselin Mouette ]
   * Add missing epoch on libxcomposite-dev build-dependency.
@@ -7,7 +7,7 @@ cogl (1.10.2-7) UNRELEASED; urgency=low
   * Add replaces/conflicts on gir1.0-clutter-1.0 because of a file conflict
     (closes: #702453).
 
- -- Josselin Mouette <joss@debian.org>  Fri, 06 Jul 2012 11:41:34 +0200
+ -- Julien Cristau <jcristau@debian.org>  Sat, 16 Mar 2013 12:07:50 +0100
 
 cogl (1.10.2-6) unstable; urgency=low
 
