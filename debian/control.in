@@ -115,8 +115,9 @@ Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
          ${misc:Depends}
-Replaces: gir1.2-clutter-1.0 (<< 1.7)
+Replaces: gir1.2-clutter-1.0 (<< 1.7), gir1.0-clutter-1.0
 Breaks: gir1.2-clutter-1.0 (<< 1.7)
+Conflicts: gir1.0-clutter-1.0
 Description: GObject introspection data for the Cogl 1.0 library
  This package contains introspection data for the Clutter scene
  graph library.
