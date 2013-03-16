@@ -1,0 +1,2 @@
+#02_disable_armv5t_specific_optimization.patch
+04_fix_crash_on_free.patch
