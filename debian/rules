@@ -10,6 +10,8 @@ GNOME_MODULE = cogl
 
 DEB_DH_MAKESHLIBS_ARGS_libcogl12 += -V -- -c4
 DEB_DH_MAKESHLIBS_ARGS_libcogl-pango12 += -V -- -c4
+DEB_DH_MAKESHLIBS_ARGS_libcogl-gles2-12 += -V -- -c4
+
 DEB_CONFIGURE_EXTRA_FLAGS += \
 	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 	--enable-gtk-doc \

@@ -2,6 +2,7 @@ cogl (1.14.0-1) experimental; urgency=low
 
   * New upstream release.
   * debian/control.in,
+    debian/rules,
     debian/libcogl12.*,
     debian/libcogl-gles2-12.*,
     debian/libcogl*-dev.install:
