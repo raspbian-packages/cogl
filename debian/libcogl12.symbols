@@ -150,7 +150,7 @@ libcogl.so.12 libcogl12 #MINVER#
  cogl_double_to_fixed@Base 1.7.4
  cogl_double_to_int@Base 1.7.4
  cogl_double_to_uint@Base 1.7.4
- cogl_egl_context_get_egl_display@Base 1.13.4
+ (arch=!hurd-any)cogl_egl_context_get_egl_display@Base 1.13.4
  cogl_end_gl@Base 1.7.4
  cogl_error_copy@Base 1.13.4
  cogl_error_free@Base 1.13.4
