@@ -1,6 +1,8 @@
 cogl (1.14.0-1) experimental; urgency=low
 
   * New upstream release.
+    + debian/patches/Disable-reliance-on-KHR_create_context.patch:
+      - Removed, fixed upstream in a different way.
   * debian/control.in,
     debian/rules,
     debian/libcogl12.*,
