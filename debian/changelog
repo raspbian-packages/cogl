@@ -1,5 +1,6 @@
-cogl (1.13.4-2) UNRELEASED; urgency=low
+cogl (1.14.0-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * debian/control.in,
     debian/libcogl12.*,
     debian/libcogl-gles2-12.*,
