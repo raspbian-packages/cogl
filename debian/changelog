@@ -1,4 +1,4 @@
-cogl (1.14.0-1) UNRELEASED; urgency=low
+cogl (1.14.0-1) experimental; urgency=low
 
   * New upstream release.
   * debian/control.in,
@@ -11,7 +11,7 @@ cogl (1.14.0-1) UNRELEASED; urgency=low
   * debian/libcogl12.symbols:
     + Mark cogl_egl_context_get_egl_display as not available on hurd.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 25 Mar 2013 13:44:33 +0100
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 25 Mar 2013 18:33:43 +0100
 
 cogl (1.13.4-1) experimental; urgency=low
 
