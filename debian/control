@@ -7,7 +7,7 @@ Source: cogl
 Section: libs
 Priority: optional
 Maintainer: Rico Tzschichholz <ricotz@ubuntu.com>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Build-Depends: debhelper (>= 8.1.3~),
                cdbs (>= 0.4.93~),
                gnome-pkg-tools,
@@ -193,3 +193,40 @@ Description: GObject introspection data for the CoglPango 1.0 library
  .
  It can be used by packages using the GIRepository format to generate
  dynamic bindings for libcogl-pango.
+
+Package: libcogl-gles2-12
+Architecture: linux-any kfreebsd-any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libgl1-mesa-glx [!armel !armhf ],
+         libgles2-mesa [armel armhf] | libgles2 [armel armhf]
+Recommends: libcogl-common
+Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
+Replaces: libcogl12 (<< 1.13.4-2)
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: Object oriented GL/GLES Abstraction/Utility Layer
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+ .
+ This package contains the GLES2 library.
+
+Package: libcogl-gles2-dev
+Section: libdevel
+Architecture: linux-any kfreebsd-any
+Depends: libcogl-gles2-12 (= ${binary:Version}),
+         libcogl-dev (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: pkg-config
+Suggests: libcogl-doc
+Replaces: libcogl-dev (<< 1.13.4-2)
+Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+ .
+ This package contains the development files for libcogl.
