@@ -1,3 +1,13 @@
+cogl (1.14.0-2) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * use canonical Vcs-* fields
+
+  [ Andreas Henriksson ]
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 16 Aug 2013 18:27:29 +0200
+
 cogl (1.14.0-1) experimental; urgency=low
 
   * New upstream release.
