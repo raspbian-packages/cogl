@@ -1,9 +1,9 @@
-cogl (1.14.0-3) UNRELEASED; urgency=low
+cogl (1.14.0-3) unstable; urgency=low
 
   * Add "Breaks: libclutter-1.0-0 (<< 1.14)" in libcogl12 to prevent
     non-working partial upgrades. (Closes: #720371)
 
- -- Andreas Henriksson <andreas@fatal.se>  Wed, 21 Aug 2013 21:57:16 +0200
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 21 Aug 2013 23:41:51 +0200
 
 cogl (1.14.0-2) unstable; urgency=low
 
