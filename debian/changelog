@@ -1,3 +1,10 @@
+cogl (1.15.8-1) UNRELEASED; urgency=low
+
+  * New upstream development release.
+  * Build-depend on libwayland-dev (>= 1.1.90) according to configure.ac
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 27 Aug 2013 16:11:53 +0200
+
 cogl (1.14.0-3) unstable; urgency=low
 
   * Add "Breaks: libclutter-1.0-0 (<< 1.14)" in libcogl12 to prevent
