@@ -6,6 +6,7 @@ cogl (1.15.8-1) UNRELEASED; urgency=low
   * Update symbols files
   * Bump Standards-Version to 3.9.4
   * also install /usr/include/cogl/cogl-path in libcogl-dev
+  * Bump libcogl15 breaks libclutter-1.0-0 to (<< 1.15)
 
  -- Andreas Henriksson <andreas@fatal.se>  Tue, 27 Aug 2013 16:11:53 +0200
 
