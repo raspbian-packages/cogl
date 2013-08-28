@@ -24,7 +24,7 @@ Standards-Version: 3.9.3
 Vcs-Svn: svn://svn.debian.org/pkg-gnome/desktop/unstable/cogl
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/cogl/
 
-Package: libcogl12
+Package: libcogl15
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -57,7 +57,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (common files)
 Package: libcogl-dev
 Section: libdevel
 Architecture: any
-Depends: libcogl12 (= ${binary:Version}),
+Depends: libcogl15 (= ${binary:Version}),
          gir1.2-cogl-1.0 (= ${binary:Version}),
          libgl1-mesa-dev (>= 7.1~rc3-1~),
          libgles2-mesa-dev (>= 7.1~rc3-1~) [!hurd-any] | libgles2-dev [!hurd-any],
@@ -81,11 +81,11 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  .
  This package contains the development files for libcogl.
 
-Package: libcogl12-dbg
+Package: libcogl15-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: libcogl12 (= ${binary:Version}),
+Depends: libcogl15 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
@@ -122,7 +122,7 @@ Description: GObject introspection data for the Cogl 1.0 library
  It can be used by packages using the GIRepository format to generate
  dynamic bindings for libcogl.
 
-Package: libcogl-pango12
+Package: libcogl-pango15
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -138,7 +138,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-pango-dev
 Section: libdevel
 Architecture: any
-Depends: libcogl-pango12 (= ${binary:Version}),
+Depends: libcogl-pango15 (= ${binary:Version}),
          gir1.2-coglpango-1.0 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
          libglib2.0-dev (>= 2.28.0),
@@ -163,11 +163,11 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  .
  This package contains the development files for libcogl-pango.
 
-Package: libcogl-pango12-dbg
+Package: libcogl-pango15-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: libcogl-pango12 (= ${binary:Version}),
+Depends: libcogl-pango15 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
@@ -191,7 +191,7 @@ Description: GObject introspection data for the CoglPango 1.0 library
  It can be used by packages using the GIRepository format to generate
  dynamic bindings for libcogl-pango.
 
-Package: libcogl-gles2-12
+Package: libcogl-gles2-15
 Architecture: linux-any kfreebsd-any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -213,7 +213,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-gles2-dev
 Section: libdevel
 Architecture: linux-any kfreebsd-any
-Depends: libcogl-gles2-12 (= ${binary:Version}),
+Depends: libcogl-gles2-15 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}

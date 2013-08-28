@@ -2,6 +2,8 @@ cogl (1.15.8-1) UNRELEASED; urgency=low
 
   * New upstream development release.
   * Build-depend on libwayland-dev (>= 1.1.90) according to configure.ac
+  * Rename packages for bumped sonames (12->15)
+  * Update symbols files
 
  -- Andreas Henriksson <andreas@fatal.se>  Tue, 27 Aug 2013 16:11:53 +0200
 
