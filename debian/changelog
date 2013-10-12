@@ -1,6 +1,6 @@
-cogl (1.15.8-1) UNRELEASED; urgency=low
+cogl (1.16.0-1) UNRELEASED; urgency=low
 
-  * New upstream development release.
+  * New upstream release.
   * Build-depend on libwayland-dev (>= 1.1.90) according to configure.ac
   * Rename packages for bumped sonames (12->15)
   * Update symbols files
