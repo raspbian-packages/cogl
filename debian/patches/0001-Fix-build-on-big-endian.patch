@@ -1,0 +1,29 @@
+From f6d8c482584de22bbacc9dc21e6ffc34371c03ff Mon Sep 17 00:00:00 2001
+From: Emilio Pozuelo Monfort <pochu27@gmail.com>
+Date: Mon, 14 Oct 2013 21:21:02 +0200
+Subject: [PATCH] Fix build on big endian
+
+Commit 50d1285b updated the wl_shm enum values but left
+one out. Update it to fix the build on big endian.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=710135
+---
+ cogl/cogl-texture-2d.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cogl/cogl-texture-2d.c b/cogl/cogl-texture-2d.c
+index 4147746..60b932b 100644
+--- a/cogl/cogl-texture-2d.c
++++ b/cogl/cogl-texture-2d.c
+@@ -315,7 +315,7 @@ cogl_wayland_texture_2d_new_from_buffer (CoglContext *ctx,
+           case WL_SHM_FORMAT_ARGB8888:
+             format = COGL_PIXEL_FORMAT_ARGB_8888_PRE;
+             break;
+-          case WL_SHM_FORMAT_XRGB32:
++          case WL_SHM_FORMAT_XRGB8888:
+             format = COGL_PIXEL_FORMAT_ARGB_8888;
+             internal_format = COGL_PIXEL_FORMAT_RGB_888;
+             break;
+-- 
+1.8.4.rc3
+
