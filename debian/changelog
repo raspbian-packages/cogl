@@ -1,4 +1,4 @@
-cogl (1.16.0-2) UNRELEASED; urgency=low
+cogl (1.16.0-2) experimental; urgency=low
 
   * debian/control.in:
     + Restrict libwayland-dev build dependency to linux.
@@ -8,7 +8,7 @@ cogl (1.16.0-2) UNRELEASED; urgency=low
   * debian/libcogl15.symbols:
     + Add wayland symbols.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 14 Oct 2013 17:04:54 +0200
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 14 Oct 2013 17:18:13 +0200
 
 cogl (1.16.0-1) experimental; urgency=low
 
