@@ -1,11 +1,11 @@
-cogl (1.16.0-3) UNRELEASED; urgency=low
+cogl (1.16.0-3) experimental; urgency=low
 
   * debian/patches/0001-Fix-build-on-big-endian.patch:
     + New patch, fix the build on big endian ports.
   * debian/libcogl15.symbols:
     + Flag cogl_egl_context_get_egl_display as not available on hurd.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 14 Oct 2013 21:25:57 +0200
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 14 Oct 2013 21:37:33 +0200
 
 cogl (1.16.0-2) experimental; urgency=low
 
