@@ -4,6 +4,7 @@ cogl (1.16.0-2) UNRELEASED; urgency=low
     + Restrict libwayland-dev build dependency to linux.
   * debian/rules:
     + Actually enable wayland support.
+    + Fix variable name to follow the new libcogl15 package names.
   * debian/libcogl15.symbols:
     + Add wayland symbols.
 
