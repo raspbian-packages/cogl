@@ -34,4 +34,10 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-gles2=yes
 endif
 
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+DEB_CONFIGURE_EXTRA_FLAGS += \
+	--enable-wayland-egl-platform \
+	--enable-wayland-egl-server
+endif
+
 common-binary-predeb-arch:: list-missing
