@@ -1,3 +1,10 @@
+cogl (1.16.0-4) UNRELEASED; urgency=low
+
+  * debian/rules, debian/libcogl15.symbols: Enable the KMS EGL platform on
+    linux
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 27 Oct 2013 23:28:32 +0100
+
 cogl (1.16.0-3) experimental; urgency=low
 
   * debian/patches/0001-Fix-build-on-big-endian.patch:

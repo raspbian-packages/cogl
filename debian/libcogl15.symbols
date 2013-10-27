@@ -352,6 +352,9 @@ libcogl.so.15 libcogl15 #MINVER#
  cogl_is_texture_rectangle@Base 1.15.8
  cogl_is_vertex_buffer@Base 1.15.8
  cogl_is_vertex_buffer_indices@Base 1.15.8
+ (arch=linux-any)cogl_kms_display_queue_modes_reset@Base 1.16.0
+ (arch=linux-any)cogl_kms_display_set_layout@Base 1.16.0
+ (arch=linux-any)cogl_kms_renderer_get_kms_fd@Base 1.16.0
  cogl_material_alpha_func_get_type@Base 1.15.8
  cogl_material_copy@Base 1.15.8
  cogl_material_filter_get_type@Base 1.15.8
