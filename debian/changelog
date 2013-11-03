@@ -1,9 +1,11 @@
-cogl (1.16.0-4) UNRELEASED; urgency=low
+cogl (1.16.0-4) experimental; urgency=low
 
   * debian/rules, debian/libcogl15.symbols: Enable the KMS EGL platform on
     linux
+  * debian/control.in: Let libcogl-dev depend on libwayland-dev [linux-any]
+  * debian/control.in: Add b-d on libgbm-dev for KMS EGL support
 
- -- Sjoerd Simons <sjoerd@debian.org>  Sun, 27 Oct 2013 23:28:32 +0100
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 03 Nov 2013 21:46:36 +0100
 
 cogl (1.16.0-3) experimental; urgency=low
 
