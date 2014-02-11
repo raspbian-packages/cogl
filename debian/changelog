@@ -1,3 +1,11 @@
+cogl (1.16.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release 1.16.2
+    + YV12/I420 support in cogl-gst is fixed.
+    + cogl_framebuffer_push_path_clip is fixed.
+
+ -- Iain Lane <laney@debian.org>  Tue, 11 Feb 2014 14:40:15 +0000
+
 cogl (1.16.0-4) experimental; urgency=low
 
   * debian/rules, debian/libcogl15.symbols: Enable the KMS EGL platform on
