@@ -1,4 +1,4 @@
-cogl (1.16.2-1) UNRELEASED; urgency=medium
+cogl (1.16.2-1) experimental; urgency=medium
 
   * New upstream release 1.16.2
     + YV12/I420 support in cogl-gst is fixed.
