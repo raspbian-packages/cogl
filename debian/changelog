@@ -1,3 +1,20 @@
+cogl (1.17.4-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+  * Rename package for new soname (15->20)
+  * Update symbols file
+  * Install libcogl-path in libcogl
+    - cogl-path was split out from libcogl
+  * also install cogl-gles2-1.0.pc in libcogl-gles2-dev
+  * Bump Standards-Version to 3.9.5
+  * Update debian/copyright for MIT relicensing
+  * Specify debian/patches/* as MIT in debian/copyright
+    - since debian/* uses LGPL - add debian/patches/* using MIT, even though
+      it doesn't (yet) exist, to avoid future problems submitting patches
+      upstream that doesn't have an explicit license tag.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 04 Mar 2014 21:30:49 +0100
+
 cogl (1.16.2-1) experimental; urgency=medium
 
   * New upstream release 1.16.2

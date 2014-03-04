@@ -1,7 +1,9 @@
 usr/lib/*/libcogl.so
+usr/lib/*/libcogl-path.so
 usr/lib/*/pkgconfig/cogl-gl-*
 usr/lib/*/pkgconfig/cogl-1.0.pc
 usr/lib/*/pkgconfig/cogl-2.0-experimental.pc
+usr/lib/*/pkgconfig/cogl-path-*.pc
 usr/include/cogl/cogl
 usr/include/cogl/cogl-path
 usr/share/gir-1.0/Cogl-*
