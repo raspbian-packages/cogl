@@ -9,6 +9,7 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 GNOME_MODULE = cogl
 
 DEB_DH_MAKESHLIBS_ARGS_libcogl20 += -V -- -c4
+DEB_DH_MAKESHLIBS_ARGS_libcogl-path20 += -V -- -c4
 DEB_DH_MAKESHLIBS_ARGS_libcogl-pango20 += -V -- -c4
 DEB_DH_MAKESHLIBS_ARGS_libcogl-gles2-20 += -V -- -c4
 

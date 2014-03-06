@@ -125,6 +125,36 @@ Description: GObject introspection data for the Cogl 1.0 library
  It can be used by packages using the GIRepository format to generate
  dynamic bindings for libcogl.
 
+Package: libcogl-path20
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Recommends: libcogl-common
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: Object oriented GL/GLES Abstraction/Utility Layer
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+
+Package: libcogl-path-dev
+Section: libdevel
+Architecture: any
+Depends: libcogl-path20 (= ${binary:Version}),
+         libcogl-dev (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: pkg-config
+Suggests: libcogl-doc
+Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
+ Cogl is a small open source library for using 3D graphics hardware to draw
+ pretty pictures. The API departs from the flat state machine style of
+ OpenGL and is designed to make it easy to write orthogonal components that
+ can render without stepping on each others toes.
+ .
+ This package contains the development files for libcogl-path.
+
 Package: libcogl-pango20
 Architecture: any
 Depends: ${shlibs:Depends},
