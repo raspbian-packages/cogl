@@ -1,4 +1,4 @@
-cogl (1.17.4-1) UNRELEASED; urgency=medium
+cogl (1.17.4-1) experimental; urgency=medium
 
   [ Andreas Henriksson ]
   * New upstream release.
@@ -17,7 +17,7 @@ cogl (1.17.4-1) UNRELEASED; urgency=medium
   [ Emilio Pozuelo Monfort ]
   * Split libcogl-path into its own package.
 
- -- Andreas Henriksson <andreas@fatal.se>  Tue, 04 Mar 2014 21:30:49 +0100
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 16 Mar 2014 21:13:39 +0100
 
 cogl (1.16.2-1) experimental; urgency=medium
 
