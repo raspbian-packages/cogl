@@ -1,6 +1,8 @@
 cogl (1.18.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * debian/libcogl20.symbols:
+    + Updated for the new symbols.
 
  -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 23 Mar 2014 15:47:49 +0100
 
