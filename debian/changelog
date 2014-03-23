@@ -1,3 +1,9 @@
+cogl (1.18.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 23 Mar 2014 15:47:49 +0100
+
 cogl (1.17.4-1) experimental; urgency=medium
 
   [ Andreas Henriksson ]
