@@ -1,4 +1,4 @@
-cogl (1.18.0-1) UNRELEASED; urgency=medium
+cogl (1.18.0-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/libcogl20.symbols,
@@ -6,8 +6,9 @@ cogl (1.18.0-1) UNRELEASED; urgency=medium
     + Updated for the new symbols.
   * debian/control.in:
     + Bump breaks on clutter to ensure a lockstep upgrade.
+  * Upload to unstable.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 23 Mar 2014 15:47:49 +0100
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 23 Mar 2014 16:15:48 +0100
 
 cogl (1.17.4-1) experimental; urgency=medium
 
