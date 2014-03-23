@@ -1,3 +1,75 @@
+cogl (1.17.4-1) experimental; urgency=medium
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Rename package for new soname (15->20)
+  * Update symbols file
+  * Install libcogl-path in libcogl
+    - cogl-path was split out from libcogl
+  * also install cogl-gles2-1.0.pc in libcogl-gles2-dev
+  * Bump Standards-Version to 3.9.5
+  * Update debian/copyright for MIT relicensing
+  * Specify debian/patches/* as MIT in debian/copyright
+    - since debian/* uses LGPL - add debian/patches/* using MIT, even though
+      it doesn't (yet) exist, to avoid future problems submitting patches
+      upstream that doesn't have an explicit license tag.
+
+  [ Emilio Pozuelo Monfort ]
+  * Split libcogl-path into its own package.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 16 Mar 2014 21:13:39 +0100
+
+cogl (1.16.2-1) experimental; urgency=medium
+
+  * New upstream release 1.16.2
+    + YV12/I420 support in cogl-gst is fixed.
+    + cogl_framebuffer_push_path_clip is fixed.
+  * 0001-Fix-build-on-big-endian.patch: Drop, applied upstream. 
+
+ -- Iain Lane <laney@debian.org>  Tue, 11 Feb 2014 14:40:15 +0000
+
+cogl (1.16.0-4) experimental; urgency=low
+
+  * debian/rules, debian/libcogl15.symbols: Enable the KMS EGL platform on
+    linux
+  * debian/control.in: Let libcogl-dev depend on libwayland-dev [linux-any]
+  * debian/control.in: Add b-d on libgbm-dev for KMS EGL support
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 03 Nov 2013 21:46:36 +0100
+
+cogl (1.16.0-3) experimental; urgency=low
+
+  * debian/patches/0001-Fix-build-on-big-endian.patch:
+    + New patch, fix the build on big endian ports.
+  * debian/libcogl15.symbols:
+    + Flag cogl_egl_context_get_egl_display as not available on hurd.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 14 Oct 2013 21:37:33 +0200
+
+cogl (1.16.0-2) experimental; urgency=low
+
+  * debian/control.in:
+    + Restrict libwayland-dev build dependency to linux.
+  * debian/rules:
+    + Actually enable wayland support.
+    + Fix variable name to follow the new libcogl15 package names.
+  * debian/libcogl15.symbols:
+    + Add wayland symbols.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 14 Oct 2013 17:18:13 +0200
+
+cogl (1.16.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Build-depend on libwayland-dev (>= 1.1.90) according to configure.ac
+  * Rename packages for bumped sonames (12->15)
+  * Update symbols files
+  * Bump Standards-Version to 3.9.4
+  * also install /usr/include/cogl/cogl-path in libcogl-dev
+  * Bump libcogl15 breaks libclutter-1.0-0 to (<< 1.15)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 12 Oct 2013 19:58:17 +0200
+
 cogl (1.14.0-3) unstable; urgency=low
 
   * Add "Breaks: libclutter-1.0-0 (<< 1.14)" in libcogl12 to prevent
