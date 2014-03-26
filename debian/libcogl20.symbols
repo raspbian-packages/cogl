@@ -158,7 +158,7 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_double_to_fixed@Base 1.17.4
  cogl_double_to_int@Base 1.17.4
  cogl_double_to_uint@Base 1.17.4
- cogl_egl_context_get_egl_context@Base 1.18.0
+ (arch=!hurd-any)cogl_egl_context_get_egl_context@Base 1.18.0
  (arch=!hurd-any)cogl_egl_context_get_egl_display@Base 1.17.4
  cogl_end_gl@Base 1.17.4
  cogl_error_copy@Base 1.17.4
@@ -816,7 +816,7 @@ libcogl.so.20 libcogl20 #MINVER#
  (arch=linux-any)cogl_wayland_renderer_set_event_dispatch_enabled@Base 1.17.4
  (arch=linux-any)cogl_wayland_renderer_set_foreign_display@Base 1.17.4
  (arch=linux-any)cogl_wayland_texture_2d_new_from_buffer@Base 1.17.4
- cogl_wayland_texture_set_region_from_shm_buffer@Base 1.17.4
+ (arch=linux-any)cogl_wayland_texture_set_region_from_shm_buffer@Base 1.17.4
  cogl_winding_get_type@Base 1.17.4
  cogl_winsys_feature_get_type@Base 1.17.4
  cogl_x11_onscreen_get_visual_xid@Base 1.17.4
