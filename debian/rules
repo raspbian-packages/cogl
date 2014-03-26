@@ -27,13 +27,11 @@ else
         DEB_CONFIGURE_EXTRA_FLAGS += --with-default-driver=gl
 endif
 
-ifeq ($(DEB_HOST_ARCH_OS),$(findstring $(DEB_HOST_ARCH_OS),linux kfreebsd))
 DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-xlib-egl-platform=yes \
 	--enable-cogl-gles2=yes \
 	--with-gles2-libname=libGLESv2.so.2 \
 	--enable-gles2=yes
-endif
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 DEB_CONFIGURE_EXTRA_FLAGS += \

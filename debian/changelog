@@ -1,9 +1,17 @@
 cogl (1.18.0-2) unstable; urgency=medium
 
+  [ Andreas Henriksson ]
   * Update symbols file for non-linux architectures:
     - (arch=!hurd-any)cogl_egl_context_get_egl_context@Base 
     - (arch=linux-any)cogl_wayland_texture_set_region_from_shm_buffer@Base
 
+  [ Samuel Thibault ]
+  * Enabling the libgles2-mesa-dev|libgles2-dev build-dep on hurd-any
+    (Closes: #742682)
+
+  [ Andreas Henriksson ]
+  * drop (arch=!hurd-any) from cogl_egl_context_ symbols.
+  
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 26 Mar 2014 11:51:58 +0100
 
 cogl (1.18.0-1) unstable; urgency=medium
