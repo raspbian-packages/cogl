@@ -1,3 +1,11 @@
+cogl (1.18.0-3) UNRELEASED; urgency=medium
+
+  [ Samuel Thibault ]
+  * Fix the gles dependencies of the libcogl-dev package on hurd-i386
+    (Closes: #743316)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 01 Apr 2014 20:43:40 +0200
+
 cogl (1.18.0-2) unstable; urgency=medium
 
   [ Andreas Henriksson ]
