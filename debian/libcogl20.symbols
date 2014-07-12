@@ -342,7 +342,9 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_is_vertex_buffer@Base 1.17.4
  cogl_is_vertex_buffer_indices@Base 1.17.4
  (arch=linux-any)cogl_kms_display_queue_modes_reset@Base 1.17.4
+ (arch=linux-any)cogl_kms_display_set_ignore_crtc@Base 1.18.2
  (arch=linux-any)cogl_kms_display_set_layout@Base 1.17.4
+ (arch=linux-any)cogl_kms_renderer_get_gbm@Base 1.18.2
  (arch=linux-any)cogl_kms_renderer_get_kms_fd@Base 1.17.4
  (arch=linux-any)cogl_kms_renderer_set_kms_fd@Base 1.18.0
  cogl_material_alpha_func_get_type@Base 1.17.4

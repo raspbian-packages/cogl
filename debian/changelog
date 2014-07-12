@@ -1,10 +1,14 @@
-cogl (1.18.0-3) UNRELEASED; urgency=medium
+cogl (1.18.2-1) unstable; urgency=medium
 
   [ Samuel Thibault ]
   * Fix the gles dependencies of the libcogl-dev package on hurd-i386
     (Closes: #743316)
 
- -- Andreas Henriksson <andreas@fatal.se>  Tue, 01 Apr 2014 20:43:40 +0200
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Add 2 new (arch=linux-any) symbols to debian/libcogl20.symbols
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 12 Jul 2014 09:23:09 +0200
 
 cogl (1.18.0-2) unstable; urgency=medium
 
