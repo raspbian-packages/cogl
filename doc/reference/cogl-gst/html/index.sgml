@@ -1,0 +1,31 @@
+<ANCHOR id="CoglGstVideoSink" href="cogl-gst/CoglGstVideoSink.html">
+<ANCHOR id="CoglGstVideoSink.synopsis" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.synopsis">
+<ANCHOR id="CoglGstVideoSink.object-hierarchy" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.object-hierarchy">
+<ANCHOR id="CoglGstVideoSink.properties" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.properties">
+<ANCHOR id="CoglGstVideoSink.signals" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.signals">
+<ANCHOR id="CoglGstVideoSink.description" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.description">
+<ANCHOR id="CoglGstVideoSink.details" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.details">
+<ANCHOR id="CoglGstVideoSink-struct" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink-struct">
+<ANCHOR id="CoglGstVideoSinkClass" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSinkClass">
+<ANCHOR id="cogl-gst-video-sink-new" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-new">
+<ANCHOR id="cogl-gst-video-sink-set-context" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-set-context">
+<ANCHOR id="cogl-gst-video-sink-get-pipeline" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline">
+<ANCHOR id="cogl-gst-video-sink-attach-frame" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-attach-frame">
+<ANCHOR id="cogl-gst-video-sink-setup-pipeline" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-setup-pipeline">
+<ANCHOR id="cogl-gst-video-sink-get-free-layer" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-get-free-layer">
+<ANCHOR id="cogl-gst-video-sink-set-first-layer" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-set-first-layer">
+<ANCHOR id="cogl-gst-video-sink-set-default-sample" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-set-default-sample">
+<ANCHOR id="cogl-gst-video-sink-is-ready" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-is-ready">
+<ANCHOR id="cogl-gst-video-sink-get-aspect" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-get-aspect">
+<ANCHOR id="cogl-gst-video-sink-get-width-for-height" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-get-width-for-height">
+<ANCHOR id="cogl-gst-video-sink-get-height-for-width" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-get-height-for-width">
+<ANCHOR id="cogl-gst-video-sink-fit-size" href="cogl-gst/CoglGstVideoSink.html#cogl-gst-video-sink-fit-size">
+<ANCHOR id="CoglGstVideoSink.property-details" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.property-details">
+<ANCHOR id="CoglGstVideoSink--update-priority" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink--update-priority">
+<ANCHOR id="CoglGstVideoSink.signal-details" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink.signal-details">
+<ANCHOR id="CoglGstVideoSink-new-frame" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink-new-frame">
+<ANCHOR id="CoglGstVideoSink-pipeline-ready" href="cogl-gst/CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready">
+<ANCHOR id="annotation-glossterm-inout" href="cogl-gst/coglglossary.html#annotation-glossterm-inout">
+<ANCHOR id="annotation-glossterm-in" href="cogl-gst/coglglossary.html#annotation-glossterm-in">
+<ANCHOR id="annotation-glossterm-transfer full" href="cogl-gst/coglglossary.html#annotation-glossterm-transfer full">
+<ANCHOR id="annotation-glossterm-transfer none" href="cogl-gst/coglglossary.html#annotation-glossterm-transfer none">

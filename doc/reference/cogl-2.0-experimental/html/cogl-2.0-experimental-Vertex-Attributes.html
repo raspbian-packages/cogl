@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Vertex Attributes</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-buffer-layout-apis.html" title="Describing the layout of GPU Memory">
+<link rel="prev" href="cogl-buffer-layout-apis.html" title="Describing the layout of GPU Memory">
+<link rel="next" href="cogl-2.0-experimental-Indices.html" title="Indices">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-buffer-layout-apis.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-buffer-layout-apis.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-2.0-experimental-Indices.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-Vertex-Attributes.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-Vertex-Attributes.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-Vertex-Attributes"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-Vertex-Attributes.top_of_page"></a>Vertex Attributes</span></h2>
+<p>Vertex Attributes — Functions for declaring and drawing vertex
+   attributes</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-Vertex-Attributes.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute">CoglAttribute</a>;
+<a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="returnvalue">CoglAttribute</span></a> *     <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-new" title="cogl_attribute_new ()">cogl_attribute_new</a>                  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> *attribute_buffer</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
+                                                         <em class="parameter"><code><span class="type">size_t</span> stride</code></em>,
+                                                         <em class="parameter"><code><span class="type">size_t</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> components</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglAttributeType" title="enum CoglAttributeType"><span class="type">CoglAttributeType</span></a> type</code></em>);
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-is-attribute" title="cogl_is_attribute ()">cogl_is_attribute</a>                   (<em class="parameter"><code><span class="type">void</span> *object</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-set-normalized" title="cogl_attribute_set_normalized ()">cogl_attribute_set_normalized</a>       (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="type">CoglBool</span></a> normalized</code></em>);
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-get-normalized" title="cogl_attribute_get_normalized ()">cogl_attribute_get_normalized</a>       (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>);
+<a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="returnvalue">CoglAttributeBuffer</span></a> * <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-get-buffer" title="cogl_attribute_get_buffer ()">cogl_attribute_get_buffer</a>         (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-set-buffer" title="cogl_attribute_set_buffer ()">cogl_attribute_set_buffer</a>           (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> *attribute_buffer</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Vertex-Attributes.description"></a><h2>Description</h2>
+<p>
+FIXME
+</p>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Vertex-Attributes.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglAttribute"></a><h3>CoglAttribute</h3>
+<pre class="programlisting">typedef struct _CoglAttribute CoglAttribute;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-attribute-new"></a><h3>cogl_attribute_new ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="returnvalue">CoglAttribute</span></a> *     cogl_attribute_new                  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> *attribute_buffer</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
+                                                         <em class="parameter"><code><span class="type">size_t</span> stride</code></em>,
+                                                         <em class="parameter"><code><span class="type">size_t</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> components</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglAttributeType" title="enum CoglAttributeType"><span class="type">CoglAttributeType</span></a> type</code></em>);</pre>
+<p>
+Describes the layout for a list of vertex attribute values (For
+example, a list of texture coordinates or colors).
+</p>
+<p>
+The <em class="parameter"><code>name</code></em> is used to access the attribute inside a GLSL vertex
+shader and there are some special names you should use if they are
+applicable:
+ </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">"cogl_position_in" (used for vertex positions)</li>
+<li class="listitem">"cogl_color_in" (used for vertex colors)</li>
+<li class="listitem">"cogl_tex_coord0_in", "cogl_tex_coord1", ...
+(used for vertex texture coordinates)</li>
+<li class="listitem">"cogl_normal_in" (used for vertex normals)</li>
+<li class="listitem">"cogl_point_size_in" (used to set the size of points
+   per-vertex. Note this can only be used if
+   <code class="literal">COGL_FEATURE_ID_POINT_SIZE_ATTRIBUTE</code> is advertised and
+   <a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-per-vertex-point-size" title="cogl_pipeline_set_per_vertex_point_size ()"><code class="function">cogl_pipeline_set_per_vertex_point_size()</code></a> is called on the pipeline.
+   </li>
+</ul></div>
+<p>
+</p>
+<p>
+The attribute values corresponding to different vertices can either
+be tightly packed or interleaved with other attribute values. For
+example it's common to define a structure for a single vertex like:
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="type">typedef</span> <span class="type">struct</span>
+{
+  <span class="type">float</span> x, y, z; <span class="comment">/*</span><span class="comment"> position attribute </span><span class="comment">*/</span>
+  <span class="type">float</span> s, t; <span class="comment">/*</span><span class="comment"> texture coordinate attribute </span><span class="comment">*/</span>
+} MyVertex;</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<p>
+And then create an array of vertex data something like:
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+MyVertex vertices[<span class="number">100</span>] = { .... }</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<p>
+In this case, to describe either the position or texture coordinate
+attribute you have to move <code class="literal">sizeof (MyVertex)</code> bytes to
+move from one vertex to the next.  This is called the attribute
+<em class="parameter"><code>stride</code></em>. If you weren't interleving attributes and you instead had
+a packed array of float x, y pairs then the attribute stride would
+be <code class="literal">(2 * sizeof (float))</code>. So the <em class="parameter"><code>stride</code></em> is the number of
+bytes to move to find the attribute value of the next vertex.
+</p>
+<p>
+Normally a list of attributes starts at the beginning of an array.
+So for the <code class="literal">MyVertex</code> example above the <em class="parameter"><code>offset</code></em> is the
+offset inside the <code class="literal">MyVertex</code> structure to the first
+component of the attribute. For the texture coordinate attribute
+the offset would be <code class="literal">offsetof (MyVertex, s)</code> or instead of
+using the offsetof macro you could use <code class="literal">sizeof (float) *
+3</code>.  If you've divided your <em class="parameter"><code>array</code></em> into blocks of non-interleved
+attributes then you will need to calculate the <em class="parameter"><code>offset</code></em> as the number of
+bytes in blocks preceding the attribute you're describing.
+</p>
+<p>
+An attribute often has more than one component. For example a color
+is often comprised of 4 red, green, blue and alpha <em class="parameter"><code>components</code></em>, and a
+position may be comprised of 2 x and y <em class="parameter"><code>components</code></em>. You should aim
+to keep the number of components to a minimum as more components
+means more data needs to be mapped into the GPU which can be a
+bottlneck when dealing with a large number of vertices.
+</p>
+<p>
+Finally you need to specify the component data type. Here you
+should aim to use the smallest type that meets your precision
+requirements. Again the larger the type then more data needs to be
+mapped into the GPU which can be a bottlneck when dealing with
+a large number of vertices.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>attribute_buffer</code></em> :</span></p></td>
+<td>The <a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> containing the actual
+attribute data</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the attribute (used to reference it from GLSL)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stride</code></em> :</span></p></td>
+<td>The number of bytes to jump to get to the next attribute
+value for the next vertex. (Usually
+<code class="literal">sizeof (MyVertex)</code>)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>The byte offset from the start of <em class="parameter"><code>attribute_buffer</code></em> for
+the first attribute value. (Usually
+<code class="literal">offsetof (MyVertex, component0)</code>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>components</code></em> :</span></p></td>
+<td>The number of components (e.g. 4 for an rgba color or
+3 for and (x,y,z) position)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>FIXME</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A newly allocated <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>
+describing the layout for a list of attribute values
+stored in <em class="parameter"><code>array</code></em>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-is-attribute"></a><h3>cogl_is_attribute ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            cogl_is_attribute                   (<em class="parameter"><code><span class="type">void</span> *object</code></em>);</pre>
+<p>
+Gets whether the given object references a <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the <em class="parameter"><code>object</code></em> references a <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>,
+<code class="literal">FALSE</code> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-attribute-set-normalized"></a><h3>cogl_attribute_set_normalized ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_attribute_set_normalized       (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="type">CoglBool</span></a> normalized</code></em>);</pre>
+<p>
+Sets whether fixed point attribute types are mapped to the range
+0→1. For example when this property is TRUE and a
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#COGL-ATTRIBUTE-TYPE-UNSIGNED-BYTE:CAPS"><code class="literal">COGL_ATTRIBUTE_TYPE_UNSIGNED_BYTE</code></a> type is used then the value 255
+will be mapped to 1.0.
+</p>
+<p>
+The default value of this property depends on the name of the
+attribute. For the builtin properties cogl_color_in and
+cogl_normal_in it will default to TRUE and for all other names it
+will default to FALSE.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>attribute</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>normalized</code></em> :</span></p></td>
+<td>The new value for the normalized property.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.10</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-attribute-get-normalized"></a><h3>cogl_attribute_get_normalized ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            cogl_attribute_get_normalized       (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>attribute</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the normalized property set with
+<a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-set-normalized" title="cogl_attribute_set_normalized ()"><code class="function">cogl_attribute_set_normalized()</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.10</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-attribute-get-buffer"></a><h3>cogl_attribute_get_buffer ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="returnvalue">CoglAttributeBuffer</span></a> * cogl_attribute_get_buffer         (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>attribute</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> that was
+set with <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-set-buffer" title="cogl_attribute_set_buffer ()"><code class="function">cogl_attribute_set_buffer()</code></a> or <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#cogl-attribute-new" title="cogl_attribute_new ()"><code class="function">cogl_attribute_new()</code></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.10</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-attribute-set-buffer"></a><h3>cogl_attribute_set_buffer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_attribute_set_buffer           (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a> *attribute</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> *attribute_buffer</code></em>);</pre>
+<p>
+Sets a new <a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a> for the attribute.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>attribute</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Vertex-Attributes.html#CoglAttribute" title="CoglAttribute"><span class="type">CoglAttribute</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>attribute_buffer</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-CoglAttributeBuffer---Buffers-of-vertex-attributes.html#CoglAttributeBuffer" title="CoglAttributeBuffer"><span class="type">CoglAttributeBuffer</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.10</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Offscreen Framebuffers</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-framebuffer-apis.html" title="Framebuffers">
+<link rel="prev" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html" title="CoglOnscreen: The Onscreen Framebuffer Interface">
+<link rel="next" href="cogl-utilities.html" title="Utilities">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-framebuffer-apis.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-utilities.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-Offscreen-Framebuffers.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-Offscreen-Framebuffers.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-Offscreen-Framebuffers"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-Offscreen-Framebuffers.top_of_page"></a>Offscreen Framebuffers</span></h2>
+<p>Offscreen Framebuffers — Functions for creating and manipulating offscreen
+                    framebuffers.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-Offscreen-Framebuffers.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#CoglOffscreen" title="CoglOffscreen">CoglOffscreen</a>;
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            <a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#cogl-is-offscreen" title="cogl_is_offscreen ()">cogl_is_offscreen</a>                   (<em class="parameter"><code><span class="type">void</span> *object</code></em>);
+
+<a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#CoglOffscreen" title="CoglOffscreen"><span class="returnvalue">CoglOffscreen</span></a> *     <a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#cogl-offscreen-new-with-texture" title="cogl_offscreen_new_with_texture ()">cogl_offscreen_new_with_texture</a>     (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Texture-Interface.html#CoglTexture" title="CoglTexture"><span class="type">CoglTexture</span></a> *texture</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Offscreen-Framebuffers.description"></a><h2>Description</h2>
+<p>
+Cogl allows creating and operating on offscreen framebuffers.
+</p>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Offscreen-Framebuffers.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglOffscreen"></a><h3>CoglOffscreen</h3>
+<pre class="programlisting">typedef struct _CoglOffscreen CoglOffscreen;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-is-offscreen"></a><h3>cogl_is_offscreen ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            cogl_is_offscreen                   (<em class="parameter"><code><span class="type">void</span> *object</code></em>);</pre>
+<p>
+Determines whether the given <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> references an offscreen
+framebuffer object.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>A pointer to a <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if <em class="parameter"><code>object</code></em> is a <a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#CoglOffscreen" title="CoglOffscreen"><span class="type">CoglOffscreen</span></a> framebuffer,
+<code class="literal">FALSE</code> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-offscreen-new-with-texture"></a><h3>cogl_offscreen_new_with_texture ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#CoglOffscreen" title="CoglOffscreen"><span class="returnvalue">CoglOffscreen</span></a> *     cogl_offscreen_new_with_texture     (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Texture-Interface.html#CoglTexture" title="CoglTexture"><span class="type">CoglTexture</span></a> *texture</code></em>);</pre>
+<p>
+This creates an offscreen framebuffer object using the given
+<em class="parameter"><code>texture</code></em> as the primary color buffer. It doesn't just initialize
+the contents of the offscreen buffer with the <em class="parameter"><code>texture</code></em>; they are
+tightly bound so that drawing to the offscreen buffer effectively
+updates the contents of the given texture. You don't need to
+destroy the offscreen buffer before you can use the <em class="parameter"><code>texture</code></em> again.
+</p>
+<p>
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>This api only works with low-level <a class="link" href="cogl-2.0-experimental-The-Texture-Interface.html#CoglTexture" title="CoglTexture"><span class="type">CoglTexture</span></a> types such as
+<a class="link" href="cogl-2.0-experimental-2D-textures.html#CoglTexture2D" title="CoglTexture2D"><span class="type">CoglTexture2D</span></a>, <a class="link" href="cogl-2.0-experimental-3D-textures.html#CoglTexture3D" title="CoglTexture3D"><span class="type">CoglTexture3D</span></a> and <a class="link" href="cogl-2.0-experimental-Rectangle-textures-(non-normalized-coordinates).html#CoglTextureRectangle" title="CoglTextureRectangle"><span class="type">CoglTextureRectangle</span></a>, and not
+with meta-texture types such as <a class="link" href="cogl-2.0-experimental-Sliced-Textures.html#CoglTexture2DSliced" title="CoglTexture2DSliced"><span class="type">CoglTexture2DSliced</span></a>.</div>
+<p>
+</p>
+<p>
+The storage for the framebuffer is actually allocated lazily
+so this function will never return <code class="literal">NULL</code> to indicate a runtime
+error. This means it is still possible to configure the framebuffer
+before it is really allocated.
+</p>
+<p>
+Simple applications without full error handling can simply rely on
+Cogl to lazily allocate the storage of framebuffers but you should
+be aware that if Cogl encounters an error (such as running out of
+GPU memory) then your application will simply abort with an error
+message. If you need to be able to catch such exceptions at runtime
+then you can explicitly allocate your framebuffer when you have
+finished configuring it by calling <a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#cogl-framebuffer-allocate" title="cogl_framebuffer_allocate ()"><code class="function">cogl_framebuffer_allocate()</code></a> and
+passing in a <a class="link" href="cogl-2.0-experimental-Exception-handling.html#CoglError" title="CoglError"><span class="type">CoglError</span></a> argument to catch any exceptions.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>texture</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-The-Texture-Interface.html#CoglTexture" title="CoglTexture"><span class="type">CoglTexture</span></a> pointer</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly instantiated <a class="link" href="cogl-2.0-experimental-Offscreen-Framebuffers.html#CoglOffscreen" title="CoglOffscreen"><span class="type">CoglOffscreen</span></a>
+framebuffer. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

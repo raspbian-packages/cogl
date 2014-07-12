@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GPU synchronisation fences</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-utilities.html" title="Utilities">
+<link rel="prev" href="cogl-2.0-experimental-Quaternions-(Rotations).html" title="Quaternions (Rotations)">
+<link rel="next" href="cogl-2.0-experimental-Versioning-utility-macros.html" title="Versioning utility macros">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-2.0-experimental-Quaternions-(Rotations).html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-utilities.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-2.0-experimental-Versioning-utility-macros.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-GPU-synchronisation-fences.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-GPU-synchronisation-fences.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-GPU-synchronisation-fences"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-GPU-synchronisation-fences.top_of_page"></a>GPU synchronisation fences</span></h2>
+<p>GPU synchronisation fences — Functions for notification of command completion</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-GPU-synchronisation-fences.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFence" title="CoglFence">CoglFence</a>;
+<span class="returnvalue">void</span>                (<a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceCallback" title="CoglFenceCallback ()">*CoglFenceCallback</a>)                (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFence" title="CoglFence"><span class="type">CoglFence</span></a> *fence</code></em>,
+                                                         <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);
+                    <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure">CoglFenceClosure</a>;
+<span class="returnvalue">void</span> *              <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-fence-closure-get-user-data" title="cogl_fence_closure_get_user_data ()">cogl_fence_closure_get_user_data</a>    (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="type">CoglFenceClosure</span></a> *closure</code></em>);
+<a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="returnvalue">CoglFenceClosure</span></a> *  <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-framebuffer-add-fence-callback" title="cogl_framebuffer_add_fence_callback ()">cogl_framebuffer_add_fence_callback</a> (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> *framebuffer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceCallback" title="CoglFenceCallback ()"><span class="type">CoglFenceCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-framebuffer-cancel-fence-callback" title="cogl_framebuffer_cancel_fence_callback ()">cogl_framebuffer_cancel_fence_callback</a>
+                                                        (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> *framebuffer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="type">CoglFenceClosure</span></a> *closure</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-GPU-synchronisation-fences.description"></a><h2>Description</h2>
+<p>
+Cogl allows notification of GPU command completion; users may mark
+points in the GPU command stream and receive notification when the GPU
+has executed to that point.
+</p>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-GPU-synchronisation-fences.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglFence"></a><h3>CoglFence</h3>
+<pre class="programlisting">typedef struct _CoglFence CoglFence;</pre>
+<p>
+An opaque object representing a fence. This type is currently
+unused but in the future may be used to pass extra information
+about the fence completion.
+</p>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglFenceCallback"></a><h3>CoglFenceCallback ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*CoglFenceCallback)                (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFence" title="CoglFence"><span class="type">CoglFence</span></a> *fence</code></em>,
+                                                         <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>
+The callback prototype used with
+<a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-framebuffer-add-fence-callback" title="cogl_framebuffer_add_fence_callback ()"><code class="function">cogl_framebuffer_add_fence_callback()</code></a> for notification of GPU
+command completion.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>fence</code></em> :</span></p></td>
+<td>Unused. In the future this parameter may be used to pass
+extra information about the fence completion but for now it
+should be ignored.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>The private data passed to <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-framebuffer-add-fence-callback" title="cogl_framebuffer_add_fence_callback ()"><code class="function">cogl_framebuffer_add_fence_callback()</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglFenceClosure"></a><h3>CoglFenceClosure</h3>
+<pre class="programlisting">typedef struct _CoglFenceClosure CoglFenceClosure;</pre>
+<p>
+An opaque type representing one future callback to be made when the
+GPU command stream has passed a certain point.
+</p>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-fence-closure-get-user-data"></a><h3>cogl_fence_closure_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *              cogl_fence_closure_get_user_data    (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="type">CoglFenceClosure</span></a> *closure</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-framebuffer-add-fence-callback"></a><h3>cogl_framebuffer_add_fence_callback ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="returnvalue">CoglFenceClosure</span></a> *  cogl_framebuffer_add_fence_callback (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> *framebuffer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceCallback" title="CoglFenceCallback ()"><span class="type">CoglFenceCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>
+Calls the provided callback when all previously-submitted commands have
+been executed by the GPU.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>framebuffer</code></em> :</span></p></td>
+<td>The <a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> the commands have been submitted to</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceCallback" title="CoglFenceCallback ()"><span class="type">CoglFenceCallback</span></a> to be called when
+all commands submitted to Cogl have been executed. <span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>Private data that will be passed to the callback. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>non-NULL if the fence succeeded, or <code class="literal">NULL</code> if it was unable to
+be inserted and the callback will never be called.  The user does not
+need to free the closure; it will be freed automatically when the
+callback is called, or cancelled.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-framebuffer-cancel-fence-callback"></a><h3>cogl_framebuffer_cancel_fence_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_framebuffer_cancel_fence_callback
+                                                        (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> *framebuffer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="type">CoglFenceClosure</span></a> *closure</code></em>);</pre>
+<p>
+Removes a fence previously submitted with
+<a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-framebuffer-add-fence-callback" title="cogl_framebuffer_add_fence_callback ()"><code class="function">cogl_framebuffer_add_fence_callback()</code></a>; the callback will not be
+called.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>framebuffer</code></em> :</span></p></td>
+<td>The <a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> the commands were submitted to</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>closure</code></em> :</span></p></td>
+<td>The <a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#CoglFenceClosure" title="CoglFenceClosure"><span class="type">CoglFenceClosure</span></a> returned from
+<a class="link" href="cogl-2.0-experimental-GPU-synchronisation-fences.html#cogl-framebuffer-add-fence-callback" title="cogl_framebuffer_add_fence_callback ()"><code class="function">cogl_framebuffer_add_fence_callback()</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

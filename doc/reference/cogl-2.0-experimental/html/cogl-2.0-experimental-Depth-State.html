@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Depth State</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-pipeline-apis.html" title="Setting Up A GPU Pipeline">
+<link rel="prev" href="cogl-2.0-experimental-Pipeline.html" title="Pipeline">
+<link rel="next" href="cogl-2.0-experimental-Shader-snippets.html" title="Shader snippets">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-2.0-experimental-Pipeline.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-pipeline-apis.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-2.0-experimental-Shader-snippets.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-Depth-State.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-Depth-State.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-Depth-State"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-Depth-State.top_of_page"></a>Depth State</span></h2>
+<p>Depth State — Functions for describing the depth testing
+                    state of your GPU.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-Depth-State.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState">CoglDepthState</a>;
+enum                <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction">CoglDepthTestFunction</a>;
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-init" title="cogl_depth_state_init ()">cogl_depth_state_init</a>               (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-enabled" title="cogl_depth_state_set_test_enabled ()">cogl_depth_state_set_test_enabled</a>   (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="type">CoglBool</span></a> enable</code></em>);
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-get-test-enabled" title="cogl_depth_state_get_test_enabled ()">cogl_depth_state_get_test_enabled</a>   (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-function" title="cogl_depth_state_set_test_function ()">cogl_depth_state_set_test_function</a>  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="type">CoglDepthTestFunction</span></a> function</code></em>);
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="returnvalue">CoglDepthTestFunction</span></a> <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-get-test-function" title="cogl_depth_state_get_test_function ()">cogl_depth_state_get_test_function</a>
+                                                        (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-write-enabled" title="cogl_depth_state_set_write_enabled ()">cogl_depth_state_set_write_enabled</a>  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="type">CoglBool</span></a> enable</code></em>);
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-get-write-enabled" title="cogl_depth_state_get_write_enabled ()">cogl_depth_state_get_write_enabled</a>  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-range" title="cogl_depth_state_set_range ()">cogl_depth_state_set_range</a>          (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> near_val</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> far_val</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-get-range" title="cogl_depth_state_get_range ()">cogl_depth_state_get_range</a>          (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> *near_val</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> *far_val</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Depth-State.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Depth-State.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglDepthState"></a><h3>CoglDepthState</h3>
+<pre class="programlisting">typedef struct {
+} CoglDepthState;
+</pre>
+<p class="since">Since 2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglDepthTestFunction"></a><h3>enum CoglDepthTestFunction</h3>
+<pre class="programlisting">typedef enum {
+  COGL_DEPTH_TEST_FUNCTION_NEVER    = 0x0200,
+  COGL_DEPTH_TEST_FUNCTION_LESS     = 0x0201,
+  COGL_DEPTH_TEST_FUNCTION_EQUAL    = 0x0202,
+  COGL_DEPTH_TEST_FUNCTION_LEQUAL   = 0x0203,
+  COGL_DEPTH_TEST_FUNCTION_GREATER  = 0x0204,
+  COGL_DEPTH_TEST_FUNCTION_NOTEQUAL = 0x0205,
+  COGL_DEPTH_TEST_FUNCTION_GEQUAL   = 0x0206,
+  COGL_DEPTH_TEST_FUNCTION_ALWAYS   = 0x0207
+} CoglDepthTestFunction;
+</pre>
+<p>
+When using depth testing one of these functions is used to compare
+the depth of an incoming fragment against the depth value currently
+stored in the depth buffer. The function is changed using
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-function" title="cogl_depth_state_set_test_function ()"><code class="function">cogl_depth_state_set_test_function()</code></a>.
+</p>
+<p>
+The test is only done when depth testing is explicitly enabled. (See
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-enabled" title="cogl_depth_state_set_test_enabled ()"><code class="function">cogl_depth_state_set_test_enabled()</code></a>)
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-NEVER:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_NEVER</code></span></p></td>
+<td>Never passes.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-LESS:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_LESS</code></span></p></td>
+<td>Passes if the fragment's depth
+value is less than the value currently in the depth buffer.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-EQUAL:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_EQUAL</code></span></p></td>
+<td>Passes if the fragment's depth
+value is equal to the value currently in the depth buffer.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-LEQUAL:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_LEQUAL</code></span></p></td>
+<td>Passes if the fragment's depth
+value is less or equal to the value currently in the depth buffer.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-GREATER:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_GREATER</code></span></p></td>
+<td>Passes if the fragment's depth
+value is greater than the value currently in the depth buffer.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-NOTEQUAL:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_NOTEQUAL</code></span></p></td>
+<td>Passes if the fragment's depth
+value is not equal to the value currently in the depth buffer.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-GEQUAL:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_GEQUAL</code></span></p></td>
+<td>Passes if the fragment's depth
+value greater than or equal to the value currently in the depth buffer.
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-DEPTH-TEST-FUNCTION-ALWAYS:CAPS"></a><span class="term"><code class="literal">COGL_DEPTH_TEST_FUNCTION_ALWAYS</code></span></p></td>
+<td>Always passes.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-init"></a><h3>cogl_depth_state_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_depth_state_init               (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);</pre>
+<p>
+Initializes the members of <em class="parameter"><code>state</code></em> to their default values.
+</p>
+<p>
+You should never pass an un initialized <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> structure
+to <a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-depth-state" title="cogl_pipeline_set_depth_state ()"><code class="function">cogl_pipeline_set_depth_state()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-set-test-enabled"></a><h3>cogl_depth_state_set_test_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_depth_state_set_test_enabled   (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="type">CoglBool</span></a> enable</code></em>);</pre>
+<p>
+Enables or disables depth testing according to the value of
+<em class="parameter"><code>enable</code></em>.
+</p>
+<p>
+If depth testing is enable then the <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="type">CoglDepthTestFunction</span></a> set
+using <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-function" title="cogl_depth_state_set_test_function ()"><code class="function">cogl_depth_state_set_test_function()</code></a> us used to evaluate
+the depth value of incoming fragments against the corresponding
+value stored in the current depth buffer, and if the test passes
+then the fragments depth value is used to update the depth buffer.
+(unless you have disabled depth writing via
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-write-enabled" title="cogl_depth_state_set_write_enabled ()"><code class="function">cogl_depth_state_set_write_enabled()</code></a>)
+</p>
+<p>
+By default depth testing is disabled.
+</p>
+<p>
+NB: this won't directly affect the state of the GPU. You have
+to then set the state on a <a class="link" href="cogl-2.0-experimental-Pipeline.html#CoglPipeline" title="CoglPipeline"><span class="type">CoglPipeline</span></a> using
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-depth-state" title="cogl_pipeline_set_depth_state ()"><code class="function">cogl_pipeline_set_depth_state()</code></a>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enable</code></em> :</span></p></td>
+<td>The enable state you want</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-get-test-enabled"></a><h3>cogl_depth_state_get_test_enabled ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            cogl_depth_state_get_test_enabled   (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);</pre>
+<p>
+Gets the current depth test enabled state as previously set by
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-enabled" title="cogl_depth_state_set_test_enabled ()"><code class="function">cogl_depth_state_set_test_enabled()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The pipeline's current depth test enabled state.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-set-test-function"></a><h3>cogl_depth_state_set_test_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_depth_state_set_test_function  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="type">CoglDepthTestFunction</span></a> function</code></em>);</pre>
+<p>
+Sets the <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="type">CoglDepthTestFunction</span></a> used to compare the depth value of
+an incoming fragment against the corresponding value in the current
+depth buffer.
+</p>
+<p>
+By default the depth test function is <a class="link" href="cogl-2.0-experimental-Depth-State.html#COGL-DEPTH-TEST-FUNCTION-LESS:CAPS"><code class="literal">COGL_DEPTH_TEST_FUNCTION_LESS</code></a>
+</p>
+<p>
+NB: this won't directly affect the state of the GPU. You have
+to then set the state on a <a class="link" href="cogl-2.0-experimental-Pipeline.html#CoglPipeline" title="CoglPipeline"><span class="type">CoglPipeline</span></a> using
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-depth-state" title="cogl_pipeline_set_depth_state ()"><code class="function">cogl_pipeline_set_depth_state()</code></a>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>function</code></em> :</span></p></td>
+<td>The <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="type">CoglDepthTestFunction</span></a> to set</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-get-test-function"></a><h3>cogl_depth_state_get_test_function ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthTestFunction" title="enum CoglDepthTestFunction"><span class="returnvalue">CoglDepthTestFunction</span></a> cogl_depth_state_get_test_function
+                                                        (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);</pre>
+<p>
+Gets the current depth test enable state as previously set via
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-test-enabled" title="cogl_depth_state_set_test_enabled ()"><code class="function">cogl_depth_state_set_test_enabled()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The current depth test enable state.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-set-write-enabled"></a><h3>cogl_depth_state_set_write_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_depth_state_set_write_enabled  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="type">CoglBool</span></a> enable</code></em>);</pre>
+<p>
+Enables or disables depth buffer writing according to the value of
+<em class="parameter"><code>enable</code></em>. Normally when depth testing is enabled and the comparison
+between a fragment's depth value and the corresponding depth buffer
+value passes then the fragment's depth is written to the depth
+buffer unless writing is disabled here.
+</p>
+<p>
+By default depth writing is enabled
+</p>
+<p>
+NB: this won't directly affect the state of the GPU. You have
+to then set the state on a <a class="link" href="cogl-2.0-experimental-Pipeline.html#CoglPipeline" title="CoglPipeline"><span class="type">CoglPipeline</span></a> using
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-depth-state" title="cogl_pipeline_set_depth_state ()"><code class="function">cogl_pipeline_set_depth_state()</code></a>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enable</code></em> :</span></p></td>
+<td>The enable state you want</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-get-write-enabled"></a><h3>cogl_depth_state_get_write_enabled ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            cogl_depth_state_get_write_enabled  (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>);</pre>
+<p>
+Gets the depth writing enable state as set by the corresponding
+<a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-write-enabled" title="cogl_depth_state_set_write_enabled ()"><code class="function">cogl_depth_state_set_write_enabled()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> struct</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The current depth writing enable state</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-set-range"></a><h3>cogl_depth_state_set_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_depth_state_set_range          (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> near_val</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> far_val</code></em>);</pre>
+<p>
+Sets the range to map depth values in normalized device coordinates
+to before writing out to a depth buffer.
+</p>
+<p>
+After your geometry has be transformed, clipped and had perspective
+division applied placing it in normalized device
+coordinates all depth values between the near and far z clipping
+planes are in the range -1 to 1. Before writing any depth value to
+the depth buffer though the value is mapped into the range [0, 1].
+</p>
+<p>
+With this function you can change the range which depth values are
+mapped too although the range must still lye within the range [0,
+1].
+</p>
+<p>
+If your driver does not support this feature (for example you are
+using GLES 1 drivers) then if you don't use the default range
+values you will get an error reported when calling
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-depth-state" title="cogl_pipeline_set_depth_state ()"><code class="function">cogl_pipeline_set_depth_state()</code></a>. You can check ahead of time for
+the <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-DEPTH-RANGE:CAPS"><code class="literal">COGL_FEATURE_ID_DEPTH_RANGE</code></a> feature with
+<a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-has-feature" title="cogl_has_feature ()"><code class="function">cogl_has_feature()</code></a> to know if this function will succeed.
+</p>
+<p>
+By default normalized device coordinate depth values are mapped to
+the full range of depth buffer values, [0, 1].
+</p>
+<p>
+NB: this won't directly affect the state of the GPU. You have
+to then set the state on a <a class="link" href="cogl-2.0-experimental-Pipeline.html#CoglPipeline" title="CoglPipeline"><span class="type">CoglPipeline</span></a> using
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-depth-state" title="cogl_pipeline_set_depth_state ()"><code class="function">cogl_pipeline_set_depth_state()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>near_val</code></em> :</span></p></td>
+<td>The near component of the desired depth range which will be
+clamped to the range [0, 1]</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>far_val</code></em> :</span></p></td>
+<td>The far component of the desired depth range which will be
+clamped to the range [0, 1]</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-depth-state-get-range"></a><h3>cogl_depth_state_get_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_depth_state_get_range          (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> *state</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> *near_val</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> *far_val</code></em>);</pre>
+<p>
+Gets the current range to which normalized depth values are mapped
+before writing to the depth buffer. This corresponds to the range
+set with <a class="link" href="cogl-2.0-experimental-Depth-State.html#cogl-depth-state-set-range" title="cogl_depth_state_set_range ()"><code class="function">cogl_depth_state_set_range()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-Depth-State.html#CoglDepthState" title="CoglDepthState"><span class="type">CoglDepthState</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>near_val</code></em> :</span></p></td>
+<td>A pointer to store the near component of the depth range</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>far_val</code></em> :</span></p></td>
+<td>A pointer to store the far component of the depth range</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

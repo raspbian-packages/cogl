@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Versioning utility macros</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-utilities.html" title="Utilities">
+<link rel="prev" href="cogl-2.0-experimental-GPU-synchronisation-fences.html" title="GPU synchronisation fences">
+<link rel="next" href="cogl-integration.html" title="Binding and Integrating">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-2.0-experimental-GPU-synchronisation-fences.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-utilities.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-integration.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-Versioning-utility-macros.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-Versioning-utility-macros.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-Versioning-utility-macros"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-Versioning-utility-macros.top_of_page"></a>Versioning utility macros</span></h2>
+<p>Versioning utility macros — Macros for determining the version of Cogl being used</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-Versioning-utility-macros.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-MAJOR:CAPS" title="COGL_VERSION_MAJOR">COGL_VERSION_MAJOR</a>
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-MINOR:CAPS" title="COGL_VERSION_MINOR">COGL_VERSION_MINOR</a>
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-MICRO:CAPS" title="COGL_VERSION_MICRO">COGL_VERSION_MICRO</a>
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-STRING:CAPS" title="COGL_VERSION_STRING">COGL_VERSION_STRING</a>
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION:CAPS" title="COGL_VERSION">COGL_VERSION</a>
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-ENCODE:CAPS" title="COGL_VERSION_ENCODE()">COGL_VERSION_ENCODE</a>                 (major,
+                                                         minor,
+                                                         micro)
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-CHECK:CAPS" title="COGL_VERSION_CHECK()">COGL_VERSION_CHECK</a>                  (major,
+                                                         minor,
+                                                         micro)
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-GET-MAJOR:CAPS" title="COGL_VERSION_GET_MAJOR()">COGL_VERSION_GET_MAJOR</a>              (version)
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-GET-MINOR:CAPS" title="COGL_VERSION_GET_MINOR()">COGL_VERSION_GET_MINOR</a>              (version)
+#define             <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-GET-MICRO:CAPS" title="COGL_VERSION_GET_MICRO()">COGL_VERSION_GET_MICRO</a>              (version)
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Versioning-utility-macros.description"></a><h2>Description</h2>
+<p>
+Cogl offers a set of macros for checking the version of the library
+at compile time.
+</p>
+<p>
+Cogl adds version information to both API deprecations and additions;
+by definining the macros <code class="literal">COGL_VERSION_MIN_REQUIRED</code> and
+<code class="literal">COGL_VERSION_MAX_ALLOWED</code>, you can specify the range of Cogl versions
+whose API you want to use. Functions that were deprecated before, or
+introduced after, this range will trigger compiler warnings. For instance,
+if we define the following symbols:
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+COGL_VERSION_MIN_REQUIRED = COGL_VERSION_1_6
+  COGL_VERSION_MAX_ALLOWED  = COGL_VERSION_1_8</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<p>
+and we have the following functions annotated in the Cogl headers:
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Type { color: #008000; text-decoration: underline; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+COGL_DEPRECATED_IN_1_4 <span class="type">void</span> cogl_function_A (<span class="type">void</span>);
+  COGL_DEPRECATED_IN_1_6 <span class="type">void</span> cogl_function_B (<span class="type">void</span>);
+  COGL_AVAILABLE_IN_1_8 <span class="type">void</span> cogl_function_C (<span class="type">void</span>);
+  COGL_AVAILABLE_IN_1_10 <span class="type">void</span> cogl_function_D (<span class="type">void</span>);</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<p>
+then any application code using the functions above will get the output:
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Statement { color: #008080; font-weight: bold; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="keyword">cogl_function_A</span>: deprecation warning
+  <span class="keyword">cogl_function_B</span>: no warning
+  <span class="keyword">cogl_function_C</span>: no warning
+  <span class="keyword">cogl_function_D</span>: symbol <span class="keyword">not</span> available warning</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<p>
+It is possible to disable the compiler warnings by defining the macro
+<code class="literal">COGL_DISABLE_DEPRECATION_WARNINGS</code> before including the cogl.h
+header.
+</p>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-Versioning-utility-macros.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="COGL-VERSION-MAJOR:CAPS"></a><h3>COGL_VERSION_MAJOR</h3>
+<pre class="programlisting">#define COGL_VERSION_MAJOR COGL_VERSION_MAJOR_INTERNAL
+</pre>
+<p>
+The major version of the Cogl library (1, if <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION:CAPS" title="COGL_VERSION"><code class="literal">COGL_VERSION</code></a> is 1.2.3)
+</p>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-MINOR:CAPS"></a><h3>COGL_VERSION_MINOR</h3>
+<pre class="programlisting">#define COGL_VERSION_MINOR COGL_VERSION_MINOR_INTERNAL
+</pre>
+<p>
+The minor version of the Cogl library (2, if <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION:CAPS" title="COGL_VERSION"><code class="literal">COGL_VERSION</code></a> is 1.2.3)
+</p>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-MICRO:CAPS"></a><h3>COGL_VERSION_MICRO</h3>
+<pre class="programlisting">#define COGL_VERSION_MICRO COGL_VERSION_MICRO_INTERNAL
+</pre>
+<p>
+The micro version of the Cogl library (3, if <a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION:CAPS" title="COGL_VERSION"><code class="literal">COGL_VERSION</code></a> is 1.2.3)
+</p>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-STRING:CAPS"></a><h3>COGL_VERSION_STRING</h3>
+<pre class="programlisting">#define COGL_VERSION_STRING COGL_VERSION_STRING_INTERNAL
+</pre>
+<p>
+The full version of the Cogl library, in string form (suited for
+string concatenation)
+</p>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION:CAPS"></a><h3>COGL_VERSION</h3>
+<pre class="programlisting">#define             COGL_VERSION</pre>
+<p>
+The Cogl version encoded into a single integer using the
+<a class="link" href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-ENCODE:CAPS" title="COGL_VERSION_ENCODE()"><code class="function">COGL_VERSION_ENCODE()</code></a> macro. This can be used for quick comparisons
+with particular versions.
+</p>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-ENCODE:CAPS"></a><h3>COGL_VERSION_ENCODE()</h3>
+<pre class="programlisting">#define             COGL_VERSION_ENCODE(major, minor, micro)</pre>
+<p>
+Encodes a 3 part version number into a single integer. This can be
+used to compare the Cogl version. For example if there is a known
+bug in Cogl versions between 1.3.2 and 1.3.4 you could use the
+following code to provide a workaround:
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="preproc">#if COGL_VERSION &gt;= COGL_VERSION_ENCODE (</span><span class="number">1</span><span class="preproc">, </span><span class="number">3</span><span class="preproc">, </span><span class="number">2</span><span class="preproc">) &amp;&amp; \</span>
+<span class="preproc">    COGL_VERSION &lt;= COGL_VERSION_ENCODE (</span><span class="number">1</span><span class="preproc">, </span><span class="number">3</span><span class="preproc">, </span><span class="number">4</span><span class="preproc">)</span>
+  <span class="comment">/*</span><span class="comment"> Do the workaround </span><span class="comment">*/</span>
+<span class="preproc">#endif</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major</code></em> :</span></p></td>
+<td>The major part of a version number</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minor</code></em> :</span></p></td>
+<td>The minor part of a version number</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>micro</code></em> :</span></p></td>
+<td>The micro part of a version number</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-CHECK:CAPS"></a><h3>COGL_VERSION_CHECK()</h3>
+<pre class="programlisting">#define             COGL_VERSION_CHECK(major, minor, micro)</pre>
+<p>
+A convenient macro to check whether the Cogl version being compiled
+against is at least the given version number. For example if the
+function cogl_pipeline_frobnicate was added in version 2.0.1 and
+you want to conditionally use that function when it is available,
+you could write the following:
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="preproc">#if COGL_VERSION_CHECK (</span><span class="number">2</span><span class="preproc">, </span><span class="number">0</span><span class="preproc">, </span><span class="number">1</span><span class="preproc">)</span>
+cogl_pipeline_frobnicate (pipeline);
+<span class="preproc">#else</span>
+<span class="comment">/*</span><span class="comment"> Frobnication is not supported. Use a red color instead </span><span class="comment">*/</span>
+cogl_pipeline_set_color_4f (pipeline, <span class="number">1.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">1.0f</span>);
+<span class="preproc">#endif</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major</code></em> :</span></p></td>
+<td>The major part of a version number</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minor</code></em> :</span></p></td>
+<td>The minor part of a version number</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>micro</code></em> :</span></p></td>
+<td>The micro part of a version number</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the Cogl version being compiled against is
+greater than or equal to the given three part version number.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-GET-MAJOR:CAPS"></a><h3>COGL_VERSION_GET_MAJOR()</h3>
+<pre class="programlisting">#define             COGL_VERSION_GET_MAJOR(version)</pre>
+<p>
+Extracts the major part of an encoded version number.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>version</code></em> :</span></p></td>
+<td>An encoded version number</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-GET-MINOR:CAPS"></a><h3>COGL_VERSION_GET_MINOR()</h3>
+<pre class="programlisting">#define             COGL_VERSION_GET_MINOR(version)</pre>
+<p>
+Extracts the minor part of an encoded version number.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>version</code></em> :</span></p></td>
+<td>An encoded version number</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.12.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="COGL-VERSION-GET-MICRO:CAPS"></a><h3>COGL_VERSION_GET_MICRO()</h3>
+<pre class="programlisting">#define             COGL_VERSION_GET_MICRO(version)</pre>
+<p>
+Extracts the micro part of an encoded version number.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>version</code></em> :</span></p></td>
+<td>An encoded version number</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.12.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

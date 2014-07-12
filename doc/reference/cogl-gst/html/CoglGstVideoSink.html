@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CoglGstVideoSink</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl GST 2.0 Reference Manual">
+<link rel="up" href="cogl-gst-general-apis.html" title="General APIs">
+<link rel="prev" href="cogl-gst-general-apis.html" title="General APIs">
+<link rel="next" href="coglglossary.html" title="Glossaries">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-gst-general-apis.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-gst-general-apis.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl GST 2.0 Reference Manual</th>
+<td><a accesskey="n" href="coglglossary.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#CoglGstVideoSink.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#CoglGstVideoSink.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#CoglGstVideoSink.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#CoglGstVideoSink.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#CoglGstVideoSink.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="CoglGstVideoSink"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="CoglGstVideoSink.top_of_page"></a>CoglGstVideoSink</span></h2>
+<p>CoglGstVideoSink — A video sink for integrating a GStreamer
+  pipeline with a Cogl pipeline.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="CoglGstVideoSink.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-struct" title="struct CoglGstVideoSink">CoglGstVideoSink</a>;
+struct              <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSinkClass" title="struct CoglGstVideoSinkClass">CoglGstVideoSinkClass</a>;
+<a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="returnvalue">CoglGstVideoSink</span></a> *  <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-new" title="cogl_gst_video_sink_new ()">cogl_gst_video_sink_new</a>             (<em class="parameter"><code><span class="type">CoglContext</span> *ctx</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-set-context" title="cogl_gst_video_sink_set_context ()">cogl_gst_video_sink_set_context</a>     (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *vt</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglContext</span> *ctx</code></em>);
+<span class="returnvalue">CoglPipeline</span> *      <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()">cogl_gst_video_sink_get_pipeline</a>    (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *vt</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-attach-frame" title="cogl_gst_video_sink_attach_frame ()">cogl_gst_video_sink_attach_frame</a>    (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglPipeline</span> *pln</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-setup-pipeline" title="cogl_gst_video_sink_setup_pipeline ()">cogl_gst_video_sink_setup_pipeline</a>  (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglPipeline</span> *pipeline</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-free-layer" title="cogl_gst_video_sink_get_free_layer ()">cogl_gst_video_sink_get_free_layer</a>  (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-set-first-layer" title="cogl_gst_video_sink_set_first_layer ()">cogl_gst_video_sink_set_first_layer</a> (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> first_layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-set-default-sample" title="cogl_gst_video_sink_set_default_sample ()">cogl_gst_video_sink_set_default_sample</a>
+                                                        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglBool</span> default_sample</code></em>);
+<span class="returnvalue">CoglBool</span>            <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-is-ready" title="cogl_gst_video_sink_is_ready ()">cogl_gst_video_sink_is_ready</a>        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>);
+<span class="returnvalue">float</span>               <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-aspect" title="cogl_gst_video_sink_get_aspect ()">cogl_gst_video_sink_get_aspect</a>      (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>);
+<span class="returnvalue">float</span>               <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-width-for-height" title="cogl_gst_video_sink_get_width_for_height ()">cogl_gst_video_sink_get_width_for_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> height</code></em>);
+<span class="returnvalue">float</span>               <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-height-for-width" title="cogl_gst_video_sink_get_height_for_width ()">cogl_gst_video_sink_get_height_for_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> width</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-fit-size" title="cogl_gst_video_sink_fit_size ()">cogl_gst_video_sink_fit_size</a>        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">CoglGstRectangle</span> *available</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglGstRectangle</span> *output</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="/usr/share/gtk-doc/html/gstreamer-1.0/GstObject.html">GstObject</a>
+               +----<a href="/usr/share/gtk-doc/html/gstreamer-1.0/GstElement.html">GstElement</a>
+                     +----<a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0/GstBaseSink.html">GstBaseSink</a>
+                           +----CoglGstVideoSink
+</pre>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink--update-priority" title='The "update-priority" property'>update-priority</a>"          <span class="type">gint</span>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-new-frame" title='The "new-frame" signal'>new-frame</a>"                                      : <code class="literal">Run Last</code>
+  "<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'>pipeline-ready</a>"                                 : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> is a subclass of <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0/GstBaseSink.html"><span class="type">GstBaseSink</span></a> which can be used to
+create a <span class="type">CoglPipeline</span> for rendering the frames of the video.
+</p>
+<p>
+To create a basic video player, an application can create a
+<a href="/usr/share/gtk-doc/html/gstreamer-1.0/GstPipeline.html"><span class="type">GstPipeline</span></a> as normal using <a href="/usr/share/gtk-doc/html/gstreamer-1.0/GstPipeline.html#gst-pipeline-new"><code class="function">gst_pipeline_new()</code></a> and set the
+sink on it to one created with <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-new" title="cogl_gst_video_sink_new ()"><code class="function">cogl_gst_video_sink_new()</code></a>. The
+application can then listen for the <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-new-frame" title='The "new-frame" signal'><span class="type">"new-frame"</span></a>
+signal which will be emitted whenever there are new textures ready
+for rendering. For simple rendering, the application can just call
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()"><code class="function">cogl_gst_video_sink_get_pipeline()</code></a> in the signal handler and use
+the returned pipeline to paint the new frame.
+</p>
+<p>
+An application is also free to do more advanced rendering by
+customizing the pipeline. In that case it should listen for the
+<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'><span class="type">"pipeline-ready"</span></a> signal which will be emitted as
+soon as the sink has determined enough information about the video
+to know how it should be rendered. In the handler for this signal,
+the application can either make modifications to a copy of the
+pipeline returned by <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()"><code class="function">cogl_gst_video_sink_get_pipeline()</code></a> or it can
+create its own pipeline from scratch and ask the sink to configure
+it with <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-setup-pipeline" title="cogl_gst_video_sink_setup_pipeline ()"><code class="function">cogl_gst_video_sink_setup_pipeline()</code></a>. If a custom pipeline
+is created using one of these methods then the application should
+call <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-attach-frame" title="cogl_gst_video_sink_attach_frame ()"><code class="function">cogl_gst_video_sink_attach_frame()</code></a> on the pipeline before
+rendering in order to update the textures on the pipeline's layers.
+</p>
+<p>
+If the <code class="literal">COGL_FEATURE_ID_GLSL</code> feature is available then the pipeline
+used by the sink will have a shader snippet with a function in it
+called cogl_gst_sample_video0 which takes a single vec2 argument.
+This can be used by custom snippets set the by the application to
+sample from the video. The vec2 argument represents the normalised
+coordinates within the video. The function returns a vec4
+containing a pre-multiplied RGBA color of the pixel within the
+video.
+</p>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglGstVideoSink-struct"></a><h3>struct CoglGstVideoSink</h3>
+<pre class="programlisting">struct CoglGstVideoSink;</pre>
+<p>
+The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> structure contains only private data and
+should be accessed using the provided API.
+</p>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglGstVideoSinkClass"></a><h3>struct CoglGstVideoSinkClass</h3>
+<pre class="programlisting">struct CoglGstVideoSinkClass {
+  void (* new_frame) (CoglGstVideoSink *sink);
+  void (* pipeline_ready) (CoglGstVideoSink *sink);
+};
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="CoglGstVideoSinkClass.new-frame"></a>new_frame</code></em> ()</span></p></td>
+<td>handler for the <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-new-frame" title='The "new-frame" signal'><span class="type">"new-frame"</span></a> signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="CoglGstVideoSinkClass.pipeline-ready"></a>pipeline_ready</code></em> ()</span></p></td>
+<td>handler for the <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'><span class="type">"pipeline-ready"</span></a> signal</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-new"></a><h3>cogl_gst_video_sink_new ()</h3>
+<pre class="programlisting"><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="returnvalue">CoglGstVideoSink</span></a> *  cogl_gst_video_sink_new             (<em class="parameter"><code><span class="type">CoglContext</span> *ctx</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> which will create resources for use
+with the given context.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ctx</code></em> :</span></p></td>
+<td>The <span class="type">CoglContext</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-set-context"></a><h3>cogl_gst_video_sink_set_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_gst_video_sink_set_context     (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *vt</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglContext</span> *ctx</code></em>);</pre>
+<p>
+Sets the <span class="type">CoglContext</span> that the video sink should use for creating
+any resources. This function would normally only be used if the
+sink was constructed via <a href="/usr/share/gtk-doc/html/gstreamer-1.0/GstElementFactory.html#gst-element-factory-make"><code class="function">gst_element_factory_make()</code></a> instead of
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-new" title="cogl_gst_video_sink_new ()"><code class="function">cogl_gst_video_sink_new()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vt</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ctx</code></em> :</span></p></td>
+<td>The <span class="type">CoglContext</span> for the sink to use</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-get-pipeline"></a><h3>cogl_gst_video_sink_get_pipeline ()</h3>
+<pre class="programlisting"><span class="returnvalue">CoglPipeline</span> *      cogl_gst_video_sink_get_pipeline    (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *vt</code></em>);</pre>
+<p>
+Returns a pipeline suitable for rendering the current frame of the
+given video sink. The pipeline will already have the textures for
+the frame attached. For simple rendering, an application will
+typically call this function immediately before it paints the
+video. It can then just paint a rectangle using the returned
+pipeline.
+</p>
+<p>
+An application is free to make a copy of this
+pipeline and modify it for custom rendering.
+</p>
+<p>
+Note: it is considered an error to call this function before the
+<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'><span class="type">"pipeline-ready"</span></a> signal is emitted.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vt</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the pipeline for rendering the
+current frame. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-attach-frame"></a><h3>cogl_gst_video_sink_attach_frame ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_gst_video_sink_attach_frame    (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglPipeline</span> *pln</code></em>);</pre>
+<p>
+Updates the given pipeline with the textures for the current frame.
+This can be used if the application wants to customize the
+rendering using its own pipeline. Typically this would be called in
+response to the <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-new-frame" title='The "new-frame" signal'><span class="type">"new-frame"</span></a> signal which is
+emitted whenever the new textures are available. The application
+would then make a copy of its template pipeline and call this to
+set the textures.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pln</code></em> :</span></p></td>
+<td>A <span class="type">CoglPipeline</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-setup-pipeline"></a><h3>cogl_gst_video_sink_setup_pipeline ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_gst_video_sink_setup_pipeline  (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglPipeline</span> *pipeline</code></em>);</pre>
+<p>
+Configures the given pipeline so that will be able to render the
+video for the <em class="parameter"><code>sink</code></em>. This should only be used if the application
+wants to perform some custom rendering using its own pipeline.
+Typically an application will call this in response to the
+<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'><span class="type">"pipeline-ready"</span></a> signal.
+</p>
+<p>
+Note: it is considered an error to call this function before the
+<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'><span class="type">"pipeline-ready"</span></a> signal is emitted.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pipeline</code></em> :</span></p></td>
+<td>A <span class="type">CoglPipeline</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-get-free-layer"></a><h3>cogl_gst_video_sink_get_free_layer ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 cogl_gst_video_sink_get_free_layer  (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>);</pre>
+<p>
+This can be used when doing specialised rendering of the video by
+customizing the pipeline. <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> may use up to three
+private layers on the pipeline in order to attach the textures of
+the video frame. This function will return the index of the next
+available unused layer after the sink's internal layers. This can
+be used by the application to add additional layers, for example to
+blend in another color in the fragment processing.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the index of the next available layer after the
+sink's internal layers.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-set-first-layer"></a><h3>cogl_gst_video_sink_set_first_layer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_gst_video_sink_set_first_layer (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> first_layer</code></em>);</pre>
+<p>
+Sets the index of the first layer that the sink will use for its
+rendering. This is useful if the application wants to have custom
+layers that appear before the layers added by the sink. In that
+case by default the sink's layers will be modulated with the result
+of the application's layers that come before <em class="parameter"><code>first_layer</code></em>.
+</p>
+<p>
+Note that if this function is called then the name of the function
+to call in the shader snippets to sample the video will also
+change. For example, if <em class="parameter"><code>first_layer</code></em> is three then the function
+will be cogl_gst_sample_video3.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>first_layer</code></em> :</span></p></td>
+<td>The new first layer</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-set-default-sample"></a><h3>cogl_gst_video_sink_set_default_sample ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_gst_video_sink_set_default_sample
+                                                        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglBool</span> default_sample</code></em>);</pre>
+<p>
+By default the pipeline generated by
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-setup-pipeline" title="cogl_gst_video_sink_setup_pipeline ()"><code class="function">cogl_gst_video_sink_setup_pipeline()</code></a> and
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()"><code class="function">cogl_gst_video_sink_get_pipeline()</code></a> will have a layer with a shader
+snippet that automatically samples the video. If the application
+wants to sample the video in a completely custom way using its own
+shader snippet it can set <em class="parameter"><code>default_sample</code></em> to <code class="literal">FALSE</code> to avoid this
+default snippet being added. In that case the application's snippet
+can call cogl_gst_sample_video0 to sample the texture itself.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>default_sample</code></em> :</span></p></td>
+<td>Whether to add the default sampling</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-is-ready"></a><h3>cogl_gst_video_sink_is_ready ()</h3>
+<pre class="programlisting"><span class="returnvalue">CoglBool</span>            cogl_gst_video_sink_is_ready        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>);</pre>
+<p>
+Returns whether the pipeline is ready and so
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()"><code class="function">cogl_gst_video_sink_get_pipeline()</code></a> and
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-setup-pipeline" title="cogl_gst_video_sink_setup_pipeline ()"><code class="function">cogl_gst_video_sink_setup_pipeline()</code></a> can be called without causing error.
+</p>
+<p>
+Note: Normally an application will wait until the
+<a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title='The "pipeline-ready" signal'><span class="type">"pipeline-ready"</span></a> signal is emitted instead of
+polling the ready status with this api, but sometimes when a sink
+is passed between components that didn't have an opportunity to
+connect a signal handler this can be useful.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>The <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the sink is ready, else <code class="literal">FALSE</code>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-get-aspect"></a><h3>cogl_gst_video_sink_get_aspect ()</h3>
+<pre class="programlisting"><span class="returnvalue">float</span>               cogl_gst_video_sink_get_aspect      (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>);</pre>
+<p>
+Returns a width-for-height aspect ratio that lets you calculate a
+suitable width for displaying your video based on a given height by
+multiplying your chosen height by the returned aspect ratio.
+</p>
+<p>
+This aspect ratio is calculated based on the underlying size of the
+video buffers and the current pixel-aspect-ratio.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>A <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a width-for-height aspect ratio</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-get-width-for-height"></a><h3>cogl_gst_video_sink_get_width_for_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">float</span>               cogl_gst_video_sink_get_width_for_height
+                                                        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> height</code></em>);</pre>
+<p>
+Calculates a suitable output width for a specific output <em class="parameter"><code>height</code></em>
+that will maintain the video's aspect ratio.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>A <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>A specific output <em class="parameter"><code>height</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>An output width for the given output <em class="parameter"><code>height</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-get-height-for-width"></a><h3>cogl_gst_video_sink_get_height_for_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">float</span>               cogl_gst_video_sink_get_height_for_width
+                                                        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> width</code></em>);</pre>
+<p>
+Calculates a suitable output height for a specific output <em class="parameter"><code>width</code></em>
+that will maintain the video's aspect ratio.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>A <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>A specific output <em class="parameter"><code>width</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>An output height for the given output <em class="parameter"><code>width</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-gst-video-sink-fit-size"></a><h3>cogl_gst_video_sink_fit_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_gst_video_sink_fit_size        (<em class="parameter"><code><a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">CoglGstRectangle</span> *available</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglGstRectangle</span> *output</code></em>);</pre>
+<p>
+Calculates a suitable <em class="parameter"><code>output</code></em> rectangle that can fit inside the
+<em class="parameter"><code>available</code></em> space while maintaining the aspect ratio of the current
+video.
+</p>
+<p>
+Applications would typically use this api for "letterboxing" by
+using this api to position a video inside a fixed screen space and
+filling the remaining space with black borders.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>A <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>available</code></em> :</span></p></td>
+<td>The space available for video output. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>The return location for the calculated output position. <span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="CoglGstVideoSink--update-priority"></a><h3>The <code class="literal">"update-priority"</code> property</h3>
+<pre class="programlisting">  "update-priority"          <span class="type">gint</span>                  : Read / Write</pre>
+<p>Priority of video updates in the thread.</p>
+<p>Allowed values: &gt;= -2147483647</p>
+<p>Default value: 100</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="CoglGstVideoSink.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="CoglGstVideoSink-new-frame"></a><h3>The <code class="literal">"new-frame"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink,
+                                                        <span class="type">gpointer</span>          user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+The sink will emit this signal whenever there are new textures
+available for a new frame of the video. After this signal is
+emitted, an application can call <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()"><code class="function">cogl_gst_video_sink_get_pipeline()</code></a>
+to get a pipeline suitable for rendering the frame. If the
+application is using a custom pipeline it can alternatively call
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-attach-frame" title="cogl_gst_video_sink_attach_frame ()"><code class="function">cogl_gst_video_sink_attach_frame()</code></a> to attach the textures.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>the <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglGstVideoSink-pipeline-ready"></a><h3>The <code class="literal">"pipeline-ready"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a> *sink,
+                                                        <span class="type">gpointer</span>          user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+The sink will emit this signal as soon as it has gathered enough
+information from the video to configure a pipeline. If the
+application wants to do some customized rendering, it can setup its
+pipeline after this signal is emitted. The application's pipeline
+will typically either be a copy of the one returned by
+<a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-get-pipeline" title="cogl_gst_video_sink_get_pipeline ()"><code class="function">cogl_gst_video_sink_get_pipeline()</code></a> or it can be a completely custom
+pipeline which is setup using <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-setup-pipeline" title="cogl_gst_video_sink_setup_pipeline ()"><code class="function">cogl_gst_video_sink_setup_pipeline()</code></a>.
+</p>
+<p>
+Note that it is an error to call either of those functions before
+this signal is emitted. The <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-new-frame" title='The "new-frame" signal'><span class="type">"new-frame"</span></a> signal
+will only be emitted after the pipeline is ready so the application
+could also create its pipeline in the handler for that.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sink</code></em> :</span></p></td>
+<td>the <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.16</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

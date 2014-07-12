@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Object Interface</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-general-apis.html" title="General API concepts">
+<link rel="prev" href="cogl-general-apis.html" title="General API concepts">
+<link rel="next" href="cogl-2.0-experimental-Exception-handling.html" title="Exception handling">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-general-apis.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-general-apis.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-2.0-experimental-Exception-handling.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-The-Object-Interface.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-The-Object-Interface.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-The-Object-Interface"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-The-Object-Interface.top_of_page"></a>The Object Interface</span></h2>
+<p>The Object Interface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-The-Object-Interface.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject">CoglObject</a>;
+<span class="returnvalue">void</span> *              <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-ref" title="cogl_object_ref ()">cogl_object_ref</a>                     (<em class="parameter"><code><span class="type">void</span> *object</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-unref" title="cogl_object_unref ()">cogl_object_unref</a>                   (<em class="parameter"><code><span class="type">void</span> *object</code></em>);
+                    <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey">CoglUserDataKey</a>;
+typedef             <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataDestroyCallback" title="CoglUserDataDestroyCallback">CoglUserDataDestroyCallback</a>;
+<span class="returnvalue">void</span> *              <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-get-user-data" title="cogl_object_get_user_data ()">cogl_object_get_user_data</a>           (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> *object</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> *key</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-set-user-data" title="cogl_object_set_user_data ()">cogl_object_set_user_data</a>           (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> *object</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataDestroyCallback" title="CoglUserDataDestroyCallback"><span class="type">CoglUserDataDestroyCallback</span></a> destroy</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-The-Object-Interface.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-The-Object-Interface.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglObject"></a><h3>CoglObject</h3>
+<pre class="programlisting">typedef struct _CoglObject CoglObject;</pre>
+<p>
+Ref Func: cogl_object_ref
+Unref Func: cogl_object_unref
+Set Value Func: cogl_object_value_set_object
+Get Value Func: cogl_object_value_get_object
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-object-ref"></a><h3>cogl_object_ref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *              cogl_object_ref                     (<em class="parameter"><code><span class="type">void</span> *object</code></em>);</pre>
+<p>
+Increases the reference count of <em class="parameter"><code>object</code></em> by 1
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>a <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <em class="parameter"><code>object</code></em>, with its reference count increased</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-object-unref"></a><h3>cogl_object_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_object_unref                   (<em class="parameter"><code><span class="type">void</span> *object</code></em>);</pre>
+<p>
+Drecreases the reference count of <em class="parameter"><code>object</code></em> by 1; if the reference
+count reaches 0, the resources allocated by <em class="parameter"><code>object</code></em> will be freed
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>a <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglUserDataKey"></a><h3>CoglUserDataKey</h3>
+<pre class="programlisting">typedef struct {
+  int unused;
+} CoglUserDataKey;
+</pre>
+<p>
+A <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> is used to declare a key for attaching data to a
+<a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> using cogl_object_set_user_data. The typedef only exists as a
+formality to make code self documenting since only the unique address of a
+<a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> is used.
+</p>
+<p>
+Typically you would declare a static <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> and set private data
+on an object something like this:
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Type { color: #008000; text-decoration: underline; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="type">static</span> CoglUserDataKey path_private_key;
+
+<span class="type">static</span> <span class="type">void</span>
+destroy_path_private_cb (<span class="type">void</span> *data)
+{
+  g_free (data);
+}
+
+<span class="type">static</span> <span class="type">void</span>
+my_path_set_data (CoglPath *path, <span class="type">void</span> *data)
+{
+  cogl_object_set_user_data (COGL_OBJECT (path),
+                             &amp;private_key,
+                             data,
+                             destroy_path_private_cb);
+}</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="type">int</span> <em class="structfield"><code><a name="CoglUserDataKey.unused"></a>unused</code></em>;</span></p></td>
+<td>ignored.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CoglUserDataDestroyCallback"></a><h3>CoglUserDataDestroyCallback</h3>
+<pre class="programlisting">typedef GDestroyNotify CoglUserDataDestroyCallback;
+</pre>
+<p>
+When associating private data with a <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> a callback can be
+given which will be called either if the object is destroyed or if
+<a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-set-user-data" title="cogl_object_set_user_data ()"><code class="function">cogl_object_set_user_data()</code></a> is called with NULL user_data for the
+same key.
+</p>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-object-get-user-data"></a><h3>cogl_object_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *              cogl_object_get_user_data           (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> *object</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> *key</code></em>);</pre>
+<p>
+Finds the user data previously associated with <em class="parameter"><code>object</code></em> using
+the given <em class="parameter"><code>key</code></em>. If no user data has been associated with <em class="parameter"><code>object</code></em>
+for the given <em class="parameter"><code>key</code></em> this function returns NULL.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>The object with associated private data to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>key</code></em> :</span></p></td>
+<td>The address of a <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> which provides a unique value
+with which to index the private data.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The user data previously associated
+with <em class="parameter"><code>object</code></em> using the given <em class="parameter"><code>key</code></em>; or <code class="literal">NULL</code> if no associated
+data is found. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-object-set-user-data"></a><h3>cogl_object_set_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_object_set_user_data           (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> *object</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataDestroyCallback" title="CoglUserDataDestroyCallback"><span class="type">CoglUserDataDestroyCallback</span></a> destroy</code></em>);</pre>
+<p>
+Associates some private <em class="parameter"><code>user_data</code></em> with a given <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a>. To
+later remove the association call <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-set-user-data" title="cogl_object_set_user_data ()"><code class="function">cogl_object_set_user_data()</code></a> with
+the same <em class="parameter"><code>key</code></em> but NULL for the <em class="parameter"><code>user_data</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>The object to associate private data with</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>key</code></em> :</span></p></td>
+<td>The address of a <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataKey" title="CoglUserDataKey"><span class="type">CoglUserDataKey</span></a> which provides a unique value
+with which to index the private data.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>The data to associate with the given object,
+or <code class="literal">NULL</code> to remove a previous association.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>destroy</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglUserDataDestroyCallback" title="CoglUserDataDestroyCallback"><span class="type">CoglUserDataDestroyCallback</span></a> to call if the object is
+destroyed or if the association is removed by later setting
+<code class="literal">NULL</code> data for the same key.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CoglOnscreenTemplate: Describe a template for onscreen framebuffers</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-context-apis.html" title="Setting Up A Drawing Context">
+<link rel="prev" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html" title="CoglRenderer: Connect to a backend renderer">
+<link rel="next" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html" title="CoglDisplay: Setup a display pipeline">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-context-apis.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.top_of_page"></a>CoglOnscreenTemplate: Describe a template for onscreen framebuffers</span></h2>
+<p>CoglOnscreenTemplate: Describe a template for onscreen framebuffers</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#CoglOnscreenTemplate" title="CoglOnscreenTemplate">CoglOnscreenTemplate</a>;
+<a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            <a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#cogl-is-onscreen-template" title="cogl_is_onscreen_template ()">cogl_is_onscreen_template</a>           (<em class="parameter"><code><span class="type">void</span> *object</code></em>);
+
+<a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#CoglOnscreenTemplate" title="CoglOnscreenTemplate"><span class="returnvalue">CoglOnscreenTemplate</span></a> * <a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#cogl-onscreen-template-new" title="cogl_onscreen_template_new ()">cogl_onscreen_template_new</a>       (<em class="parameter"><code><span class="type">CoglSwapChain</span> *swap_chain</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglOnscreenTemplate"></a><h3>CoglOnscreenTemplate</h3>
+<pre class="programlisting">typedef struct _CoglOnscreenTemplate CoglOnscreenTemplate;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-is-onscreen-template"></a><h3>cogl_is_onscreen_template ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-Common-Types.html#CoglBool" title="CoglBool"><span class="returnvalue">CoglBool</span></a>            cogl_is_onscreen_template           (<em class="parameter"><code><span class="type">void</span> *object</code></em>);</pre>
+<p>
+Gets whether the given object references a <a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#CoglOnscreenTemplate" title="CoglOnscreenTemplate"><span class="type">CoglOnscreenTemplate</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-The-Object-Interface.html#CoglObject" title="CoglObject"><span class="type">CoglObject</span></a> pointer</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the object references a <a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#CoglOnscreenTemplate" title="CoglOnscreenTemplate"><span class="type">CoglOnscreenTemplate</span></a>
+and <code class="literal">FALSE</code> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.10</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-onscreen-template-new"></a><h3>cogl_onscreen_template_new ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-CoglOnscreenTemplate---Describe-a-template-for-onscreen-framebuffers.html#CoglOnscreenTemplate" title="CoglOnscreenTemplate"><span class="returnvalue">CoglOnscreenTemplate</span></a> * cogl_onscreen_template_new       (<em class="parameter"><code><span class="type">CoglSwapChain</span> *swap_chain</code></em>);</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SDL Integration</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
+<link rel="up" href="cogl-integration.html" title="Binding and Integrating">
+<link rel="prev" href="cogl-integration.html" title="Binding and Integrating">
+<link rel="next" href="cogl-2.0-experimental-Main-loop-integration.html" title="Main loop integration">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-integration.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="cogl-integration.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl 2.0 Reference Manual</th>
+<td><a accesskey="n" href="cogl-2.0-experimental-Main-loop-integration.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-2.0-experimental-SDL-Integration.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-2.0-experimental-SDL-Integration.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-2.0-experimental-SDL-Integration"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-2.0-experimental-SDL-Integration.top_of_page"></a>SDL Integration</span></h2>
+<p>SDL Integration — Integration api for the Simple DirectMedia
+                    Layer library.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-2.0-experimental-SDL-Integration.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="returnvalue">CoglContext</span></a> *       <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-context-new" title="cogl_sdl_context_new ()">cogl_sdl_context_new</a>                (<em class="parameter"><code><span class="type">int</span> type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Exception-handling.html#CoglError" title="CoglError"><span class="type">CoglError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-renderer-set-event-type" title="cogl_sdl_renderer_set_event_type ()">cogl_sdl_renderer_set_event_type</a>    (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> type</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-renderer-get-event-type" title="cogl_sdl_renderer_get_event_type ()">cogl_sdl_renderer_get_event_type</a>    (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a> *renderer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-handle-event" title="cogl_sdl_handle_event ()">cogl_sdl_handle_event</a>               (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a> *context</code></em>,
+                                                         <em class="parameter"><code><span class="type">SDL_Event</span> *event</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-idle" title="cogl_sdl_idle ()">cogl_sdl_idle</a>                       (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a> *context</code></em>);
+<span class="returnvalue">SDL_Window</span> *        <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-onscreen-get-window" title="cogl_sdl_onscreen_get_window ()">cogl_sdl_onscreen_get_window</a>        (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a> *onscreen</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-SDL-Integration.description"></a><h2>Description</h2>
+<p>
+Cogl is a portable graphics api that can either be used standalone
+or alternatively integrated with certain existing frameworks. This
+api enables Cogl to be used in conjunction with the Simple
+DirectMedia Layer library.
+</p>
+<p>
+Using this API a typical SDL application would look something like
+this:
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Statement { color: #008080; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Special { color: #c000c0; font-weight: bold; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+MyAppData data;
+CoglError *error = <span class="number">NULL</span>;
+
+data.ctx = cogl_sdl_context_new (SDL_USEREVENT, &amp;error);
+<span class="keyword">if</span> (!data.ctx)
+  {
+    fprintf (<span class="number">stderr</span>, <span class="number">&quot;Failed to create context: </span><span class="symbol">%s</span><span class="symbol">\n</span><span class="number">&quot;</span>,
+             error-&gt;message);
+    <span class="keyword">return</span> <span class="number">1</span>;
+  }
+
+my_application_setup (&amp;data);
+
+data.redraw_queued = TRUE;
+<span class="keyword">while</span> (!data.quit)
+  {
+    <span class="keyword">while</span> (!data.quit)
+      {
+        <span class="keyword">if</span> (!SDL_PollEvent (&amp;event))
+          {
+            <span class="keyword">if</span> (data.redraw_queued)
+              <span class="keyword">break</span>;
+
+            cogl_sdl_idle (ctx);
+            <span class="keyword">if</span> (!SDL_WaitEvent (&amp;event))
+              {
+                fprintf (<span class="number">stderr</span>, <span class="number">&quot;Error waiting for SDL events&quot;</span>);
+                <span class="keyword">return</span> <span class="number">1</span>;
+              }
+          }
+
+         handle_event (&amp;data, &amp;event);
+         cogl_sdl_handle_event (ctx, &amp;event);
+       }
+
+    data.redraw_queued = redraw (&amp;data);
+  }</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="cogl-2.0-experimental-SDL-Integration.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="cogl-sdl-context-new"></a><h3>cogl_sdl_context_new ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="returnvalue">CoglContext</span></a> *       cogl_sdl_context_new                (<em class="parameter"><code><span class="type">int</span> type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-2.0-experimental-Exception-handling.html#CoglError" title="CoglError"><span class="type">CoglError</span></a> **error</code></em>);</pre>
+<p>
+This is a convenience function for creating a new <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a> for
+use with SDL and specifying what SDL user event type Cogl can use
+as a way to interrupt <code class="function">SDL_WaitEvent()</code>.
+</p>
+<p>
+This function is equivalent to the following code:
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="syntax" content="cpp" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Statement { color: #008080; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+CoglRenderer *renderer = cogl_renderer_new ();
+CoglDisplay *display;
+
+cogl_renderer_set_winsys_id (renderer, COGL_WINSYS_ID_SDL);
+
+cogl_sdl_renderer_set_event_type (renderer, type);
+
+<span class="keyword">if</span> (!cogl_renderer_connect (renderer, error))
+  <span class="keyword">return</span> <span class="number">NULL</span>;
+
+display = cogl_display_new (renderer, <span class="number">NULL</span>);
+<span class="keyword">if</span> (!cogl_display_setup (display, error))
+  <span class="keyword">return</span> <span class="number">NULL</span>;
+
+<span class="keyword">return</span> cogl_context_new (display, error);</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+<p>
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>SDL applications are required to either use this API or
+to manually create a <a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a> and call
+<a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-renderer-set-event-type" title="cogl_sdl_renderer_set_event_type ()"><code class="function">cogl_sdl_renderer_set_event_type()</code></a>.</div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>An SDL user event type between <code class="constant">SDL_USEREVENT</code> and
+<code class="constant">SDL_NUMEVENTS</code> - 1</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>A CoglError return location.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-sdl-renderer-set-event-type"></a><h3>cogl_sdl_renderer_set_event_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_sdl_renderer_set_event_type    (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> type</code></em>);</pre>
+<p>
+Tells Cogl what SDL user event type it can use as a way to
+interrupt <code class="function">SDL_WaitEvent()</code> to ensure that <a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-handle-event" title="cogl_sdl_handle_event ()"><code class="function">cogl_sdl_handle_event()</code></a>
+will be called in a finite amount of time.
+</p>
+<p>
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>This should only be called on an un-connected
+<em class="parameter"><code>renderer</code></em>.</div>
+<p>
+</p>
+<p>
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>For convenience most simple applications can use
+<a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-context-new" title="cogl_sdl_context_new ()"><code class="function">cogl_sdl_context_new()</code></a> if they don't want to manually create
+<a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a> and <a class="link" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#CoglDisplay" title="CoglDisplay"><span class="type">CoglDisplay</span></a> objects during
+initialization.</div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>An SDL user event type between <code class="constant">SDL_USEREVENT</code> and
+<code class="constant">SDL_NUMEVENTS</code> - 1</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-sdl-renderer-get-event-type"></a><h3>cogl_sdl_renderer_get_event_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 cogl_sdl_renderer_get_event_type    (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Queries what SDL user event type Cogl is using as a way to
+interrupt <code class="function">SDL_WaitEvent()</code>. This is set either using
+cogl_sdl_context_new or by using
+<a class="link" href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-renderer-set-event-type" title="cogl_sdl_renderer_set_event_type ()"><code class="function">cogl_sdl_renderer_set_event_type()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#CoglRenderer" title="CoglRenderer"><span class="type">CoglRenderer</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-sdl-handle-event"></a><h3>cogl_sdl_handle_event ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_sdl_handle_event               (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a> *context</code></em>,
+                                                         <em class="parameter"><code><span class="type">SDL_Event</span> *event</code></em>);</pre>
+<p>
+Passes control to Cogl so that it may dispatch any internal event
+callbacks in response to the given SDL <em class="parameter"><code>event</code></em>. This function must
+be called for every SDL event.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>An SDL event</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-sdl-idle"></a><h3>cogl_sdl_idle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_sdl_idle                       (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a> *context</code></em>);</pre>
+<p>
+Notifies Cogl that the application is idle and about to call
+<code class="function">SDL_WaitEvent()</code>. Cogl may use this to run low priority book keeping
+tasks.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-sdl-onscreen-get-window"></a><h3>cogl_sdl_onscreen_get_window ()</h3>
+<pre class="programlisting"><span class="returnvalue">SDL_Window</span> *        cogl_sdl_onscreen_get_window        (<em class="parameter"><code><a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a> *onscreen</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>onscreen</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the underlying SDL_Window associated with an onscreen framebuffer.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0</p>
+<p class="stability">Stability Level: Unstable</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

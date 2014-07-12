@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Shaders and Programmable Pipeline</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Cogl Reference Manual">
+<link rel="up" href="ch01.html" title="Cogl - a modern 3D graphics API">
+<link rel="prev" href="cogl-Matrices.html" title="Matrices">
+<link rel="next" href="cogl-Offscreen-Buffers.html" title="Offscreen Buffers">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="cogl-Matrices.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Cogl Reference Manual</th>
+<td><a accesskey="n" href="cogl-Offscreen-Buffers.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#cogl-Shaders-and-Programmable-Pipeline.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#cogl-Shaders-and-Programmable-Pipeline.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="cogl-Shaders-and-Programmable-Pipeline"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="cogl-Shaders-and-Programmable-Pipeline.top_of_page"></a>Shaders and Programmable Pipeline</span></h2>
+<p>Shaders and Programmable Pipeline — Fuctions for accessing the programmable GL pipeline</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="cogl-Shaders-and-Programmable-Pipeline.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#CoglShaderType" title="enum CoglShaderType">CoglShaderType</a>;
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="returnvalue">CoglHandle</span></a>          <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-create-shader" title="cogl_create_shader ()">cogl_create_shader</a>                  (<em class="parameter"><code><a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#CoglShaderType" title="enum CoglShaderType"><span class="type">CoglShaderType</span></a> shader_type</code></em>);
+<span class="returnvalue">CoglBool</span>            <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-is-shader" title="cogl_is_shader ()">cogl_is_shader</a>                      (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-source" title="cogl_shader_source ()">cogl_shader_source</a>                  (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> shader</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *source</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-compile" title="cogl_shader_compile ()">cogl_shader_compile</a>                 (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+<span class="returnvalue">char</span> *              <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-get-info-log" title="cogl_shader_get_info_log ()">cogl_shader_get_info_log</a>            (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#CoglShaderType" title="enum CoglShaderType"><span class="returnvalue">CoglShaderType</span></a>      <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-get-type" title="cogl_shader_get_type ()">cogl_shader_get_type</a>                (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+<span class="returnvalue">CoglBool</span>            <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-is-compiled" title="cogl_shader_is_compiled ()">cogl_shader_is_compiled</a>             (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="returnvalue">CoglHandle</span></a>          <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-create-program" title="cogl_create_program ()">cogl_create_program</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">CoglBool</span>            <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-is-program" title="cogl_is_program ()">cogl_is_program</a>                     (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-attach-shader" title="cogl_program_attach_shader ()">cogl_program_attach_shader</a>          (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program_handle</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> shader_handle</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-link" title="cogl_program_link ()">cogl_program_link</a>                   (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-get-uniform-location" title="cogl_program_get_uniform_location ()">cogl_program_get_uniform_location</a>   (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *uniform_name</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-set-uniform-1f" title="cogl_program_set_uniform_1f ()">cogl_program_set_uniform_1f</a>         (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-set-uniform-1i" title="cogl_program_set_uniform_1i ()">cogl_program_set_uniform_1i</a>         (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-set-uniform-float" title="cogl_program_set_uniform_float ()">cogl_program_set_uniform_float</a>      (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> n_components</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">float</span> *value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-set-uniform-int" title="cogl_program_set_uniform_int ()">cogl_program_set_uniform_int</a>        (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> n_components</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">int</span> *value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-set-uniform-matrix" title="cogl_program_set_uniform_matrix ()">cogl_program_set_uniform_matrix</a>     (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> dimensions</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> count</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglBool</span> transpose</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">float</span> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="cogl-Shaders-and-Programmable-Pipeline.description"></a><h2>Description</h2>
+<p>
+Cogl allows accessing the GL programmable pipeline in order to create
+vertex and fragment shaders.
+</p>
+<p>
+The shader source code can either be GLSL or ARBfp. If the source
+code is ARBfp, it must begin with the string “!!ARBfp1.0”. The
+application should check for the <a class="link" href="cogl-General-API.html#COGL-FEATURE-SHADERS-GLSL:CAPS"><code class="literal">COGL_FEATURE_SHADERS_GLSL</code></a> or
+<a class="link" href="cogl-General-API.html#COGL-FEATURE-SHADERS-ARBFP:CAPS"><code class="literal">COGL_FEATURE_SHADERS_ARBFP</code></a> features before using shaders.
+</p>
+<p>
+When using GLSL Cogl provides replacement names for most of the
+builtin varyings and uniforms. It is recommended to use these names
+wherever possible to increase portability between OpenGL 2.0 and
+GLES 2.0. GLES 2.0 does not have most of the builtins under their
+original names so they will only work with the Cogl names.
+</p>
+<p>
+For use in all GLSL shaders, the Cogl builtins are as follows:
+</p>
+<p>
+</p>
+<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+<div class="glosslist"><dl>
+<dt><span class="glossterm">uniform mat4
+        <span class="emphasis"><em>cogl_modelview_matrix</em></span></span></dt>
+<dd class="glossdef"><p>
+   The current modelview matrix. This is equivalent to
+   <span class="type">gl_ModelViewMatrix</span>.
+  </p></dd>
+<dt><span class="glossterm">uniform mat4
+        <span class="emphasis"><em>cogl_projection_matrix</em></span></span></dt>
+<dd class="glossdef"><p>
+   The current projection matrix. This is equivalent to
+   <span class="type">gl_ProjectionMatrix</span>.
+  </p></dd>
+<dt><span class="glossterm">uniform mat4
+        <span class="emphasis"><em>cogl_modelview_projection_matrix</em></span></span></dt>
+<dd class="glossdef"><p>
+   The combined modelview and projection matrix. A vertex shader
+   would typically use this to transform the incoming vertex
+   position. The separate modelview and projection matrices are
+   usually only needed for lighting calculations. This is
+   equivalent to <span class="type">gl_ModelViewProjectionMatrix</span>.
+  </p></dd>
+<dt><span class="glossterm">uniform mat4
+        <span class="emphasis"><em>cogl_texture_matrix</em></span>[]</span></dt>
+<dd class="glossdef"><p>
+   An array of matrices for transforming the texture
+   coordinates. This is equivalent to <span class="type">gl_TextureMatrix</span>.
+  </p></dd>
+</dl></div>
+</div>
+<p>
+</p>
+<p>
+In a vertex shader, the following are also available:
+</p>
+<p>
+</p>
+<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+<div class="glosslist"><dl>
+<dt><span class="glossterm">attribute vec4
+        <span class="emphasis"><em>cogl_position_in</em></span></span></dt>
+<dd class="glossdef"><p>
+   The incoming vertex position. This is equivalent to <span class="type">gl_Vertex</span>.
+  </p></dd>
+<dt><span class="glossterm">attribute vec4
+        <span class="emphasis"><em>cogl_color_in</em></span></span></dt>
+<dd class="glossdef"><p>
+   The incoming vertex color. This is equivalent to <span class="type">gl_Color</span>.
+  </p></dd>
+<dt><span class="glossterm">attribute vec4
+        <span class="emphasis"><em>cogl_tex_coord_in</em></span></span></dt>
+<dd class="glossdef"><p>
+   The texture coordinate for the first texture unit. This is
+   equivalent to <span class="type">gl_MultiTexCoord0</span>.
+  </p></dd>
+<dt><span class="glossterm">attribute vec4
+        <span class="emphasis"><em>cogl_tex_coord0_in</em></span></span></dt>
+<dd class="glossdef"><p>
+   The texture coordinate for the first texture unit. This is
+   equivalent to <span class="type">gl_MultiTexCoord0</span>. There is also
+   <span class="type">cogl_tex_coord1_in</span> and so on.
+  </p></dd>
+<dt><span class="glossterm">attribute vec3
+        <span class="emphasis"><em>cogl_normal_in</em></span></span></dt>
+<dd class="glossdef"><p>
+   The normal of the vertex. This is equivalent to <span class="type">gl_Normal</span>.
+  </p></dd>
+<dt><span class="glossterm">vec4
+        <span class="emphasis"><em>cogl_position_out</em></span></span></dt>
+<dd class="glossdef"><p>
+   The calculated position of the vertex. This must be written to
+   in all vertex shaders. This is equivalent to <span class="type">gl_Position</span>.
+  </p></dd>
+<dt><span class="glossterm">float
+        <span class="emphasis"><em>cogl_point_size_out</em></span></span></dt>
+<dd class="glossdef"><p>
+   The calculated size of a point. This is equivalent to <span class="type">gl_PointSize</span>.
+  </p></dd>
+<dt><span class="glossterm">varying vec4
+        <span class="emphasis"><em>cogl_color_out</em></span></span></dt>
+<dd class="glossdef"><p>
+   The calculated color of a vertex. This is equivalent to <span class="type">gl_FrontColor</span>.
+  </p></dd>
+<dt><span class="glossterm">varying vec4
+        <span class="emphasis"><em>cogl_tex_coord_out</em></span>[]</span></dt>
+<dd class="glossdef"><p>
+   An array of calculated texture coordinates for a vertex. This is
+   equivalent to <span class="type">gl_TexCoord</span>.
+  </p></dd>
+</dl></div>
+</div>
+<p>
+</p>
+<p>
+In a fragment shader, the following are also available:
+</p>
+<p>
+</p>
+<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+<div class="glosslist"><dl>
+<dt><span class="glossterm">varying vec4 <span class="emphasis"><em>cogl_color_in</em></span></span></dt>
+<dd class="glossdef"><p>
+   The calculated color of a vertex. This is equivalent to <span class="type">gl_FrontColor</span>.
+  </p></dd>
+<dt><span class="glossterm">varying vec4
+             <span class="emphasis"><em>cogl_tex_coord_in</em></span>[]</span></dt>
+<dd class="glossdef"><p>
+   An array of calculated texture coordinates for a vertex. This is
+   equivalent to <span class="type">gl_TexCoord</span>.
+  </p></dd>
+<dt><span class="glossterm">vec4 <span class="emphasis"><em>cogl_color_out</em></span></span></dt>
+<dd class="glossdef"><p>
+   The final calculated color of the fragment. All fragment shaders
+   must write to this variable. This is equivalent to
+   <span class="type">gl_FrontColor</span>.
+  </p></dd>
+<dt><span class="glossterm">float <span class="emphasis"><em>cogl_depth_out</em></span></span></dt>
+<dd class="glossdef"><p>
+   An optional output variable specifying the depth value to use
+   for this fragment. This is equivalent to <span class="type">gl_FragDepth</span>.
+  </p></dd>
+<dt><span class="glossterm">bool <span class="emphasis"><em>cogl_front_facing</em></span></span></dt>
+<dd class="glossdef"><p>
+   A readonly variable that will be true if the current primitive
+   is front facing. This can be used to implement two-sided
+   coloring algorithms. This is equivalent to <span class="type">gl_FrontFacing</span>.
+  </p></dd>
+</dl></div>
+</div>
+<p>
+</p>
+<p>
+It's worth nothing that this API isn't what Cogl would like to have
+in the long term and it may be removed in Cogl 2.0. The
+experimental <span class="type">CoglShader</span> API is the proposed replacement.
+</p>
+</div>
+<div class="refsect1">
+<a name="cogl-Shaders-and-Programmable-Pipeline.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="CoglShaderType"></a><h3>enum CoglShaderType</h3>
+<pre class="programlisting">typedef enum {
+  COGL_SHADER_TYPE_VERTEX,
+  COGL_SHADER_TYPE_FRAGMENT
+} CoglShaderType;
+</pre>
+<p>
+Types of shaders
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="COGL-SHADER-TYPE-VERTEX:CAPS"></a><span class="term"><code class="literal">COGL_SHADER_TYPE_VERTEX</code></span></p></td>
+<td>A program for proccessing vertices
+</td>
+</tr>
+<tr>
+<td><p><a name="COGL-SHADER-TYPE-FRAGMENT:CAPS"></a><span class="term"><code class="literal">COGL_SHADER_TYPE_FRAGMENT</code></span></p></td>
+<td>A program for processing fragments
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-create-shader"></a><h3>cogl_create_shader ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="returnvalue">CoglHandle</span></a>          cogl_create_shader                  (<em class="parameter"><code><a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#CoglShaderType" title="enum CoglShaderType"><span class="type">CoglShaderType</span></a> shader_type</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_create_shader</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Create a new shader handle, use <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-source" title="cogl_shader_source ()"><code class="function">cogl_shader_source()</code></a> to set the
+source code to be used on it.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>shader_type</code></em> :</span></p></td>
+<td>COGL_SHADER_TYPE_VERTEX or COGL_SHADER_TYPE_FRAGMENT.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new shader handle.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-is-shader"></a><h3>cogl_is_shader ()</h3>
+<pre class="programlisting"><span class="returnvalue">CoglBool</span>            cogl_is_shader                      (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_is_shader</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Gets whether the given handle references an existing shader object.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>A CoglHandle</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the handle references a shader,
+<code class="literal">FALSE</code> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-shader-source"></a><h3>cogl_shader_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_shader_source                  (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> shader</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *source</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_shader_source</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Replaces the current source associated with a shader with a new
+one.
+</p>
+<p>
+Please see <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-Shaders-and-Programmable-Pipeline.description" title="Description">above</a>
+for a description of the recommended format for the shader code.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>shader</code></em> :</span></p></td>
+<td>
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td>Shader source.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-shader-compile"></a><h3>cogl_shader_compile ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_shader_compile                 (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_shader_compile</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Compiles the shader, no return value, but the shader is now ready
+for linking into a program. Note that calling this function is
+optional. If it is not called then the shader will be automatically
+compiled when it is linked.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-shader-get-info-log"></a><h3>cogl_shader_get_info_log ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              cogl_shader_get_info_log            (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_shader_get_info_log</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Retrieves the information log for a coglobject, can be used in conjunction
+with <code class="function">cogl_shader_get_parameteriv()</code> to retrieve the compiler warnings/error
+messages that caused a shader to not compile correctly, mainly useful for
+debugging purposes.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly allocated string containing the info log. Use
+<code class="function">g_free()</code> to free it</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-shader-get-type"></a><h3>cogl_shader_get_type ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#CoglShaderType" title="enum CoglShaderType"><span class="returnvalue">CoglShaderType</span></a>      cogl_shader_get_type                (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_shader_get_type</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Retrieves the type of a shader <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#COGL-SHADER-TYPE-VERTEX:CAPS"><code class="literal">COGL_SHADER_TYPE_VERTEX</code></a> if the shader is a vertex processor
+or <a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#COGL-SHADER-TYPE-FRAGMENT:CAPS"><code class="literal">COGL_SHADER_TYPE_FRAGMENT</code></a> if the shader is a frament processor</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-shader-is-compiled"></a><h3>cogl_shader_is_compiled ()</h3>
+<pre class="programlisting"><span class="returnvalue">CoglBool</span>            cogl_shader_is_compiled             (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_shader_is_compiled</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Retrieves whether a shader <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> has been compiled
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>
+<a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the shader object has sucessfully be compiled</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-create-program"></a><h3>cogl_create_program ()</h3>
+<pre class="programlisting"><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="returnvalue">CoglHandle</span></a>          cogl_create_program                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_create_program</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Create a new cogl program object that can be used to replace parts of the GL
+rendering pipeline with custom code.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new cogl program.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-is-program"></a><h3>cogl_is_program ()</h3>
+<pre class="programlisting"><span class="returnvalue">CoglBool</span>            cogl_is_program                     (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_is_program</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Gets whether the given handle references an existing program object.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>A CoglHandle</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if the handle references a program,
+<code class="literal">FALSE</code> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-attach-shader"></a><h3>cogl_program_attach_shader ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_attach_shader          (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program_handle</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> shader_handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_attach_shader</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Attaches a shader to a program object. A program can have multiple
+vertex or fragment shaders but only one of them may provide a
+<code class="function">main()</code> function. It is allowed to use a program with only a vertex
+shader or only a fragment shader.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program_handle</code></em> :</span></p></td>
+<td>a <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shdaer program.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>shader_handle</code></em> :</span></p></td>
+<td>a <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a vertex of fragment shader.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-link"></a><h3>cogl_program_link ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_link                   (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_link</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api</p>
+</div>
+<p>
+Links a program making it ready for use. Note that calling this
+function is optional. If it is not called the program will
+automatically be linked the first time it is used.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>a <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader program.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-get-uniform-location"></a><h3>cogl_program_get_uniform_location ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 cogl_program_get_uniform_location   (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> handle</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *uniform_name</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_get_uniform_location</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api instead</p>
+</div>
+<p>
+Retrieve the location (offset) of a uniform variable in a shader program,
+a uniform is a variable that is constant for all vertices/fragments for a
+shader object and is possible to modify as an external parameter.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>a <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a shader program.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uniform_name</code></em> :</span></p></td>
+<td>the name of a uniform.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the offset of a uniform in a specified program.
+This uniform can be set using <a class="link" href="cogl-Shaders-and-Programmable-Pipeline-(Deprecated).html#cogl-program-uniform-1f" title="cogl_program_uniform_1f ()"><code class="function">cogl_program_uniform_1f()</code></a> when the
+program is in use.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-set-uniform-1f"></a><h3>cogl_program_set_uniform_1f ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_set_uniform_1f         (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">float</span> value</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_set_uniform_1f</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api instead</p>
+</div>
+<p>
+Changes the value of a floating point uniform for the given linked
+<em class="parameter"><code>program</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a linked program</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uniform_location</code></em> :</span></p></td>
+<td>the uniform location retrieved from
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-get-uniform-location" title="cogl_program_get_uniform_location ()"><code class="function">cogl_program_get_uniform_location()</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the uniform.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-set-uniform-1i"></a><h3>cogl_program_set_uniform_1i ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_set_uniform_1i         (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> value</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_set_uniform_1i</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api instead</p>
+</div>
+<p>
+Changes the value of an integer uniform for the given linked
+<em class="parameter"><code>program</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a linked program</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uniform_location</code></em> :</span></p></td>
+<td>the uniform location retrieved from
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-get-uniform-location" title="cogl_program_get_uniform_location ()"><code class="function">cogl_program_get_uniform_location()</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the uniform.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-set-uniform-float"></a><h3>cogl_program_set_uniform_float ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_set_uniform_float      (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> n_components</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">float</span> *value</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_set_uniform_float</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api instead</p>
+</div>
+<p>
+Changes the value of a float vector uniform, or uniform array for
+the given linked <em class="parameter"><code>program</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a linked program</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uniform_location</code></em> :</span></p></td>
+<td>the uniform location retrieved from
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-get-uniform-location" title="cogl_program_get_uniform_location ()"><code class="function">cogl_program_get_uniform_location()</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_components</code></em> :</span></p></td>
+<td>The number of components for the uniform. For
+example with glsl you'd use 3 for a vec3 or 4 for a vec4.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>count</code></em> :</span></p></td>
+<td>For uniform arrays this is the array length otherwise just
+pass 1</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the uniform[s]. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=count]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-set-uniform-int"></a><h3>cogl_program_set_uniform_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_set_uniform_int        (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> n_components</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> count</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">int</span> *value</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_set_uniform_int</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api instead</p>
+</div>
+<p>
+Changes the value of a int vector uniform, or uniform array for
+the given linked <em class="parameter"><code>program</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a linked program</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uniform_location</code></em> :</span></p></td>
+<td>the uniform location retrieved from
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-get-uniform-location" title="cogl_program_get_uniform_location ()"><code class="function">cogl_program_get_uniform_location()</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n_components</code></em> :</span></p></td>
+<td>The number of components for the uniform. For
+example with glsl you'd use 3 for a vec3 or 4 for a vec4.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>count</code></em> :</span></p></td>
+<td>For uniform arrays this is the array length otherwise just
+pass 1</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the uniform[s]. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=count]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="cogl-program-set-uniform-matrix"></a><h3>cogl_program_set_uniform_matrix ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                cogl_program_set_uniform_matrix     (<em class="parameter"><code><a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> program</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> uniform_location</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> dimensions</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> count</code></em>,
+                                                         <em class="parameter"><code><span class="type">CoglBool</span> transpose</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">float</span> *value</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">cogl_program_set_uniform_matrix</code> has been deprecated since version 1.16 and should not be used in newly-written code. Use <span class="type">CoglSnippet</span> api instead</p>
+</div>
+<p>
+Changes the value of a matrix uniform, or uniform array in the
+given linked <em class="parameter"><code>program</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program</code></em> :</span></p></td>
+<td>A <a class="link" href="cogl-General-API.html#CoglHandle" title="CoglHandle"><span class="type">CoglHandle</span></a> for a linked program</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uniform_location</code></em> :</span></p></td>
+<td>the uniform location retrieved from
+<a class="link" href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-get-uniform-location" title="cogl_program_get_uniform_location ()"><code class="function">cogl_program_get_uniform_location()</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dimensions</code></em> :</span></p></td>
+<td>The dimensions of the matrix. So for for example pass
+2 for a 2x2 matrix or 3 for 3x3.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>count</code></em> :</span></p></td>
+<td>For uniform arrays this is the array length otherwise just
+pass 1</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>transpose</code></em> :</span></p></td>
+<td>Whether to transpose the matrix when setting the uniform.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the uniform. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=count]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.4</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>
