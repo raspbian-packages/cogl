@@ -6,7 +6,7 @@ cogl (1.18.2-2) UNRELEASED; urgency=medium
     (Closes: #743316)
 
   [ Rico Tzschichholz ]
-  * Use dh-autorefconf to pick up distro-specific autotools updates
+  * Use dh-autoreconf to pick up distro-specific autotools updates
 
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Jul 2014 18:19:01 +0200
 
