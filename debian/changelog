@@ -1,4 +1,4 @@
-cogl (1.18.2-2) UNRELEASED; urgency=medium
+cogl (1.18.2-2) unstable; urgency=medium
 
   [ Andreas Henriksson ]
   * Apply the remaining bits of Samuels Hurd/gles patch to
@@ -9,7 +9,7 @@ cogl (1.18.2-2) UNRELEASED; urgency=medium
   * Use dh-autoreconf to pick up distro-specific autotools updates
     (Closes: #754819)
 
- -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Jul 2014 18:19:01 +0200
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 26 Aug 2014 11:06:47 -0700
 
 cogl (1.18.2-1) unstable; urgency=medium
 
