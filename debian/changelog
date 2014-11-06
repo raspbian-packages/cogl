@@ -1,11 +1,11 @@
-cogl (1.18.2-3) UNRELEASED; urgency=medium
+cogl (1.18.2-3) unstable; urgency=medium
 
   * Team upload.
   * libcogl20 Breaks libcogl9, libcogl11, libcogl12, libcogl15
     to hint wheezy's apt into doing the right thing on upgrades
     (Closes: #761047)
 
- -- Simon McVittie <smcv@debian.org>  Thu, 06 Nov 2014 12:19:26 +0000
+ -- Simon McVittie <smcv@debian.org>  Thu, 06 Nov 2014 14:51:16 +0000
 
 cogl (1.18.2-2) unstable; urgency=medium
 
