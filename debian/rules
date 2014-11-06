@@ -20,7 +20,6 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-gdk-pixbuf \
 	--enable-cogl-pango \
 	--enable-introspection=yes \
-	--enable-cogl-gst=yes
 	--enable-gl=yes
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH),armel armhf))

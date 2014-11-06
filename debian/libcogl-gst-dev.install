@@ -1,4 +1,0 @@
-usr/lib/*/libcogl-gst.so
-usr/lib/*/pkgconfig/cogl-gst*
-usr/include/cogl/cogl-gst/
-usr/share/gir-1.0/CoglGst-*
