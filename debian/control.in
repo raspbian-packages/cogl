@@ -35,7 +35,11 @@ Depends: ${shlibs:Depends},
 Recommends: libcogl-common
 Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
 Pre-Depends: ${misc:Pre-Depends}
-Breaks: libclutter-1.0-0 (<< 1.17)
+Breaks: libclutter-1.0-0 (<< 1.17),
+        libcogl9,
+        libcogl11,
+        libcogl12,
+        libcogl15
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw

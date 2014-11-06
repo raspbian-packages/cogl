@@ -2,12 +2,11 @@
 # 
 # Modifications should be made to debian/control.in instead.
 # This file is regenerated automatically in the clean target.
-
 Source: cogl
 Section: libs
 Priority: optional
 Maintainer: Rico Tzschichholz <ricotz@ubuntu.com>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Iain Lane <laney@debian.org>, Sjoerd Simons <sjoerd@debian.org>
 Build-Depends: debhelper (>= 8.1.3~),
                cdbs (>= 0.4.93~),
                dh-autoreconf,
@@ -40,7 +39,11 @@ Depends: ${shlibs:Depends},
 Recommends: libcogl-common
 Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
 Pre-Depends: ${misc:Pre-Depends}
-Breaks: libclutter-1.0-0 (<< 1.17)
+Breaks: libclutter-1.0-0 (<< 1.17),
+        libcogl9,
+        libcogl11,
+        libcogl12,
+        libcogl15
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
