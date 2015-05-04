@@ -20,7 +20,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-gdk-pixbuf \
 	--enable-cogl-pango \
 	--enable-introspection=yes \
-	--enable-gl=yes
+	--enable-gl=yes \
+	--enable-cogl-gst=yes
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH),armel armhf))
         DEB_CONFIGURE_EXTRA_FLAGS += --with-default-driver=gles2

@@ -225,12 +225,12 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_framebuffer_get_green_bits@Base 1.17.4
  cogl_framebuffer_get_gtype@Base 1.18.0
  cogl_framebuffer_get_height@Base 1.17.4
- cogl_framebuffer_get_is_stereo@Base 1.20.0-1
+ cogl_framebuffer_get_is_stereo@Base 1.20.0
  cogl_framebuffer_get_modelview_matrix@Base 1.17.4
  cogl_framebuffer_get_projection_matrix@Base 1.17.4
  cogl_framebuffer_get_red_bits@Base 1.17.4
  cogl_framebuffer_get_samples_per_pixel@Base 1.17.4
- cogl_framebuffer_get_stereo_mode@Base 1.20.0-1
+ cogl_framebuffer_get_stereo_mode@Base 1.20.0
  cogl_framebuffer_get_viewport4fv@Base 1.17.4
  cogl_framebuffer_get_viewport_height@Base 1.17.4
  cogl_framebuffer_get_viewport_width@Base 1.17.4
@@ -261,7 +261,7 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_framebuffer_set_modelview_matrix@Base 1.17.4
  cogl_framebuffer_set_projection_matrix@Base 1.17.4
  cogl_framebuffer_set_samples_per_pixel@Base 1.17.4
- cogl_framebuffer_set_stereo_mode@Base 1.20.0-1
+ cogl_framebuffer_set_stereo_mode@Base 1.20.0
  cogl_framebuffer_set_viewport@Base 1.17.4
  cogl_framebuffer_transform@Base 1.17.4
  cogl_framebuffer_translate@Base 1.17.4
@@ -500,7 +500,7 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_onscreen_template_get_gtype@Base 1.18.0
  cogl_onscreen_template_new@Base 1.17.4
  cogl_onscreen_template_set_samples_per_pixel@Base 1.17.4
- cogl_onscreen_template_set_stereo_enabled@Base 1.20.0-1
+ cogl_onscreen_template_set_stereo_enabled@Base 1.20.0
  cogl_onscreen_template_set_swap_throttled@Base 1.17.4
  cogl_ortho@Base 1.17.4
  cogl_output_get_gtype@Base 1.18.0
@@ -715,7 +715,7 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_snippet_set_pre@Base 1.17.4
  cogl_snippet_set_replace@Base 1.17.4
  cogl_sqrti@Base 1.17.4
- cogl_stereo_mode_get_type@Base 1.20.0-1
+ cogl_stereo_mode_get_type@Base 1.20.0
  cogl_sub_texture_get_gtype@Base 1.18.0
  cogl_sub_texture_get_parent@Base 1.17.4
  cogl_sub_texture_new@Base 1.17.4
@@ -766,8 +766,8 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_texture_pixmap_x11_get_gtype@Base 1.18.0
  cogl_texture_pixmap_x11_is_using_tfp_extension@Base 1.17.4
  cogl_texture_pixmap_x11_new@Base 1.17.4
- cogl_texture_pixmap_x11_new_left@Base 1.20.0-1
- cogl_texture_pixmap_x11_new_right@Base 1.20.0-1
+ cogl_texture_pixmap_x11_new_left@Base 1.20.0
+ cogl_texture_pixmap_x11_new_right@Base 1.20.01
  cogl_texture_pixmap_x11_set_damage_object@Base 1.17.4
  cogl_texture_pixmap_x11_update_area@Base 1.17.4
  cogl_texture_rectangle_get_gtype@Base 1.18.0
