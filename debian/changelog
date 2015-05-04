@@ -1,3 +1,71 @@
+cogl (1.20.0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon, 04 May 2015 12:41:13 +0200
+
+cogl (1.18.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * libcogl20 Breaks libcogl9, libcogl11, libcogl12, libcogl15
+    to hint wheezy's apt into doing the right thing on upgrades
+    (Closes: #761047)
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 06 Nov 2014 14:51:16 +0000
+
+cogl (1.18.2-2) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * Apply the remaining bits of Samuels Hurd/gles patch to
+    debian/control.*in* this time so they don't get lost on clean.
+    (Closes: #743316)
+
+  [ Rico Tzschichholz ]
+  * Use dh-autoreconf to pick up distro-specific autotools updates
+    (Closes: #754819)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 26 Aug 2014 11:06:47 -0700
+
+cogl (1.18.2-1) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * Fix the gles dependencies of the libcogl-dev package on hurd-i386
+    (Closes: #743316)
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Add 2 new (arch=linux-any) symbols to debian/libcogl20.symbols
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 12 Jul 2014 09:23:09 +0200
+
+cogl (1.18.0-2) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * Update symbols file for non-linux architectures:
+    - (arch=!hurd-any)cogl_egl_context_get_egl_context@Base 
+    - (arch=linux-any)cogl_wayland_texture_set_region_from_shm_buffer@Base
+
+  [ Samuel Thibault ]
+  * Enabling the libgles2-mesa-dev|libgles2-dev build-dep on hurd-any
+    (Closes: #742682)
+
+  [ Andreas Henriksson ]
+  * drop (arch=!hurd-any) from cogl_egl_context_ symbols.
+  
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 26 Mar 2014 11:51:58 +0100
+
+cogl (1.18.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/libcogl20.symbols,
+    debian/libcogl-path20.symbols:
+    + Updated for the new symbols.
+  * debian/control.in:
+    + Bump breaks on clutter to ensure a lockstep upgrade.
+  * Upload to unstable.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 23 Mar 2014 16:15:48 +0100
+
 cogl (1.17.4-1) experimental; urgency=medium
 
   [ Andreas Henriksson ]
