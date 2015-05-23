@@ -1,3 +1,11 @@
+cogl (1.20.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * Build packages for cogl-gst (gir1.2-coglgst-2.0,
+    libcogl-gst20, libcogl-gst-dev)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Mon, 04 May 2015 12:41:13 +0200
+
 cogl (1.18.2-3) unstable; urgency=medium
 
   * Team upload.
