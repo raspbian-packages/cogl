@@ -1,3 +1,9 @@
+cogl (1.20.0-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sat, 23 May 2015 19:42:54 +0200
+
 cogl (1.20.0-1) experimental; urgency=medium
 
   * New upstream release
