@@ -836,6 +836,7 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_xlib_renderer_add_filter@Base 1.17.4
  cogl_xlib_renderer_get_display@Base 1.17.4
  cogl_xlib_renderer_get_foreign_display@Base 1.17.4
+ cogl_xlib_renderer_get_visual_info@Base 1.21.2
  cogl_xlib_renderer_handle_event@Base 1.17.4
  cogl_xlib_renderer_remove_filter@Base 1.17.4
  cogl_xlib_renderer_set_event_retrieval_enabled@Base 1.17.4

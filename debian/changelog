@@ -1,3 +1,16 @@
+cogl (1.22.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 18 Sep 2015 09:34:15 +0200
+
+cogl (1.21.2-1) experimental; urgency=medium
+
+  * New upstream development release.
+  * Update cogl symbols with one addition.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 29 Aug 2015 10:41:00 +0200
+
 cogl (1.20.0-2) unstable; urgency=medium
 
   * Upload to unstable.
