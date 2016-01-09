@@ -128,6 +128,7 @@ Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
          ${misc:Depends}
+Multi-Arch: same
 Description: GObject introspection data for the Cogl 1.0 library
  This package contains introspection data for the Clutter scene
  graph library.
@@ -227,6 +228,7 @@ Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
          ${misc:Depends}
+Multi-Arch: same
 Description: GObject introspection data for the CoglPango 1.0 library
  This package contains introspection data for the Clutter scene
  graph library.
@@ -338,6 +340,7 @@ Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
          ${misc:Depends}
+Multi-Arch: same
 Description: GObject introspection data for the CoglGst 2.0 library
  This package contains introspection data for the Cogl GStreamer
  library.
