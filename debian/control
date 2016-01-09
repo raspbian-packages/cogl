@@ -27,7 +27,7 @@ Build-Depends: debhelper (>= 9),
                gobject-introspection (>= 1.33.4-1~),
                libgirepository1.0-dev (>= 0.9.12),
                libgstreamer-plugins-base1.0-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/cogl
 Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/cogl/
 
