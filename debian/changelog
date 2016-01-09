@@ -1,4 +1,4 @@
-cogl (1.22.0-2) UNRELEASED; urgency=medium
+cogl (1.22.0-2) unstable; urgency=medium
 
   * Fix black screen after logout. Patch cherry-picked from upstream Git.
     (Closes: #805763)
@@ -9,7 +9,7 @@ cogl (1.22.0-2) UNRELEASED; urgency=medium
     Multi-Arch: same.
   * Bump Standards-Version to 3.9.6.
 
- -- Michael Biebl <biebl@debian.org>  Sat, 09 Jan 2016 23:52:22 +0100
+ -- Michael Biebl <biebl@debian.org>  Sun, 10 Jan 2016 00:20:18 +0100
 
 cogl (1.22.0-1) unstable; urgency=medium
 
