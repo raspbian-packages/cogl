@@ -1,6 +1,10 @@
-cogl (1.22.0-3) UNRELEASED; urgency=medium
+cogl (1.22.2-1) UNRELEASED; urgency=medium
 
+  [ Jeremy Bicha ]
   * Have libcogl-dev depend on libcairo2-dev
+
+  [ Michael Biebl ]
+  * New upstream release.
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 06 Jul 2016 01:10:21 -0400
 
