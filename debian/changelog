@@ -12,6 +12,7 @@ cogl (1.22.2-1) UNRELEASED; urgency=medium
     Ensure proper upgrade to the new dbgsym packages by using
     dh_strip --dbgsym-migration. Bump the Build-Depends on debhelper
     accordingly.
+  * Bump Standards-Version to 3.9.8.
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 06 Jul 2016 01:10:21 -0400
 
