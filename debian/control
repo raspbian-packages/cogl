@@ -7,7 +7,7 @@ Section: libs
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: Andreas Henriksson <andreas@fatal.se>, Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@ubuntu.com>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>, Rico Tzschichholz <ricotz@ubuntu.com>
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 9.20160114~),
                dh-autoreconf,
                gnome-pkg-tools,
                gtk-doc-tools (>= 1.13),
@@ -93,21 +93,6 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  can render without stepping on each others toes.
  .
  This package contains the development files for libcogl.
-
-Package: libcogl20-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: libcogl20 (= ${binary:Version}),
-         ${misc:Depends}
-Multi-Arch: same
-Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the debug files for libcogl.
 
 Package: libcogl-doc
 Section: doc
@@ -207,21 +192,6 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  .
  This package contains the development files for libcogl-pango.
 
-Package: libcogl-pango20-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: libcogl-pango20 (= ${binary:Version}),
-         ${misc:Depends}
-Multi-Arch: same
-Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the debug files for libcogl-pango.
-
 Package: gir1.2-coglpango-1.0
 Section: introspection
 Architecture: any
@@ -318,21 +288,6 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  can render without stepping on each others toes.
  .
  This package contains the development files for libcogl-gst.
-
-Package: libcogl-gst20-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: libcogl-gst20 (= ${binary:Version}),
-         ${misc:Depends}
-Multi-Arch: same
-Description: Object oriented GL/GLES Abstraction/Utility Layer (debug files)
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the debug files for libcogl-gst.
 
 Package: gir1.2-coglgst-2.0
 Section: introspection

@@ -8,6 +8,10 @@ cogl (1.22.2-1) UNRELEASED; urgency=medium
   * Drop 0001-kms-winsys-don-t-wait-for-a-flip-when-page-flipping-.patch,
     merged upstream.
   * Convert from cdbs to dh.
+  * Drop dbg packages now that we have automatic dbgsym packages.
+    Ensure proper upgrade to the new dbgsym packages by using
+    dh_strip --dbgsym-migration. Bump the Build-Depends on debhelper
+    accordingly.
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 06 Jul 2016 01:10:21 -0400
 

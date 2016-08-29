@@ -37,3 +37,9 @@ override_dh_makeshlibs:
 
 override_dh_install:
 	dh_install --list-missing
+
+override_dh_strip:
+	dh_strip -plibcogl20 --dbgsym-migration='libcogl20-dbg (<< 1.22.2-1~)'
+	dh_strip -plibcogl-pango20 --dbgsym-migration='libcogl-pango20-dbg (<< 1.22.2-1~)'
+	dh_strip -plibcogl-gst20 --dbgsym-migration='libcogl-gst20-dbg (<< 1.22.2-1~)'
+	dh_strip --remaining-packages
