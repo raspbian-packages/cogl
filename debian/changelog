@@ -1,4 +1,4 @@
-cogl (1.22.2-1) UNRELEASED; urgency=medium
+cogl (1.22.2-1) unstable; urgency=medium
 
   [ Jeremy Bicha ]
   * Have libcogl-dev depend on libcairo2-dev
@@ -14,7 +14,7 @@ cogl (1.22.2-1) UNRELEASED; urgency=medium
     accordingly.
   * Bump Standards-Version to 3.9.8.
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 06 Jul 2016 01:10:21 -0400
+ -- Michael Biebl <biebl@debian.org>  Tue, 30 Aug 2016 00:57:01 +0200
 
 cogl (1.22.0-2) unstable; urgency=medium
 
