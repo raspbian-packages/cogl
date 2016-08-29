@@ -7,6 +7,7 @@ cogl (1.22.2-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Drop 0001-kms-winsys-don-t-wait-for-a-flip-when-page-flipping-.patch,
     merged upstream.
+  * Convert from cdbs to dh.
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 06 Jul 2016 01:10:21 -0400
 
