@@ -2,10 +2,15 @@
 
 include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
+%:
+	dh $@ --with autoreconf,gir,gnome
+
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH),armel armhf))
-CONFFLAGS = --with-default-driver=gles2
+CONFFLAGS += \
+	--with-default-driver=gles2
 else
-CONFFLAGS = --with-default-driver=gl
+CONFFLAGS += \
+	--with-default-driver=gl
 endif
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
@@ -14,9 +19,6 @@ CONFFLAGS += \
 	--enable-wayland-egl-server \
 	--enable-kms-egl-platform
 endif
-
-%:
-	dh $@ --with autoreconf,gir,gnome
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
