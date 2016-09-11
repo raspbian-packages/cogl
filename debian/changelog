@@ -1,3 +1,10 @@
+cogl (1.22.2-3) UNRELEASED; urgency=medium
+
+  * Add debian/patches/fix-undef-build-failure.patch:
+    - Patch from Bugzilla to fix kfreebsd build failure
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 10 Sep 2016 19:57:01 -0400
+
 cogl (1.22.2-2) unstable; urgency=medium
 
   * Disable test suite as the tests need a working GL/GLES environment which
