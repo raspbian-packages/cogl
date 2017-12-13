@@ -1,12 +1,13 @@
-cogl (1.22.2-3) UNRELEASED; urgency=medium
+cogl (1.22.2-4) UNRELEASED; urgency=medium
 
   * Add debian/patches/fix-undef-build-failure.patch:
     - Patch from Bugzilla to fix kfreebsd build failure
   * Update Vcs fields for conversion to git
   * Add debian/gbp.conf
+  * Bump debhelper compat to 10
   * Bump Standards-Version to 4.1.2
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 10 Sep 2016 19:57:01 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 13 Dec 2017 18:27:42 -0500
 
 cogl (1.22.2-2) unstable; urgency=medium
 

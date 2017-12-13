@@ -3,7 +3,7 @@
 include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 %:
-	dh $@ --with autoreconf,gir,gnome
+	dh $@ --with gir,gnome
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH),armel armhf))
 CONFFLAGS += \
