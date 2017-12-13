@@ -48,9 +48,9 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 
 Package: libcogl-common
 Architecture: all
+Multi-Arch: foreign
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Multi-Arch: foreign
 Description: Object oriented GL/GLES Abstraction/Utility Layer (common files)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
@@ -62,6 +62,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (common files)
 Package: libcogl-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl20 (= ${binary:Version}),
          gir1.2-cogl-1.0 (= ${binary:Version}),
          libcairo2-dev,
@@ -92,6 +93,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
 Package: libcogl-doc
 Section: doc
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Suggests: devhelp
 Description: Object oriented GL/GLES Abstraction/Utility Layer (documentation)
@@ -132,6 +134,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-path-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-path20 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
          ${misc:Depends},
@@ -162,6 +165,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-pango-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-pango20 (= ${binary:Version}),
          gir1.2-coglpango-1.0 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
@@ -223,6 +227,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-gles2-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-gles2-20 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
          ${misc:Depends},
@@ -259,6 +264,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-gst-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-gst20 (= ${binary:Version}),
          gir1.2-coglgst-2.0 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
