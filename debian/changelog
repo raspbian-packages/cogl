@@ -5,6 +5,7 @@ cogl (1.22.2-4) UNRELEASED; urgency=medium
   * Update Vcs fields for conversion to git
   * Add Multi-Arch metadata, thanks multiarch hinter
   * Add debian/gbp.conf
+  * Run build tests with xvfb
   * Bump debhelper compat to 10
   * Bump Standards-Version to 4.1.2
 

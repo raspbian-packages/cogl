@@ -46,5 +46,7 @@ override_dh_strip:
 	dh_strip -plibcogl-gst20 --dbgsym-migration='libcogl-gst20-dbg (<< 1.22.2-1~)'
 	dh_strip --remaining-packages
 
-# disable test suite, they need a working GL/GLES environment
 override_dh_auto_test:
+ifneq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	xvfb-run -a dh_auto_test
+endif
