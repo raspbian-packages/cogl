@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@, Rico Tzschichholz <ricotz@ubuntu.com>
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper (>= 11),
                gnome-pkg-tools,
                gtk-doc-tools (>= 1.13),
                libgbm-dev [linux-any],
@@ -35,7 +35,6 @@ Depends: ${shlibs:Depends},
          libgles2-mesa [armel armhf] | libgles2 [armel armhf]
 Recommends: libcogl-common
 Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
-Pre-Depends: ${misc:Pre-Depends}
 Breaks: libclutter-1.0-0 (<< 1.17),
         libcogl9,
         libcogl11,
@@ -125,7 +124,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -156,7 +154,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -216,7 +213,6 @@ Depends: ${shlibs:Depends},
 Recommends: libcogl-common
 Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
 Replaces: libcogl12 (<< 1.13.4-2)
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -252,7 +248,6 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          libgstreamer-plugins-base1.0-0 (>= 1.2.3-1co2)
 Recommends: libcogl-common
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
