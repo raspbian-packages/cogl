@@ -1,6 +1,9 @@
 #!/usr/bin/make -f
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
 %:
 	dh $@ --with gir,gnome
 
@@ -18,6 +21,9 @@ CONFFLAGS += \
 	--enable-wayland-egl-server \
 	--enable-kms-egl-platform
 endif
+
+override_dh_autoreconf:
+	dh_autoreconf --as-needed
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
