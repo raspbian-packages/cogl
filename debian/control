@@ -6,9 +6,8 @@ Source: cogl
 Section: libs
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Emilio Pozuelo Monfort <pochu@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>, Rico Tzschichholz <ricotz@ubuntu.com>
-Build-Depends: debhelper (>= 9.20160114~),
-               dh-autoreconf,
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Iain Lane <laney@debian.org>, Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>, Rico Tzschichholz <ricotz@ubuntu.com>
+Build-Depends: debhelper (>= 11),
                gnome-pkg-tools,
                gtk-doc-tools (>= 1.13),
                libgbm-dev [linux-any],
@@ -21,14 +20,16 @@ Build-Depends: debhelper (>= 9.20160114~),
                libxdamage-dev,
                libxcomposite-dev (>= 1:0.4),
                libxrandr-dev (>= 2:1.2),
+               xauth <!nocheck>,
+               xvfb <!nocheck>,
                gobject-introspection (>= 1.33.4-1~),
                libgirepository1.0-dev (>= 0.9.12),
                libgstreamer-plugins-base1.0-dev
 Build-Conflicts:
                libwayland-dev (>= 1.1.90)
-Standards-Version: 3.9.8
-Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/cogl
-Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/cogl/
+Standards-Version: 4.1.2
+Vcs-Git: https://anonscm.debian.org/git/pkg-gnome/cogl.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-gnome/cogl.git
 
 Package: libcogl20
 Architecture: any
@@ -37,7 +38,6 @@ Depends: ${shlibs:Depends},
          libgl1-mesa-glx
 Recommends: libcogl-common
 Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
-Pre-Depends: ${misc:Pre-Depends}
 Breaks: libclutter-1.0-0 (<< 1.17),
         libcogl9,
         libcogl11,
@@ -52,9 +52,9 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 
 Package: libcogl-common
 Architecture: all
+Multi-Arch: foreign
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Multi-Arch: foreign
 Description: Object oriented GL/GLES Abstraction/Utility Layer (common files)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
@@ -66,6 +66,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (common files)
 Package: libcogl-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl20 (= ${binary:Version}),
          gir1.2-cogl-1.0 (= ${binary:Version}),
          libcairo2-dev,
@@ -94,6 +95,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
 Package: libcogl-doc
 Section: doc
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Suggests: devhelp
 Description: Object oriented GL/GLES Abstraction/Utility Layer (documentation)
@@ -123,7 +125,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -134,6 +135,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-path-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-path20 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
          ${misc:Depends},
@@ -153,7 +155,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
 Recommends: libcogl-common
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -164,6 +165,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-pango-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-pango20 (= ${binary:Version}),
          gir1.2-coglpango-1.0 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
@@ -212,7 +214,6 @@ Depends: ${shlibs:Depends},
 Recommends: libcogl-common
 Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
 Replaces: libcogl12 (<< 1.13.4-2)
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -225,6 +226,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-gles2-dev
 Section: libdevel
 Architecture: kfreebsd-any
+Multi-Arch: same
 Depends: libcogl-gles2-20 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),
          ${misc:Depends},
@@ -247,7 +249,6 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          libgstreamer-plugins-base1.0-0 (>= 1.2.3-1co2)
 Recommends: libcogl-common
-Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
  Cogl is a small open source library for using 3D graphics hardware to draw
@@ -261,6 +262,7 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer
 Package: libcogl-gst-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libcogl-gst20 (= ${binary:Version}),
          gir1.2-coglgst-2.0 (= ${binary:Version}),
          libcogl-dev (= ${binary:Version}),

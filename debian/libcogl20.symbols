@@ -1,4 +1,5 @@
 libcogl.so.20 libcogl20 #MINVER#
+* Build-Depends-Package: libcogl-dev
  _cogl_atlas_add_reorganize_callback@Base 1.17.4
  _cogl_atlas_new@Base 1.17.4
  _cogl_atlas_reserve_space@Base 1.17.4

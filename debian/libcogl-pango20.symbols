@@ -1,4 +1,5 @@
 libcogl-pango.so.20 libcogl-pango20 #MINVER#
+* Build-Depends-Package: libcogl-pango-dev
  cogl_pango_ensure_glyph_cache_for_layout@Base 1.17.4
  cogl_pango_font_map_clear_glyph_cache@Base 1.17.4
  cogl_pango_font_map_create_context@Base 1.17.4

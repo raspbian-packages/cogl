@@ -1,4 +1,4 @@
-cogl (1.22.2-2+rpi1) stretch-staging; urgency=medium
+cogl (1.22.2-3+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 1.18.2-3+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:29:18 +0000]
   * Switch to regular opengl and disable egl/gles to avoid conflicting with
@@ -8,7 +8,21 @@ cogl (1.22.2-2+rpi1) stretch-staging; urgency=medium
   * Move libwayland-dev from Depends and Build-depends to build-conflicts.
     Wayland without EGL seems to be a problem combination.
 
- -- Peter Michael Green <plugwash@raspbian.org>  Thu, 29 Sep 2016 15:26:58 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Wed, 27 Dec 2017 20:06:04 +0000
+
+cogl (1.22.2-3) unstable; urgency=medium
+
+  * Add debian/patches/fix-undef-build-failure.patch:
+    - Patch from Bugzilla to fix kfreebsd build failure
+  * Update Vcs fields for conversion to git
+  * Add Multi-Arch metadata, thanks multiarch hinter
+  * Add debian/gbp.conf
+  * Run build tests with xvfb, but still don't fail build for test failures
+  * Bump debhelper compat to 11
+  * Bump Standards-Version to 4.1.2
+  * Build with all hardening flags
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 19 Dec 2017 16:24:19 -0500
 
 cogl (1.22.2-2) unstable; urgency=medium
 

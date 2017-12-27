@@ -1,9 +1,11 @@
 #!/usr/bin/make -f
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 %:
-	dh $@ --with autoreconf,gir,gnome
+	dh $@ --with gir,gnome
 
 #ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH),armel armhf))
 #CONFFLAGS += \
@@ -20,6 +22,9 @@ CONFFLAGS += \
 #	--enable-kms-egl-platform
 #endif
 
+override_dh_autoreconf:
+	dh_autoreconf --as-needed
+
 override_dh_auto_configure:
 	dh_auto_configure -- \
 		--enable-gtk-doc \
@@ -31,10 +36,14 @@ override_dh_auto_configure:
 		$(CONFFLAGS)
 
 override_dh_makeshlibs:
-	dh_makeshlibs -V -- -c4
+	dh_makeshlibs -- -c4
 
 override_dh_install:
-	dh_install --list-missing
+	find debian/tmp -name '*.la' -print -delete
+	dh_install
+
+override_dh_missing:
+	dh_missing --list-missing
 
 override_dh_strip:
 	dh_strip -plibcogl20 --dbgsym-migration='libcogl20-dbg (<< 1.22.2-1~)'
@@ -42,5 +51,7 @@ override_dh_strip:
 	dh_strip -plibcogl-gst20 --dbgsym-migration='libcogl-gst20-dbg (<< 1.22.2-1~)'
 	dh_strip --remaining-packages
 
-# disable test suite, they need a working GL/GLES environment
 override_dh_auto_test:
+ifneq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	-xvfb-run -a dh_auto_test
+endif

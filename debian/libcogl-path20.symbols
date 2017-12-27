@@ -1,4 +1,5 @@
 libcogl-path.so.20 libcogl-path20 #MINVER#
+* Build-Depends-Package: libcogl-path-dev
  cogl2_clip_push_from_path@Base 1.17.4
  cogl2_path_arc@Base 1.17.4
  cogl2_path_close@Base 1.17.4

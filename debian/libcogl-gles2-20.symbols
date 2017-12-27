@@ -1,4 +1,5 @@
 libcogl-gles2.so.20 libcogl-gles2-20 #MINVER#
+* Build-Depends-Package: libcogl-gles2-dev
  glActiveTexture@Base 1.17.4
  glAttachShader@Base 1.17.4
  glBindAttribLocation@Base 1.17.4
