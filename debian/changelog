@@ -1,3 +1,9 @@
+cogl (1.22.2-4) UNRELEASED; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 12:58:04 -0500
+
 cogl (1.22.2-3) unstable; urgency=medium
 
   * Add debian/patches/fix-undef-build-failure.patch:
