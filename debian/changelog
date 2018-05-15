@@ -1,6 +1,10 @@
 cogl (1.22.2-4) UNRELEASED; urgency=medium
 
+  [ Jeremy Bicha ]
   * Update Vcs fields for migration to https://salsa.debian.org/
+
+  [ Simon McVittie ]
+  * Remove obsolete Breaks on pre-jessie versions of cogl
 
  -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 12:58:04 -0500
 
