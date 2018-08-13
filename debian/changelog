@@ -9,6 +9,8 @@ cogl (1.22.2-4) UNRELEASED; urgency=medium
     the canonical names for the packages containing Cogl-2.0.typelib and
     CoglPango-2.0.typelib. Note that despite the packages' names, there
     is no Cogl-1.0.typelib or CoglPango-1.0.typelib.
+  * Depend on libgl1 and libgles2 instead of transitional packages
+    libgl1-mesa-glx and libgles2-mesa (Closes: #905974)
 
  -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 12:58:04 -0500
 

@@ -35,10 +35,10 @@ Package: libcogl20
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libgl1-mesa-glx [!armel !armhf ],
-         libgles2-mesa [armel armhf] | libgles2 [armel armhf]
+         libgl1 [!armel !armhf],
+         libgles2 [armel armhf]
 Recommends: libcogl-common
-Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
+Suggests: libgles2, libgl1
 Breaks: libclutter-1.0-0 (<< 1.17)
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
@@ -210,10 +210,10 @@ Package: libcogl-gles2-20
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libgl1-mesa-glx [!armel !armhf ],
-         libgles2-mesa [armel armhf] | libgles2 [armel armhf]
+         libgl1 [!armel !armhf],
+         libgles2 [armel armhf]
 Recommends: libcogl-common
-Suggests: libgles2-mesa | libgles2, libgl1-mesa-glx
+Suggests: libgles2, libgl1
 Replaces: libcogl12 (<< 1.13.4-2)
 Multi-Arch: same
 Description: Object oriented GL/GLES Abstraction/Utility Layer
