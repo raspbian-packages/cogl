@@ -301,3 +301,4 @@ Description: GObject introspection data for the CoglGst 2.0 library
  library.
  .
  It can be used by packages using the GIRepository format to generate
+ dynamic bindings for libcogl-gst.
