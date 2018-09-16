@@ -1,7 +1,10 @@
-cogl (1.22.2-4) UNRELEASED; urgency=medium
+cogl (1.22.2-4) unstable; urgency=medium
 
   [ Jeremy Bicha ]
   * Update Vcs fields for migration to https://salsa.debian.org/
+  * debian/libcogl20.symbols: Add symbol exposed by compiler changes
+    (Closes: #895732)
+  * Bump Standards-Version to 4.2.1
 
   [ Simon McVittie ]
   * Remove obsolete Breaks on pre-jessie versions of cogl
@@ -12,7 +15,7 @@ cogl (1.22.2-4) UNRELEASED; urgency=medium
   * Depend on libgl1 and libgles2 instead of transitional packages
     libgl1-mesa-glx and libgles2-mesa (Closes: #905974)
 
- -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 12:58:04 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 16 Sep 2018 13:04:26 -0400
 
 cogl (1.22.2-3) unstable; urgency=medium
 
@@ -131,7 +134,7 @@ cogl (1.18.0-2) unstable; urgency=medium
 
   [ Andreas Henriksson ]
   * Update symbols file for non-linux architectures:
-    - (arch=!hurd-any)cogl_egl_context_get_egl_context@Base 
+    - (arch=!hurd-any)cogl_egl_context_get_egl_context@Base
     - (arch=linux-any)cogl_wayland_texture_set_region_from_shm_buffer@Base
 
   [ Samuel Thibault ]
@@ -140,7 +143,7 @@ cogl (1.18.0-2) unstable; urgency=medium
 
   [ Andreas Henriksson ]
   * drop (arch=!hurd-any) from cogl_egl_context_ symbols.
-  
+
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 26 Mar 2014 11:51:58 +0100
 
 cogl (1.18.0-1) unstable; urgency=medium
@@ -181,7 +184,7 @@ cogl (1.16.2-1) experimental; urgency=medium
   * New upstream release 1.16.2
     + YV12/I420 support in cogl-gst is fixed.
     + cogl_framebuffer_push_path_clip is fixed.
-  * 0001-Fix-build-on-big-endian.patch: Drop, applied upstream. 
+  * 0001-Fix-build-on-big-endian.patch: Drop, applied upstream.
 
  -- Iain Lane <laney@debian.org>  Tue, 11 Feb 2014 14:40:15 +0000
 
