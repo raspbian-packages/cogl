@@ -54,5 +54,9 @@ override_dh_strip:
 	dh_strip -plibcogl-gst20 --dbgsym-migration='libcogl-gst20-dbg (<< 1.22.2-1~)'
 	dh_strip --remaining-packages
 
+# Tests hang on Debian's armel buildd
 override_dh_auto_test:
+ifeq (,$(findstring $(DEB_HOST_ARCH),"armel"))
 	-xvfb-run -a dh_auto_test
+else
+endif
