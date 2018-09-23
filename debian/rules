@@ -1,5 +1,4 @@
 #!/usr/bin/make -f
--include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
@@ -51,7 +50,9 @@ override_dh_strip:
 	dh_strip -plibcogl-gst20 --dbgsym-migration='libcogl-gst20-dbg (<< 1.22.2-1~)'
 	dh_strip --remaining-packages
 
+# Don't run tests on armel since they hang on Debian's buildd there
 override_dh_auto_test:
-ifneq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+ifeq (,$(findstring $(DEB_HOST_ARCH),"armel"))
 	-xvfb-run -a dh_auto_test
+else
 endif

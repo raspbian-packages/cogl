@@ -172,6 +172,7 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_feature_flags_get_type@Base 1.17.4
  cogl_features_available@Base 1.17.4
  cogl_fence_closure_get_user_data@Base 1.17.4
+ cogl_filter_return_get_type@Base 1.22.2
  cogl_fixed_atan2@Base 1.17.4
  cogl_fixed_atan@Base 1.17.4
  cogl_fixed_cos@Base 1.17.4

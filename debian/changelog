@@ -1,4 +1,4 @@
-cogl (1.22.2-3+rpi1) buster-staging; urgency=medium
+cogl (1.22.2-5+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 1.18.2-3+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Wed, 07 Jan 2015 02:29:18 +0000]
   * Switch to regular opengl and disable egl/gles to avoid conflicting with
@@ -8,7 +8,34 @@ cogl (1.22.2-3+rpi1) buster-staging; urgency=medium
   * Move libwayland-dev from Depends and Build-depends to build-conflicts.
     Wayland without EGL seems to be a problem combination.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 27 Dec 2017 20:06:04 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sun, 23 Sep 2018 15:51:41 +0000
+
+cogl (1.22.2-5) unstable; urgency=medium
+
+  * Fix incomplete package description for gir1.2-coglgst-2.0 (Closes: #787516)
+  * Don't run build tests on armel since they hang on Debian's buildds there.
+    The tests don't pass on any of our architectures anyway.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 17 Sep 2018 09:44:04 -0400
+
+cogl (1.22.2-4) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * debian/libcogl20.symbols: Add symbol exposed by compiler changes
+    (Closes: #895732)
+  * Bump Standards-Version to 4.2.1
+
+  [ Simon McVittie ]
+  * Remove obsolete Breaks on pre-jessie versions of cogl
+  * Add versioned Provides for gir1.2-cogl-2.0 and gir1.2-coglpango-2.0,
+    the canonical names for the packages containing Cogl-2.0.typelib and
+    CoglPango-2.0.typelib. Note that despite the packages' names, there
+    is no Cogl-1.0.typelib or CoglPango-1.0.typelib.
+  * Depend on libgl1 and libgles2 instead of transitional packages
+    libgl1-mesa-glx and libgles2-mesa (Closes: #905974)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 16 Sep 2018 13:04:26 -0400
 
 cogl (1.22.2-3) unstable; urgency=medium
 
@@ -127,7 +154,7 @@ cogl (1.18.0-2) unstable; urgency=medium
 
   [ Andreas Henriksson ]
   * Update symbols file for non-linux architectures:
-    - (arch=!hurd-any)cogl_egl_context_get_egl_context@Base 
+    - (arch=!hurd-any)cogl_egl_context_get_egl_context@Base
     - (arch=linux-any)cogl_wayland_texture_set_region_from_shm_buffer@Base
 
   [ Samuel Thibault ]
@@ -136,7 +163,7 @@ cogl (1.18.0-2) unstable; urgency=medium
 
   [ Andreas Henriksson ]
   * drop (arch=!hurd-any) from cogl_egl_context_ symbols.
-  
+
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 26 Mar 2014 11:51:58 +0100
 
 cogl (1.18.0-1) unstable; urgency=medium
@@ -177,7 +204,7 @@ cogl (1.16.2-1) experimental; urgency=medium
   * New upstream release 1.16.2
     + YV12/I420 support in cogl-gst is fixed.
     + cogl_framebuffer_push_path_clip is fixed.
-  * 0001-Fix-build-on-big-endian.patch: Drop, applied upstream. 
+  * 0001-Fix-build-on-big-endian.patch: Drop, applied upstream.
 
  -- Iain Lane <laney@debian.org>  Tue, 11 Feb 2014 14:40:15 +0000
 
