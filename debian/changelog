@@ -7,6 +7,10 @@ cogl (1.22.2-5+rpi1) buster-staging; urgency=medium
   [changes brought forward from 1.22.0-1+rpi2 by Peter Michael Green <plugwash@raspbian.org> at Fri, 25 Sep 2015 01:24:58 +0000]
   * Move libwayland-dev from Depends and Build-depends to build-conflicts.
     Wayland without EGL seems to be a problem combination.
+  
+  [changes introduced in 1.22.2-5+rpi1 by Peter Michael Green]
+  * Remove libwayland-dev from build-conflicts, the conflict renders the
+    build-depends uninstallable thanks to gstreamer.
 
  -- Raspbian forward porter <root@raspbian.org>  Sun, 23 Sep 2018 15:51:41 +0000
 
