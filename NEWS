@@ -1,3 +1,25 @@
+Cogl 1.22.4                                                        2019-04-23
+
+  • List of changes since Cogl 1.22.2
+
+  » Add precision for Sampler3D following the GLES 3.0 spec [#770723]
+  » Take pending updates in consideration on Wayland [#772707]
+  » Fix build with both Wayland and EGL support disabled
+  » Support Automake 1.16
+  » Support compositors that do not support wl_shell
+  » Drop deprecated `G_INLINE_FUNC` symbol
+  » Fix introspection annotations
+
+Many thanks to:
+
+  Lionel Landwerlin
+  Piotr Drąg
+  Kalev Lember
+  Ting-Wei Lan
+  Ilia Bozhinov
+  Javier Jardón
+  Marco Trevisan
+
 Cogl 1.22.2                                                        2016-08-25
 
   • List of changes since Cogl 1.22.0

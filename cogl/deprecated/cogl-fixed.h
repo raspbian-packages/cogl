@@ -536,18 +536,44 @@ cogl_fixed_atan2 (CoglFixed a,
 /*< public >*/
 
 /* Fixed point math routines */
-G_INLINE_FUNC CoglFixed
+static inline CoglFixed
 cogl_fixed_mul (CoglFixed a,
-                CoglFixed b);
+                CoglFixed b)
+{
+# ifdef __arm__
+    int res_low, res_hi;
 
-G_INLINE_FUNC CoglFixed
+    __asm__ ("smull %0, %1, %2, %3     \n"
+             "mov   %0, %0,     lsr %4 \n"
+             "add   %1, %0, %1, lsl %5 \n"
+             : "=r"(res_hi), "=r"(res_low)\
+             : "r"(a), "r"(b), "i"(COGL_FIXED_Q), "i"(32 - COGL_FIXED_Q));
+
+    return (CoglFixed) res_low;
+# else
+    long long r = (long long) a * (long long) b;
+
+    return (unsigned int)(r >> COGL_FIXED_Q);
+# endif
+}
+
+static inline CoglFixed
 cogl_fixed_div (CoglFixed a,
-                CoglFixed b);
+                CoglFixed b)
+{
+  return (CoglFixed) ((((int64_t) a) << COGL_FIXED_Q) / b);
+}
 
-G_INLINE_FUNC CoglFixed
+static inline CoglFixed
 cogl_fixed_mul_div (CoglFixed a,
                     CoglFixed b,
-                    CoglFixed c);
+                    CoglFixed c)
+{
+  CoglFixed ab = cogl_fixed_mul (a, b);
+  CoglFixed quo = cogl_fixed_div (ab, c);
+
+  return quo;
+}
 
 /**
  * COGL_SQRTI_ARG_MAX:
@@ -749,53 +775,6 @@ cogl_angle_tan (CoglAngle angle);
  */
 CoglFixed
 cogl_angle_cos (CoglAngle angle);
-
-/*< private >*/
-
-#if defined (G_CAN_INLINE)
-G_INLINE_FUNC CoglFixed
-cogl_fixed_mul (CoglFixed a,
-                CoglFixed b)
-{
-# ifdef __arm__
-    int res_low, res_hi;
-
-    __asm__ ("smull %0, %1, %2, %3     \n"
-	     "mov   %0, %0,     lsr %4 \n"
-	     "add   %1, %0, %1, lsl %5 \n"
-	     : "=r"(res_hi), "=r"(res_low)\
-	     : "r"(a), "r"(b), "i"(COGL_FIXED_Q), "i"(32 - COGL_FIXED_Q));
-
-    return (CoglFixed) res_low;
-# else
-    long long r = (long long) a * (long long) b;
-
-    return (unsigned int)(r >> COGL_FIXED_Q);
-# endif
-}
-#endif
-
-#if defined (G_CAN_INLINE)
-G_INLINE_FUNC CoglFixed
-cogl_fixed_div (CoglFixed a,
-                CoglFixed b)
-{
-  return (CoglFixed) ((((int64_t) a) << COGL_FIXED_Q) / b);
-}
-#endif
-
-#if defined(G_CAN_INLINE)
-G_INLINE_FUNC CoglFixed
-cogl_fixed_mul_div (CoglFixed a,
-                    CoglFixed b,
-                    CoglFixed c)
-{
-  CoglFixed ab = cogl_fixed_mul (a, b);
-  CoglFixed quo = cogl_fixed_div (ab, c);
-
-  return quo;
-}
-#endif
 
 CoglFixed
 cogl_double_to_fixed (double value);

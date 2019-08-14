@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Offscreen Buffers: Cogl Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl Reference Manual">
 <link rel="up" href="ch01.html" title="Cogl - a modern 3D graphics API">
 <link rel="prev" href="cogl-Shaders-and-Programmable-Pipeline.html" title="Shaders and Programmable Pipeline">
 <link rel="next" href="cogl-Bitmaps.html" title="Bitmaps">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -34,7 +34,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="cogl-Offscreen-Buffers.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -151,7 +151,7 @@ finished configuring it by calling <code class="function">cogl_framebuffer_alloc
 passing in a <span class="type">CoglError</span> argument to catch any exceptions.</p>
 <div class="refsect3">
 <a name="cogl-offscreen-new-with-texture.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -166,7 +166,7 @@ passing in a <span class="type">CoglError</span> argument to catch any exception
 </div>
 <div class="refsect3">
 <a name="cogl-offscreen-new-with-texture.returns"></a><h4>Returns</h4>
-<p> a newly instantiated <span class="type">CoglOffscreen</span>
+<p>a newly instantiated <span class="type">CoglOffscreen</span>
 framebuffer. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -194,7 +194,7 @@ you can use the <em class="parameter"><code>texture</code></em>
 with meta-texture types such as <span class="type">CoglTexture2DSliced</span>.</div>
 <div class="refsect3">
 <a name="cogl-offscreen-new-to-texture.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -209,7 +209,7 @@ with meta-texture types such as <span class="type">CoglTexture2DSliced</span>.</
 </div>
 <div class="refsect3">
 <a name="cogl-offscreen-new-to-texture.returns"></a><h4>Returns</h4>
-<p> a newly instantiated <span class="type">CoglOffscreen</span>
+<p>a newly instantiated <span class="type">CoglOffscreen</span>
 framebuffer or <code class="literal">NULL</code> if it wasn't possible to create the
 buffer. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
@@ -224,7 +224,7 @@ cogl_is_offscreen (<em class="parameter"><code><span class="type">void</span> *o
 framebuffer object.</p>
 <div class="refsect3">
 <a name="cogl-is-offscreen.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -260,7 +260,7 @@ either be an offscreen buffer created with <a class="link" href="cogl-Offscreen-
 or in the future it may be an onscreen framebuffers too.</p>
 <div class="refsect3">
 <a name="cogl-set-framebuffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -386,7 +386,7 @@ corresponding to the bottom right you can do so like this:</p>
 <span class="cbracket">{</span>
 <span class="normal">  </span><span class="usertype">ClutterPerspective</span><span class="normal"> perspective</span><span class="symbol">;</span>
 
-<span class="normal">  </span><span class="function">clutter_stage_get_perspective</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stage</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">perspective</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="function"><a href="/home/ebassi/gnome/install/share/gtk-doc/html/clutter/ClutterStage.html#clutter-stage-get-perspective">clutter_stage_get_perspective</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stage</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">perspective</span><span class="symbol">);</span>
 
 <span class="normal">  </span><span class="function"><a href="cogl-Offscreen-Buffers.html#cogl-push-framebuffer">cogl_push_framebuffer</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer</span><span class="symbol">);</span>
 <span class="normal">  </span><span class="function">setup_viewport</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer_width</span><span class="symbol">,</span>
@@ -405,7 +405,7 @@ corresponding to the bottom right you can do so like this:</p>
 <p>The previous framebuffer can be restored by calling <a class="link" href="cogl-Offscreen-Buffers.html#cogl-pop-framebuffer" title="cogl_pop_framebuffer ()"><code class="function">cogl_pop_framebuffer()</code></a></p>
 <div class="refsect3">
 <a name="cogl-push-framebuffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -453,7 +453,7 @@ can either be an offscreen buffer created with
 on screen window buffer.</p>
 <div class="refsect3">
 <a name="cogl-set-draw-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -508,6 +508,6 @@ cogl_push_draw_buffer (<em class="parameter"><code><span class="type">void</span
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>

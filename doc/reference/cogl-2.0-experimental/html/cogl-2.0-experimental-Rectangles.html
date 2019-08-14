@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Rectangles: Cogl 2.0 Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
 <link rel="up" href="cogl-primitive-apis.html" title="Geometry">
 <link rel="prev" href="cogl-2.0-experimental-Path-Primitives.html" title="Path Primitives">
 <link rel="next" href="cogl-textures.html" title="Textures">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -33,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-Rectangles.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -97,7 +97,7 @@ cogl_rectangle (<em class="parameter"><code><span class="type">float</span> x_1<
 <p>Fills a rectangle at the given coordinates with the current source material</p>
 <div class="refsect3">
 <a name="cogl-rectangle.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -146,7 +146,7 @@ parameters x1, y1, x2, and y2, and have the same
 meaning as in <a class="link" href="cogl-2.0-experimental-Rectangles.html#cogl-rectangle" title="cogl_rectangle ()"><code class="function">cogl_rectangle()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-rectangles.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -155,7 +155,7 @@ meaning as in <a class="link" href="cogl-2.0-experimental-Rectangles.html#cogl-r
 <tbody>
 <tr>
 <td class="parameter_name"><p>verts</p></td>
-<td class="parameter_description"><p> an array of vertices. </p></td>
+<td class="parameter_description"><p>an array of vertices. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ texture pass in <em class="parameter"><code>tx1</code></em>
 =1.0.</p>
 <div class="refsect3">
 <a name="cogl-rectangle-with-texture-coords.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -259,7 +259,7 @@ parameters x1, y1, x2, y2, tx1, ty1, tx2 and ty2 and have the same
 meaning as in <a class="link" href="cogl-2.0-experimental-Rectangles.html#cogl-rectangle-with-texture-coords" title="cogl_rectangle_with_texture_coords ()"><code class="function">cogl_rectangle_with_texture_coords()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-rectangles-with-texture-coords.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -268,7 +268,7 @@ meaning as in <a class="link" href="cogl-2.0-experimental-Rectangles.html#cogl-r
 <tbody>
 <tr>
 <td class="parameter_name"><p>verts</p></td>
-<td class="parameter_description"><p> an array of vertices. </p></td>
+<td class="parameter_description"><p>an array of vertices. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -302,7 +302,7 @@ layers in the current source material then default texture coordinates
 (0.0, 0.0, 1.0, 1.0) are generated.</p>
 <div class="refsect3">
 <a name="cogl-rectangle-with-multitexture-coords.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -331,7 +331,7 @@ layers in the current source material then default texture coordinates
 </tr>
 <tr>
 <td class="parameter_name"><p>tex_coords</p></td>
-<td class="parameter_description"><p> An array containing groups of
+<td class="parameter_description"><p>An array containing groups of
 4 float values: [tx1, ty1, tx2, ty2] that are interpreted as two texture
 coordinates; one for the upper left texel, and one for the lower right
 texel. Each value should be between 0.0 and 1.0, where the coordinate
@@ -356,6 +356,6 @@ and one group of texture coordinates, this would be 4)</p></td>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>

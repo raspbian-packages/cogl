@@ -818,51 +818,6 @@ cogl_sqrti (int number)
 #endif
 }
 
-CoglFixed
-cogl_fixed_mul (CoglFixed a,
-                CoglFixed b)
-{
-#if defined(__arm__) && !defined(__thumb__)
-  /* This provides about 12% speedeup on the gcc -O2 optimised
-   * C version
-   *
-   * Based on code found in the following thread:
-   * http://lists.mplayerhq.hu/pipermail/ffmpeg-devel/2006-August/014405.html
-   */
-  int res_low, res_hi;
-
-  __asm__ ("smull %0, %1, %2, %3     \n"
-           "mov   %0, %0,     lsr %4 \n"
-           "add   %1, %0, %1, lsl %5 \n"
-           : "=&r"(res_hi), "=&r"(res_low) \
-           : "r"(a), "r"(b), "i"(COGL_FIXED_Q), "i"(32 - COGL_FIXED_Q));
-
-  return (CoglFixed) res_low;
-#else
-  int64_t r = (int64_t) a * (int64_t) b;
-
-  return (CoglFixed) (r >> COGL_FIXED_Q);
-#endif
-}
-
-CoglFixed
-cogl_fixed_div (CoglFixed a,
-                CoglFixed b)
-{
-  return (CoglFixed) ((((int64_t) a) << COGL_FIXED_Q) / b);
-}
-
-CoglFixed
-cogl_fixed_mul_div (CoglFixed a,
-                    CoglFixed b,
-                    CoglFixed c)
-{
-  CoglFixed ab = cogl_fixed_mul (a, b);
-  CoglFixed quo = cogl_fixed_div (ab, c);
-
-  return quo;
-}
-
 /*
  * The log2x() and pow2x() functions
  *

@@ -519,7 +519,7 @@
 #define PACKAGE_NAME "cogl"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "cogl 1.22.2"
+#define PACKAGE_STRING "cogl 1.22.4"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "cogl"
@@ -528,7 +528,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.22.2"
+#define PACKAGE_VERSION "1.22.4"
 
 /* Maximum POSIX RT priority */
 /* #undef POSIX_MAX_PRIORITY */

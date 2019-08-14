@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Top-Level Context: Cogl 2.0 Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
 <link rel="up" href="cogl-context-apis.html" title="Setting Up A Drawing Context">
 <link rel="prev" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html" title="CoglDisplay: Setup a display pipeline">
 <link rel="next" href="cogl-pipeline-apis.html" title="Setting Up A GPU Pipeline">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -33,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-The-Top-Level-Context.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -308,7 +308,7 @@
 </div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-The-Top-Level-Context.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -375,7 +375,7 @@ cogl_is_context (<em class="parameter"><code><span class="type">void</span> *obj
 <p>Gets whether the given object references an existing context object.</p>
 <div class="refsect3">
 <a name="cogl-is-context.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -421,7 +421,7 @@ for any state objects that are allocated.</p>
 <p><span class="annotation">[<acronym title="This symbol is a constructor, not a static method."><span class="acronym">constructor</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="cogl-context-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -430,7 +430,7 @@ for any state objects that are allocated.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>display</p></td>
-<td class="parameter_description"><p> A <a class="link" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#CoglDisplay" title="CoglDisplay"><span class="type">CoglDisplay</span></a> pointer. </p></td>
+<td class="parameter_description"><p>A <a class="link" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#CoglDisplay" title="CoglDisplay"><span class="type">CoglDisplay</span></a> pointer. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -443,7 +443,7 @@ for any state objects that are allocated.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-context-new.returns"></a><h4>Returns</h4>
-<p> A newly allocated <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a>. </p>
+<p>A newly allocated <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext" title="CoglContext"><span class="type">CoglContext</span></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: 1.8</p>
@@ -475,7 +475,7 @@ passed to <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html
 display that was automatically setup internally.</p>
 <div class="refsect3">
 <a name="cogl-context-get-display.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -490,7 +490,7 @@ display that was automatically setup internally.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-context-get-display.returns"></a><h4>Returns</h4>
-<p> The <a class="link" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#CoglDisplay" title="CoglDisplay"><span class="type">CoglDisplay</span></a> associated with the
+<p>The <a class="link" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#CoglDisplay" title="CoglDisplay"><span class="type">CoglDisplay</span></a> associated with the
 given <em class="parameter"><code>context</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -525,7 +525,7 @@ means applications have some responsibility to explicitly check
 that certain features are available before depending on them.</p>
 <div class="refsect3">
 <a name="cogl-has-feature.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -579,7 +579,7 @@ returns <code class="literal">TRUE</code> if all the features are available or <
 otherwise.</p>
 <div class="refsect3">
 <a name="cogl-has-features.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -630,7 +630,7 @@ mentioned in the release notes for the affected release.
 context level features supported by Cogl.</p>
 <div class="refsect3">
 <a name="CoglFeatureCallback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -679,7 +679,7 @@ for a given <em class="parameter"><code>context</code></em>
  is called.</p>
 <div class="refsect3">
 <a name="cogl-foreach-feature.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -693,13 +693,13 @@ for a given <em class="parameter"><code>context</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p> A <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglFeatureCallback" title="CoglFeatureCallback ()"><span class="type">CoglFeatureCallback</span></a> called for each
+<td class="parameter_description"><p>A <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglFeatureCallback" title="CoglFeatureCallback ()"><span class="type">CoglFeatureCallback</span></a> called for each
 supported feature. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> Private data to pass to the callback. </p></td>
+<td class="parameter_description"><p>Private data to pass to the callback. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -759,7 +759,7 @@ cogl_scale (<em class="parameter"><code><span class="type">float</span> x</code>
 y and z axes by the given values.</p>
 <div class="refsect3">
 <a name="cogl-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -800,7 +800,7 @@ cogl_translate (<em class="parameter"><code><span class="type">float</span> x</c
 model along all three axes according to the given values.</p>
 <div class="refsect3">
 <a name="cogl-translate.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -848,7 +848,7 @@ degrees about the vertex (0, 0, 1) causes a small counter-clockwise
 rotation.</p>
 <div class="refsect3">
 <a name="cogl-rotate.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -891,7 +891,7 @@ cogl_transform (<em class="parameter"><code>const <a class="link" href="cogl-2.0
 <p>Multiplies the current model-view matrix by the given matrix.</p>
 <div class="refsect3">
 <a name="cogl-transform.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -925,7 +925,7 @@ for a given viewing frustum defined by 4 side clip planes that
 all cross through the origin and 2 near and far clip planes.</p>
 <div class="refsect3">
 <a name="cogl-frustum.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -991,7 +991,7 @@ since there wont be enough precision to identify the depth of
 objects near to each other.</div>
 <div class="refsect3">
 <a name="cogl-perspective.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1051,7 +1051,7 @@ the z clipping planes which would have been consistent with the
 left, right bottom and top arguments.</div>
 <div class="refsect3">
 <a name="cogl-ortho.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1109,7 +1109,7 @@ cogl_get_modelview_matrix (<em class="parameter"><code><a class="link" href="cog
 .</p>
 <div class="refsect3">
 <a name="cogl-get-modelview-matrix.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1117,7 +1117,7 @@ cogl_get_modelview_matrix (<em class="parameter"><code><a class="link" href="cog
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>matrix</p></td>
-<td class="parameter_description"><p> return location for the model-view matrix. </p></td>
+<td class="parameter_description"><p>return location for the model-view matrix. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr></tbody>
 </table></div>
@@ -1137,7 +1137,7 @@ cogl_set_modelview_matrix (<em class="parameter"><code><a class="link" href="cog
  as the new model-view matrix.</p>
 <div class="refsect3">
 <a name="cogl-set-modelview-matrix.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1165,7 +1165,7 @@ cogl_get_projection_matrix (<em class="parameter"><code><a class="link" href="co
 .</p>
 <div class="refsect3">
 <a name="cogl-get-projection-matrix.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1173,7 +1173,7 @@ cogl_get_projection_matrix (<em class="parameter"><code><a class="link" href="co
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>matrix</p></td>
-<td class="parameter_description"><p> return location for the projection matrix. </p></td>
+<td class="parameter_description"><p>return location for the projection matrix. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr></tbody>
 </table></div>
@@ -1192,7 +1192,7 @@ cogl_set_projection_matrix (<em class="parameter"><code><a class="link" href="co
 <p>Loads matrix as the new projection matrix.</p>
 <div class="refsect3">
 <a name="cogl-set-projection-matrix.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1221,7 +1221,7 @@ cogl_set_viewport (<em class="parameter"><code><span class="type">int</span> x</
 <p>Replaces the current viewport with the given values.</p>
 <div class="refsect3">
 <a name="cogl-set-viewport.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1273,7 +1273,7 @@ position of the viewport and <em class="parameter"><code>v</code></em>
 height.</p>
 <div class="refsect3">
 <a name="cogl-get-viewport.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1281,7 +1281,7 @@ height.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p> pointer to a 4 element array
+<td class="parameter_description"><p>pointer to a 4 element array
 of <span class="type">float</span>s to receive the viewport dimensions. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=4]</span></td>
 </tr></tbody>
@@ -1305,7 +1305,7 @@ process subsequent primitives, such as rectangles drawn with
 <a class="link" href="cogl-2.0-experimental-Rectangles.html#cogl-rectangle" title="cogl_rectangle ()"><code class="function">cogl_rectangle()</code></a> or vertices drawn using <code class="function">cogl_vertex_buffer_draw()</code>.</p>
 <div class="refsect3">
 <a name="cogl-set-source.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1341,7 +1341,7 @@ semi-transparent red.</p>
 if you already have the color components.</p>
 <div class="refsect3">
 <a name="cogl-set-source-color.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1377,7 +1377,7 @@ color will be used for any subsequent drawing operation.</p>
 between 0 and 255.</p>
 <div class="refsect3">
 <a name="cogl-set-source-color4ub.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1431,7 +1431,7 @@ between 0 and <code class="literal">1</code>.0. If the values passed in are outs
 range, they will be clamped.</p>
 <div class="refsect3">
 <a name="cogl-set-source-color4f.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1489,7 +1489,7 @@ cogl_set_source (material);
 </pre>
 <div class="refsect3">
 <a name="cogl-set-source-texture.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1545,7 +1545,7 @@ material at the top of this stack defines the GPU state used to
 process later primitives as defined by <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-set-source" title="cogl_set_source ()"><code class="function">cogl_set_source()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-push-source.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1592,7 +1592,7 @@ that includes the color buffer then the specified <em class="parameter"><code>co
  is used.</p>
 <div class="refsect3">
 <a name="cogl-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1640,7 +1640,7 @@ specify a format that doesn't use an alpha channel or use one of
 the formats ending in PRE.</p>
 <div class="refsect3">
 <a name="cogl-read-pixels.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1726,7 +1726,7 @@ by Cogl. Applications that depend on any of these features should explicitly
 check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-has-feature" title="cogl_has_feature ()"><code class="function">cogl_has_feature()</code></a> or <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-has-features" title="cogl_has_features ()"><code class="function">cogl_has_features()</code></a>.</p>
 <div class="refsect3">
 <a name="CoglFeatureID.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -1946,7 +1946,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <p>Flags for <a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#cogl-framebuffer-read-pixels-into-bitmap" title="cogl_framebuffer_read_pixels_into_bitmap ()"><code class="function">cogl_framebuffer_read_pixels_into_bitmap()</code></a></p>
 <div class="refsect3">
 <a name="CoglReadPixelsFlags.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -1966,6 +1966,6 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>
