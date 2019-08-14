@@ -285,7 +285,7 @@ cogl_primitive_new_with_attributes (CoglVerticesMode mode,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP2): An array
+ * @data: (array length=n_vertices) (type Cogl.VertexP2): An array
  *        of #CoglVertexP2 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -339,7 +339,7 @@ cogl_primitive_new_p2 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP3): An array of
+ * @data: (array length=n_vertices) (type Cogl.VertexP3): An array of
  *        #CoglVertexP3 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -393,7 +393,7 @@ cogl_primitive_new_p3 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP2C4): An array
+ * @data: (array length=n_vertices) (type Cogl.VertexP2C4): An array
  *        of #CoglVertexP2C4 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -449,7 +449,7 @@ cogl_primitive_new_p2c4 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP3C4): An array
+ * @data: (array length=n_vertices) (type Cogl.VertexP3C4): An array
  *        of #CoglVertexP3C4 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -505,7 +505,7 @@ cogl_primitive_new_p3c4 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP2T2): An array
+ * @data: (array length=n_vertices) (type Cogl.VertexP2T2): An array
  *        of #CoglVertexP2T2 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -561,7 +561,7 @@ cogl_primitive_new_p2t2 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP3T2): An array
+ * @data: (array length=n_vertices) (type Cogl.VertexP3T2): An array
  *        of #CoglVertexP3T2 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -617,7 +617,7 @@ cogl_primitive_new_p3t2 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP2T2C4): An
+ * @data: (array length=n_vertices) (type Cogl.VertexP2T2C4): An
  *        array of #CoglVertexP2T2C4 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single
@@ -673,7 +673,7 @@ cogl_primitive_new_p2t2c4 (CoglContext *context,
  * @mode: A #CoglVerticesMode defining how to draw the vertices
  * @n_vertices: The number of vertices to read from @data and also
  *              the number of vertices to read when later drawing.
- * @data: (array length=n_vertices): (type Cogl.VertexP3T2C4): An
+ * @data: (array length=n_vertices) (type Cogl.VertexP3T2C4): An
  *        array of #CoglVertexP3T2C4 vertices
  *
  * Provides a convenient way to describe a primitive, such as a single

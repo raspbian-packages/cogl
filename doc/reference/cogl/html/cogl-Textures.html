@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Textures: Cogl Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl Reference Manual">
 <link rel="up" href="ch01.html" title="Cogl - a modern 3D graphics API">
 <link rel="prev" href="cogl-Color-Type.html" title="Color Type">
 <link rel="next" href="cogl-Blend-Strings.html" title="Material Blend Strings">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -33,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="cogl-Textures.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -169,7 +169,7 @@
 </div>
 <div class="refsect1">
 <a name="cogl-Textures.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -209,7 +209,7 @@ cogl_texture_new_with_size (<em class="parameter"><code>unsigned <span class="ty
 <p>Creates a new <span class="type">CoglTexture</span> with the specified dimensions and pixel format.</p>
 <div class="refsect3">
 <a name="cogl-texture-new-with-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -242,7 +242,7 @@ texture.</p></td>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-new-with-size.returns"></a><h4>Returns</h4>
-<p> A newly created <span class="type">CoglTexture</span> or <code class="literal">NULL</code> on failure. </p>
+<p>A newly created <span class="type">CoglTexture</span> or <code class="literal">NULL</code> on failure. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix03.html#api-index-0.8">0.8</a></p>
@@ -263,7 +263,7 @@ cogl_texture_new_from_file (<em class="parameter"><code>const <span class="type"
 <p>Creates a <span class="type">CoglTexture</span> from an image file.</p>
 <div class="refsect3">
 <a name="cogl-texture-new-from-file.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -302,7 +302,7 @@ other than straight blending.</p></td>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-new-from-file.returns"></a><h4>Returns</h4>
-<p> A newly created <span class="type">CoglTexture</span> or
+<p>A newly created <span class="type">CoglTexture</span> or
 <code class="literal">NULL</code> on failure. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -327,7 +327,7 @@ cogl_texture_new_from_data (<em class="parameter"><code><span class="type">int</
 <p>Creates a new <span class="type">CoglTexture</span> based on data residing in memory.</p>
 <div class="refsect3">
 <a name="cogl-texture-new-from-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -383,7 +383,7 @@ scanlines in <em class="parameter"><code>data</code></em>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-new-from-data.returns"></a><h4>Returns</h4>
-<p> A newly created <span class="type">CoglTexture</span> or
+<p>A newly created <span class="type">CoglTexture</span> or
 <code class="literal">NULL</code> on failure. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -416,7 +416,7 @@ the waste arguments to tell Cogl which region should be mapped to
 the texture coordinate range [0:1].</p>
 <div class="refsect3">
 <a name="cogl-texture-new-from-foreign.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -463,7 +463,7 @@ the texture coordinate range [0:1].</p>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-new-from-foreign.returns"></a><h4>Returns</h4>
-<p> A newly created <span class="type">CoglTexture</span> or
+<p>A newly created <span class="type">CoglTexture</span> or
 <code class="literal">NULL</code> on failure. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -484,7 +484,7 @@ cogl_texture_new_from_bitmap (<em class="parameter"><code><a class="link" href="
 <p>Creates a <span class="type">CoglTexture</span> from a <a class="link" href="cogl-Bitmaps.html#CoglBitmap" title="CoglBitmap"><span class="type">CoglBitmap</span></a>.</p>
 <div class="refsect3">
 <a name="cogl-texture-new-from-bitmap.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -512,7 +512,7 @@ texture</p></td>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-new-from-bitmap.returns"></a><h4>Returns</h4>
-<p> A newly created <span class="type">CoglTexture</span> or
+<p>A newly created <span class="type">CoglTexture</span> or
 <code class="literal">NULL</code> on failure. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -542,7 +542,7 @@ not need to keep one separately if you only want to use the sub
 texture.</p>
 <div class="refsect3">
 <a name="cogl-texture-new-from-sub-texture.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -579,7 +579,7 @@ texture.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-new-from-sub-texture.returns"></a><h4>Returns</h4>
-<p> A newly created <span class="type">CoglTexture</span> or
+<p>A newly created <span class="type">CoglTexture</span> or
 <code class="literal">NULL</code> on failure. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -593,7 +593,7 @@ cogl_is_texture (<em class="parameter"><code><span class="type">void</span> *obj
 <p>Gets whether the given object references a texture object.</p>
 <div class="refsect3">
 <a name="cogl-is-texture.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -621,7 +621,7 @@ cogl_texture_get_width (<em class="parameter"><code><span class="type">CoglTextu
 <p>Queries the width of a cogl texture.</p>
 <div class="refsect3">
 <a name="cogl-texture-get-width.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -647,7 +647,7 @@ cogl_texture_get_height (<em class="parameter"><code><span class="type">CoglText
 <p>Queries the height of a cogl texture.</p>
 <div class="refsect3">
 <a name="cogl-texture-get-height.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -677,7 +677,7 @@ cogl_texture_get_format (<em class="parameter"><code><span class="type">CoglText
 <p>Queries the <a class="link" href="cogl-General-API.html#CoglPixelFormat" title="enum CoglPixelFormat"><span class="type">CoglPixelFormat</span></a> of a cogl texture.</p>
 <div class="refsect3">
 <a name="cogl-texture-get-format.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -735,7 +735,7 @@ cogl_texture_get_max_waste (<em class="parameter"><code><span class="type">CoglT
 texture.</p>
 <div class="refsect3">
 <a name="cogl-texture-get-max-waste.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -762,7 +762,7 @@ cogl_texture_is_sliced (<em class="parameter"><code><span class="type">CoglTextu
 objects).</p>
 <div class="refsect3">
 <a name="cogl-texture-is-sliced.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -793,7 +793,7 @@ cogl_texture_get_gl_texture (<em class="parameter"><code><span class="type">Cogl
 queried.</p>
 <div class="refsect3">
 <a name="cogl-texture-get-gl-texture.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -807,13 +807,13 @@ queried.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>out_gl_handle</p></td>
-<td class="parameter_description"><p> pointer to return location for the
+<td class="parameter_description"><p>pointer to return location for the
 textures GL handle, or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>out_gl_target</p></td>
-<td class="parameter_description"><p> pointer to return location for the
+<td class="parameter_description"><p>pointer to return location for the
 GL target type, or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
@@ -841,7 +841,7 @@ want for the destination <em class="parameter"><code>data</code></em> buffer not
 source texture</div>
 <div class="refsect3">
 <a name="cogl-texture-get-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -906,7 +906,7 @@ buffer containing pixel data.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-texture-set-region.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1002,7 +1002,7 @@ specified)</p></td>
 <p>Used to specify vertex information when calling <a class="link" href="cogl-Primitives.html#cogl-polygon" title="cogl_polygon ()"><code class="function">cogl_polygon()</code></a></p>
 <div class="refsect3">
 <a name="CoglTextureVertex.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
 <col class="struct_members_description">
@@ -1050,7 +1050,7 @@ use_color is <code class="literal">FALSE</code> when calling <a class="link" hre
 <p>Flags to pass to the cogl_texture_new_* family of functions.</p>
 <div class="refsect3">
 <a name="CoglTextureFlags.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -1098,6 +1098,6 @@ use_color is <code class="literal">FALSE</code> when calling <a class="link" hre
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>

@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Buffers: Cogl Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl Reference Manual">
 <link rel="up" href="ch02.html" title="Cogl experimental API">
 <link rel="prev" href="ch02.html" title="Cogl experimental API">
 <link rel="next" href="cogl-Vectors.html" title="Vectors">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -50,7 +50,7 @@ mentioned in the release notes for the affected release.
 </div>
 <div class="refsect1">
 <a name="cogl-Buffers.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -132,7 +132,7 @@ mentioned in the release notes for the affected release.
 </div>
 <div class="refsect1">
 <a name="cogl-Buffers.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -175,7 +175,7 @@ cogl_is_buffer (<em class="parameter"><code><span class="type">void</span> *obje
  is a buffer object.</p>
 <div class="refsect3">
 <a name="cogl-is-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -216,7 +216,7 @@ cogl_buffer_get_size (<em class="parameter"><code><span class="type">CoglBuffer<
 <p>Retrieves the size of buffer</p>
 <div class="refsect3">
 <a name="cogl-buffer-get-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -259,7 +259,7 @@ cogl_buffer_set_update_hint (<em class="parameter"><code><span class="type">Cogl
 of the available hints.</p>
 <div class="refsect3">
 <a name="cogl-buffer-set-update-hint.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -303,7 +303,7 @@ cogl_buffer_get_update_hint (<em class="parameter"><code><span class="type">Cogl
 <p>Retrieves the update hints set using <a class="link" href="cogl-Buffers.html#cogl-buffer-set-update-hint" title="cogl_buffer_set_update_hint ()"><code class="function">cogl_buffer_set_update_hint()</code></a></p>
 <div class="refsect3">
 <a name="cogl-buffer-get-update-hint.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -358,7 +358,7 @@ conflicting with the <em class="parameter"><code>access</code></em>
 release your last reference while the buffer is mapped.</p>
 <div class="refsect3">
 <a name="cogl-buffer-map.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -386,7 +386,7 @@ the data will be modified once mapped.</p></td>
 </div>
 <div class="refsect3">
 <a name="cogl-buffer-map.returns"></a><h4>Returns</h4>
-<p> A pointer to the mapped memory or
+<p>A pointer to the mapped memory or
 <code class="literal">NULL</code> is the call fails. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -414,7 +414,7 @@ cogl_buffer_unmap (<em class="parameter"><code><span class="type">CoglBuffer</sp
 <p>Unmaps a buffer previously mapped by <a class="link" href="cogl-Buffers.html#cogl-buffer-map" title="cogl_buffer_map ()"><code class="function">cogl_buffer_map()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-buffer-unmap.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -460,7 +460,7 @@ data is controlled by <em class="parameter"><code>offset</code></em>
 buffer size.</p>
 <div class="refsect3">
 <a name="cogl-buffer-set-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -529,7 +529,7 @@ or by mapping it into the application's address space using
 immediately copied into the new buffer.</p>
 <div class="refsect3">
 <a name="cogl-pixel-buffer-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -556,7 +556,7 @@ immediately copied into the new buffer.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-pixel-buffer-new.returns"></a><h4>Returns</h4>
-<p> a newly allocated <span class="type">CoglPixelBuffer</span>. </p>
+<p>a newly allocated <span class="type">CoglPixelBuffer</span>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: 1.10</p>
@@ -584,7 +584,7 @@ cogl_is_pixel_buffer (<em class="parameter"><code><span class="type">void</span>
  is a pixel buffer.</p>
 <div class="refsect3">
 <a name="cogl-is-pixel-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -628,7 +628,7 @@ mentioned in the release notes for the affected release.
 the buffer data is going to be updated.</p>
 <div class="refsect3">
 <a name="CoglBufferUpdateHint.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -682,7 +682,7 @@ mentioned in the release notes for the affected release.
 <p>The access hints for <a class="link" href="cogl-Buffers.html#cogl-buffer-set-update-hint" title="cogl_buffer_set_update_hint ()"><code class="function">cogl_buffer_set_update_hint()</code></a></p>
 <div class="refsect3">
 <a name="CoglBufferAccess.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -733,6 +733,6 @@ mentioned in the release notes for the affected release.
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>

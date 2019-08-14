@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Matrices: Cogl 2.0 Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
 <link rel="up" href="cogl-utilities.html" title="Utilities">
 <link rel="prev" href="cogl-2.0-experimental-Color-Type.html" title="Color Type">
 <link rel="next" href="cogl-2.0-experimental-Matrix-Stacks.html" title="Matrix Stacks">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -33,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-Matrices.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -243,7 +243,7 @@
 </div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-Matrices.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -287,7 +287,7 @@ cogl_matrix_init_identity (<em class="parameter"><code><a class="link" href="cog
 <p></p>
 <div class="refsect3">
 <a name="cogl-matrix-init-identity.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -312,7 +312,7 @@ cogl_matrix_init_from_array (<em class="parameter"><code><a class="link" href="c
 </p>
 <div class="refsect3">
 <a name="cogl-matrix-init-from-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -362,7 +362,7 @@ cogl_matrix_init_translation (<em class="parameter"><code><a class="link" href="
 <p></p>
 <div class="refsect3">
 <a name="cogl-matrix-init-translation.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -404,7 +404,7 @@ cogl_matrix_init_from_quaternion (<em class="parameter"><code><a class="link" hr
  from a <a class="link" href="cogl-2.0-experimental-Quaternions-(Rotations).html#CoglQuaternion" title="CoglQuaternion"><span class="type">CoglQuaternion</span></a> rotation.</p>
 <div class="refsect3">
 <a name="cogl-matrix-init-from-quaternion.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -435,7 +435,7 @@ cogl_matrix_init_from_euler (<em class="parameter"><code><a class="link" href="c
  from a <a class="link" href="cogl-2.0-experimental-Eulers-(Rotations).html#CoglEuler" title="CoglEuler"><span class="type">CoglEuler</span></a> rotation.</p>
 <div class="refsect3">
 <a name="cogl-matrix-init-from-euler.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -466,7 +466,7 @@ the same values as <em class="parameter"><code>matrix</code></em>
 .</p>
 <div class="refsect3">
 <a name="cogl-matrix-copy.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -481,7 +481,7 @@ the same values as <em class="parameter"><code>matrix</code></em>
 </div>
 <div class="refsect3">
 <a name="cogl-matrix-copy.returns"></a><h4>Returns</h4>
-<p> A newly allocated <a class="link" href="cogl-2.0-experimental-Matrices.html#CoglMatrix" title="CoglMatrix"><span class="type">CoglMatrix</span></a> which
+<p>A newly allocated <a class="link" href="cogl-2.0-experimental-Matrices.html#CoglMatrix" title="CoglMatrix"><span class="type">CoglMatrix</span></a> which
 should be freed using <a class="link" href="cogl-2.0-experimental-Matrices.html#cogl-matrix-free" title="cogl_matrix_free ()"><code class="function">cogl_matrix_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -499,7 +499,7 @@ annotations associated with them and may potentially have a cached
 inverse matrix these are not considered in the comparison.</p>
 <div class="refsect3">
 <a name="cogl-matrix-equal.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -530,7 +530,7 @@ cogl_matrix_free (<em class="parameter"><code><a class="link" href="cogl-2.0-exp
 <a class="link" href="cogl-2.0-experimental-Matrices.html#cogl-matrix-copy" title="cogl_matrix_copy ()"><code class="function">cogl_matrix_copy()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-matrix-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -560,7 +560,7 @@ cogl_matrix_frustum (<em class="parameter"><code><a class="link" href="cogl-2.0-
  by the given frustum perspective matrix.</p>
 <div class="refsect3">
 <a name="cogl-matrix-frustum.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -625,7 +625,7 @@ cogl_matrix_orthographic (<em class="parameter"><code><a class="link" href="cogl
  by a parallel projection matrix.</p>
 <div class="refsect3">
 <a name="cogl-matrix-orthographic.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -707,7 +707,7 @@ since there wont be enough precision to identify the depth of
 objects near to each other.</div>
 <div class="refsect3">
 <a name="cogl-matrix-perspective.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -788,7 +788,7 @@ your origin maps to the center of your viewport.</div>
 transform applied to a new modelview transform</div>
 <div class="refsect3">
 <a name="cogl-matrix-look-at.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -878,7 +878,7 @@ the resulting matrix inside <em class="parameter"><code>result</code></em>
 <em class="parameter"><code>result</code></em> can be equal to <em class="parameter"><code>a</code></em> but can't be equal to <em class="parameter"><code>b</code></em>.</div>
 <div class="refsect3">
 <a name="cogl-matrix-multiply.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -919,7 +919,7 @@ of <em class="parameter"><code>angle</code></em>
  degrees around the specified 3D vector.</p>
 <div class="refsect3">
 <a name="cogl-matrix-rotate.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -966,7 +966,7 @@ cogl_matrix_rotate_quaternion (<em class="parameter"><code><a class="link" href=
 given <a class="link" href="cogl-2.0-experimental-Quaternions-(Rotations).html#CoglQuaternion" title="CoglQuaternion"><span class="type">CoglQuaternion</span></a>.</p>
 <div class="refsect3">
 <a name="cogl-matrix-rotate-quaternion.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -999,7 +999,7 @@ cogl_matrix_rotate_euler (<em class="parameter"><code><a class="link" href="cogl
 given <a class="link" href="cogl-2.0-experimental-Eulers-(Rotations).html#CoglEuler" title="CoglEuler"><span class="type">CoglEuler</span></a>.</p>
 <div class="refsect3">
 <a name="cogl-matrix-rotate-euler.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1034,7 +1034,7 @@ cogl_matrix_translate (<em class="parameter"><code><a class="link" href="cogl-2.
 the X, Y and Z axis.</p>
 <div class="refsect3">
 <a name="cogl-matrix-translate.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1078,7 +1078,7 @@ cogl_matrix_scale (<em class="parameter"><code><a class="link" href="cogl-2.0-ex
 Y and Z axis.</p>
 <div class="refsect3">
 <a name="cogl-matrix-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1119,7 +1119,7 @@ cogl_matrix_transpose (<em class="parameter"><code><a class="link" href="cogl-2.
 new matrix is taken from element (j,i) in the old matrix.</p>
 <div class="refsect3">
 <a name="cogl-matrix-transpose.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1143,7 +1143,7 @@ cogl_matrix_get_array (<em class="parameter"><code>const <a class="link" href="c
  to a float array which can be directly passed to OpenGL.</p>
 <div class="refsect3">
 <a name="cogl-matrix-get-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1176,7 +1176,7 @@ technically save a copy of the inverse transform within the given
 avoid costly inversion calculations.</div>
 <div class="refsect3">
 <a name="cogl-matrix-get-inverse.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1190,7 +1190,7 @@ avoid costly inversion calculations.</div>
 </tr>
 <tr>
 <td class="parameter_name"><p>inverse</p></td>
-<td class="parameter_description"><p> The destination for a 4x4 inverse transformation matrix. </p></td>
+<td class="parameter_description"><p>The destination for a 4x4 inverse transformation matrix. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1218,7 +1218,7 @@ cogl_matrix_transform_point (<em class="parameter"><code>const <a class="link" h
 components.</p>
 <div class="refsect3">
 <a name="cogl-matrix-transform-point.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1232,22 +1232,22 @@ components.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p> The X component of your points position. </p></td>
+<td class="parameter_description"><p>The X component of your points position. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>y</p></td>
-<td class="parameter_description"><p> The Y component of your points position. </p></td>
+<td class="parameter_description"><p>The Y component of your points position. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p> The Z component of your points position. </p></td>
+<td class="parameter_description"><p>The Z component of your points position. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>w</p></td>
-<td class="parameter_description"><p> The W component of your points position. </p></td>
+<td class="parameter_description"><p>The W component of your points position. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1331,7 +1331,7 @@ transform in-place.</p>
 <p></p>
 <div class="refsect3">
 <a name="cogl-matrix-transform-points.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1467,7 +1467,7 @@ the input array to do the transform in-place.</p>
 <p></p>
 <div class="refsect3">
 <a name="cogl-matrix-project-points.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1536,7 +1536,7 @@ cogl_matrix_is_identity (<em class="parameter"><code>const <a class="link" href=
 <p>Determines if the given matrix is an identity matrix.</p>
 <div class="refsect3">
 <a name="cogl-matrix-is-identity.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1622,6 +1622,6 @@ than the identity matrix you can use <a class="link" href="cogl-2.0-experimental
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>

@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CoglOnscreen: The Onscreen Framebuffer Interface: Cogl 2.0 Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl 2.0 Reference Manual">
 <link rel="up" href="cogl-framebuffer-apis.html" title="Framebuffers">
 <link rel="prev" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html" title="CoglFramebuffer: The Framebuffer Interface">
 <link rel="next" href="cogl-2.0-experimental-Offscreen-Framebuffers.html" title="Offscreen Framebuffers">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -33,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -257,7 +257,7 @@
 </div>
 <div class="refsect1">
 <a name="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -298,7 +298,7 @@ cogl_is_onscreen (<em class="parameter"><code><span class="type">void</span> *ob
 <p>Gets whether the given object references a <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a>.</p>
 <div class="refsect3">
 <a name="cogl-is-onscreen.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -351,7 +351,7 @@ it is first used or explicitly via <a class="link" href="cogl-2.0-experimental-C
 <p><span class="annotation">[<acronym title="This symbol is a constructor, not a static method."><span class="acronym">constructor</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="cogl-onscreen-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -378,7 +378,7 @@ it is first used or explicitly via <a class="link" href="cogl-2.0-experimental-C
 </div>
 <div class="refsect3">
 <a name="cogl-onscreen-new.returns"></a><h4>Returns</h4>
-<p> A newly instantiated <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a> framebuffer. </p>
+<p>A newly instantiated <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a> framebuffer. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: 1.8</p>
@@ -453,7 +453,7 @@ my_update_cogl_x11_event_mask (CoglOnscreen *onscreen,
 }]</p>
 <div class="refsect3">
 <a name="cogl-x11-onscreen-set-foreign-window-xid.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -518,7 +518,7 @@ xid has not been set then it's undefined what value will be returned.</p>
 renderer.</p>
 <div class="refsect3">
 <a name="cogl-x11-onscreen-get-window-xid.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -568,7 +568,7 @@ function can be called before <em class="parameter"><code>onscreen</code></em>
 foreign XID for your existing X window.</p>
 <div class="refsect3">
 <a name="cogl-win32-onscreen-set-foreign-window.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -615,7 +615,7 @@ framebuffer.  If <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-
 it will return the same handle set with that API.</p>
 <div class="refsect3">
 <a name="cogl-win32-onscreen-get-window.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -669,7 +669,7 @@ that it's acceptable to alternatively use native APIs to show and
 hide windows without confusing Cogl.</div>
 <div class="refsect3">
 <a name="cogl-onscreen-show.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -718,7 +718,7 @@ that it's acceptable to alternatively use native APIs to show and
 hide windows without confusing Cogl.</div>
 <div class="refsect3">
 <a name="cogl-onscreen-hide.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -763,7 +763,7 @@ progresses in some notable way.</p>
 events can be notified.</p>
 <div class="refsect3">
 <a name="CoglFrameCallback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -847,7 +847,7 @@ wasting resources, drawing more frames than your system compositor
 can display.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-add-frame-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -861,18 +861,18 @@ can display.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p> A callback function to call for frame events. </p></td>
+<td class="parameter_description"><p>A callback function to call for frame events. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> A private pointer to be passed to <em class="parameter"><code>callback</code></em>
+<td class="parameter_description"><p>A private pointer to be passed to <em class="parameter"><code>callback</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
-<td class="parameter_description"><p> An optional callback to destroy <em class="parameter"><code>user_data</code></em>
+<td class="parameter_description"><p>An optional callback to destroy <em class="parameter"><code>user_data</code></em>
 when the <em class="parameter"><code>callback</code></em>
 is removed or <em class="parameter"><code>onscreen</code></em>
 is freed. </p></td>
@@ -916,7 +916,7 @@ registered using <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-
 this will get called.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-remove-frame-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -966,7 +966,7 @@ system determines that a region of the onscreen window has been
 lost and the application should redraw it.</p>
 <div class="refsect3">
 <a name="CoglOnscreenDirtyCallback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1035,7 +1035,7 @@ the dirty region to ensure that the framebuffer is actually ready
 for rendering.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-add-dirty-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1049,18 +1049,18 @@ for rendering.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p> A callback function to call for dirty events. </p></td>
+<td class="parameter_description"><p>A callback function to call for dirty events. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> A private pointer to be passed to <em class="parameter"><code>callback</code></em>
+<td class="parameter_description"><p>A private pointer to be passed to <em class="parameter"><code>callback</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
-<td class="parameter_description"><p> An optional callback to destroy <em class="parameter"><code>user_data</code></em>
+<td class="parameter_description"><p>An optional callback to destroy <em class="parameter"><code>user_data</code></em>
 when the
 <em class="parameter"><code>callback</code></em>
 is removed or <em class="parameter"><code>onscreen</code></em>
@@ -1105,7 +1105,7 @@ registered using <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-
 this will also get called.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-remove-dirty-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1164,7 +1164,7 @@ occur while an application might have arbitrary locks held for
 example.</div>
 <div class="refsect3">
 <a name="CoglOnscreenResizeCallback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1228,7 +1228,7 @@ occur while an application might have arbitrary locks held for
 example.</div>
 <div class="refsect3">
 <a name="cogl-onscreen-add-resize-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1242,20 +1242,20 @@ example.</div>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p> A <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreenResizeCallback" title="CoglOnscreenResizeCallback ()"><span class="type">CoglOnscreenResizeCallback</span></a> to call when
+<td class="parameter_description"><p>A <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreenResizeCallback" title="CoglOnscreenResizeCallback ()"><span class="type">CoglOnscreenResizeCallback</span></a> to call when
 the <em class="parameter"><code>onscreen</code></em>
 changes size. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> Private data to be passed to <em class="parameter"><code>callback</code></em>
+<td class="parameter_description"><p>Private data to be passed to <em class="parameter"><code>callback</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
-<td class="parameter_description"><p> An optional callback to destroy <em class="parameter"><code>user_data</code></em>
+<td class="parameter_description"><p>An optional callback to destroy <em class="parameter"><code>user_data</code></em>
 when the <em class="parameter"><code>callback</code></em>
 is removed or <em class="parameter"><code>onscreen</code></em>
 is freed. </p></td>
@@ -1285,7 +1285,7 @@ associated with <em class="parameter"><code>onscreen</code></em>
  via <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#cogl-onscreen-add-resize-callback" title="cogl_onscreen_add_resize_callback ()"><code class="function">cogl_onscreen_add_resize_callback()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-remove-resize-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1325,7 +1325,7 @@ perform incremental updates to older buffers instead of having to
 render a full buffer for every frame.</div>
 <div class="refsect3">
 <a name="cogl-onscreen-swap-buffers.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1396,7 +1396,7 @@ the <code class="function">cogl_onscreen_get_buffer_age()</code> api so that you
 perform incremental rendering based on old back buffers.</div>
 <div class="refsect3">
 <a name="cogl-onscreen-swap-buffers-with-damage.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1458,7 +1458,7 @@ start a new frame that incrementally builds on the contents of the previous
 frame.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-swap-region.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1514,7 +1514,7 @@ displays vblank period or perhaps some other mechanism in a composited
 environment.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-set-swap-throttled.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1583,7 +1583,7 @@ your application will be able to avoid long blocks in the driver caused by
 throttling when you request to swap buffers too quickly.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-add-swap-buffers-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1597,13 +1597,13 @@ throttling when you request to swap buffers too quickly.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p> A callback function to call when a swap
+<td class="parameter_description"><p>A callback function to call when a swap
 has completed. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> A private pointer to be passed to <em class="parameter"><code>callback</code></em>
+<td class="parameter_description"><p>A private pointer to be passed to <em class="parameter"><code>callback</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
 </tr>
@@ -1646,7 +1646,7 @@ cogl_onscreen_remove_swap_buffers_callback
 using <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#cogl-onscreen-add-swap-buffers-callback" title="cogl_onscreen_add_swap_buffers_callback ()"><code class="function">cogl_onscreen_add_swap_buffers_callback()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-onscreen-remove-swap-buffers-callback.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1727,7 +1727,7 @@ mentioned in the release notes for the affected release.
 rectangle within the onscreen buffer that should be redrawn.</p>
 <div class="refsect3">
 <a name="CoglOnscreenDirtyInfo.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
 <col class="struct_members_description">
@@ -1827,6 +1827,6 @@ mentioned in the release notes for the affected release.
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>

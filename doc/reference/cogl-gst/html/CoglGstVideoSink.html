@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CoglGstVideoSink: Cogl GST 2.0 Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Cogl GST 2.0 Reference Manual">
 <link rel="up" href="cogl-gst-general-apis.html" title="General APIs">
 <link rel="prev" href="cogl-gst-general-apis.html" title="General APIs">
 <link rel="next" href="coglglossary.html" title="Glossaries">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.29.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -37,7 +37,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="CoglGstVideoSink.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -152,7 +152,7 @@
 </div>
 <div class="refsect1">
 <a name="CoglGstVideoSink.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table border="0">
+<div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
 <col width="150px" class="properties_type">
 <col width="300px" class="properties_name">
@@ -167,7 +167,7 @@
 </div>
 <div class="refsect1">
 <a name="CoglGstVideoSink.signals"></a><h2>Signals</h2>
-<div class="informaltable"><table border="0">
+<div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
 <col width="150px" class="signals_return">
 <col width="300px" class="signals_name">
@@ -189,7 +189,7 @@
 </div>
 <div class="refsect1">
 <a name="CoglGstVideoSink.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -259,7 +259,7 @@ cogl_gst_video_sink_new (<em class="parameter"><code><span class="type">CoglCont
 with the given context.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -274,7 +274,7 @@ with the given context.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-new.returns"></a><h4>Returns</h4>
-<p> a new <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>. </p>
+<p>a new <a class="link" href="CoglGstVideoSink.html" title="CoglGstVideoSink"><span class="type">CoglGstVideoSink</span></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: 1.16</p>
@@ -291,7 +291,7 @@ sink was constructed via <code class="function">gst_element_factory_make()</code
 <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-new" title="cogl_gst_video_sink_new ()"><code class="function">cogl_gst_video_sink_new()</code></a>.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-set-context.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -330,7 +330,7 @@ pipeline and modify it for custom rendering.</p>
 <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title="The “pipeline-ready” signal"><span class="type">“pipeline-ready”</span></a> signal is emitted.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-get-pipeline.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -345,7 +345,7 @@ pipeline and modify it for custom rendering.</p>
 </div>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-get-pipeline.returns"></a><h4>Returns</h4>
-<p> the pipeline for rendering the
+<p>the pipeline for rendering the
 current frame. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -366,7 +366,7 @@ would then make a copy of its template pipeline and call this to
 set the textures.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-attach-frame.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -404,7 +404,7 @@ Typically an application will call this in response to the
 <a class="link" href="CoglGstVideoSink.html#CoglGstVideoSink-pipeline-ready" title="The “pipeline-ready” signal"><span class="type">“pipeline-ready”</span></a> signal is emitted.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-setup-pipeline.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -440,7 +440,7 @@ be used by the application to add additional layers, for example to
 blend in another color in the fragment processing.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-get-free-layer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -479,7 +479,7 @@ change. For example, if <em class="parameter"><code>first_layer</code></em>
 will be cogl_gst_sample_video3.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-set-first-layer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -519,7 +519,7 @@ default snippet being added. In that case the application's snippet
 can call cogl_gst_sample_video0 to sample the texture itself.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-set-default-sample.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -556,7 +556,7 @@ is passed between components that didn't have an opportunity to
 connect a signal handler this can be useful.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-is-ready.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -587,7 +587,7 @@ multiplying your chosen height by the returned aspect ratio.</p>
 video buffers and the current pixel-aspect-ratio.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-get-aspect.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -632,7 +632,7 @@ cogl_gst_video_sink_get_width_for_height
 that will maintain the video's aspect ratio.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-get-width-for-height.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -686,7 +686,7 @@ cogl_gst_video_sink_get_height_for_width
 that will maintain the video's aspect ratio.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-get-height-for-width.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -745,7 +745,7 @@ using this api to position a video inside a fixed screen space and
 filling the remaining space with black borders.</p>
 <div class="refsect3">
 <a name="cogl-gst-video-sink-fit-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -759,12 +759,12 @@ filling the remaining space with black borders.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>available</p></td>
-<td class="parameter_description"><p> The space available for video output. </p></td>
+<td class="parameter_description"><p>The space available for video output. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>output</p></td>
-<td class="parameter_description"><p> The return location for the calculated output position. </p></td>
+<td class="parameter_description"><p>The return location for the calculated output position. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -806,7 +806,7 @@ should be accessed using the provided API.</p>
 </pre>
 <div class="refsect3">
 <a name="CoglGstVideoSinkClass.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
 <col class="struct_members_description">
@@ -855,7 +855,7 @@ application is using a custom pipeline it can alternatively call
 <a class="link" href="CoglGstVideoSink.html#cogl-gst-video-sink-attach-frame" title="cogl_gst_video_sink_attach_frame ()"><code class="function">cogl_gst_video_sink_attach_frame()</code></a> to attach the textures.</p>
 <div class="refsect3">
 <a name="CoglGstVideoSink-new-frame.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -897,7 +897,7 @@ will only be emitted after the pipeline is ready so the application
 could also create its pipeline in the handler for that.</p>
 <div class="refsect3">
 <a name="CoglGstVideoSink-pipeline-ready.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -923,6 +923,6 @@ could also create its pipeline in the handler for that.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>Generated by GTK-Doc V1.29.1</div>
 </body>
 </html>
