@@ -1,3 +1,9 @@
+cogl (1.22.4-2) UNRELEASED; urgency=medium
+
+  * Really include the symbol update...
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 14 Aug 2019 20:01:35 +0200
+
 cogl (1.22.4-1) unstable; urgency=medium
 
   * New upstream release

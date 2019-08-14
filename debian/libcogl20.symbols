@@ -178,11 +178,8 @@ libcogl.so.20 libcogl20 #MINVER#
  cogl_fixed_atan2@Base 1.17.4
  cogl_fixed_atan@Base 1.17.4
  cogl_fixed_cos@Base 1.17.4
- cogl_fixed_div@Base 1.17.4
  cogl_fixed_get_type@Base 1.17.4
  cogl_fixed_log2@Base 1.17.4
- cogl_fixed_mul@Base 1.17.4
- cogl_fixed_mul_div@Base 1.17.4
  cogl_fixed_pow2@Base 1.17.4
  cogl_fixed_pow@Base 1.17.4
  cogl_fixed_sin@Base 1.17.4
