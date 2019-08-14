@@ -7,7 +7,7 @@ Section: libs
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Iain Lane <laney@debian.org>, Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>, Rico Tzschichholz <ricotz@ubuntu.com>
-Build-Depends: debhelper (>= 11),
+Build-Depends: debhelper-compat (= 12),
                gnome-pkg-tools,
                gtk-doc-tools (>= 1.13),
                libgbm-dev [linux-any],
