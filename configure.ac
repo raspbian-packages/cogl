@@ -1361,6 +1361,8 @@ dnl ================================================================
 dnl Checks for library functions.
 dnl ================================================================
 
+AC_CHECK_FUNCS_ONCE([alarm])
+
 dnl The 'ffs' function is part of C99 so it isn't always
 dnl available. Cogl has a fallback if needed.
 dnl
