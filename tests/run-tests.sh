@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o pipefail
+
 if test -z "$G_DEBUG"; then
     G_DEBUG=fatal-warnings
 else
@@ -64,7 +66,12 @@ get_status()
 
 run_test()
 {
-  $($TEST_BINARY $1 &> "$LOG")
+  if [ -n "${VERBOSE-}" ]; then
+    echo "running $TEST_BINARY $1:"
+    $TEST_BINARY $1 2>&1 | tee "$LOG"
+  else
+    $($TEST_BINARY $1 &> "$LOG")
+  fi
   TMP=$?
   var_name=$2_result
   eval $var_name=$TMP
