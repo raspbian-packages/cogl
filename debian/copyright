@@ -92,7 +92,10 @@ License: Apache-2.0
  '/usr/share/common-licenses/Apache-2.0'.
 
 Files: debian/*
-Copyright: 2011, Rico Tzschichholz <ricotz@ubuntu.com>
+Copyright:
+ 2011, Rico Tzschichholz <ricotz@ubuntu.com>
+ 2012 Canonical Ltd.
+ 2018-2020 Simon McVittie
 License: LGPL-2.1+
  This package is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public

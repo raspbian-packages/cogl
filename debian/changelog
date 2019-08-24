@@ -33,6 +33,7 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     directory
   * d/p/tests-Show-the-actual-output-from-tests-if-VERBOSE-is-set.patch:
     Update to the version I sent upstream
+  * d/tests/lib*-dev: Add superficial tests for the -dev packages
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
