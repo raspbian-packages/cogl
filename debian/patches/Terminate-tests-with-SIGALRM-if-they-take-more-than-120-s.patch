@@ -1,0 +1,38 @@
+From: Simon McVittie <smcv@debian.org>
+Date: Sat, 24 Aug 2019 15:48:46 +0100
+Subject: Terminate tests with SIGALRM if they take more than 120 seconds
+
+We're currently ignoring test failures, but if a test hangs, that will
+still cause the build to fail (and tie up a buildd for 150 minutes).
+
+The fork of cogl in Mutter uses a 120 second timeout for tests in its
+Meson build system, but other than that it's purely an arbitrary number.
+
+Bug-Debian: https://bugs.debian.org/935592
+Forwarded: no
+---
+ test-fixtures/test-utils.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/test-fixtures/test-utils.c b/test-fixtures/test-utils.c
+index 59e3fd8..b1ef12b 100644
+--- a/test-fixtures/test-utils.c
++++ b/test-fixtures/test-utils.c
+@@ -1,6 +1,7 @@
+ #include <config.h>
+ 
+ #include <stdlib.h>
++#include <unistd.h>
+ 
+ #include "test-unit.h"
+ #include "test-utils.h"
+@@ -146,6 +147,9 @@ test_utils_init (TestFlags requirement_flags,
+                 "$ make test-report");
+   counter++;
+ 
++  /* Kill the test with SIGALRM if it takes more than this many seconds */
++  alarm (120);
++
+   if (is_boolean_env_set ("COGL_TEST_VERBOSE") ||
+       is_boolean_env_set ("V"))
+     cogl_test_is_verbose = TRUE;
