@@ -1,0 +1,39 @@
+From: Simon McVittie <smcv@debian.org>
+Date: Sat, 24 Aug 2019 15:37:29 +0100
+Subject: tests: Show the actual output from tests if VERBOSE is set
+
+Writing tests' output to ./.log makes them difficult to debug when the
+test might be running on an autobuilder or CI system where only
+stdout/stderr are recorded.
+
+Signed-off-by: Simon McVittie <smcv@debian.org>
+---
+ tests/run-tests.sh | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/tests/run-tests.sh b/tests/run-tests.sh
+index 7e62bf0..ca19067 100755
+--- a/tests/run-tests.sh
++++ b/tests/run-tests.sh
+@@ -1,5 +1,7 @@
+ #!/bin/bash
+ 
++set -o pipefail
++
+ if test -z "$G_DEBUG"; then
+     G_DEBUG=fatal-warnings
+ else
+@@ -62,7 +64,12 @@ get_status()
+ 
+ run_test()
+ {
+-  $($TEST_BINARY $1 &>.log)
++  if [ -n "${VERBOSE-}" ]; then
++    echo "running $TEST_BINARY $1:"
++    $TEST_BINARY $1 2>&1 | tee .log
++  else
++    $($TEST_BINARY $1 &>.log)
++  fi
+   TMP=$?
+   var_name=$2_result
+   eval $var_name=$TMP

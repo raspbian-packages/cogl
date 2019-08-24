@@ -1,1 +1,2 @@
 Terminate-tests-with-SIGALRM-if-they-take-more-than-120-s.patch
+tests-Show-the-actual-output-from-tests-if-VERBOSE-is-set.patch

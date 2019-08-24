@@ -57,6 +57,6 @@ override_dh_strip:
 # Don't run tests on armel since they hang on Debian's buildd there
 override_dh_auto_test:
 ifeq (,$(findstring $(DEB_HOST_ARCH),"armel"))
-	-xvfb-run -a dh_auto_test
+	-VERBOSE=1 xvfb-run -a dh_auto_test
 else
 endif
