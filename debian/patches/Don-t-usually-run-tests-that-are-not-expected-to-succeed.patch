@@ -1,0 +1,100 @@
+From: Simon McVittie <smcv@debian.org>
+Date: Sun, 25 Aug 2019 16:53:31 +0100
+Subject: Don't usually run tests that are not expected to succeed
+
+They can still be requested via an environment variable.
+---
+ test-fixtures/test-utils.c        |  4 +++-
+ test-fixtures/test-utils.h        |  2 +-
+ tests/conform/test-conform-main.c | 15 +++++++++++----
+ tests/unit/test-unit-main.c       | 18 ++++++++++++------
+ 4 files changed, 27 insertions(+), 12 deletions(-)
+
+diff --git a/test-fixtures/test-utils.c b/test-fixtures/test-utils.c
+index b1ef12b..b937936 100644
+--- a/test-fixtures/test-utils.c
++++ b/test-fixtures/test-utils.c
+@@ -126,7 +126,7 @@ is_boolean_env_set (const char *variable)
+   return ret;
+ }
+ 
+-void
++CoglBool
+ test_utils_init (TestFlags requirement_flags,
+                  TestFlags known_failure_flags)
+ {
+@@ -208,6 +208,8 @@ test_utils_init (TestFlags requirement_flags,
+     g_print ("WARNING: Missing required feature[s] for this test\n");
+   else if (known_failure)
+     g_print ("WARNING: Test is known to fail\n");
++
++  return (!missing_requirement && !known_failure);
+ }
+ 
+ void
+diff --git a/test-fixtures/test-utils.h b/test-fixtures/test-utils.h
+index 9c3ced9..e59163c 100644
+--- a/test-fixtures/test-utils.h
++++ b/test-fixtures/test-utils.h
+@@ -69,7 +69,7 @@ typedef enum {
+ extern CoglContext *test_ctx;
+ extern CoglFramebuffer *test_fb;
+ 
+-void
++CoglBool
+ test_utils_init (TestFlags requirement_flags,
+                  TestFlags known_failure_flags);
+ 
+diff --git a/tests/conform/test-conform-main.c b/tests/conform/test-conform-main.c
+index ee66899..63ae15f 100644
+--- a/tests/conform/test-conform-main.c
++++ b/tests/conform/test-conform-main.c
+@@ -15,10 +15,17 @@
+     extern void FUNC (void);                                            \
+     if (strcmp (#FUNC, argv[1]) == 0)                                   \
+       {                                                                 \
+-        test_utils_init (REQUIREMENTS, KNOWN_FAIL_REQUIREMENTS);        \
+-        FUNC ();                                                        \
+-        test_utils_fini ();                                             \
+-        exit (0);                                                       \
++        if (test_utils_init (REQUIREMENTS, KNOWN_FAIL_REQUIREMENTS)     \
++            || g_getenv ("COGL_TEST_TRY_EVERYTHING") != NULL)           \
++          {                                                             \
++            FUNC ();                                                    \
++            test_utils_fini ();                                         \
++            exit (0);                                                   \
++          }                                                             \
++        else                                                            \
++          {                                                             \
++            exit (1);                                                   \
++          }                                                             \
+       }                                                                 \
+   } G_STMT_END
+ 
+diff --git a/tests/unit/test-unit-main.c b/tests/unit/test-unit-main.c
+index b1f7864..3962a97 100644
+--- a/tests/unit/test-unit-main.c
++++ b/tests/unit/test-unit-main.c
+@@ -36,10 +36,16 @@ main (int argc, char **argv)
+       return 1;
+     }
+ 
+-  test_utils_init (unit_test->requirement_flags,
+-                   unit_test->known_failure_flags);
+-  unit_test->run ();
+-  test_utils_fini ();
+-
+-  return 0;
++  if (test_utils_init (unit_test->requirement_flags,
++                       unit_test->known_failure_flags)
++      || getenv ("CLUTTER_TEST_TRY_EVERYTHING") != NULL)
++    {
++      unit_test->run ();
++      test_utils_fini ();
++      return 0;
++    }
++  else
++    {
++      return 1;
++    }
+ }
