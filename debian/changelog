@@ -18,6 +18,7 @@ cogl (1.22.4-3) UNRELEASED; urgency=medium
   * d/p/Don-t-usually-run-tests-that-are-not-expected-to-succeed.patch:
     Don't run tests that are not expected to succeed, unless requested
     by setting $COGL_TEST_TRY_EVERYTHING
+  * Canonicalize order of dependencies (wrap-and-sort -a)
 
  -- Simon McVittie <smcv@debian.org>  Sat, 24 Aug 2019 16:26:08 +0100
 
