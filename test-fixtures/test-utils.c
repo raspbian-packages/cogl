@@ -126,7 +126,7 @@ is_boolean_env_set (const char *variable)
   return ret;
 }
 
-void
+CoglBool
 test_utils_init (TestFlags requirement_flags,
                  TestFlags known_failure_flags)
 {
@@ -208,6 +208,8 @@ test_utils_init (TestFlags requirement_flags,
     g_print ("WARNING: Missing required feature[s] for this test\n");
   else if (known_failure)
     g_print ("WARNING: Test is known to fail\n");
+
+  return (!missing_requirement && !known_failure);
 }
 
 void

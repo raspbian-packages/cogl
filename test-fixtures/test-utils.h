@@ -69,7 +69,7 @@ typedef enum {
 extern CoglContext *test_ctx;
 extern CoglFramebuffer *test_fb;
 
-void
+CoglBool
 test_utils_init (TestFlags requirement_flags,
                  TestFlags known_failure_flags);
 
