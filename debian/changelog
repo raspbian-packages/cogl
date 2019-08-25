@@ -10,6 +10,7 @@ cogl (1.22.4-3) UNRELEASED; urgency=medium
     Show the output of each test. Writing it to a file is not much use
     on buildds, because the build directory is discarded after the build
     finishes anyway.
+  * d/control.in: Add missing -dev dependency on libxrandr-dev
 
  -- Simon McVittie <smcv@debian.org>  Sat, 24 Aug 2019 16:26:08 +0100
 

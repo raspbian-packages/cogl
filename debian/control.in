@@ -75,6 +75,7 @@ Depends: libcogl20 (= ${binary:Version}),
          libxext-dev,
          libxfixes-dev,
          libxdamage-dev,
+         libxrandr-dev,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: pkg-config
