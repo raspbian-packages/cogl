@@ -19,6 +19,10 @@ else
 fi
 
 cat <<'EOF' > path.c
+/* Ideally this would not be necessary, but there is a circular dependency
+ * between <cogl/cogl.h> and <cogl-path/cogl-path.h>. */
+#include <cogl/cogl.h>
+
 #include <cogl-path/cogl-path.h>
 
 int main(void)
