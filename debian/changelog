@@ -42,6 +42,9 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
   * d/p/gst-pango-Add-missing-pkg-config-dependencies.patch:
     Add missing dependencies to the pkg-config files in libcogl-gst-dev
     and libcogl-pango-dev. These were detected by the new autopkgtests.
+  * d/p/cogl-pango-2.0-experimental.pc-Reference-correct-library-.patch:
+    Fix incorrect library name in cogl-pango-2.0-experimental pkg-config
+    metadata. This was also detected by the new autopkgtests.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 

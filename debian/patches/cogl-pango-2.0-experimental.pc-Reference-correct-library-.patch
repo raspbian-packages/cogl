@@ -1,0 +1,23 @@
+From: Simon McVittie <smcv@debian.org>
+Date: Tue, 27 Aug 2019 14:57:34 +0100
+Subject: cogl-pango-2.0-experimental.pc: Reference correct library name
+
+It's libcogl-pango.so, not libcoglpango.so.
+
+Signed-off-by: Simon McVittie <smcv@debian.org>
+---
+ cogl-pango/cogl-pango-2.0-experimental.pc.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cogl-pango/cogl-pango-2.0-experimental.pc.in b/cogl-pango/cogl-pango-2.0-experimental.pc.in
+index 33018a3..233714e 100644
+--- a/cogl-pango/cogl-pango-2.0-experimental.pc.in
++++ b/cogl-pango/cogl-pango-2.0-experimental.pc.in
+@@ -8,6 +8,6 @@ requires=@COGL_PKG_REQUIRES@ @COGL_PANGO_PKG_REQUIRES@ cogl-2.0-experimental
+ Name: Cogl
+ Description: An object oriented GL/GLES Abstraction/Utility Layer
+ Version: @COGL_1_VERSION@
+-Libs: -L${libdir} -lcoglpango
++Libs: -L${libdir} -lcogl-pango
+ Cflags: -I${includedir}/cogl
+ Requires: ${requires}

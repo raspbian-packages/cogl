@@ -5,3 +5,4 @@ test-premult-Don-t-free-texture-data-until-CoglBitmap-is-.patch
 Normally-skip-tests-that-are-not-expected-to-succeed.patch
 Fix-building-against-libglvnd-provided-EGL-headers.patch
 gst-pango-Add-missing-pkg-config-dependencies.patch
+cogl-pango-2.0-experimental.pc-Reference-correct-library-.patch
