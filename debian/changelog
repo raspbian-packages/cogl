@@ -34,6 +34,11 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
   * d/p/tests-Show-the-actual-output-from-tests-if-VERBOSE-is-set.patch:
     Update to the version I sent upstream
   * d/tests/lib*-dev: Add superficial tests for the -dev packages
+  * Move files from libcogl-path-dev into libcogl-dev.
+    The new autopkgtests detected that libcogl-dev as configured by Debian
+    is not actually usable without the <cogl-path/cogl-path.h> header,
+    which is included by <cogl/cogl.h>. libcogl-path-dev is now an empty
+    package that depends on libcogl-dev.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 

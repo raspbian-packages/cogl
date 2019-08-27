@@ -69,6 +69,7 @@ Multi-Arch: same
 Depends: gir1.2-cogl-1.0 (= ${binary:Version}),
          libcairo2-dev,
          libcogl20 (= ${binary:Version}),
+         libcogl-path20 (= ${binary:Version}),
          libdrm-dev [!hurd-any],
          libgbm-dev [linux-any],
          libgdk-pixbuf2.0-dev (>= 2.0),
@@ -84,6 +85,8 @@ Depends: gir1.2-cogl-1.0 (= ${binary:Version}),
          libxrandr-dev,
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: libcogl-path-dev (<< 1.22.4-4~)
+Replaces: libcogl-path-dev (<< 1.22.4-4~)
 Recommends: pkg-config
 Suggests: libcogl-doc
 Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
@@ -140,7 +143,6 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends: libcogl-dev (= ${binary:Version}),
-         libcogl-path20 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: pkg-config
@@ -151,7 +153,9 @@ Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
  OpenGL and is designed to make it easy to write orthogonal components that
  can render without stepping on each others toes.
  .
- This package contains the development files for libcogl-path.
+ This package should be used as a build-dependency by programs that use the
+ cogl-path API, but is currently an empty package that depends on libcogl-dev
+ due to circular dependencies between the base cogl API and the cogl-path API.
 
 Package: libcogl-pango20
 Architecture: any
