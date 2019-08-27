@@ -4,3 +4,4 @@ tests-Show-the-actual-output-from-tests-if-VERBOSE-is-set.patch
 test-premult-Don-t-free-texture-data-until-CoglBitmap-is-.patch
 Normally-skip-tests-that-are-not-expected-to-succeed.patch
 Fix-building-against-libglvnd-provided-EGL-headers.patch
+gst-pango-Add-missing-pkg-config-dependencies.patch

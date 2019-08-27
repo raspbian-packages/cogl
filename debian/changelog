@@ -39,6 +39,9 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     is not actually usable without the <cogl-path/cogl-path.h> header,
     which is included by <cogl/cogl.h>. libcogl-path-dev is now an empty
     package that depends on libcogl-dev.
+  * d/p/gst-pango-Add-missing-pkg-config-dependencies.patch:
+    Add missing dependencies to the pkg-config files in libcogl-gst-dev
+    and libcogl-pango-dev. These were detected by the new autopkgtests.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
