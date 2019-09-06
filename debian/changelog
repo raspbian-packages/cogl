@@ -12,6 +12,10 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
   * d/upstream/metadata: Add
   * Drop transition for old debug package migration.
     The -dbg packages were removed before Debian 9 'stretch' (oldstable).
+  * d/copyright: Fix license name syntax for SGI-B-2.0.
+    The file format does not allow spaces in license names, so use the
+    SPDX identifier for this license, moving its formal name into the
+    license text.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
