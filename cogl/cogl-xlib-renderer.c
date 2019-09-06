@@ -570,7 +570,10 @@ _cogl_xlib_renderer_disconnect (CoglRenderer *renderer)
   renderer->outputs = NULL;
 
   if (!renderer->foreign_xdpy && xlib_renderer->xdpy)
-    XCloseDisplay (xlib_renderer->xdpy);
+    {
+      XCloseDisplay (xlib_renderer->xdpy);
+      xlib_renderer->xdpy = NULL;
+    }
 
   unregister_xlib_renderer (renderer);
 }
