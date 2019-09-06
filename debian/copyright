@@ -132,3 +132,39 @@ License: MIT
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
+
+Files:
+ deps/glib/*
+ deps/gmodule/*
+Copyright:
+ 1991-2004 Free Software Foundation, Inc.
+ 1995-2002 Peter Mattis
+ 1995-1998 Spencer Kimball
+ 1995-1998 Josh MacDonald
+ 1998-2010 Red Hat, Inc.
+ 1998-2005 Tim Janik
+ 1998 Owen Taylor
+ 1998 Sebastian Wilhelmi
+ 1998 University of Karlsruhe
+ 1999-2000 Tom Tromey
+ 2000 Eazel, Inc.
+ 2001 Dan Winship
+ 2004 Tor Lillqvist
+ 2007 Imendio AB
+ 2008-2011 Allison Lortie
+ 2010 Codethink Limited
+License: LGPL-2+
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+Comment:
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".

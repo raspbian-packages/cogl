@@ -18,6 +18,8 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     license text.
   * d/copyright: Make short license name for debian/* consistent with
     license grant
+  * d/copyright: Add details of cut-down GLib in deps/.
+    This is not actually used in the Debian package.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
