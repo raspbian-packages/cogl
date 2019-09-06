@@ -93,7 +93,7 @@ License: Apache-2.0
 
 Files: debian/*
 Copyright: 2011, Rico Tzschichholz <ricotz@ubuntu.com>
-License: LGPL-2.1
+License: LGPL-2.1+
  This package is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either

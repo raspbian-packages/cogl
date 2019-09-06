@@ -16,6 +16,8 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     The file format does not allow spaces in license names, so use the
     SPDX identifier for this license, moving its formal name into the
     license text.
+  * d/copyright: Make short license name for debian/* consistent with
+    license grant
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
