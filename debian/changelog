@@ -4,6 +4,8 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     Presumably this was previously pulled in by some other dependency,
     but configure.ac checks for it so we should build-depend on it
     ourselves. (Closes: #952013)
+  * Explicitly build-depend on libegl-dev, libx11-dev, libxext-dev
+    for the same reason.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 12:03:43 +0000
 
