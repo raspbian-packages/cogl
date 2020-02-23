@@ -9,8 +9,11 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
   * d/p/Fix-building-against-libglvnd-provided-EGL-headers.patch:
     Add patch from upstream merge request !17 to fix build when using
     libglvnd's EGL headers.
+  * d/upstream/metadata: Add
+  * Drop transition for old debug package migration.
+    The -dbg packages were removed before Debian 9 'stretch' (oldstable).
 
- -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 12:03:43 +0000
+ -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
 cogl (1.22.4-3) unstable; urgency=medium
 
