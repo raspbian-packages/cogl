@@ -48,12 +48,6 @@ override_dh_install:
 override_dh_missing:
 	dh_missing --list-missing
 
-override_dh_strip:
-	dh_strip -plibcogl20 --dbgsym-migration='libcogl20-dbg (<< 1.22.2-1~)'
-	dh_strip -plibcogl-pango20 --dbgsym-migration='libcogl-pango20-dbg (<< 1.22.2-1~)'
-	dh_strip -plibcogl-gst20 --dbgsym-migration='libcogl-gst20-dbg (<< 1.22.2-1~)'
-	dh_strip --remaining-packages
-
 # Don't run tests on armel since they hang on Debian's buildd there
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
