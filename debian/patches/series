@@ -1,5 +1,5 @@
 Terminate-tests-with-SIGALRM-if-they-take-more-than-120-s.patch
 tests-Show-the-actual-output-from-tests-if-VERBOSE-is-set.patch
 test-premult-Don-t-free-texture-data-until-CoglBitmap-is-.patch
-Don-t-usually-run-tests-that-are-not-expected-to-succeed.patch
+Normally-skip-tests-that-are-not-expected-to-succeed.patch
 Fix-building-against-libglvnd-provided-EGL-headers.patch
