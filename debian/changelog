@@ -1,3 +1,12 @@
+cogl (1.22.4-4) UNRELEASED; urgency=medium
+
+  * Explicitly build-depend on libdrm-dev on Linux platforms.
+    Presumably this was previously pulled in by some other dependency,
+    but configure.ac checks for it so we should build-depend on it
+    ourselves. (Closes: #952013)
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 12:03:43 +0000
+
 cogl (1.22.4-3) unstable; urgency=medium
 
   * Team upload
