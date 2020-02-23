@@ -6,6 +6,9 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     ourselves. (Closes: #952013)
   * Explicitly build-depend on libegl-dev, libx11-dev, libxext-dev
     for the same reason.
+  * d/p/Fix-building-against-libglvnd-provided-EGL-headers.patch:
+    Add patch from upstream merge request !17 to fix build when using
+    libglvnd's EGL headers.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 12:03:43 +0000
 
