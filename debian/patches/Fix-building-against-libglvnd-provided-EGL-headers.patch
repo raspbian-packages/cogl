@@ -13,7 +13,7 @@ Forwarded: https://gitlab.gnome.org/GNOME/cogl/-/merge_requests/17
  1 file changed, 14 insertions(+), 2 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index 4fc9cb5..e9b005c 100644
+index 746da3b..fff7d9c 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -685,10 +685,15 @@ AS_IF([test "x$enable_gles1" = "xyes"],

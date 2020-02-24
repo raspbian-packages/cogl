@@ -24,6 +24,8 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     Rename from
     d/p/Don-t-usually-run-tests-that-are-not-expected-to-succeed.patch
     and amend to match what I sent upstream
+  * d/p/Terminate-tests-with-SIGALRM-if-they-take-more-than-120-s.patch:
+    Update to match what I sent upstream
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 

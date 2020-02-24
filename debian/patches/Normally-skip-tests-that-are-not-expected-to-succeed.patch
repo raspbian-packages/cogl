@@ -22,10 +22,10 @@ Forwarded: https://gitlab.gnome.org/GNOME/cogl/merge_requests/15
  4 files changed, 27 insertions(+), 12 deletions(-)
 
 diff --git a/test-fixtures/test-utils.c b/test-fixtures/test-utils.c
-index b1ef12b..b937936 100644
+index faa9e1f..d6c592c 100644
 --- a/test-fixtures/test-utils.c
 +++ b/test-fixtures/test-utils.c
-@@ -126,7 +126,7 @@ is_boolean_env_set (const char *variable)
+@@ -129,7 +129,7 @@ is_boolean_env_set (const char *variable)
    return ret;
  }
  
@@ -34,7 +34,7 @@ index b1ef12b..b937936 100644
  test_utils_init (TestFlags requirement_flags,
                   TestFlags known_failure_flags)
  {
-@@ -208,6 +208,8 @@ test_utils_init (TestFlags requirement_flags,
+@@ -213,6 +213,8 @@ test_utils_init (TestFlags requirement_flags,
      g_print ("WARNING: Missing required feature[s] for this test\n");
    else if (known_failure)
      g_print ("WARNING: Test is known to fail\n");
