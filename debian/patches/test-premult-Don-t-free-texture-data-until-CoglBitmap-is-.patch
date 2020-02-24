@@ -45,6 +45,7 @@ previously allocated by thread T0 here:
     #1 0x7f3e2d384500 in g_malloc ../../../glib/gmem.c:99
 
 Signed-off-by: Simon McVittie <smcv@debian.org>
+Forwarded: https://gitlab.gnome.org/GNOME/cogl/merge_requests/12
 ---
  tests/conform/test-conform-main.c | 2 +-
  tests/conform/test-premult.c      | 6 +++++-

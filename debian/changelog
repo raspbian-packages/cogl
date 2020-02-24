@@ -26,6 +26,8 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     and amend to match what I sent upstream
   * d/p/Terminate-tests-with-SIGALRM-if-they-take-more-than-120-s.patch:
     Update to match what I sent upstream
+  * d/p/test-premult-Don-t-free-texture-data-until-CoglBitmap-is-.patch:
+    Mark as forwarded
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
