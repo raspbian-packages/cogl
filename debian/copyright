@@ -9,7 +9,7 @@ Copyright: 2007,2008 OpenedHand
            1999-2005 Brian Paul   All Rights Reserved.
            2011,2012 Collabora Ltd.
            2008-2011 Kristian Høgsberg
-License: MIT
+License: Expat
 
 Files: cogl/cogl-point-in-poly.c
 Copyright: 1970-2003, Wm. Randolph Franklin
@@ -78,7 +78,7 @@ Files:
  cogl-path/tesselator/memalloc.h
 Copyright:
  2010 Intel Corporation
-License: MIT
+License: Expat
 
 Files: examples/android/*
 Copyright: 2010, The Android Open Source Project
@@ -124,9 +124,9 @@ License: LGPL-2.1+
 
 Files: debian/patches/*
 Copyright: 2014, Andreas Henriksson <andreas@fatal.se>
-License: MIT
+License: Expat
 
-License: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights

@@ -46,6 +46,10 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     Fix incorrect library name in cogl-pango-2.0-experimental pkg-config
     metadata. This was also detected by the new autopkgtests.
   * d/copyright: Update list of files under SGI-B-2.0 license
+  * d/copyright: Refer to MIT/X11 license as "Expat".
+    The machine-readable copyright file format recommends this name
+    to distinguish Expat's version of the MIT/X11 license from other
+    BSD-style licenses used by MIT and/or in X11.
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
