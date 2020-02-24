@@ -40,7 +40,10 @@ License: BSD-3
  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Files: cogl/tesselator/*
+Files:
+ cogl-gles2/GLES2/*.h
+ cogl-path/tesselator/*
+ cogl/cogl-gles2-types.h
 Copyright: 1991-2000, Silicon Graphics, Inc.
 License: SGI-B-2.0
  SGI FREE SOFTWARE LICENSE B
@@ -70,6 +73,12 @@ License: SGI-B-2.0
  shall not be used in advertising or otherwise to promote the sale, use or
  other dealings in this Software without prior written authorization from
  Silicon Graphics, Inc.
+
+Files:
+ cogl-path/tesselator/memalloc.h
+Copyright:
+ 2010 Intel Corporation
+License: MIT
 
 Files: examples/android/*
 Copyright: 2010, The Android Open Source Project

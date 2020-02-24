@@ -45,6 +45,7 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
   * d/p/cogl-pango-2.0-experimental.pc-Reference-correct-library-.patch:
     Fix incorrect library name in cogl-pango-2.0-experimental pkg-config
     metadata. This was also detected by the new autopkgtests.
+  * d/copyright: Update list of files under SGI-B-2.0 license
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
