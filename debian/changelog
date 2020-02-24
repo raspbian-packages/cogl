@@ -28,6 +28,11 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     Update to match what I sent upstream
   * d/p/test-premult-Don-t-free-texture-data-until-CoglBitmap-is-.patch:
     Mark as forwarded
+  * d/p/tests-Use-tmp-file-to-dump-test-results.patch:
+    Add patch from mutter's fork of cogl to write test logs to a temporary
+    directory
+  * d/p/tests-Show-the-actual-output-from-tests-if-VERBOSE-is-set.patch:
+    Update to the version I sent upstream
 
  -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
 
