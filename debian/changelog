@@ -1,5 +1,6 @@
-cogl (1.22.4-4) UNRELEASED; urgency=medium
+cogl (1.22.4-4) unstable; urgency=medium
 
+  * Team upload
   * Explicitly build-depend on libdrm-dev on Linux platforms.
     Presumably this was previously pulled in by some other dependency,
     but configure.ac checks for it so we should build-depend on it
@@ -51,7 +52,7 @@ cogl (1.22.4-4) UNRELEASED; urgency=medium
     to distinguish Expat's version of the MIT/X11 license from other
     BSD-style licenses used by MIT and/or in X11.
 
- -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 14:25:10 +0000
+ -- Simon McVittie <smcv@debian.org>  Mon, 24 Feb 2020 11:39:47 +0000
 
 cogl (1.22.4-3) unstable; urgency=medium
 
