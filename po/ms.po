@@ -1,61 +1,62 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Cogl authors
+# Malay translation for cogl.
+# Copyright (C) 2019 cogl's COPYRIGHT HOLDER
 # This file is distributed under the same license as the cogl package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# abuyop <abuyop@gmail.com>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: cogl 1.22.6\n"
+"Project-Id-Version: cogl cogl-1.22\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/cogl/issues\n"
-"POT-Creation-Date: 2020-03-09 16:04+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-08-22 16:47+0000\n"
+"PO-Revision-Date: 2019-12-26 13:04+0800\n"
+"Language-Team: Malay <ms@li.org>\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: cogl/cogl-debug.c:181
 msgid "Supported debug values:"
-msgstr ""
+msgstr "Nilai-nilai nyahpepijat disokong:"
 
 #: cogl/cogl-debug.c:186
 msgid "Special debug values:"
-msgstr ""
+msgstr "Nilai-nilai nyahpepijat khas:"
 
 #: cogl/cogl-debug.c:188 cogl/cogl-debug.c:190
 msgid "Enables all non-behavioural debug options"
-msgstr ""
+msgstr "Benarkan semua pilihan nyahpepijat bukan-perilaku"
 
 #: cogl/cogl-debug.c:197
 msgid "Additional environment variables:"
-msgstr ""
+msgstr "Pembolehubah persekitaran tambahan:"
 
 #: cogl/cogl-debug.c:198
 msgid "Comma-separated list of GL extensions to pretend are disabled"
 msgstr ""
+"Senarai sambungan GL diasing-tanda-koma untuk dianggap telah dilumpuhkan"
 
 #: cogl/cogl-debug.c:200
 msgid "Override the GL version that Cogl will assume the driver supports"
-msgstr ""
+msgstr "Batalkan versi GL yang mana Cogl akan menganggap sokongan pemacu"
 
 #: cogl/cogl-debug.c:244
 msgid "Cogl debugging flags to set"
-msgstr ""
+msgstr "Bendera penyahpepijatan Cogl yang ditetapkan"
 
 #: cogl/cogl-debug.c:246
 msgid "Cogl debugging flags to unset"
-msgstr ""
+msgstr "Bendera penyahpepijatan Cogl yang dinyahtetapkan"
 
 #: cogl/cogl-debug.c:295
 msgid "Cogl Options"
-msgstr ""
+msgstr "Pilihan Cogl"
 
 #: cogl/cogl-debug.c:296
 msgid "Show Cogl options"
-msgstr ""
+msgstr "Tunjuk pilihan Cogl"
 
 #: cogl/cogl-debug-options.h:32 cogl/cogl-debug-options.h:37
 #: cogl/cogl-debug-options.h:42 cogl/cogl-debug-options.h:47
@@ -66,107 +67,107 @@ msgstr ""
 #: cogl/cogl-debug-options.h:175 cogl/cogl-debug-options.h:191
 #: cogl/cogl-debug-options.h:196
 msgid "Cogl Tracing"
-msgstr ""
+msgstr "Penyurihan Cogl"
 
 #: cogl/cogl-debug-options.h:34
 msgid "CoglObject references"
-msgstr ""
+msgstr "Rujukan CoglObject"
 
 #: cogl/cogl-debug-options.h:35
 msgid "Debug ref counting issues for CoglObjects"
-msgstr ""
+msgstr "Nyahpepijat masalah pengiraan ruj untuk CoglObjects"
 
 #: cogl/cogl-debug-options.h:39
 msgid "Trace Texture Slicing"
-msgstr ""
+msgstr "Surih Penghirisan Tekstur"
 
 #: cogl/cogl-debug-options.h:40
 msgid "debug the creation of texture slices"
-msgstr ""
+msgstr "nyahpepijat penciptaan hirisan tekstur"
 
 #: cogl/cogl-debug-options.h:44
 msgid "Trace Atlas Textures"
-msgstr ""
+msgstr "Surih Tekstur Atlas"
 
 #: cogl/cogl-debug-options.h:45
 msgid "Debug texture atlas management"
-msgstr ""
+msgstr "Nyahpepijat pengurusan atlas tekstur"
 
 #: cogl/cogl-debug-options.h:49
 msgid "Trace Blend Strings"
-msgstr ""
+msgstr "Jejak Rentetan Adun"
 
 #: cogl/cogl-debug-options.h:50
 msgid "Debug CoglBlendString parsing"
-msgstr ""
+msgstr "Nyahpepijat penghuraian CoglBlendString"
 
 #: cogl/cogl-debug-options.h:54
 msgid "Trace Journal"
-msgstr ""
+msgstr "Surih Jurnal"
 
 #: cogl/cogl-debug-options.h:55
 msgid "View all the geometry passing through the journal"
-msgstr ""
+msgstr "Lihat semua geometri yang melepasi jurnal"
 
 #: cogl/cogl-debug-options.h:59
 msgid "Trace Batching"
-msgstr ""
+msgstr "Jejak Pengelompokan"
 
 #: cogl/cogl-debug-options.h:60
 msgid "Show how geometry is being batched in the journal"
-msgstr ""
+msgstr "Tunjuk bagaimana geometri dikelompok di dalam jurnal"
 
 #: cogl/cogl-debug-options.h:64
 msgid "Trace matrices"
-msgstr ""
+msgstr "Surih matrik"
 
 #: cogl/cogl-debug-options.h:65
 msgid "Trace all matrix manipulation"
-msgstr ""
+msgstr "Surih semua manipulasi matrik"
 
 #: cogl/cogl-debug-options.h:70
 msgid "Trace Misc Drawing"
-msgstr ""
+msgstr "Surih Lukisan Pelbagai"
 
 #: cogl/cogl-debug-options.h:71
 msgid "Trace some misc drawing operations"
-msgstr ""
+msgstr "Surih beberapa operasi lukisan pelbagai"
 
 #: cogl/cogl-debug-options.h:75
 msgid "Trace Pango Renderer"
-msgstr ""
+msgstr "Surih Penerap Pango"
 
 #: cogl/cogl-debug-options.h:76
 msgid "Trace the Cogl Pango renderer"
-msgstr ""
+msgstr "Surih penerap Pango Cogl"
 
 #: cogl/cogl-debug-options.h:80
 msgid "Trace CoglTexturePixmap backend"
-msgstr ""
+msgstr "Surih bahagian belakang CoglTexturePixmap"
 
 #: cogl/cogl-debug-options.h:81
 msgid "Trace the Cogl texture pixmap backend"
-msgstr ""
+msgstr "Surih bahagian belakang pixmap tekstur Cogl"
 
 #: cogl/cogl-debug-options.h:83 cogl/cogl-debug-options.h:88
 msgid "Visualize"
-msgstr ""
+msgstr "Visualkan"
 
 #: cogl/cogl-debug-options.h:85
 msgid "Outline rectangles"
-msgstr ""
+msgstr "Segiempat rangka"
 
 #: cogl/cogl-debug-options.h:86
 msgid "Add wire outlines for all rectangular geometry"
-msgstr ""
+msgstr "Tambah rangka wayar untuk semua geometri segiempat"
 
 #: cogl/cogl-debug-options.h:90
 msgid "Show wireframes"
-msgstr ""
+msgstr "Tunjuk bingkai wayar"
 
 #: cogl/cogl-debug-options.h:91
 msgid "Add wire outlines for all geometry"
-msgstr ""
+msgstr "Tambah rangka wayar untuk semua geometri"
 
 #: cogl/cogl-debug-options.h:93 cogl/cogl-debug-options.h:98
 #: cogl/cogl-debug-options.h:103 cogl/cogl-debug-options.h:108
@@ -177,181 +178,188 @@ msgstr ""
 #: cogl/cogl-debug-options.h:160 cogl/cogl-debug-options.h:180
 #: cogl/cogl-debug-options.h:185
 msgid "Root Cause"
-msgstr ""
+msgstr "Punca Root"
 
 #: cogl/cogl-debug-options.h:95
 msgid "Disable Journal batching"
-msgstr ""
+msgstr "Lumpuhkan pengelompokan Jurnal"
 
 #: cogl/cogl-debug-options.h:96
 msgid "Disable batching of geometry in the Cogl Journal."
-msgstr ""
+msgstr "Lumpuhkan pengelompokan geometri dalam Jurnal Cogl."
 
 #: cogl/cogl-debug-options.h:100
 msgid "Disable GL Vertex Buffers"
-msgstr ""
+msgstr "Lumpuhkan Penimbal Puncak GL"
 
 #: cogl/cogl-debug-options.h:101
 msgid "Disable use of OpenGL vertex buffer objects"
-msgstr ""
+msgstr "Lumpuhkan penggunaan objek penimbal puncak OpenGL"
 
 #: cogl/cogl-debug-options.h:105
 msgid "Disable GL Pixel Buffers"
-msgstr ""
+msgstr "Lumpuhkan Penimbal Piksel GL"
 
 #: cogl/cogl-debug-options.h:106
 msgid "Disable use of OpenGL pixel buffer objects"
-msgstr ""
+msgstr "Lumpuhkan penggunaan objek penimbal piksel OpenGL"
 
 #: cogl/cogl-debug-options.h:110
 msgid "Disable software rect transform"
-msgstr ""
+msgstr "Lumpuhkan penjelmaan segiempat perisian"
 
 #: cogl/cogl-debug-options.h:111
 msgid "Use the GPU to transform rectangular geometry"
-msgstr ""
+msgstr "Guna GPU untuk jelmakan geometri segiempat"
 
 #: cogl/cogl-debug-options.h:113
 msgid "Cogl Specialist"
-msgstr ""
+msgstr "Pakar Cogl"
 
 #: cogl/cogl-debug-options.h:115
 msgid "Dump atlas images"
-msgstr ""
+msgstr "Longgok imej atlas"
 
 #: cogl/cogl-debug-options.h:116
 msgid "Dump texture atlas changes to an image file"
-msgstr ""
+msgstr "Longgok perubahan atlas tekstur pada sebuah fail imej"
 
 #: cogl/cogl-debug-options.h:120
 msgid "Disable texture atlasing"
-msgstr ""
+msgstr "Lumpuhkan atlas tekstur"
 
 #: cogl/cogl-debug-options.h:121
 msgid "Disable use of texture atlasing"
-msgstr ""
+msgstr "Lumpuhkan penggunaan atlas tekstur"
 
 #: cogl/cogl-debug-options.h:125
 msgid "Disable sharing the texture atlas between text and images"
-msgstr ""
+msgstr "Lumpuhkan perkongsian atlas tekstur antara teks dan imej"
 
 #: cogl/cogl-debug-options.h:126
 msgid ""
 "When this is set the glyph cache will always use a separate texture for its "
 "atlas. Otherwise it will try to share the atlas with images."
 msgstr ""
+"Bila ia tetapkan cache glif akan sentiasa guna satu tekstur berasingan untuk "
+"atlasnya. Jika tidak ia akan cuba berkongsi atlas dengan imej."
 
 #: cogl/cogl-debug-options.h:131
 msgid "Disable texturing"
-msgstr ""
+msgstr "Lumpuhkan penteksturan"
 
 #: cogl/cogl-debug-options.h:132
 msgid "Disable texturing any primitives"
-msgstr ""
+msgstr "Lumpuhkan penteksturan mana-mana primitif"
 
 #: cogl/cogl-debug-options.h:136
 msgid "Disable arbfp"
-msgstr ""
+msgstr "Lumpuhkan arbfp"
 
 #: cogl/cogl-debug-options.h:137
 msgid "Disable use of ARB fragment programs"
-msgstr ""
+msgstr "Lumpuhkan penggunaan program-program cebisan ARB"
 
 #: cogl/cogl-debug-options.h:141
 msgid "Disable fixed"
-msgstr ""
+msgstr "Lumpuhkan yang dibaiki"
 
 #: cogl/cogl-debug-options.h:142
 msgid "Disable use of the fixed function pipeline backend"
-msgstr ""
+msgstr "Lumpuhkan penggunaan bahagian belakang talian paip fungsi tetap"
 
 #: cogl/cogl-debug-options.h:146
 msgid "Disable GLSL"
-msgstr ""
+msgstr "Lumpuhkan GLSL"
 
 #: cogl/cogl-debug-options.h:147
 msgid "Disable use of GLSL"
-msgstr ""
+msgstr "Lumpuhkan penggunaan GLSL"
 
 #: cogl/cogl-debug-options.h:151
 msgid "Disable blending"
-msgstr ""
+msgstr "Lumpuhkan pengadunan"
 
 #: cogl/cogl-debug-options.h:152
 msgid "Disable use of blending"
-msgstr ""
+msgstr "Lumpuhkan penggunaan pengadunan"
 
 #: cogl/cogl-debug-options.h:156
 msgid "Disable non-power-of-two textures"
-msgstr ""
+msgstr "Lumpuhkan tekstur bukan-kuasa-dua"
 
 #: cogl/cogl-debug-options.h:157
 msgid ""
 "Makes Cogl think that the GL driver doesn't support NPOT textures so that it "
 "will create sliced textures or textures with waste instead."
 msgstr ""
+"Biarkan Cogl fahami pemacu GL tidak menyokong tekstur NPOT supaya ia akan "
+"mencipta tekstur terhiris atau tekstur dengan sisa sebagai ganti."
 
 #: cogl/cogl-debug-options.h:162
 msgid "Disable software clipping"
-msgstr ""
+msgstr "Lumpuhkan pengklipan perisian"
 
 #: cogl/cogl-debug-options.h:163
 msgid "Disables Cogl's attempts to clip some rectangles in software."
 msgstr ""
+"Lumpuhkan percubaan Cogl untuk mengklip beberapa segiempat dalam perisian."
 
 #: cogl/cogl-debug-options.h:167
 msgid "Show source"
-msgstr ""
+msgstr "Tunjuk sumber"
 
 #: cogl/cogl-debug-options.h:168
 msgid "Show generated ARBfp/GLSL source code"
-msgstr ""
+msgstr "Tunjuk kod sumber ARBfp/GLSL terjana"
 
 #: cogl/cogl-debug-options.h:172
 msgid "Trace some OpenGL"
-msgstr ""
+msgstr "Surih beberapa OpenGL"
 
 #: cogl/cogl-debug-options.h:173
 msgid "Traces some select OpenGL calls"
-msgstr ""
+msgstr "Surih beberapa panggilan pilih OpenGL"
 
 #: cogl/cogl-debug-options.h:177
 msgid "Trace offscreen support"
-msgstr ""
+msgstr "Surih sokongan luar-skrin"
 
 #: cogl/cogl-debug-options.h:178
 msgid "Debug offscreen support"
-msgstr ""
+msgstr "Nyahpepijat sokongan luar-skrin"
 
 #: cogl/cogl-debug-options.h:182
 msgid "Disable program caches"
-msgstr ""
+msgstr "Lumpuhkan cache program"
 
 #: cogl/cogl-debug-options.h:183
 msgid "Disable fallback caches for arbfp and glsl programs"
-msgstr ""
+msgstr "Lumpuhkan cache jatuh-balik untuk program arbfp dan glsl"
 
 #: cogl/cogl-debug-options.h:187
 msgid "Disable read pixel optimization"
-msgstr ""
+msgstr "Lumpuhkan pengoptimuman piksel baca"
 
 #: cogl/cogl-debug-options.h:188
 msgid ""
 "Disable optimization for reading 1px for simple scenes of opaque rectangles"
 msgstr ""
+"Lumpuhkan pengoptimuman untuk membaca 1 px bagi adegan ringkas segiempat "
+"legap"
 
 #: cogl/cogl-debug-options.h:193
 msgid "Trace clipping"
-msgstr ""
+msgstr "Surih pengklipan"
 
 #: cogl/cogl-debug-options.h:194
 msgid "Logs information about how Cogl is implementing clipping"
-msgstr ""
+msgstr "Log maklumat berkenaan Cogl melaksanakan pengklipan"
 
 #: cogl/cogl-debug-options.h:198
 msgid "Trace performance concerns"
-msgstr ""
+msgstr "Surih yang berkenaan prestasi"
 
 #: cogl/cogl-debug-options.h:199
 msgid "Tries to highlight sub-optimal Cogl usage."
-msgstr ""
+msgstr "Cuba menyorot penggunaan Cogl sub-optimum."
