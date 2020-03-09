@@ -31,7 +31,6 @@ override_dh_auto_configure:
 		--enable-cogl-pango \
 		--enable-introspection \
 		--enable-gl \
-		--enable-cogl-gst \
 		--enable-xlib-egl-platform \
 		--enable-cogl-gles2 \
 		--enable-gles2 \
