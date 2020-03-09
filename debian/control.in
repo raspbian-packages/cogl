@@ -28,6 +28,7 @@ Build-Depends: debhelper-compat (= 12),
                libxrandr-dev (>= 2:1.2),
                xauth <!nocheck>,
                xvfb <!nocheck>
+Rules-Requires-Root: no
 Standards-Version: 4.4.0.1
 Vcs-Browser: https://salsa.debian.org/gnome-team/cogl
 Vcs-Git: https://salsa.debian.org/gnome-team/cogl.git
