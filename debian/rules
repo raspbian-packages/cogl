@@ -32,7 +32,6 @@ override_dh_auto_configure:
 		--enable-introspection \
 		--enable-gl \
 		--enable-xlib-egl-platform \
-		--enable-cogl-gles2 \
 		--enable-gles2 \
 		--with-gles2-libname=libGLESv2.so.2 \
 		$(CONFFLAGS)
