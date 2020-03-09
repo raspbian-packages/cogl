@@ -1,3 +1,9 @@
+cogl (1.22.6-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 09 Mar 2020 19:23:46 +0000
+
 cogl (1.22.4-4) unstable; urgency=medium
 
   * Team upload
