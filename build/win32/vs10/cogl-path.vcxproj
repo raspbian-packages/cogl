@@ -175,8 +175,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
- <ClCompile Include="..\..\..\cogl-path\cogl1-path.c" />
  <ClCompile Include="..\..\..\cogl-path\cogl-path.c" />
+ <ClCompile Include="..\..\..\cogl-path\cogl1-path.c" />
  <ClCompile Include="..\..\..\cogl-path\tesselator\dict.c" />
  <ClCompile Include="..\..\..\cogl-path\tesselator\geom.c" />
  <ClCompile Include="..\..\..\cogl-path\tesselator\mesh.c" />

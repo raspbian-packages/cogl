@@ -14,8 +14,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
- <ClCompile Include="..\..\..\cogl-path\cogl1-path.c"><Filter>Source Files</Filter></ClCompile>
  <ClCompile Include="..\..\..\cogl-path\cogl-path.c"><Filter>Source Files</Filter></ClCompile>
+ <ClCompile Include="..\..\..\cogl-path\cogl1-path.c"><Filter>Source Files</Filter></ClCompile>
  <ClCompile Include="..\..\..\cogl-path\tesselator\dict.c"><Filter>Source Files</Filter></ClCompile>
  <ClCompile Include="..\..\..\cogl-path\tesselator\geom.c"><Filter>Source Files</Filter></ClCompile>
  <ClCompile Include="..\..\..\cogl-path\tesselator\mesh.c"><Filter>Source Files</Filter></ClCompile>

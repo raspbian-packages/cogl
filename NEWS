@@ -1,3 +1,11 @@
+Cogl 1.22.6                                                        2020-03-09
+
+  • List of changes since Cogl 1.22.4
+
+  » Build with newer versions of Pango
+  » Fix the pkg-config files for cogl-gst and cogl-pango [!13,
+    Simon McVittie]
+
 Cogl 1.22.4                                                        2019-04-23
 
   • List of changes since Cogl 1.22.2
