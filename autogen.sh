@@ -16,21 +16,13 @@ test $TEST_TYPE $FILE || {
 	exit 1
 }
 
-AUTOMAKE_VERSIONS="1.16 1.15 1.14 1.13 1.12 1.11"
-for version in $AUTOMAKE_VERSIONS; do
-	if automake-$version --version < /dev/null > /dev/null 2>&1 ; then
-		AUTOMAKE=automake-$version
-		ACLOCAL=aclocal-$version
-		export AUTOMAKE ACLOCAL
-		break
-	fi
-done
-
-if test -z "$AUTOMAKE"; then
+if ! command -v "${AUTOMAKE-automake}" >/dev/null; then
 	echo
-	echo "You must have one of automake $AUTOMAKE_VERSIONS to compile $PROJECT."
+	echo "You must have automake >= 1.11 to compile $PROJECT."
 	echo "Install the appropriate package for your distribution,"
 	echo "or get the source tarball at http://ftp.gnu.org/gnu/automake/"
+	echo "To use a non-default version, set the AUTOMAKE and ACLOCAL"
+	echo "environment variables."
 	exit 1
 fi
 
@@ -49,7 +41,7 @@ if test -z "$NOCONFIGURE"; then
 fi
 
 if test -z "$ACLOCAL_FLAGS"; then
-        acdir=`$ACLOCAL --print-ac-dir`
+        acdir=`${ACLOCAL-aclocal} --print-ac-dir`
         m4list="glib-2.0.m4"
         for file in $m4list; do
                 if [ ! -f "$acdir/$file" ]; then
