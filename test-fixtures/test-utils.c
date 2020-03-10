@@ -2,6 +2,10 @@
 
 #include <stdlib.h>
 
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
 #include "test-unit.h"
 #include "test-utils.h"
 
@@ -145,6 +149,11 @@ test_utils_init (TestFlags requirement_flags,
                 "If you want to run all the tests you should run\n"
                 "$ make test-report");
   counter++;
+
+#ifdef HAVE_ALARM
+  /* Kill the test with SIGALRM if it takes more than this many seconds */
+  alarm (120);
+#endif
 
   if (is_boolean_env_set ("COGL_TEST_VERBOSE") ||
       is_boolean_env_set ("V"))
