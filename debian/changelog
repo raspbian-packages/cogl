@@ -1,4 +1,4 @@
-cogl (1.22.6-1) UNRELEASED; urgency=medium
+cogl (1.22.6-1) unstable; urgency=medium
 
   [ Simon McVittie ]
   * New upstream release
@@ -27,7 +27,7 @@ cogl (1.22.6-1) UNRELEASED; urgency=medium
     between the gtk-doc files are properly resolved, mark libcogl-doc with
     Build-Profiles: <!nodoc>
 
- -- Laurent Bigonville <bigon@debian.org>  Sun, 15 Mar 2020 15:44:14 +0100
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 15 Mar 2020 16:49:35 +0100
 
 cogl (1.22.4-4) unstable; urgency=medium
 
