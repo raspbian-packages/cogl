@@ -161,8 +161,8 @@
    Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
    UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
    >
- <File RelativePath="..\..\..\cogl-path\cogl1-path.c" />
  <File RelativePath="..\..\..\cogl-path\cogl-path.c" />
+ <File RelativePath="..\..\..\cogl-path\cogl1-path.c" />
  <File RelativePath="..\..\..\cogl-path\tesselator\dict.c" />
  <File RelativePath="..\..\..\cogl-path\tesselator\geom.c" />
  <File RelativePath="..\..\..\cogl-path\tesselator\mesh.c" />

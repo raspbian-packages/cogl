@@ -8,12 +8,13 @@ headers, this header is included indirectly via EGL/eglext.h.
 Also fix typo COGL_EGL_INCLUDE -> COGL_EGL_INCLUDES
 
 Forwarded: https://gitlab.gnome.org/GNOME/cogl/-/merge_requests/17
+Forwarded: https://gitlab.gnome.org/GNOME/cogl/-/merge_requests/19
 ---
  configure.ac | 16 ++++++++++++++--
  1 file changed, 14 insertions(+), 2 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index 746da3b..fff7d9c 100644
+index 956f277..6c44eea 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -685,10 +685,15 @@ AS_IF([test "x$enable_gles1" = "xyes"],

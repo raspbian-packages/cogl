@@ -5,20 +5,6 @@ Depends: build-essential,
          xvfb
 Restrictions: allow-stderr superficial
 
-Tests: libcogl-gles2-dev
-Depends: build-essential,
-         libcogl-gles2-dev,
-         xauth,
-         xvfb
-Restrictions: allow-stderr superficial
-
-Tests: libcogl-gst-dev
-Depends: build-essential,
-         libcogl-gst-dev,
-         xauth,
-         xvfb
-Restrictions: allow-stderr superficial
-
 Tests: libcogl-pango-dev
 Depends: build-essential,
          libcogl-pango-dev,

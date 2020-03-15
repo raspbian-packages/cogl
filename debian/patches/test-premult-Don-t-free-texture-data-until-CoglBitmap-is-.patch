@@ -46,6 +46,7 @@ previously allocated by thread T0 here:
 
 Signed-off-by: Simon McVittie <smcv@debian.org>
 Forwarded: https://gitlab.gnome.org/GNOME/cogl/merge_requests/12
+Applied-upstream: 1.22.7, commit:0f5f3179c0b59b7c03339d39a0661f07aab37e6e
 ---
  tests/conform/test-conform-main.c | 2 +-
  tests/conform/test-premult.c      | 6 +++++-

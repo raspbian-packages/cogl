@@ -1,3 +1,34 @@
+cogl (1.22.6-1) unstable; urgency=medium
+
+  [ Simon McVittie ]
+  * New upstream release
+  * Refresh patch series
+    - d/p/cogl-pango-2.0-experimental.pc-Reference-correct-library-.patch,
+      d/p/gst-pango-Add-missing-pkg-config-dependencies.patch:
+      Drop, applied upstream.
+    - d/p/test-premult-Don-t-free-texture-data-until-CoglBitmap-is-.patch:
+      Mark as having been applied upstream (since 1.22.6).
+  * Set Rules-Requires-Root to no
+  * Disable cogl-gst sub-library.
+    It used to be a dependency for clutter-gst, but that dependency was
+    removed in 2015, and it doesn't seem to be depended on by anything
+    since at least buster. cogl is essentially unmaintained upstream, so the
+    less of it we are trying to maintain in Debian, the better.
+  * Disable cogl-gles2 sub-library.
+    Nothing in Debian seems to depend on this since at least buster.
+    Note that GLES2 support in the main cogl library continues to be built,
+    and is still the default on 32-bit ARM.
+  * Build-depend on libegl1-mesa-dev, for Mesa EGL extensions.
+    Previously these were brought in by GStreamer.
+  * Standards-Version: 4.5.0 (no changes required)
+
+  [ Laurent Bigonville ]
+  * debian/control.in: Add several -doc packages to the BDI so the links
+    between the gtk-doc files are properly resolved, mark libcogl-doc with
+    Build-Profiles: <!nodoc>
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 15 Mar 2020 16:49:35 +0100
+
 cogl (1.22.4-4) unstable; urgency=medium
 
   * Team upload

@@ -13,7 +13,7 @@ an environment variable, which can be set after fixing a bug to check which
 tests are now passing.
 
 Signed-off-by: Simon McVittie <smcv@debian.org>
-Forwarded: https://gitlab.gnome.org/GNOME/cogl/merge_requests/15
+Forwarded: https://gitlab.gnome.org/GNOME/cogl/-/merge_requests/15
 ---
  test-fixtures/test-utils.c        |  4 +++-
  test-fixtures/test-utils.h        |  2 +-

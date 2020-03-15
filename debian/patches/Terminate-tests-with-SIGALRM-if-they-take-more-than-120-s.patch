@@ -23,7 +23,7 @@ Forwarded: https://gitlab.gnome.org/GNOME/cogl/merge_requests/11
  2 files changed, 11 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index 4fc9cb5..746da3b 100644
+index 9fc1505..956f277 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -1361,6 +1361,8 @@ dnl ================================================================

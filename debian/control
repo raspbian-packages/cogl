@@ -6,7 +6,7 @@ Source: cogl
 Section: libs
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>,
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@debian.org>, Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>,
            Rico Tzschichholz <ricotz@ubuntu.com>
 Build-Depends: debhelper-compat (= 12),
                gnome-pkg-tools,
@@ -15,13 +15,13 @@ Build-Depends: debhelper-compat (= 12),
                libcairo2-dev (>= 1.10),
                libdrm-dev [linux-any],
                libegl-dev,
+               libegl1-mesa-dev,
                libgbm-dev [linux-any],
                libgdk-pixbuf2.0-dev (>= 2.0),
                libgirepository1.0-dev (>= 0.9.12),
                libgl1-mesa-dev (>= 7.1~rc3-1~),
                libgles2-mesa-dev (>= 7.1~rc3-1~) | libgles2-dev,
                libglib2.0-dev (>= 2.32.0),
-               libgstreamer-plugins-base1.0-dev,
                libpango1.0-dev (>= 1.28.3-5),
                libwayland-dev (>= 1.1.90) [linux-any],
                libx11-dev,
@@ -32,7 +32,11 @@ Build-Depends: debhelper-compat (= 12),
                libxrandr-dev (>= 2:1.2),
                xauth <!nocheck>,
                xvfb <!nocheck>
-Standards-Version: 4.4.0.1
+Build-Depends-Indep: libclutter-1.0-doc <!nodoc>,
+                     libgdk-pixbuf2.0-doc <!nodoc>,
+                     libglib2.0-doc <!nodoc>
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
 Vcs-Browser: https://salsa.debian.org/gnome-team/cogl
 Vcs-Git: https://salsa.debian.org/gnome-team/cogl.git
 
@@ -72,8 +76,8 @@ Architecture: any
 Multi-Arch: same
 Depends: gir1.2-cogl-1.0 (= ${binary:Version}),
          libcairo2-dev,
-         libcogl20 (= ${binary:Version}),
          libcogl-path20 (= ${binary:Version}),
+         libcogl20 (= ${binary:Version}),
          libdrm-dev [!hurd-any],
          libgbm-dev [linux-any],
          libgdk-pixbuf2.0-dev (>= 2.0),
@@ -107,6 +111,7 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
 Suggests: devhelp
+Build-Profiles: <!nodoc>
 Description: Object oriented GL/GLES Abstraction/Utility Layer (documentation)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
@@ -216,101 +221,3 @@ Description: GObject introspection data for the CoglPango 1.0 library
  .
  It can be used by packages using the GIRepository format to generate
  dynamic bindings for libcogl-pango.
-
-Package: libcogl-gles2-20
-Architecture: any
-Depends: libgl1 [!armel !armhf],
-         libgles2 [armel armhf],
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: libcogl-common
-Suggests: libgl1,
-          libgles2
-Replaces: libcogl12 (<< 1.13.4-2)
-Multi-Arch: same
-Description: Object oriented GL/GLES Abstraction/Utility Layer
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the GLES2 library.
-
-Package: libcogl-gles2-dev
-Section: libdevel
-Architecture: any
-Multi-Arch: same
-Depends: libcogl-dev (= ${binary:Version}),
-         libcogl-gles2-20 (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: pkg-config
-Suggests: libcogl-doc
-Breaks: libcogl-dev (<< 1.14.0-1)
-Replaces: libcogl-dev (<< 1.14.0-1)
-Description: Object oriented GL/GLES Abstraction/Utility Layer (development files)
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the development files for libcogl.
-
-Package: libcogl-gst20
-Architecture: any
-Depends: libgstreamer-plugins-base1.0-0 (>= 1.2.3-1co2),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: libcogl-common
-Multi-Arch: same
-Description: Object oriented GL/GLES Abstraction/Utility Layer
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the GStreamer integration library, which provides
- a video sink to paint with cogl.
-
-Package: libcogl-gst-dev
-Section: libdevel
-Architecture: any
-Multi-Arch: same
-Depends: gir1.2-coglgst-2.0 (= ${binary:Version}),
-         libcairo2-dev (>= 1.10),
-         libcogl-dev (= ${binary:Version}),
-         libcogl-gst20 (= ${binary:Version}),
-         libdrm-dev [!hurd-any],
-         libgdk-pixbuf2.0-dev (>= 2.0),
-         libglib2.0-dev (>= 2.28.0),
-         libgstreamer-plugins-base1.0-dev,
-         libx11-dev,
-         libxcomposite-dev,
-         libxdamage-dev,
-         libxext-dev,
-         libxfixes-dev,
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: pkg-config
-Suggests: libcogl-doc
-Description: Object oriented GL/GLES Abstraction/Utility Layer (development file
- Cogl is a small open source library for using 3D graphics hardware to draw
- pretty pictures. The API departs from the flat state machine style of
- OpenGL and is designed to make it easy to write orthogonal components that
- can render without stepping on each others toes.
- .
- This package contains the development files for libcogl-gst.
-
-Package: gir1.2-coglgst-2.0
-Section: introspection
-Architecture: any
-Depends: ${gir:Depends},
-         ${misc:Depends},
-         ${shlibs:Depends}
-Multi-Arch: same
-Description: GObject introspection data for the CoglGst 2.0 library
- This package contains introspection data for the Cogl GStreamer
- library.
- .
- It can be used by packages using the GIRepository format to generate
- dynamic bindings for libcogl-gst.

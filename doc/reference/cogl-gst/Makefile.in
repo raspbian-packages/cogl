@@ -720,10 +720,10 @@ maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 @BUILD_GTK_DOC_FALSE@uninstall-local:
-@BUILD_GTK_DOC_FALSE@distclean-local:
-@BUILD_GTK_DOC_FALSE@install-data-local:
-@BUILD_GTK_DOC_FALSE@maintainer-clean-local:
 @BUILD_GTK_DOC_FALSE@clean-local:
+@BUILD_GTK_DOC_FALSE@distclean-local:
+@BUILD_GTK_DOC_FALSE@maintainer-clean-local:
+@BUILD_GTK_DOC_FALSE@install-data-local:
 clean: clean-am
 
 clean-am: clean-generic clean-libtool clean-local mostlyclean-am
