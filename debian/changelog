@@ -1,5 +1,6 @@
 cogl (1.22.6-1) UNRELEASED; urgency=medium
 
+  [ Simon McVittie ]
   * New upstream release
   * Refresh patch series
     - d/p/cogl-pango-2.0-experimental.pc-Reference-correct-library-.patch,
@@ -21,7 +22,12 @@ cogl (1.22.6-1) UNRELEASED; urgency=medium
     Previously these were brought in by GStreamer.
   * Standards-Version: 4.5.0 (no changes required)
 
- -- Simon McVittie <smcv@debian.org>  Mon, 09 Mar 2020 23:51:09 +0000
+  [ Laurent Bigonville ]
+  * debian/control.in: Add several -doc packages to the BDI so the links
+    between the gtk-doc files are properly resolved, mark libcogl-doc with
+    Build-Profiles: <!nodoc>
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 15 Mar 2020 15:44:14 +0100
 
 cogl (1.22.4-4) unstable; urgency=medium
 

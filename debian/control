@@ -6,7 +6,7 @@ Source: cogl
 Section: libs
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>,
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@debian.org>, Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>,
            Rico Tzschichholz <ricotz@ubuntu.com>
 Build-Depends: debhelper-compat (= 12),
                gnome-pkg-tools,
@@ -32,6 +32,9 @@ Build-Depends: debhelper-compat (= 12),
                libxrandr-dev (>= 2:1.2),
                xauth <!nocheck>,
                xvfb <!nocheck>
+Build-Depends-Indep: libclutter-1.0-doc <!nodoc>,
+                     libgdk-pixbuf2.0-doc <!nodoc>,
+                     libglib2.0-doc <!nodoc>
 Rules-Requires-Root: no
 Standards-Version: 4.5.0
 Vcs-Browser: https://salsa.debian.org/gnome-team/cogl
@@ -73,8 +76,8 @@ Architecture: any
 Multi-Arch: same
 Depends: gir1.2-cogl-1.0 (= ${binary:Version}),
          libcairo2-dev,
-         libcogl20 (= ${binary:Version}),
          libcogl-path20 (= ${binary:Version}),
+         libcogl20 (= ${binary:Version}),
          libdrm-dev [!hurd-any],
          libgbm-dev [linux-any],
          libgdk-pixbuf2.0-dev (>= 2.0),
@@ -108,6 +111,7 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
 Suggests: devhelp
+Build-Profiles: <!nodoc>
 Description: Object oriented GL/GLES Abstraction/Utility Layer (documentation)
  Cogl is a small open source library for using 3D graphics hardware to draw
  pretty pictures. The API departs from the flat state machine style of
