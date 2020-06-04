@@ -1,3 +1,14 @@
+Cogl 1.22.8                                                        2020-06-04
+
+  • List of changes since Cogl 1.22.6
+
+  » Fix building against libglvnd-provided EGL headers [!19; Simon McVittie]
+  » Stop checking the Automake version [!20; Simon McVittie]
+  » Fix compiler warnings with GCC ≥ 9 [!21; Simon McVittie]
+  » Ensure we don't close the same X display twice [!23; Simon McVittie]
+  » Test suite fixes [!10, !11, !12, !14, !15, !22; Simon McVittie]
+  » Free pipeline state last [#14]
+
 Cogl 1.22.6                                                        2020-03-09
 
   • List of changes since Cogl 1.22.4
