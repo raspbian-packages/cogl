@@ -11,8 +11,9 @@ variables:
     gettext-devel
     libtool
     chrpath
-    pkgconfig(cairo)
     mesa-libEGL-devel
+    xorg-x11-server-Xvfb
+    pkgconfig(cairo)
     pkgconfig(gbm)
     pkgconfig(gdk-pixbuf-2.0)
     pkgconfig(gl)
@@ -39,6 +40,6 @@ build_stable:
   script:
     - CPPFLAGS='-D_FORTIFY_SOURCE=2' ./autogen.sh --disable-dependency-tracking --disable-gtk-doc
     - make
-    - make check
+    - xvfb-run -a -s "-screen 0 1024x768x24" make check
     - make install
 
