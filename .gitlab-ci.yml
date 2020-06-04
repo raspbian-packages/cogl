@@ -32,6 +32,7 @@ variables:
     pkgconfig(wayland-cursor)
     pkgconfig(wayland-egl)
     pkgconfig(xkbcommon)
+  COGL_RENDERER: "glx"
 
 build_stable:
   before_script:
