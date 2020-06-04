@@ -37,7 +37,7 @@ build_stable:
     - dnf upgrade -y --nogpgcheck fedora-release fedora-repos*
     - dnf update -y && dnf install -y $DEPENDENCIES
   script:
-    - CPPFLAGS='-D_FORTIFY_SOURCE=2' ./autogen.sh --disable-dependency-tracking --enable-gtk-doc --enable-gtk-tests
+    - CPPFLAGS='-D_FORTIFY_SOURCE=2' ./autogen.sh --disable-dependency-tracking --disable-gtk-doc
     - make
     - make check
     - make install
