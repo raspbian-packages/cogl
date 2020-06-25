@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-buffer-layout-apis.html" title="Describing the layout of GPU Memory">
 <link rel="prev" href="cogl-buffer-layout-apis.html" title="Describing the layout of GPU Memory">
 <link rel="next" href="cogl-2.0-experimental-Indices.html" title="Indices">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <td valign="top">
 <h2><span class="refentrytitle"><a name="cogl-2.0-experimental-Vertex-Attributes.top_of_page"></a>Vertex Attributes</span></h2>
 <p>Vertex Attributes — Functions for declaring and drawing vertex
-   attributes</p>
+attributes</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -36,8 +36,8 @@
 <a name="cogl-2.0-experimental-Vertex-Attributes.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -95,8 +95,8 @@
 <a name="cogl-2.0-experimental-Vertex-Attributes.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword"> </td>
@@ -149,11 +149,11 @@ example it's common to define a structure for a single vertex like:</p>
 3
 4
 5</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">typedef</span><span class="normal"> </span><span class="keyword">struct</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="type">float</span><span class="normal"> x</span><span class="symbol">,</span><span class="normal"> y</span><span class="symbol">,</span><span class="normal"> z</span><span class="symbol">;</span><span class="normal"> </span><span class="symbol">/&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;*</span><span class="normal"> </span><span class="usertype">position</span><span class="normal"> attribute </span><span class="symbol">*&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;/</span>
-<span class="normal">  </span><span class="type">float</span><span class="normal"> s</span><span class="symbol">,</span><span class="normal"> t</span><span class="symbol">;</span><span class="normal"> </span><span class="symbol">/&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;*</span><span class="normal"> texture </span><span class="usertype">coordinate</span><span class="normal"> attribute </span><span class="symbol">*&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;/</span>
-<span class="cbracket">}</span><span class="normal"> MyVertex</span><span class="symbol">;</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="k">typedef</span> <span class="k">struct</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span> <span class="o">/&lt;!--</span> <span class="o">--&gt;*</span> <span class="n">position</span> <span class="n">attribute</span> <span class="o">*&lt;!--</span> <span class="o">--&gt;/</span>
+  <span class="kt">float</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">;</span> <span class="o">/&lt;!--</span> <span class="o">--&gt;*</span> <span class="n">texture</span> <span class="n">coordinate</span> <span class="n">attribute</span> <span class="o">*&lt;!--</span> <span class="o">--&gt;/</span>
+<span class="p">}</span> <span class="n">MyVertex</span><span class="p">;</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -166,7 +166,7 @@ example it's common to define a structure for a single vertex like:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">MyVertex</span><span class="normal"> vertices</span><span class="symbol">[</span><span class="number">100</span><span class="symbol">]</span><span class="normal"> </span><span class="symbol">=</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="symbol">....</span><span class="normal"> </span><span class="cbracket">}</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">MyVertex</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">....</span> <span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -499,6 +499,6 @@ mentioned in the release notes for the affected release.
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

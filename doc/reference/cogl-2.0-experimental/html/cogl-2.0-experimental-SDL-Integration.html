@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-integration.html" title="Binding and Integrating">
 <link rel="prev" href="cogl-integration.html" title="Binding and Integrating">
 <link rel="next" href="cogl-2.0-experimental-Main-loop-integration.html" title="Main loop integration">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <td valign="top">
 <h2><span class="refentrytitle"><a name="cogl-2.0-experimental-SDL-Integration.top_of_page"></a>SDL Integration</span></h2>
 <p>SDL Integration — Integration api for the Simple DirectMedia
-                    Layer library.</p>
+Layer library.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -36,8 +36,8 @@
 <a name="cogl-2.0-experimental-SDL-Integration.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -140,43 +140,43 @@ this:</p>
 35
 36
 37</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">MyAppData</span><span class="normal"> data</span><span class="symbol">;</span>
-<span class="usertype">CoglError</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">error </span><span class="symbol">=</span><span class="normal"> NULL</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="n">MyAppData</span> <span class="n">data</span><span class="p">;</span>
+<span class="n">CoglError</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 
-<span class="normal">data</span><span class="symbol">.</span><span class="normal">ctx </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-context-new">cogl_sdl_context_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">SDL_USEREVENT</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">);</span>
-<span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal">data</span><span class="symbol">.</span><span class="normal">ctx</span><span class="symbol">)</span>
-<span class="normal">  </span><span class="cbracket">{</span>
-<span class="normal">    </span><span class="function">fprintf</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stderr</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"Failed to create context: %s</span><span class="specialchar">\n</span><span class="string">"</span><span class="symbol">,</span>
-<span class="normal">             error</span><span class="symbol">-&gt;</span><span class="normal">message</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="keyword">return</span><span class="normal"> </span><span class="number">1</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="cbracket">}</span>
+<span class="n">data</span><span class="p">.</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">cogl_sdl_context_new</span> <span class="p">(</span><span class="n">SDL_USEREVENT</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">error</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">data</span><span class="p">.</span><span class="n">ctx</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Failed to create context: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+             <span class="n">error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
 
-<span class="function">my_application_setup</span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">data</span><span class="symbol">);</span>
+<span class="n">my_application_setup</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
 
-<span class="normal">data</span><span class="symbol">.</span><span class="normal">redraw_queued </span><span class="symbol">=</span><span class="normal"> TRUE</span><span class="symbol">;</span>
-<span class="keyword">while</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal">data</span><span class="symbol">.</span><span class="normal">quit</span><span class="symbol">)</span>
-<span class="normal">  </span><span class="cbracket">{</span>
-<span class="normal">    </span><span class="keyword">while</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal">data</span><span class="symbol">.</span><span class="normal">quit</span><span class="symbol">)</span>
-<span class="normal">      </span><span class="cbracket">{</span>
-<span class="normal">        </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="function">SDL_PollEvent</span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">event</span><span class="symbol">))</span>
-<span class="normal">          </span><span class="cbracket">{</span>
-<span class="normal">            </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">data</span><span class="symbol">.</span><span class="normal">redraw_queued</span><span class="symbol">)</span>
-<span class="normal">              </span><span class="keyword">break</span><span class="symbol">;</span>
+<span class="n">data</span><span class="p">.</span><span class="n">redraw_queued</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">data</span><span class="p">.</span><span class="n">quit</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">data</span><span class="p">.</span><span class="n">quit</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">SDL_PollEvent</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">))</span>
+          <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">redraw_queued</span><span class="p">)</span>
+              <span class="k">break</span><span class="p">;</span>
 
-<span class="normal">            </span><span class="function"><a href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-idle">cogl_sdl_idle</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">ctx</span><span class="symbol">);</span>
-<span class="normal">            </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="function">SDL_WaitEvent</span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">event</span><span class="symbol">))</span>
-<span class="normal">              </span><span class="cbracket">{</span>
-<span class="normal">                </span><span class="function">fprintf</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stderr</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"Error waiting for SDL events"</span><span class="symbol">);</span>
-<span class="normal">                </span><span class="keyword">return</span><span class="normal"> </span><span class="number">1</span><span class="symbol">;</span>
-<span class="normal">              </span><span class="cbracket">}</span>
-<span class="normal">          </span><span class="cbracket">}</span>
+            <span class="n">cogl_sdl_idle</span> <span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">SDL_WaitEvent</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">))</span>
+              <span class="p">{</span>
+                <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Error waiting for SDL events&quot;</span><span class="p">);</span>
+                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
 
-<span class="normal">         </span><span class="function">handle_event</span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">data</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">event</span><span class="symbol">);</span>
-<span class="normal">         </span><span class="function"><a href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-handle-event">cogl_sdl_handle_event</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">ctx</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">event</span><span class="symbol">);</span>
-<span class="normal">       </span><span class="cbracket">}</span>
+         <span class="n">handle_event</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">event</span><span class="p">);</span>
+         <span class="n">cogl_sdl_handle_event</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">event</span><span class="p">);</span>
+       <span class="p">}</span>
 
-<span class="normal">    data</span><span class="symbol">.</span><span class="normal">redraw_queued </span><span class="symbol">=</span><span class="normal"> </span><span class="function">redraw</span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">data</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="cbracket">}</span></pre></td>
+    <span class="n">data</span><span class="p">.</span><span class="n">redraw_queued</span> <span class="o">=</span> <span class="n">redraw</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+  <span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -214,21 +214,21 @@ as a way to interrupt <code class="function">SDL_WaitEvent()</code>.</p>
 13
 14
 15</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">CoglRenderer</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">renderer </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#cogl-renderer-new">cogl_renderer_new</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="usertype">CoglDisplay</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">display</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="n">CoglRenderer</span> <span class="o">*</span><span class="n">renderer</span> <span class="o">=</span> <span class="n">cogl_renderer_new</span> <span class="p">();</span>
+<span class="n">CoglDisplay</span> <span class="o">*</span><span class="n">display</span><span class="p">;</span>
 
-<span class="function"><a href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#cogl-renderer-set-winsys-id">cogl_renderer_set_winsys_id</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">renderer</span><span class="symbol">,</span><span class="normal"> <a href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#COGL-WINSYS-ID-SDL:CAPS">COGL_WINSYS_ID_SDL</a></span><span class="symbol">);</span>
+<span class="n">cogl_renderer_set_winsys_id</span> <span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">COGL_WINSYS_ID_SDL</span><span class="p">);</span>
 
-<span class="function"><a href="cogl-2.0-experimental-SDL-Integration.html#cogl-sdl-renderer-set-event-type">cogl_sdl_renderer_set_event_type</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">renderer</span><span class="symbol">,</span><span class="normal"> type</span><span class="symbol">);</span>
+<span class="n">cogl_sdl_renderer_set_event_type</span> <span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">type</span><span class="p">);</span>
 
-<span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="function"><a href="cogl-2.0-experimental-CoglRenderer---Connect-to-a-backend-renderer.html#cogl-renderer-connect">cogl_renderer_connect</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">renderer</span><span class="symbol">,</span><span class="normal"> error</span><span class="symbol">))</span>
-<span class="normal">  </span><span class="keyword">return</span><span class="normal"> NULL</span><span class="symbol">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">cogl_renderer_connect</span> <span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">error</span><span class="p">))</span>
+  <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 
-<span class="normal">display </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#cogl-display-new">cogl_display_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">renderer</span><span class="symbol">,</span><span class="normal"> NULL</span><span class="symbol">);</span>
-<span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="function"><a href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html#cogl-display-setup">cogl_display_setup</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">display</span><span class="symbol">,</span><span class="normal"> error</span><span class="symbol">))</span>
-<span class="normal">  </span><span class="keyword">return</span><span class="normal"> NULL</span><span class="symbol">;</span>
+<span class="n">display</span> <span class="o">=</span> <span class="n">cogl_display_new</span> <span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">cogl_display_setup</span> <span class="p">(</span><span class="n">display</span><span class="p">,</span> <span class="n">error</span><span class="p">))</span>
+  <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 
-<span class="keyword">return</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-context-new">cogl_context_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">display</span><span class="symbol">,</span><span class="normal"> error</span><span class="symbol">);</span></pre></td>
+<span class="k">return</span> <span class="nf">cogl_context_new</span> <span class="p">(</span><span class="n">display</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -501,11 +501,8 @@ mentioned in the release notes for the affected release.
 "><span class="acronym">Unstable</span></acronym></p>
 </div>
 </div>
-<div class="refsect1">
-<a name="cogl-2.0-experimental-SDL-Integration.other_details"></a><h2>Types and Values</h2>
-</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

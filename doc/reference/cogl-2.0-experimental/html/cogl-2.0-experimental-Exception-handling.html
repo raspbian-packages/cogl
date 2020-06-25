@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-general-apis.html" title="General API concepts">
 <link rel="prev" href="cogl-2.0-experimental-The-Object-Interface.html" title="The Object Interface">
 <link rel="next" href="cogl-2.0-experimental-Common-Types.html" title="Common Types">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-2.0-experimental-Exception-handling.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -76,8 +76,8 @@
 <a name="cogl-2.0-experimental-Exception-handling.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="define_keyword">#define</td>
@@ -103,8 +103,8 @@ takes an error argument:</p>
       <tr>
         <td class="listing_lines" align="right"><pre>1
 2</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#CoglContext">CoglContext</a> </span><span class="symbol">*</span>
-<span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-context-new">cogl_context_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">CoglDisplay</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">display</span><span class="symbol">,</span><span class="normal"> </span><span class="usertype">CoglError</span><span class="normal"> </span><span class="symbol">**</span><span class="normal">error</span><span class="symbol">);</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">CoglContext</span> <span class="o">*</span>
+<span class="nf">cogl_context_new</span> <span class="p">(</span><span class="n">CoglDisplay</span> <span class="o">*</span><span class="n">display</span><span class="p">,</span> <span class="n">CoglError</span> <span class="o">**</span><span class="n">error</span><span class="p">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -122,10 +122,10 @@ that has first been initialized to <code class="literal">NULL</code> as follows:
 2
 3
 4</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">CoglError</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">error </span><span class="symbol">=</span><span class="normal"> NULL</span><span class="symbol">;</span>
-<span class="usertype">CoglContext</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">context</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="n">CoglError</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="n">CoglContext</span> <span class="o">*</span><span class="n">context</span><span class="p">;</span>
 
-<span class="normal">context </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-context-new">cogl_context_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">NULL</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">);</span></pre></td>
+<span class="n">context</span> <span class="o">=</span> <span class="n">cogl_context_new</span> <span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">error</span><span class="p">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -150,13 +150,13 @@ abort without attempting to recover.</p>
 5
 6
 7</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">context </span><span class="symbol">==</span><span class="normal"> NULL</span><span class="symbol">)</span>
-<span class="normal">  </span><span class="cbracket">{</span>
-<span class="normal">    </span><span class="function">fprintf</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stderr</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"Failed to create a Cogl context: %s</span><span class="specialchar">\n</span><span class="string">"</span><span class="symbol">,</span>
-<span class="normal">             error</span><span class="symbol">-&gt;</span><span class="normal">message</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="function"><a href="cogl-2.0-experimental-Exception-handling.html#cogl-error-free">cogl_error_free</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">error</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="function">abort</span><span class="normal"> </span><span class="symbol">();</span>
-<span class="normal">  </span><span class="cbracket">}</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="k">if</span> <span class="p">(</span><span class="n">context</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Failed to create a Cogl context: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+             <span class="n">error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+    <span class="n">cogl_error_free</span> <span class="p">(</span><span class="n">error</span><span class="p">);</span>
+    <span class="n">abort</span> <span class="p">();</span>
+  <span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -346,6 +346,6 @@ GError api.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

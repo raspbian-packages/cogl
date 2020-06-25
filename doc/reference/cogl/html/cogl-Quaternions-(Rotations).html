@@ -8,7 +8,7 @@
 <link rel="up" href="ch02.html" title="Cogl experimental API">
 <link rel="prev" href="cogl-3D-textures.html" title="3D textures">
 <link rel="next" href="ch03.html" title="Cogl deprecated API">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -36,8 +36,8 @@ quaternions.</p>
 <a name="cogl-Quaternions-(Rotations).functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -221,8 +221,8 @@ quaternions.</p>
 <a name="cogl-Quaternions-(Rotations).other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword"> </td>
@@ -1050,7 +1050,7 @@ pair are represented in a quaternion as follows:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="symbol">[</span><span class="normal">w</span><span class="symbol">=</span><span class="function">cos</span><span class="symbol">(</span><span class="normal">𝜃</span><span class="symbol">/</span><span class="number">2</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">(</span><span class="normal"> x</span><span class="symbol">=</span><span class="function">sin</span><span class="symbol">(</span><span class="normal">𝜃</span><span class="symbol">/</span><span class="number">2</span><span class="symbol">)*</span><span class="normal">a</span><span class="symbol">.</span><span class="normal">x</span><span class="symbol">,</span><span class="normal"> y</span><span class="symbol">=</span><span class="function">sin</span><span class="symbol">(</span><span class="normal">𝜃</span><span class="symbol">/</span><span class="number">2</span><span class="symbol">)*</span><span class="normal">a</span><span class="symbol">.</span><span class="normal">y</span><span class="symbol">,</span><span class="normal"> z</span><span class="symbol">=</span><span class="function">sin</span><span class="symbol">(</span><span class="normal">𝜃</span><span class="symbol">/</span><span class="number">2</span><span class="symbol">)*</span><span class="normal">a</span><span class="symbol">.</span><span class="normal">x </span><span class="symbol">)]</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="p">[</span><span class="n">w</span><span class="o">=</span><span class="n">cos</span><span class="p">(</span><span class="err">𝜃</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">sin</span><span class="p">(</span><span class="err">𝜃</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">sin</span><span class="p">(</span><span class="err">𝜃</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">sin</span><span class="p">(</span><span class="err">𝜃</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="p">)]</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1066,7 +1066,7 @@ magnitude of a quaternion is defined as:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="function">sqrt</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">w² </span><span class="symbol">+</span><span class="normal"> x² </span><span class="symbol">+</span><span class="normal"> y² </span><span class="symbol">+</span><span class="normal"> z²</span><span class="symbol">)</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">sqrt</span> <span class="p">(</span><span class="n">w²</span> <span class="o">+</span> <span class="n">x²</span> <span class="o">+</span> <span class="n">y²</span> <span class="o">+</span> <span class="n">z²</span><span class="p">)</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1079,7 +1079,7 @@ and a unit quaternion satisfies this equation:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">w² </span><span class="symbol">+</span><span class="normal"> x² </span><span class="symbol">+</span><span class="normal"> y² </span><span class="symbol">+</span><span class="normal"> z² </span><span class="symbol">=</span><span class="normal"> </span><span class="number">1</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">w²</span> <span class="o">+</span> <span class="n">x²</span> <span class="o">+</span> <span class="n">y²</span> <span class="o">+</span> <span class="n">z²</span> <span class="o">=</span> <span class="mi">1</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1139,6 +1139,6 @@ rotation it is sin(𝜃/2)*axis.z</p></td>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Cogl - a modern 3D graphics API">
 <link rel="prev" href="ch01.html" title="Cogl - a modern 3D graphics API">
 <link rel="next" href="cogl-Color-Type.html" title="Color Type">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-General-API.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -390,8 +390,8 @@
 <a name="cogl-General-API.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -1906,12 +1906,12 @@ but if you are trying to do something like:</p>
 4
 5
 6</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> setup some </span><span class="usertype">OpenGL</span><span class="normal"> state</span><span class="symbol">.</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> draw </span><span class="usertype">using</span><span class="normal"> </span><span class="function">OpenGL</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">e</span><span class="symbol">.</span><span class="normal">g</span><span class="symbol">.</span><span class="normal"> </span><span class="function">glDrawArrays</span><span class="symbol">()</span><span class="normal"> </span><span class="symbol">)</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> reset modified </span><span class="usertype">OpenGL</span><span class="normal"> state</span><span class="symbol">.</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> </span><span class="keyword">continue</span><span class="normal"> using Cogl to draw</span>
-<span class="cbracket">}</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="p">{</span>
+   <span class="o">-</span> <span class="n">setup</span> <span class="n">some</span> <span class="n">OpenGL</span> <span class="n">state</span><span class="p">.</span>
+   <span class="o">-</span> <span class="n">draw</span> <span class="n">using</span> <span class="n">OpenGL</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">glDrawArrays</span><span class="p">()</span> <span class="p">)</span>
+   <span class="o">-</span> <span class="n">reset</span> <span class="n">modified</span> <span class="n">OpenGL</span> <span class="n">state</span><span class="p">.</span>
+   <span class="o">-</span> <span class="k">continue</span> <span class="n">using</span> <span class="n">Cogl</span> <span class="n">to</span> <span class="n">draw</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1932,14 +1932,14 @@ and <a class="link" href="cogl-General-API.html#cogl-end-gl" title="cogl_end_gl�
 6
 7
 8</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
-<span class="normal">   </span><span class="function"><a href="cogl-General-API.html#cogl-begin-gl">cogl_begin_gl</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> setup some </span><span class="usertype">OpenGL</span><span class="normal"> state</span><span class="symbol">.</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> draw </span><span class="usertype">using</span><span class="normal"> </span><span class="function">OpenGL</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">e</span><span class="symbol">.</span><span class="normal">g</span><span class="symbol">.</span><span class="normal"> </span><span class="function">glDrawArrays</span><span class="symbol">()</span><span class="normal"> </span><span class="symbol">)</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> reset modified </span><span class="usertype">OpenGL</span><span class="normal"> state</span><span class="symbol">.</span>
-<span class="normal">   </span><span class="function"><a href="cogl-General-API.html#cogl-end-gl">cogl_end_gl</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> </span><span class="keyword">continue</span><span class="normal"> using Cogl to draw</span>
-<span class="cbracket">}</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="p">{</span>
+   <span class="n">cogl_begin_gl</span> <span class="p">();</span>
+   <span class="o">-</span> <span class="n">setup</span> <span class="n">some</span> <span class="n">OpenGL</span> <span class="n">state</span><span class="p">.</span>
+   <span class="o">-</span> <span class="n">draw</span> <span class="n">using</span> <span class="n">OpenGL</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">glDrawArrays</span><span class="p">()</span> <span class="p">)</span>
+   <span class="o">-</span> <span class="n">reset</span> <span class="n">modified</span> <span class="n">OpenGL</span> <span class="n">state</span><span class="p">.</span>
+   <span class="n">cogl_end_gl</span> <span class="p">();</span>
+   <span class="o">-</span> <span class="k">continue</span> <span class="n">using</span> <span class="n">Cogl</span> <span class="n">to</span> <span class="n">draw</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1956,11 +1956,11 @@ and <a class="link" href="cogl-General-API.html#cogl-end-gl" title="cogl_end_gl�
 3
 4
 5</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> setup some </span><span class="usertype">OpenGL</span><span class="normal"> state</span><span class="symbol">.</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> use Cogl to draw</span>
-<span class="normal">   </span><span class="symbol">-</span><span class="normal"> reset modified </span><span class="usertype">OpenGL</span><span class="normal"> state</span><span class="symbol">.</span>
-<span class="cbracket">}</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="p">{</span>
+   <span class="o">-</span> <span class="n">setup</span> <span class="n">some</span> <span class="n">OpenGL</span> <span class="n">state</span><span class="p">.</span>
+   <span class="o">-</span> <span class="n">use</span> <span class="n">Cogl</span> <span class="n">to</span> <span class="n">draw</span>
+   <span class="o">-</span> <span class="n">reset</span> <span class="n">modified</span> <span class="n">OpenGL</span> <span class="n">state</span><span class="p">.</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2045,22 +2045,22 @@ on an object something like this:</p>
 14
 15
 16</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> </span><span class="usertype">CoglUserDataKey</span><span class="normal"> path_private_key</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="k">static</span> <span class="n">CoglUserDataKey</span> <span class="n">path_private_key</span><span class="p">;</span>
 
-<span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">destroy_path_private_cb</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">data</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="function">g_free</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">data</span><span class="symbol">);</span>
-<span class="cbracket">}</span>
+<span class="k">static</span> <span class="kt">void</span>
+<span class="nf">destroy_path_private_cb</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">g_free</span> <span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">my_path_set_data</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">CoglPath</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">data</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="function"><a href="cogl-General-API.html#cogl-object-set-user-data">cogl_object_set_user_data</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function">COGL_OBJECT</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">),</span>
-<span class="normal">                             </span><span class="symbol">&amp;</span><span class="normal">private_key</span><span class="symbol">,</span>
-<span class="normal">                             data</span><span class="symbol">,</span>
-<span class="normal">                             destroy_path_private_cb</span><span class="symbol">);</span>
-<span class="cbracket">}</span></pre></td>
+<span class="k">static</span> <span class="kt">void</span>
+<span class="nf">my_path_set_data</span> <span class="p">(</span><span class="n">CoglPath</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">cogl_object_set_user_data</span> <span class="p">(</span><span class="n">COGL_OBJECT</span> <span class="p">(</span><span class="n">path</span><span class="p">),</span>
+                             <span class="o">&amp;</span><span class="n">private_key</span><span class="p">,</span>
+                             <span class="n">data</span><span class="p">,</span>
+                             <span class="n">destroy_path_private_cb</span><span class="p">);</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2181,8 +2181,8 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-PIXEL-FORMAT-RG-88:CAPS"></a>COGL_PIXEL_FORMAT_RG_88</p></td>
 <td class="enum_member_description">
 <p>RG, 16 bits. Note that red-green textures
-  are only available if <code class="literal">COGL_FEATURE_ID_TEXTURE_RG</code> is advertised.
-  See <code class="function">cogl_texture_set_components()</code> for details.</p>
+are only available if <code class="literal">COGL_FEATURE_ID_TEXTURE_RG</code> is advertised.
+See <code class="function">cogl_texture_set_components()</code> for details.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2441,7 +2441,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-ATTRIBUTE-TYPE-UNSIGNED-BYTE:CAPS"></a>COGL_ATTRIBUTE_TYPE_UNSIGNED_BYTE</p></td>
 <td class="enum_member_description">
 <p>Data is the same size of an
-  unsigned byte</p>
+unsigned byte</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2456,7 +2456,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-ATTRIBUTE-TYPE-UNSIGNED-SHORT:CAPS"></a>COGL_ATTRIBUTE_TYPE_UNSIGNED_SHORT</p></td>
 <td class="enum_member_description">
 <p>Data is the same size of
-  an unsigned short integer</p>
+an unsigned short integer</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2496,9 +2496,9 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-TEXTURE-NPOT:CAPS"></a>COGL_FEATURE_TEXTURE_NPOT</p></td>
 <td class="enum_member_description">
 <p>Non power of two textures are supported
-   by the hardware. This is a equivalent to the
-   <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-BASIC:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_BASIC</code></a>, <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_MIPMAP</code></a>
-   and <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_REPEAT</code></a> features combined.</p>
+by the hardware. This is a equivalent to the
+<a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-BASIC:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_BASIC</code></a>, <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_MIPMAP</code></a>
+and <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_REPEAT</code></a> features combined.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2576,8 +2576,8 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-UNSIGNED-INT-INDICES:CAPS"></a>COGL_FEATURE_UNSIGNED_INT_INDICES</p></td>
 <td class="enum_member_description">
 <p>Set if
-    <a class="link" href="cogl-Vertex-Buffers.html#COGL-INDICES-TYPE-UNSIGNED-INT:CAPS"><code class="literal">COGL_INDICES_TYPE_UNSIGNED_INT</code></a> is supported in
-    <a class="link" href="cogl-Vertex-Buffers.html#cogl-vertex-buffer-indices-new" title="cogl_vertex_buffer_indices_new ()"><code class="function">cogl_vertex_buffer_indices_new()</code></a>.</p>
+<a class="link" href="cogl-Vertex-Buffers.html#COGL-INDICES-TYPE-UNSIGNED-INT:CAPS"><code class="literal">COGL_INDICES_TYPE_UNSIGNED_INT</code></a> is supported in
+<a class="link" href="cogl-Vertex-Buffers.html#cogl-vertex-buffer-indices-new" title="cogl_vertex_buffer_indices_new ()"><code class="function">cogl_vertex_buffer_indices_new()</code></a>.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2592,11 +2592,11 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-TEXTURE-NPOT-BASIC:CAPS"></a>COGL_FEATURE_TEXTURE_NPOT_BASIC</p></td>
 <td class="enum_member_description">
 <p>The hardware supports non power
-    of two textures, but you also need to check the
-    <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_MIPMAP</code></a> and <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_REPEAT</code></a>
-    features to know if the hardware supports npot texture mipmaps
-    or repeat modes other than
-    <code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code> respectively.</p>
+of two textures, but you also need to check the
+<a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_MIPMAP</code></a> and <a class="link" href="cogl-General-API.html#COGL-FEATURE-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_TEXTURE_NPOT_REPEAT</code></a>
+features to know if the hardware supports npot texture mipmaps
+or repeat modes other than
+<code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code> respectively.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2604,7 +2604,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-TEXTURE-NPOT-MIPMAP:CAPS"></a>COGL_FEATURE_TEXTURE_NPOT_MIPMAP</p></td>
 <td class="enum_member_description">
 <p>Mipmapping is supported in
-    conjuntion with non power of two textures.</p>
+conjuntion with non power of two textures.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2612,8 +2612,8 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-TEXTURE-NPOT-REPEAT:CAPS"></a>COGL_FEATURE_TEXTURE_NPOT_REPEAT</p></td>
 <td class="enum_member_description">
 <p>Repeat modes other than
-    <code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code> are supported by the
-    hardware.</p>
+<code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code> are supported by the
+hardware.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2621,7 +2621,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-POINT-SPRITE:CAPS"></a>COGL_FEATURE_POINT_SPRITE</p></td>
 <td class="enum_member_description">
 <p>Whether
-    <a class="link" href="cogl-Materials.html#cogl-material-set-layer-point-sprite-coords-enabled" title="cogl_material_set_layer_point_sprite_coords_enabled ()"><code class="function">cogl_material_set_layer_point_sprite_coords_enabled()</code></a> is supported.</p>
+<a class="link" href="cogl-Materials.html#cogl-material-set-layer-point-sprite-coords-enabled" title="cogl_material_set_layer_point_sprite_coords_enabled ()"><code class="function">cogl_material_set_layer_point_sprite_coords_enabled()</code></a> is supported.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2643,7 +2643,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-MAP-BUFFER-FOR-READ:CAPS"></a>COGL_FEATURE_MAP_BUFFER_FOR_READ</p></td>
 <td class="enum_member_description">
 <p>Whether <a class="link" href="cogl-Buffers.html#cogl-buffer-map" title="cogl_buffer_map ()"><code class="function">cogl_buffer_map()</code></a> is
-    supported with CoglBufferAccess including read support.</p>
+supported with CoglBufferAccess including read support.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2651,7 +2651,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-MAP-BUFFER-FOR-WRITE:CAPS"></a>COGL_FEATURE_MAP_BUFFER_FOR_WRITE</p></td>
 <td class="enum_member_description">
 <p>Whether <a class="link" href="cogl-Buffers.html#cogl-buffer-map" title="cogl_buffer_map ()"><code class="function">cogl_buffer_map()</code></a> is
-    supported with CoglBufferAccess including write support.</p>
+supported with CoglBufferAccess including write support.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2664,7 +2664,7 @@ internally and convert the texture data if necessary.</p>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-DEPTH-TEXTURE:CAPS"></a>COGL_FEATURE_DEPTH_TEXTURE</p></td>
 <td class="enum_member_description">
 <p>Whether <span class="type">CoglFramebuffer</span> support rendering the
-    depth buffer to a texture.</p>
+depth buffer to a texture.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2684,7 +2684,7 @@ determines f as:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">f </span><span class="symbol">=</span><span class="normal"> end </span><span class="symbol">-</span><span class="normal"> eye_distance </span><span class="symbol">/</span><span class="normal"> end </span><span class="symbol">-</span><span class="normal"> start</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">f</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">eye_distance</span> <span class="o">/</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2711,7 +2711,7 @@ coordinates from the origin.</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">f </span><span class="symbol">=</span><span class="normal"> end </span><span class="symbol">-</span><span class="normal"> eye_distance </span><span class="symbol">/</span><span class="normal"> end </span><span class="symbol">-</span><span class="normal"> start</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">f</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">eye_distance</span> <span class="o">/</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2730,7 +2730,7 @@ coordinates from the origin.</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">f </span><span class="symbol">=</span><span class="normal"> e </span><span class="symbol">^</span><span class="normal"> </span><span class="symbol">-(</span><span class="normal">density </span><span class="symbol">*</span><span class="normal"> eye_distance</span><span class="symbol">)</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">f</span> <span class="o">=</span> <span class="n">e</span> <span class="o">^</span> <span class="o">-</span><span class="p">(</span><span class="n">density</span> <span class="o">*</span> <span class="n">eye_distance</span><span class="p">)</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2749,7 +2749,7 @@ coordinates from the origin.</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">f </span><span class="symbol">=</span><span class="normal"> e </span><span class="symbol">^</span><span class="normal"> </span><span class="symbol">-(</span><span class="normal">density </span><span class="symbol">*</span><span class="normal"> eye_distance</span><span class="symbol">)^</span><span class="number">2</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">f</span> <span class="o">=</span> <span class="n">e</span> <span class="o">^</span> <span class="o">-</span><span class="p">(</span><span class="n">density</span> <span class="o">*</span> <span class="n">eye_distance</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2790,6 +2790,6 @@ coordinates from the origin.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

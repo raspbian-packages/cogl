@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Cogl - a modern 3D graphics API">
 <link rel="prev" href="cogl-Shaders-and-Programmable-Pipeline.html" title="Shaders and Programmable Pipeline">
 <link rel="next" href="cogl-Bitmaps.html" title="Bitmaps">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <td valign="top">
 <h2><span class="refentrytitle"><a name="cogl-Offscreen-Buffers.top_of_page"></a>Offscreen Buffers</span></h2>
 <p>Offscreen Buffers — Functions for creating and manipulating offscreen
-                    framebuffers.</p>
+framebuffers.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -36,8 +36,8 @@
 <a name="cogl-Offscreen-Buffers.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -353,49 +353,49 @@ corresponding to the bottom right you can do so like this:</p>
 41
 42
 43</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">setup_viewport</span><span class="normal"> </span><span class="symbol">(</span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> width</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> height</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> fovy</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> aspect</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> z_near</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> z_far</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="type">float</span><span class="normal"> z_camera</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="usertype">CoglMatrix</span><span class="normal"> projection_matrix</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="usertype">CoglMatrix</span><span class="normal"> mv_matrix</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="k">static</span> <span class="kt">void</span>
+<span class="nf">setup_viewport</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span>
+                <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">fovy</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">aspect</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">z_near</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">z_far</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">z_camera</span><span class="p">;</span>
+  <span class="n">CoglMatrix</span> <span class="n">projection_matrix</span><span class="p">;</span>
+  <span class="n">CoglMatrix</span> <span class="n">mv_matrix</span><span class="p">;</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-General-API.html#cogl-set-viewport">cogl_set_viewport</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> width</span><span class="symbol">,</span><span class="normal"> height</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-General-API.html#cogl-perspective">cogl_perspective</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">fovy</span><span class="symbol">,</span><span class="normal"> aspect</span><span class="symbol">,</span><span class="normal"> z_near</span><span class="symbol">,</span><span class="normal"> z_far</span><span class="symbol">);</span>
+  <span class="n">cogl_set_viewport</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+  <span class="n">cogl_perspective</span> <span class="p">(</span><span class="n">fovy</span><span class="p">,</span> <span class="n">aspect</span><span class="p">,</span> <span class="n">z_near</span><span class="p">,</span> <span class="n">z_far</span><span class="p">);</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-General-API.html#cogl-get-projection-matrix">cogl_get_projection_matrix</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">projection_matrix</span><span class="symbol">);</span>
-<span class="normal">  z_camera </span><span class="symbol">=</span><span class="normal"> </span><span class="number">0.5</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> projection_matrix</span><span class="symbol">.</span><span class="normal">xx</span><span class="symbol">;</span>
+  <span class="n">cogl_get_projection_matrix</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">projection_matrix</span><span class="p">);</span>
+  <span class="n">z_camera</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">projection_matrix</span><span class="p">.</span><span class="n">xx</span><span class="p">;</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-Matrices.html#cogl-matrix-init-identity">cogl_matrix_init_identity</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-Matrices.html#cogl-matrix-translate">cogl_matrix_translate</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">0</span><span class="symbol">.</span><span class="normal">5f</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">0</span><span class="symbol">.</span><span class="normal">5f</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="normal">z_camera</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-Matrices.html#cogl-matrix-scale">cogl_matrix_scale</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f </span><span class="symbol">/</span><span class="normal"> width</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f </span><span class="symbol">/</span><span class="normal"> height</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f </span><span class="symbol">/</span><span class="normal"> width</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-Matrices.html#cogl-matrix-translate">cogl_matrix_translate</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">1.0</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> height</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-General-API.html#cogl-set-modelview-matrix">cogl_set_modelview_matrix</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">);</span>
-<span class="cbracket">}</span>
+  <span class="n">cogl_matrix_init_identity</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">);</span>
+  <span class="n">cogl_matrix_translate</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5f</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5f</span><span class="p">,</span> <span class="o">-</span><span class="n">z_camera</span><span class="p">);</span>
+  <span class="n">cogl_matrix_scale</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">,</span> <span class="mf">1.0f</span> <span class="o">/</span> <span class="n">width</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0f</span> <span class="o">/</span> <span class="n">height</span><span class="p">,</span> <span class="mf">1.0f</span> <span class="o">/</span> <span class="n">width</span><span class="p">);</span>
+  <span class="n">cogl_matrix_translate</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">height</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">);</span>
+  <span class="n">cogl_set_modelview_matrix</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">my_init_framebuffer</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">ClutterStage</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">stage</span><span class="symbol">,</span>
-<span class="normal">                     </span><span class="usertype">CoglFramebuffer</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">framebuffer</span><span class="symbol">,</span>
-<span class="normal">                     </span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> framebuffer_width</span><span class="symbol">,</span>
-<span class="normal">                     </span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> framebuffer_height</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="usertype">ClutterPerspective</span><span class="normal"> perspective</span><span class="symbol">;</span>
+<span class="k">static</span> <span class="kt">void</span>
+<span class="nf">my_init_framebuffer</span> <span class="p">(</span><span class="n">ClutterStage</span> <span class="o">*</span><span class="n">stage</span><span class="p">,</span>
+                     <span class="n">CoglFramebuffer</span> <span class="o">*</span><span class="n">framebuffer</span><span class="p">,</span>
+                     <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">framebuffer_width</span><span class="p">,</span>
+                     <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">framebuffer_height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ClutterPerspective</span> <span class="n">perspective</span><span class="p">;</span>
 
-<span class="normal">  </span><span class="function">clutter_stage_get_perspective</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stage</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">perspective</span><span class="symbol">);</span>
+  <span class="n">clutter_stage_get_perspective</span> <span class="p">(</span><span class="n">stage</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">perspective</span><span class="p">);</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-Offscreen-Buffers.html#cogl-push-framebuffer">cogl_push_framebuffer</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function">setup_viewport</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer_width</span><span class="symbol">,</span>
-<span class="normal">                  framebuffer_height</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">fovy</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">aspect</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">z_near</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">z_far</span><span class="symbol">);</span>
-<span class="cbracket">}</span></pre></td>
+  <span class="n">cogl_push_framebuffer</span> <span class="p">(</span><span class="n">framebuffer</span><span class="p">);</span>
+  <span class="n">setup_viewport</span> <span class="p">(</span><span class="n">framebuffer_width</span><span class="p">,</span>
+                  <span class="n">framebuffer_height</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">fovy</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">aspect</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">z_near</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">z_far</span><span class="p">);</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -503,11 +503,8 @@ cogl_push_draw_buffer (<em class="parameter"><code><span class="type">void</span
 <p>Save <a class="link" href="cogl-Offscreen-Buffers.html#cogl-set-draw-buffer" title="cogl_set_draw_buffer ()"><code class="function">cogl_set_draw_buffer()</code></a> state.</p>
 </div>
 </div>
-<div class="refsect1">
-<a name="cogl-Offscreen-Buffers.other_details"></a><h2>Types and Values</h2>
-</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>
