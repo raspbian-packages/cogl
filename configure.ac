@@ -25,7 +25,7 @@ m4_define([cogl_version],
 dnl Since the core Cogl library has to also maintain support for the
 dnl Cogl 1.x API for Clutter then we track the 1.x version separately.
 m4_define([cogl_1_minor_version], [22])
-m4_define([cogl_1_micro_version], [6])
+m4_define([cogl_1_micro_version], [8])
 m4_define([cogl_1_version], [1.cogl_1_minor_version.cogl_1_micro_version])
 
 dnl ================================================================
@@ -56,7 +56,7 @@ dnl ================================================================
 #  5. If any interfaces have been removed since the last public release,
 #     then set AGE to 0.
 m4_define([cogl_lt_current], 24)
-m4_define([cogl_lt_revision], 2)
+m4_define([cogl_lt_revision], 3)
 m4_define([cogl_lt_age], 4)
 # We do also tell libtool the pretty version:
 m4_define([cogl_lt_release], [cogl_version])
@@ -685,8 +685,13 @@ AS_IF([test "x$enable_gles1" = "xyes"],
             AC_SUBST([COGL_EGL_INCLUDES])
 
             AC_CHECK_HEADERS([EGL/eglext.h],
-                             [COGL_EGL_INCLUDES="$COGL_EGL_INCLUDE
+                             [COGL_EGL_INCLUDES="$COGL_EGL_INCLUDES
 #include <EGL/eglext.h>"],
+                             [],
+                             [$COGL_EGL_INCLUDES])
+            AC_CHECK_HEADERS([EGL/eglmesaext.h],
+                             [COGL_EGL_INCLUDES="$COGL_EGL_INCLUDES
+#include <EGL/eglmesaext.h>"],
                              [],
                              [$COGL_EGL_INCLUDES])
 
@@ -1216,6 +1221,12 @@ AS_IF([test "x$NEED_EGL" = "xyes" && test "x$EGL_CHECKED" != "xyes"],
               [],
               [AC_MSG_ERROR([Unable to locate required EGL headers])],
               [#include <EGL/egl.h>])
+            AC_CHECK_HEADERS(
+              [EGL/eglmesaext.h],
+              [],
+              [AC_MSG_ERROR([Unable to locate required EGL headers])],
+              [#include <EGL/egl.h>
+#include <EGL/eglext.h>])
 
             AC_CHECK_LIB(EGL, [eglInitialize],
               [COGL_EXTRA_LDFLAGS="$COGL_EXTRA_LDFLAGS -lEGL"],
@@ -1226,7 +1237,8 @@ AS_IF([test "x$NEED_EGL" = "xyes" && test "x$EGL_CHECKED" != "xyes"],
           )
 
         COGL_EGL_INCLUDES="#include <EGL/egl.h>
-#include <EGL/eglext.h>"
+#include <EGL/eglext.h>
+#include <EGL/eglmesaext.h>"
         AC_SUBST([COGL_EGL_INCLUDES])
       ])
 
@@ -1360,6 +1372,8 @@ AC_CHECK_HEADER([endian.h],
 dnl ================================================================
 dnl Checks for library functions.
 dnl ================================================================
+
+AC_CHECK_FUNCS_ONCE([alarm])
 
 dnl The 'ffs' function is part of C99 so it isn't always
 dnl available. Cogl has a fallback if needed.

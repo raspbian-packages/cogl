@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o pipefail
+
 if test -z "$G_DEBUG"; then
     G_DEBUG=fatal-warnings
 else
@@ -17,6 +19,8 @@ shift
 . $ENVIRONMENT_CONFIG
 
 set +m
+
+LOG=$(mktemp)
 
 trap "" ERR
 trap "" SIGABRT
@@ -62,17 +66,22 @@ get_status()
 
 run_test()
 {
-  $($TEST_BINARY $1 &>.log)
+  if [ -n "${VERBOSE-}" ]; then
+    echo "running $TEST_BINARY $1:"
+    $TEST_BINARY $1 2>&1 | tee "$LOG"
+  else
+    $($TEST_BINARY $1 &> "$LOG")
+  fi
   TMP=$?
   var_name=$2_result
   eval $var_name=$TMP
-  if grep -q "$MISSING_FEATURE" .log; then
+  if grep -q "$MISSING_FEATURE" "$LOG"; then
     if test $TMP -ne 0; then
       eval $var_name=500
     else
       eval $var_name=400
     fi
-  elif grep -q "$KNOWN_FAILURE" .log; then
+  elif grep -q "$KNOWN_FAILURE" "$LOG"; then
     if test $TMP -ne 0; then
       eval $var_name=300
     else
@@ -153,5 +162,7 @@ do
   fi
   echo ""
 done
+
+rm "$LOG"
 
 exit $EXIT

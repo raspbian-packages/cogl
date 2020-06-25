@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Cogl - a modern 3D graphics API">
 <link rel="prev" href="cogl-Blend-Strings.html" title="Material Blend Strings">
 <link rel="next" href="cogl-Primitives.html" title="Primitives">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-Materials.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -430,8 +430,8 @@
 <a name="cogl-Materials.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -1273,7 +1273,7 @@ blend statements will be of the form:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="symbol">&lt;</span><span class="normal">channel</span><span class="symbol">-</span><span class="normal">mask</span><span class="symbol">&gt;=</span><span class="function">ADD</span><span class="symbol">(</span><span class="normal">SRC_COLOR</span><span class="symbol">*(&lt;</span><span class="normal">factor</span><span class="symbol">&gt;),</span><span class="normal"> DST_COLOR</span><span class="symbol">*(&lt;</span><span class="normal">factor</span><span class="symbol">&gt;))</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="o">&lt;</span><span class="n">channel</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;=</span><span class="n">ADD</span><span class="p">(</span><span class="n">SRC_COLOR</span><span class="o">*</span><span class="p">(</span><span class="o">&lt;</span><span class="n">factor</span><span class="o">&gt;</span><span class="p">),</span> <span class="n">DST_COLOR</span><span class="o">*</span><span class="p">(</span><span class="o">&lt;</span><span class="n">factor</span><span class="o">&gt;</span><span class="p">))</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1327,7 +1327,7 @@ before computing the result of blending.</div>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">RGBA </span><span class="symbol">=</span><span class="normal"> </span><span class="function">ADD</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">SRC_COLOR</span><span class="symbol">,</span><span class="normal"> DST_COLOR</span><span class="symbol">*(</span><span class="number">1</span><span class="symbol">-</span><span class="normal">SRC_COLOR</span><span class="symbol">[</span><span class="normal">A</span><span class="symbol">]))</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">RGBA</span> <span class="o">=</span> <span class="n">ADD</span> <span class="p">(</span><span class="n">SRC_COLOR</span><span class="p">,</span> <span class="n">DST_COLOR</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">SRC_COLOR</span><span class="p">[</span><span class="n">A</span><span class="p">]))</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1651,7 +1651,7 @@ are:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">RGBA </span><span class="symbol">=</span><span class="normal"> </span><span class="function">MODULATE</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">PREVIOUS</span><span class="symbol">,</span><span class="normal"> TEXTURE</span><span class="symbol">)</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">RGBA</span> <span class="o">=</span> <span class="n">MODULATE</span> <span class="p">(</span><span class="n">PREVIOUS</span><span class="p">,</span> <span class="n">TEXTURE</span><span class="p">)</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1665,7 +1665,7 @@ are:</p>
     <tbody>
       <tr>
         <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">RGBA </span><span class="symbol">=</span><span class="normal"> </span><span class="function">INTERPOLATE</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">PREVIOUS</span><span class="symbol">,</span><span class="normal"> TEXTURE</span><span class="symbol">,</span><span class="normal"> CONSTANT</span><span class="symbol">[</span><span class="normal">A</span><span class="symbol">])</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">RGBA</span> <span class="o">=</span> <span class="n">INTERPOLATE</span> <span class="p">(</span><span class="n">PREVIOUS</span><span class="p">,</span> <span class="n">TEXTURE</span><span class="p">,</span> <span class="n">CONSTANT</span><span class="p">[</span><span class="n">A</span><span class="p">])</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2457,26 +2457,26 @@ program with a <a class="link" href="cogl-Materials.html#CoglMaterial" title="Co
 18
 19
 20</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="usertype">CoglHandle</span><span class="normal"> shader</span><span class="symbol">;</span>
-<span class="usertype">CoglHandle</span><span class="normal"> program</span><span class="symbol">;</span>
-<span class="usertype">CoglMaterial</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">material</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="n">CoglHandle</span> <span class="n">shader</span><span class="p">;</span>
+<span class="n">CoglHandle</span> <span class="n">program</span><span class="p">;</span>
+<span class="n">CoglMaterial</span> <span class="o">*</span><span class="n">material</span><span class="p">;</span>
 
-<span class="normal">shader </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-create-shader">cogl_create_shader</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal"><a href="cogl-Shaders-and-Programmable-Pipeline.html#COGL-SHADER-TYPE-FRAGMENT:CAPS">COGL_SHADER_TYPE_FRAGMENT</a></span><span class="symbol">);</span>
-<span class="function"><a href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-source">cogl_shader_source</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">shader</span><span class="symbol">,</span>
-<span class="normal">                    </span><span class="string">"!!ARBfp1.0</span><span class="specialchar">\n</span><span class="string">"</span>
-<span class="normal">                    </span><span class="string">"MOV result.color,fragment.color;</span><span class="specialchar">\n</span><span class="string">"</span>
-<span class="normal">                    </span><span class="string">"END</span><span class="specialchar">\n</span><span class="string">"</span><span class="symbol">);</span>
-<span class="function"><a href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-shader-compile">cogl_shader_compile</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">shader</span><span class="symbol">);</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="n">cogl_create_shader</span> <span class="p">(</span><span class="n">COGL_SHADER_TYPE_FRAGMENT</span><span class="p">);</span>
+<span class="n">cogl_shader_source</span> <span class="p">(</span><span class="n">shader</span><span class="p">,</span>
+                    <span class="s">&quot;!!ARBfp1.0</span><span class="se">\n</span><span class="s">&quot;</span>
+                    <span class="s">&quot;MOV result.color,fragment.color;</span><span class="se">\n</span><span class="s">&quot;</span>
+                    <span class="s">&quot;END</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">cogl_shader_compile</span> <span class="p">(</span><span class="n">shader</span><span class="p">);</span>
 
-<span class="normal">program </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-create-program">cogl_create_program</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="function"><a href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-attach-shader">cogl_program_attach_shader</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">program</span><span class="symbol">,</span><span class="normal"> shader</span><span class="symbol">);</span>
-<span class="function"><a href="cogl-Shaders-and-Programmable-Pipeline.html#cogl-program-link">cogl_program_link</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">program</span><span class="symbol">);</span>
+<span class="n">program</span> <span class="o">=</span> <span class="n">cogl_create_program</span> <span class="p">();</span>
+<span class="n">cogl_program_attach_shader</span> <span class="p">(</span><span class="n">program</span><span class="p">,</span> <span class="n">shader</span><span class="p">);</span>
+<span class="n">cogl_program_link</span> <span class="p">(</span><span class="n">program</span><span class="p">);</span>
 
-<span class="normal">material </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-Materials.html#cogl-material-new">cogl_material_new</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="function"><a href="cogl-Materials.html#cogl-material-set-user-program">cogl_material_set_user_program</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">material</span><span class="symbol">,</span><span class="normal"> program</span><span class="symbol">);</span>
+<span class="n">material</span> <span class="o">=</span> <span class="n">cogl_material_new</span> <span class="p">();</span>
+<span class="n">cogl_material_set_user_program</span> <span class="p">(</span><span class="n">material</span><span class="p">,</span> <span class="n">program</span><span class="p">);</span>
 
-<span class="function"><a href="cogl-General-API.html#cogl-set-source-color4ub">cogl_set_source_color4ub</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">0xff</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0x00</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0x00</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0xff</span><span class="symbol">);</span>
-<span class="function"><a href="cogl-Primitives.html#cogl-rectangle">cogl_rectangle</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">100</span><span class="symbol">,</span><span class="normal"> </span><span class="number">100</span><span class="symbol">);</span></pre></td>
+<span class="n">cogl_set_source_color4ub</span> <span class="p">(</span><span class="mh">0xff</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">);</span>
+<span class="n">cogl_rectangle</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2647,7 +2647,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-ALPHA-FUNC-LESS:CAPS"></a>COGL_MATERIAL_ALPHA_FUNC_LESS</p></td>
 <td class="enum_member_description">
 <p>Let the fragment through if the incoming
-  alpha value is less than the reference alpha value</p>
+alpha value is less than the reference alpha value</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2655,7 +2655,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-ALPHA-FUNC-EQUAL:CAPS"></a>COGL_MATERIAL_ALPHA_FUNC_EQUAL</p></td>
 <td class="enum_member_description">
 <p>Let the fragment through if the incoming
-  alpha value equals the reference alpha value</p>
+alpha value equals the reference alpha value</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2663,7 +2663,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-ALPHA-FUNC-LEQUAL:CAPS"></a>COGL_MATERIAL_ALPHA_FUNC_LEQUAL</p></td>
 <td class="enum_member_description">
 <p>Let the fragment through if the incoming
-  alpha value is less than or equal to the reference alpha value</p>
+alpha value is less than or equal to the reference alpha value</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2671,7 +2671,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-ALPHA-FUNC-GREATER:CAPS"></a>COGL_MATERIAL_ALPHA_FUNC_GREATER</p></td>
 <td class="enum_member_description">
 <p>Let the fragment through if the incoming
-  alpha value is greater than the reference alpha value</p>
+alpha value is greater than the reference alpha value</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2679,7 +2679,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-ALPHA-FUNC-NOTEQUAL:CAPS"></a>COGL_MATERIAL_ALPHA_FUNC_NOTEQUAL</p></td>
 <td class="enum_member_description">
 <p>Let the fragment through if the incoming
-  alpha value does not equal the reference alpha value</p>
+alpha value does not equal the reference alpha value</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2687,7 +2687,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-ALPHA-FUNC-GEQUAL:CAPS"></a>COGL_MATERIAL_ALPHA_FUNC_GEQUAL</p></td>
 <td class="enum_member_description">
 <p>Let the fragment through if the incoming
-  alpha value is greater than or equal to the reference alpha value.</p>
+alpha value is greater than or equal to the reference alpha value.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2748,7 +2748,7 @@ determines how the comparison is done.</p>
 <td class="enum_member_name"><p><a name="COGL-BLEND-STRING-ERROR-GPU-UNSUPPORTED-ERROR:CAPS"></a>COGL_BLEND_STRING_ERROR_GPU_UNSUPPORTED_ERROR</p></td>
 <td class="enum_member_description">
 <p>Blend string not
-  supported by the GPU</p>
+supported by the GPU</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2778,7 +2778,7 @@ average or simply using the nearest texel.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-FILTER-NEAREST:CAPS"></a>COGL_MATERIAL_FILTER_NEAREST</p></td>
 <td class="enum_member_description">
 <p>Measuring in manhatten distance from the,
-  current pixel center, use the nearest texture texel</p>
+current pixel center, use the nearest texture texel</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2786,7 +2786,7 @@ average or simply using the nearest texel.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-FILTER-LINEAR:CAPS"></a>COGL_MATERIAL_FILTER_LINEAR</p></td>
 <td class="enum_member_description">
 <p>Use the weighted average of the 4 texels
-  nearest the current pixel center</p>
+nearest the current pixel center</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2794,8 +2794,8 @@ average or simply using the nearest texel.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-FILTER-NEAREST-MIPMAP-NEAREST:CAPS"></a>COGL_MATERIAL_FILTER_NEAREST_MIPMAP_NEAREST</p></td>
 <td class="enum_member_description">
 <p>Select the mimap level whose
-  texel size most closely matches the current pixel, and use the
-  <a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-NEAREST:CAPS"><code class="literal">COGL_MATERIAL_FILTER_NEAREST</code></a> criterion</p>
+texel size most closely matches the current pixel, and use the
+<a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-NEAREST:CAPS"><code class="literal">COGL_MATERIAL_FILTER_NEAREST</code></a> criterion</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2803,8 +2803,8 @@ average or simply using the nearest texel.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-FILTER-LINEAR-MIPMAP-NEAREST:CAPS"></a>COGL_MATERIAL_FILTER_LINEAR_MIPMAP_NEAREST</p></td>
 <td class="enum_member_description">
 <p>Select the mimap level whose
-  texel size most closely matches the current pixel, and use the
-  <a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-LINEAR:CAPS"><code class="literal">COGL_MATERIAL_FILTER_LINEAR</code></a> criterion</p>
+texel size most closely matches the current pixel, and use the
+<a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-LINEAR:CAPS"><code class="literal">COGL_MATERIAL_FILTER_LINEAR</code></a> criterion</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2812,9 +2812,9 @@ average or simply using the nearest texel.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-FILTER-NEAREST-MIPMAP-LINEAR:CAPS"></a>COGL_MATERIAL_FILTER_NEAREST_MIPMAP_LINEAR</p></td>
 <td class="enum_member_description">
 <p>Select the two mimap levels
-  whose texel size most closely matches the current pixel, use
-  the <a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-NEAREST:CAPS"><code class="literal">COGL_MATERIAL_FILTER_NEAREST</code></a> criterion on each one and take
-  their weighted average</p>
+whose texel size most closely matches the current pixel, use
+the <a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-NEAREST:CAPS"><code class="literal">COGL_MATERIAL_FILTER_NEAREST</code></a> criterion on each one and take
+their weighted average</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2822,9 +2822,9 @@ average or simply using the nearest texel.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-FILTER-LINEAR-MIPMAP-LINEAR:CAPS"></a>COGL_MATERIAL_FILTER_LINEAR_MIPMAP_LINEAR</p></td>
 <td class="enum_member_description">
 <p>Select the two mimap levels
-  whose texel size most closely matches the current pixel, use
-  the <a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-LINEAR:CAPS"><code class="literal">COGL_MATERIAL_FILTER_LINEAR</code></a> criterion on each one and take
-  their weighted average</p>
+whose texel size most closely matches the current pixel, use
+the <a class="link" href="cogl-Materials.html#COGL-MATERIAL-FILTER-LINEAR:CAPS"><code class="literal">COGL_MATERIAL_FILTER_LINEAR</code></a> criterion on each one and take
+their weighted average</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2881,7 +2881,7 @@ merged in if the wrap mode is set to repeat.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-WRAP-MODE-REPEAT:CAPS"></a>COGL_MATERIAL_WRAP_MODE_REPEAT</p></td>
 <td class="enum_member_description">
 <p>The texture will be repeated. This
-  is useful for example to draw a tiled background.</p>
+is useful for example to draw a tiled background.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2889,9 +2889,9 @@ merged in if the wrap mode is set to repeat.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-WRAP-MODE-CLAMP-TO-EDGE:CAPS"></a>COGL_MATERIAL_WRAP_MODE_CLAMP_TO_EDGE</p></td>
 <td class="enum_member_description">
 <p>The coordinates outside the
-  range 0→1 will sample copies of the edge pixels of the
-  texture. This is useful to avoid artifacts if only one copy of
-  the texture is being rendered.</p>
+range 0→1 will sample copies of the edge pixels of the
+texture. This is useful to avoid artifacts if only one copy of
+the texture is being rendered.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2899,13 +2899,13 @@ merged in if the wrap mode is set to repeat.</p>
 <td class="enum_member_name"><p><a name="COGL-MATERIAL-WRAP-MODE-AUTOMATIC:CAPS"></a>COGL_MATERIAL_WRAP_MODE_AUTOMATIC</p></td>
 <td class="enum_member_description">
 <p>Cogl will try to automatically
-  decide which of the above two to use. For <a class="link" href="cogl-Primitives.html#cogl-rectangle" title="cogl_rectangle ()"><code class="function">cogl_rectangle()</code></a>, it
-  will use repeat mode if any of the texture coordinates are
-  outside the range 0→1, otherwise it will use clamp to edge. For
-  <a class="link" href="cogl-Primitives.html#cogl-polygon" title="cogl_polygon ()"><code class="function">cogl_polygon()</code></a> it will always use repeat mode. For
-  <a class="link" href="cogl-Vertex-Buffers.html#cogl-vertex-buffer-draw" title="cogl_vertex_buffer_draw ()"><code class="function">cogl_vertex_buffer_draw()</code></a> it will use repeat mode except for
-  layers that have point sprite coordinate generation enabled. This
-  is the default value.</p>
+decide which of the above two to use. For <a class="link" href="cogl-Primitives.html#cogl-rectangle" title="cogl_rectangle ()"><code class="function">cogl_rectangle()</code></a>, it
+will use repeat mode if any of the texture coordinates are
+outside the range 0→1, otherwise it will use clamp to edge. For
+<a class="link" href="cogl-Primitives.html#cogl-polygon" title="cogl_polygon ()"><code class="function">cogl_polygon()</code></a> it will always use repeat mode. For
+<a class="link" href="cogl-Vertex-Buffers.html#cogl-vertex-buffer-draw" title="cogl_vertex_buffer_draw ()"><code class="function">cogl_vertex_buffer_draw()</code></a> it will use repeat mode except for
+layers that have point sprite coordinate generation enabled. This
+is the default value.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2917,6 +2917,6 @@ merged in if the wrap mode is set to repeat.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

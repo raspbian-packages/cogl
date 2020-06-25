@@ -201,6 +201,7 @@ _cogl_driver_pixel_format_to_gl (CoglContext *context,
 
     case COGL_PIXEL_FORMAT_ANY:
     case COGL_PIXEL_FORMAT_YUV:
+    default:
       g_assert_not_reached ();
       break;
     }

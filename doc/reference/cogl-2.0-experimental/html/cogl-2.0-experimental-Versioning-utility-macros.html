@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-utilities.html" title="Utilities">
 <link rel="prev" href="cogl-2.0-experimental-GPU-synchronisation-fences.html" title="GPU synchronisation fences">
 <link rel="next" href="cogl-integration.html" title="Binding and Integrating">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-2.0-experimental-Versioning-utility-macros.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -76,8 +76,8 @@
 <a name="cogl-2.0-experimental-Versioning-utility-macros.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -119,8 +119,8 @@ if we define the following symbols:</p>
       <tr>
         <td class="listing_lines" align="right"><pre>1
 2</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">COGL_VERSION_MIN_REQUIRED </span><span class="symbol">=</span><span class="normal"> COGL_VERSION_1_6</span>
-<span class="normal">COGL_VERSION_MAX_ALLOWED  </span><span class="symbol">=</span><span class="normal"> COGL_VERSION_1_8</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">COGL_VERSION_MIN_REQUIRED</span> <span class="o">=</span> <span class="n">COGL_VERSION_1_6</span>
+<span class="n">COGL_VERSION_MAX_ALLOWED</span>  <span class="o">=</span> <span class="n">COGL_VERSION_1_8</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -136,10 +136,10 @@ if we define the following symbols:</p>
 2
 3
 4</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">COGL_DEPRECATED_IN_1_4 </span><span class="usertype">void</span><span class="normal"> </span><span class="function">cogl_function_A</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">);</span>
-<span class="normal">COGL_DEPRECATED_IN_1_6 </span><span class="usertype">void</span><span class="normal"> </span><span class="function">cogl_function_B</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">);</span>
-<span class="normal">COGL_AVAILABLE_IN_1_8 </span><span class="usertype">void</span><span class="normal"> </span><span class="function">cogl_function_C</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">);</span>
-<span class="normal">COGL_AVAILABLE_IN_1_10 </span><span class="usertype">void</span><span class="normal"> </span><span class="function">cogl_function_D</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">);</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">COGL_DEPRECATED_IN_1_4</span> <span class="kt">void</span> <span class="nf">cogl_function_A</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="n">COGL_DEPRECATED_IN_1_6</span> <span class="kt">void</span> <span class="nf">cogl_function_B</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="n">COGL_AVAILABLE_IN_1_8</span> <span class="kt">void</span> <span class="nf">cogl_function_C</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="n">COGL_AVAILABLE_IN_1_10</span> <span class="kt">void</span> <span class="nf">cogl_function_D</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -155,10 +155,10 @@ if we define the following symbols:</p>
 2
 3
 4</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">cogl_function_A</span><span class="symbol">:</span><span class="normal"> deprecation warning</span>
-<span class="normal">cogl_function_B</span><span class="symbol">:</span><span class="normal"> no warning</span>
-<span class="normal">cogl_function_C</span><span class="symbol">:</span><span class="normal"> no warning</span>
-<span class="normal">cogl_function_D</span><span class="symbol">:</span><span class="normal"> symbol not available warning</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="nl">cogl_function_A</span><span class="p">:</span> <span class="n">deprecation</span> <span class="n">warning</span>
+<span class="nl">cogl_function_B</span><span class="p">:</span> <span class="n">no</span> <span class="n">warning</span>
+<span class="nl">cogl_function_C</span><span class="p">:</span> <span class="n">no</span> <span class="n">warning</span>
+<span class="nl">cogl_function_D</span><span class="p">:</span> <span class="n">symbol</span> <span class="n">not</span> <span class="n">available</span> <span class="n">warning</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -186,10 +186,10 @@ following code to provide a workaround:</p>
 2
 3
 4</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="preproc">#if</span><span class="normal"> <a href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION:CAPS">COGL_VERSION</a> </span><span class="symbol">&gt;=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-ENCODE:CAPS">COGL_VERSION_ENCODE</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">1</span><span class="symbol">,</span><span class="normal"> </span><span class="number">3</span><span class="symbol">,</span><span class="normal"> </span><span class="number">2</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">&amp;&amp;</span><span class="normal"> </span><span class="symbol">\</span>
-<span class="normal">    <a href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION:CAPS">COGL_VERSION</a> </span><span class="symbol">&lt;=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-ENCODE:CAPS">COGL_VERSION_ENCODE</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">1</span><span class="symbol">,</span><span class="normal"> </span><span class="number">3</span><span class="symbol">,</span><span class="normal"> </span><span class="number">4</span><span class="symbol">)</span>
-<span class="normal">  </span><span class="symbol">/&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;*</span><span class="normal"> Do </span><span class="usertype">the</span><span class="normal"> workaround </span><span class="symbol">*&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;/</span>
-<span class="preproc">#endif</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="cp">#if COGL_VERSION &gt;= COGL_VERSION_ENCODE (1, 3, 2) &amp;&amp; \</span>
+<span class="cp">    COGL_VERSION &lt;= COGL_VERSION_ENCODE (1, 3, 4)</span>
+  <span class="o">/&lt;!--</span> <span class="o">--&gt;*</span> <span class="n">Do</span> <span class="n">the</span> <span class="n">workaround</span> <span class="o">*&lt;!--</span> <span class="o">--&gt;/</span>
+<span class="cp">#endif</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -244,12 +244,12 @@ you could write the following:</p>
 4
 5
 6</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="preproc">#if</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-Versioning-utility-macros.html#COGL-VERSION-CHECK:CAPS">COGL_VERSION_CHECK</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">2</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">)</span>
-<span class="function">cogl_pipeline_frobnicate</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pipeline</span><span class="symbol">);</span>
-<span class="preproc">#else</span>
-<span class="symbol">/&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;*</span><span class="normal"> Frobnication is </span><span class="usertype">not</span><span class="normal"> supported</span><span class="symbol">.</span><span class="normal"> Use a red </span><span class="usertype">color</span><span class="normal"> instead </span><span class="symbol">*&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;/</span>
-<span class="function">cogl_pipeline_set_color_4f</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pipeline</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">);</span>
-<span class="preproc">#endif</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="cp">#if COGL_VERSION_CHECK (2, 0, 1)</span>
+<span class="n">cogl_pipeline_frobnicate</span> <span class="p">(</span><span class="n">pipeline</span><span class="p">);</span>
+<span class="cp">#else</span>
+<span class="o">/&lt;!--</span> <span class="o">--&gt;*</span> <span class="n">Frobnication</span> <span class="n">is</span> <span class="n">not</span> <span class="n">supported</span><span class="p">.</span> <span class="n">Use</span> <span class="n">a</span> <span class="n">red</span> <span class="n">color</span> <span class="n">instead</span> <span class="o">*&lt;!--</span> <span class="o">--&gt;/</span>
+<span class="n">cogl_pipeline_set_color_4f</span> <span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+<span class="cp">#endif</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -403,6 +403,6 @@ with particular versions.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

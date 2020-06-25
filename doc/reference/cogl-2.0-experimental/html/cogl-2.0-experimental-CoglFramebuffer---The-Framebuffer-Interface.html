@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-framebuffer-apis.html" title="Framebuffers">
 <link rel="prev" href="cogl-framebuffer-apis.html" title="Framebuffers">
 <link rel="next" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html" title="CoglOnscreen: The Onscreen Framebuffer Interface">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -516,8 +516,8 @@
 <a name="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="typedef_keyword">typedef</td>
@@ -1869,17 +1869,17 @@ any other rowstride or source, please use the
 9
 10
 11</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="normal">bitmap </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="cogl-2.0-experimental-Bitmap.html#cogl-bitmap-new-for-data">cogl_bitmap_new_for_data</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">context</span><span class="symbol">,</span>
-<span class="normal">                                   width</span><span class="symbol">,</span><span class="normal"> height</span><span class="symbol">,</span>
-<span class="normal">                                   format</span><span class="symbol">,</span>
-<span class="normal">                                   </span><span class="symbol">/&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;*</span><span class="normal"> rowstride </span><span class="symbol">*&lt;!--</span><span class="normal"> </span><span class="symbol">--&gt;/</span>
-<span class="normal">                                   bpp </span><span class="symbol">*</span><span class="normal"> width</span><span class="symbol">,</span>
-<span class="normal">                                   pixels</span><span class="symbol">);</span>
-<span class="function"><a href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#cogl-framebuffer-read-pixels-into-bitmap">cogl_framebuffer_read_pixels_into_bitmap</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer</span><span class="symbol">,</span>
-<span class="normal">                                          x</span><span class="symbol">,</span><span class="normal"> y</span><span class="symbol">,</span>
-<span class="normal">                                          <a href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-READ-PIXELS-COLOR-BUFFER:CAPS">COGL_READ_PIXELS_COLOR_BUFFER</a></span><span class="symbol">,</span>
-<span class="normal">                                          bitmap</span><span class="symbol">);</span>
-<span class="function"><a href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-unref">cogl_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">bitmap</span><span class="symbol">);</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">bitmap</span> <span class="o">=</span> <span class="n">cogl_bitmap_new_for_data</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span>
+                                   <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span>
+                                   <span class="n">format</span><span class="p">,</span>
+                                   <span class="o">/&lt;!--</span> <span class="o">--&gt;*</span> <span class="n">rowstride</span> <span class="o">*&lt;!--</span> <span class="o">--&gt;/</span>
+                                   <span class="n">bpp</span> <span class="o">*</span> <span class="n">width</span><span class="p">,</span>
+                                   <span class="n">pixels</span><span class="p">);</span>
+<span class="n">cogl_framebuffer_read_pixels_into_bitmap</span> <span class="p">(</span><span class="n">framebuffer</span><span class="p">,</span>
+                                          <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+                                          <span class="n">COGL_READ_PIXELS_COLOR_BUFFER</span><span class="p">,</span>
+                                          <span class="n">bitmap</span><span class="p">);</span>
+<span class="n">cogl_object_unref</span> <span class="p">(</span><span class="n">bitmap</span><span class="p">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -3905,49 +3905,49 @@ corresponding to the bottom right you can do so like this:</p>
 41
 42
 43</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">setup_viewport</span><span class="normal"> </span><span class="symbol">(</span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> width</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> height</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> fovy</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> aspect</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> z_near</span><span class="symbol">,</span>
-<span class="normal">                </span><span class="type">float</span><span class="normal"> z_far</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="type">float</span><span class="normal"> z_camera</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="usertype">CoglMatrix</span><span class="normal"> projection_matrix</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="usertype">CoglMatrix</span><span class="normal"> mv_matrix</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="k">static</span> <span class="kt">void</span>
+<span class="nf">setup_viewport</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span>
+                <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">fovy</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">aspect</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">z_near</span><span class="p">,</span>
+                <span class="kt">float</span> <span class="n">z_far</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">z_camera</span><span class="p">;</span>
+  <span class="n">CoglMatrix</span> <span class="n">projection_matrix</span><span class="p">;</span>
+  <span class="n">CoglMatrix</span> <span class="n">mv_matrix</span><span class="p">;</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-set-viewport">cogl_set_viewport</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> width</span><span class="symbol">,</span><span class="normal"> height</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-perspective">cogl_perspective</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">fovy</span><span class="symbol">,</span><span class="normal"> aspect</span><span class="symbol">,</span><span class="normal"> z_near</span><span class="symbol">,</span><span class="normal"> z_far</span><span class="symbol">);</span>
+  <span class="n">cogl_set_viewport</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+  <span class="n">cogl_perspective</span> <span class="p">(</span><span class="n">fovy</span><span class="p">,</span> <span class="n">aspect</span><span class="p">,</span> <span class="n">z_near</span><span class="p">,</span> <span class="n">z_far</span><span class="p">);</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-get-projection-matrix">cogl_get_projection_matrix</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">projection_matrix</span><span class="symbol">);</span>
-<span class="normal">  z_camera </span><span class="symbol">=</span><span class="normal"> </span><span class="number">0.5</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> projection_matrix</span><span class="symbol">.</span><span class="normal">xx</span><span class="symbol">;</span>
+  <span class="n">cogl_get_projection_matrix</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">projection_matrix</span><span class="p">);</span>
+  <span class="n">z_camera</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">projection_matrix</span><span class="p">.</span><span class="n">xx</span><span class="p">;</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-Matrices.html#cogl-matrix-init-identity">cogl_matrix_init_identity</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-Matrices.html#cogl-matrix-translate">cogl_matrix_translate</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">0</span><span class="symbol">.</span><span class="normal">5f</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">0</span><span class="symbol">.</span><span class="normal">5f</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="normal">z_camera</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-Matrices.html#cogl-matrix-scale">cogl_matrix_scale</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f </span><span class="symbol">/</span><span class="normal"> width</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f </span><span class="symbol">/</span><span class="normal"> height</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1</span><span class="symbol">.</span><span class="normal">0f </span><span class="symbol">/</span><span class="normal"> width</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-Matrices.html#cogl-matrix-translate">cogl_matrix_translate</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">1.0</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> height</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">.</span><span class="normal">0f</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-The-Top-Level-Context.html#cogl-set-modelview-matrix">cogl_set_modelview_matrix</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">mv_matrix</span><span class="symbol">);</span>
-<span class="cbracket">}</span>
+  <span class="n">cogl_matrix_init_identity</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">);</span>
+  <span class="n">cogl_matrix_translate</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5f</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5f</span><span class="p">,</span> <span class="o">-</span><span class="n">z_camera</span><span class="p">);</span>
+  <span class="n">cogl_matrix_scale</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">,</span> <span class="mf">1.0f</span> <span class="o">/</span> <span class="n">width</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0f</span> <span class="o">/</span> <span class="n">height</span><span class="p">,</span> <span class="mf">1.0f</span> <span class="o">/</span> <span class="n">width</span><span class="p">);</span>
+  <span class="n">cogl_matrix_translate</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">height</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">);</span>
+  <span class="n">cogl_set_modelview_matrix</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">mv_matrix</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">my_init_framebuffer</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">ClutterStage</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">stage</span><span class="symbol">,</span>
-<span class="normal">                     </span><span class="usertype">CoglFramebuffer</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">framebuffer</span><span class="symbol">,</span>
-<span class="normal">                     </span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> framebuffer_width</span><span class="symbol">,</span>
-<span class="normal">                     </span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> framebuffer_height</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="usertype">ClutterPerspective</span><span class="normal"> perspective</span><span class="symbol">;</span>
+<span class="k">static</span> <span class="kt">void</span>
+<span class="nf">my_init_framebuffer</span> <span class="p">(</span><span class="n">ClutterStage</span> <span class="o">*</span><span class="n">stage</span><span class="p">,</span>
+                     <span class="n">CoglFramebuffer</span> <span class="o">*</span><span class="n">framebuffer</span><span class="p">,</span>
+                     <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">framebuffer_width</span><span class="p">,</span>
+                     <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">framebuffer_height</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">ClutterPerspective</span> <span class="n">perspective</span><span class="p">;</span>
 
-<span class="normal">  </span><span class="function">clutter_stage_get_perspective</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">stage</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">perspective</span><span class="symbol">);</span>
+  <span class="n">clutter_stage_get_perspective</span> <span class="p">(</span><span class="n">stage</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">perspective</span><span class="p">);</span>
 
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#cogl-push-framebuffer">cogl_push_framebuffer</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="function">setup_viewport</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">framebuffer_width</span><span class="symbol">,</span>
-<span class="normal">                  framebuffer_height</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">fovy</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">aspect</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">z_near</span><span class="symbol">,</span>
-<span class="normal">                  perspective</span><span class="symbol">.</span><span class="normal">z_far</span><span class="symbol">);</span>
-<span class="cbracket">}</span></pre></td>
+  <span class="n">cogl_push_framebuffer</span> <span class="p">(</span><span class="n">framebuffer</span><span class="p">);</span>
+  <span class="n">setup_viewport</span> <span class="p">(</span><span class="n">framebuffer_width</span><span class="p">,</span>
+                  <span class="n">framebuffer_height</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">fovy</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">aspect</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">z_near</span><span class="p">,</span>
+                  <span class="n">perspective</span><span class="p">.</span><span class="n">z_far</span><span class="p">);</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -3998,6 +3998,6 @@ All subsequent drawing will be redirected to this framebuffer.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-general-apis.html" title="General API concepts">
 <link rel="prev" href="cogl-general-apis.html" title="General API concepts">
 <link rel="next" href="cogl-2.0-experimental-Exception-handling.html" title="Exception handling">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-2.0-experimental-The-Object-Interface.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -78,8 +78,8 @@
 <a name="cogl-2.0-experimental-The-Object-Interface.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -301,22 +301,22 @@ on an object something like this:</p>
 14
 15
 16</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> </span><span class="usertype">CoglUserDataKey</span><span class="normal"> path_private_key</span><span class="symbol">;</span>
+        <td class="listing_code"><pre class="programlisting"><span class="k">static</span> <span class="n">CoglUserDataKey</span> <span class="n">path_private_key</span><span class="p">;</span>
 
-<span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">destroy_path_private_cb</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">data</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="function">g_free</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">data</span><span class="symbol">);</span>
-<span class="cbracket">}</span>
+<span class="k">static</span> <span class="kt">void</span>
+<span class="nf">destroy_path_private_cb</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">g_free</span> <span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
-<span class="function">my_path_set_data</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">CoglPath</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">data</span><span class="symbol">)</span>
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="function"><a href="cogl-2.0-experimental-The-Object-Interface.html#cogl-object-set-user-data">cogl_object_set_user_data</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function">COGL_OBJECT</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">),</span>
-<span class="normal">                             </span><span class="symbol">&amp;</span><span class="normal">private_key</span><span class="symbol">,</span>
-<span class="normal">                             data</span><span class="symbol">,</span>
-<span class="normal">                             destroy_path_private_cb</span><span class="symbol">);</span>
-<span class="cbracket">}</span></pre></td>
+<span class="k">static</span> <span class="kt">void</span>
+<span class="nf">my_path_set_data</span> <span class="p">(</span><span class="n">CoglPath</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">cogl_object_set_user_data</span> <span class="p">(</span><span class="n">COGL_OBJECT</span> <span class="p">(</span><span class="n">path</span><span class="p">),</span>
+                             <span class="o">&amp;</span><span class="n">private_key</span><span class="p">,</span>
+                             <span class="n">data</span><span class="p">,</span>
+                             <span class="n">destroy_path_private_cb</span><span class="p">);</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -354,6 +354,6 @@ same key.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>

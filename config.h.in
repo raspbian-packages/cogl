@@ -97,6 +97,9 @@
 /* 'va_lists' cannot be copies as values */
 #undef G_VA_COPY_AS_ARRAY
 
+/* Define to 1 if you have the `alarm' function. */
+#undef HAVE_ALARM
+
 /* Define to 1 if you have the <alloca.h> header file. */
 #undef HAVE_ALLOCA_H
 
@@ -147,6 +150,9 @@
 
 /* Define to 1 if you have the <EGL/eglext.h> header file. */
 #undef HAVE_EGL_EGLEXT_H
+
+/* Define to 1 if you have the <EGL/eglmesaext.h> header file. */
+#undef HAVE_EGL_EGLMESAEXT_H
 
 /* Define to 1 if you have the <EGL/egl.h> header file. */
 #undef HAVE_EGL_EGL_H

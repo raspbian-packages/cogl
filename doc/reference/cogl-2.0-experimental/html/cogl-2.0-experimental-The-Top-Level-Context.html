@@ -8,7 +8,7 @@
 <link rel="up" href="cogl-context-apis.html" title="Setting Up A Drawing Context">
 <link rel="prev" href="cogl-2.0-experimental-CoglDisplay---Setup-a-display-pipeline.html" title="CoglDisplay: Setup a display pipeline">
 <link rel="next" href="cogl-pipeline-apis.html" title="Setting Up A GPU Pipeline">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="cogl-2.0-experimental-The-Top-Level-Context.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -310,8 +310,8 @@
 <a name="cogl-2.0-experimental-The-Top-Level-Context.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -1737,11 +1737,11 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-TEXTURE-NPOT-BASIC:CAPS"></a>COGL_FEATURE_ID_TEXTURE_NPOT_BASIC</p></td>
 <td class="enum_member_description">
 <p>The hardware supports non power
-    of two textures, but you also need to check the
-    <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_MIPMAP</code></a> and <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_REPEAT</code></a>
-    features to know if the hardware supports npot texture mipmaps
-    or repeat modes other than
-    <a class="link" href="cogl-2.0-experimental-Pipeline.html#COGL-PIPELINE-WRAP-MODE-CLAMP-TO-EDGE:CAPS"><code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code></a> respectively.</p>
+of two textures, but you also need to check the
+<a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_MIPMAP</code></a> and <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_REPEAT</code></a>
+features to know if the hardware supports npot texture mipmaps
+or repeat modes other than
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#COGL-PIPELINE-WRAP-MODE-CLAMP-TO-EDGE:CAPS"><code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code></a> respectively.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1749,7 +1749,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-TEXTURE-NPOT-MIPMAP:CAPS"></a>COGL_FEATURE_ID_TEXTURE_NPOT_MIPMAP</p></td>
 <td class="enum_member_description">
 <p>Mipmapping is supported in
-    conjuntion with non power of two textures.</p>
+conjuntion with non power of two textures.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1757,8 +1757,8 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-TEXTURE-NPOT-REPEAT:CAPS"></a>COGL_FEATURE_ID_TEXTURE_NPOT_REPEAT</p></td>
 <td class="enum_member_description">
 <p>Repeat modes other than
-    <a class="link" href="cogl-2.0-experimental-Pipeline.html#COGL-PIPELINE-WRAP-MODE-CLAMP-TO-EDGE:CAPS"><code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code></a> are supported by the
-    hardware.</p>
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#COGL-PIPELINE-WRAP-MODE-CLAMP-TO-EDGE:CAPS"><code class="literal">COGL_PIPELINE_WRAP_MODE_CLAMP_TO_EDGE</code></a> are supported by the
+hardware.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1766,9 +1766,9 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-TEXTURE-NPOT:CAPS"></a>COGL_FEATURE_ID_TEXTURE_NPOT</p></td>
 <td class="enum_member_description">
 <p>Non power of two textures are supported
-   by the hardware. This is a equivalent to the
-   <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-BASIC:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_BASIC</code></a>, <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_MIPMAP</code></a>
-   and <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_REPEAT</code></a> features combined.</p>
+by the hardware. This is a equivalent to the
+<a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-BASIC:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_BASIC</code></a>, <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-MIPMAP:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_MIPMAP</code></a>
+and <a class="link" href="cogl-2.0-experimental-The-Top-Level-Context.html#COGL-FEATURE-ID-TEXTURE-NPOT-REPEAT:CAPS"><code class="literal">COGL_FEATURE_ID_TEXTURE_NPOT_REPEAT</code></a> features combined.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1776,7 +1776,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-TEXTURE-RECTANGLE:CAPS"></a>COGL_FEATURE_ID_TEXTURE_RECTANGLE</p></td>
 <td class="enum_member_description">
 <p>Support for rectangular
-   textures with non-normalized texture coordinates.</p>
+textures with non-normalized texture coordinates.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1812,7 +1812,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-OFFSCREEN-MULTISAMPLE:CAPS"></a>COGL_FEATURE_ID_OFFSCREEN_MULTISAMPLE</p></td>
 <td class="enum_member_description">
 <p>Multisample support for
-   offscreen framebuffers</p>
+offscreen framebuffers</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1820,7 +1820,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-ONSCREEN-MULTIPLE:CAPS"></a>COGL_FEATURE_ID_ONSCREEN_MULTIPLE</p></td>
 <td class="enum_member_description">
 <p>Multiple onscreen framebuffers
-   supported.</p>
+supported.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1828,8 +1828,8 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-UNSIGNED-INT-INDICES:CAPS"></a>COGL_FEATURE_ID_UNSIGNED_INT_INDICES</p></td>
 <td class="enum_member_description">
 <p>Set if
-    <a class="link" href="cogl-2.0-experimental-Indices.html#COGL-INDICES-TYPE-UNSIGNED-INT:CAPS"><code class="literal">COGL_INDICES_TYPE_UNSIGNED_INT</code></a> is supported in
-    <a class="link" href="cogl-2.0-experimental-Indices.html#cogl-indices-new" title="cogl_indices_new ()"><code class="function">cogl_indices_new()</code></a>.</p>
+<a class="link" href="cogl-2.0-experimental-Indices.html#COGL-INDICES-TYPE-UNSIGNED-INT:CAPS"><code class="literal">COGL_INDICES_TYPE_UNSIGNED_INT</code></a> is supported in
+<a class="link" href="cogl-2.0-experimental-Indices.html#cogl-indices-new" title="cogl_indices_new ()"><code class="function">cogl_indices_new()</code></a>.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1844,7 +1844,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-POINT-SPRITE:CAPS"></a>COGL_FEATURE_ID_POINT_SPRITE</p></td>
 <td class="enum_member_description">
 <p>Whether
-    <a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-layer-point-sprite-coords-enabled" title="cogl_pipeline_set_layer_point_sprite_coords_enabled ()"><code class="function">cogl_pipeline_set_layer_point_sprite_coords_enabled()</code></a> is supported.</p>
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#cogl-pipeline-set-layer-point-sprite-coords-enabled" title="cogl_pipeline_set_layer_point_sprite_coords_enabled ()"><code class="function">cogl_pipeline_set_layer_point_sprite_coords_enabled()</code></a> is supported.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1852,7 +1852,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-MAP-BUFFER-FOR-READ:CAPS"></a>COGL_FEATURE_ID_MAP_BUFFER_FOR_READ</p></td>
 <td class="enum_member_description">
 <p>Whether <a class="link" href="cogl-2.0-experimental-CoglBuffer---The-Buffer-Interface.html#cogl-buffer-map" title="cogl_buffer_map ()"><code class="function">cogl_buffer_map()</code></a> is
-    supported with CoglBufferAccess including read support.</p>
+supported with CoglBufferAccess including read support.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1860,7 +1860,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-MAP-BUFFER-FOR-WRITE:CAPS"></a>COGL_FEATURE_ID_MAP_BUFFER_FOR_WRITE</p></td>
 <td class="enum_member_description">
 <p>Whether <a class="link" href="cogl-2.0-experimental-CoglBuffer---The-Buffer-Interface.html#cogl-buffer-map" title="cogl_buffer_map ()"><code class="function">cogl_buffer_map()</code></a> is
-    supported with CoglBufferAccess including write support.</p>
+supported with CoglBufferAccess including write support.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1868,15 +1868,15 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-MIRRORED-REPEAT:CAPS"></a>COGL_FEATURE_ID_MIRRORED_REPEAT</p></td>
 <td class="enum_member_description">
 <p>Whether
-   <a class="link" href="cogl-2.0-experimental-Pipeline.html#COGL-PIPELINE-WRAP-MODE-MIRRORED-REPEAT:CAPS"><code class="literal">COGL_PIPELINE_WRAP_MODE_MIRRORED_REPEAT</code></a> is supported.</p>
+<a class="link" href="cogl-2.0-experimental-Pipeline.html#COGL-PIPELINE-WRAP-MODE-MIRRORED-REPEAT:CAPS"><code class="literal">COGL_PIPELINE_WRAP_MODE_MIRRORED_REPEAT</code></a> is supported.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-SWAP-BUFFERS-EVENT:CAPS"></a>COGL_FEATURE_ID_SWAP_BUFFERS_EVENT</p></td>
 <td class="enum_member_description">
-<p>    Available if the window system supports reporting an event
-    for swap buffer completions.</p>
+<p>Available if the window system supports reporting an event
+for swap buffer completions.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1884,7 +1884,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-GLES2-CONTEXT:CAPS"></a>COGL_FEATURE_ID_GLES2_CONTEXT</p></td>
 <td class="enum_member_description">
 <p>Whether creating new GLES2 contexts is
-   suported.</p>
+suported.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1892,7 +1892,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-DEPTH-TEXTURE:CAPS"></a>COGL_FEATURE_ID_DEPTH_TEXTURE</p></td>
 <td class="enum_member_description">
 <p>Whether <a class="link" href="cogl-2.0-experimental-CoglFramebuffer---The-Framebuffer-Interface.html#CoglFramebuffer" title="CoglFramebuffer"><span class="type">CoglFramebuffer</span></a> support rendering
-    the depth buffer to a texture.</p>
+the depth buffer to a texture.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1900,7 +1900,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-PRESENTATION-TIME:CAPS"></a>COGL_FEATURE_ID_PRESENTATION_TIME</p></td>
 <td class="enum_member_description">
 <p>Whether frame presentation
-   time stamps will be recorded in <span class="type">CoglFrameInfo</span> objects.</p>
+time stamps will be recorded in <span class="type">CoglFrameInfo</span> objects.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1913,7 +1913,7 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-PER-VERTEX-POINT-SIZE:CAPS"></a>COGL_FEATURE_ID_PER_VERTEX_POINT_SIZE</p></td>
 <td class="enum_member_description">
 <p>Whether cogl_point_size_in
-    can be used as an attribute to set a per-vertex point size.</p>
+can be used as an attribute to set a per-vertex point size.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1921,8 +1921,8 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-TEXTURE-RG:CAPS"></a>COGL_FEATURE_ID_TEXTURE_RG</p></td>
 <td class="enum_member_description">
 <p>Support for
-   <a class="link" href="cogl-2.0-experimental-The-Texture-Interface.html#COGL-TEXTURE-COMPONENTS-RG:CAPS"><code class="literal">COGL_TEXTURE_COMPONENTS_RG</code></a> as the internal components of a
-   texture.</p>
+<a class="link" href="cogl-2.0-experimental-The-Texture-Interface.html#COGL-TEXTURE-COMPONENTS-RG:CAPS"><code class="literal">COGL_TEXTURE_COMPONENTS_RG</code></a> as the internal components of a
+texture.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1930,8 +1930,8 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 <td class="enum_member_name"><p><a name="COGL-FEATURE-ID-BUFFER-AGE:CAPS"></a>COGL_FEATURE_ID_BUFFER_AGE</p></td>
 <td class="enum_member_description">
 <p>Available if the age of <a class="link" href="cogl-2.0-experimental-CoglOnscreen---The-Onscreen-Framebuffer-Interface.html#CoglOnscreen" title="CoglOnscreen"><span class="type">CoglOnscreen</span></a> back
-   buffers are tracked and so <code class="function">cogl_onscreen_get_buffer_age()</code> can be
-   expected to return age values other than 0.</p>
+buffers are tracked and so <code class="function">cogl_onscreen_get_buffer_age()</code> can be
+expected to return age values other than 0.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1966,6 +1966,6 @@ check for them using <a class="link" href="cogl-2.0-experimental-The-Top-Level-C
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32.1</div>
 </body>
 </html>
