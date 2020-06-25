@@ -1,12 +1,14 @@
-cogl (1.22.8-1) UNRELEASED; urgency=medium
+cogl (1.22.8-1) unstable; urgency=medium
 
+  * Team upload
+  * New upstream release
+    - Drop patches, applied upstream
   * d/shlibs.local: Generate lockstep dependencies between binary packages.
     Upstream developers are not going to support mixing binary packages
     of different versions from the same source package, and neither should
     we; they all migrate to testing as a unit anyway.
-  * New upstream release
 
- -- Simon McVittie <smcv@debian.org>  Thu, 25 Jun 2020 10:44:09 +0100
+ -- Simon McVittie <smcv@debian.org>  Thu, 25 Jun 2020 10:49:53 +0100
 
 cogl (1.22.6-1) unstable; urgency=medium
 
