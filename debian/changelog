@@ -1,3 +1,13 @@
+cogl (1.22.8-2) unstable; urgency=medium
+
+  * Team upload
+  * Preferentially build-depend on libgdk-pixbuf-2.0-dev.
+    We don't need the deprecated Xlib integration that is also pulled in
+    by the older libgdk-pixbuf2.0-dev package (see #974870).
+  * Standards-Version: 4.5.1 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 26 Nov 2020 09:55:20 +0000
+
 cogl (1.22.8-1) unstable; urgency=medium
 
   * Team upload
