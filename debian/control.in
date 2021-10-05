@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@,
            Rico Tzschichholz <ricotz@ubuntu.com>
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                gnome-pkg-tools,
                gobject-introspection (>= 1.33.4-1~),
                gtk-doc-tools (>= 1.13),
