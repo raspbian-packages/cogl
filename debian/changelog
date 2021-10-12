@@ -1,5 +1,6 @@
-cogl (1.22.8-3) UNRELEASED; urgency=medium
+cogl (1.22.8-3) unstable; urgency=medium
 
+  * Team upload
   * (Build-)Depend on libgl-dev instead of transitional libgl1-mesa-dev
   * (Build-)Depend on libgles-dev instead of transitional libgles2-mesa-dev
   * Standards-Version: 4.6.0 (no changes required)
@@ -10,7 +11,7 @@ cogl (1.22.8-3) UNRELEASED; urgency=medium
     now does this.
   * Add Lintian override for #970275
 
- -- Simon McVittie <smcv@debian.org>  Tue, 05 Oct 2021 13:07:03 +0100
+ -- Simon McVittie <smcv@debian.org>  Tue, 12 Oct 2021 19:39:53 +0100
 
 cogl (1.22.8-2) unstable; urgency=medium
 
