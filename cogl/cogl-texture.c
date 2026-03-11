@@ -1287,8 +1287,8 @@ _cogl_texture_spans_foreach_in_region (CoglSpan *x_spans,
                                        CoglMetaTextureCallback callback,
                                        void *user_data)
 {
-  CoglSpanIter iter_x;
-  CoglSpanIter iter_y;
+  CoglSpanIter iter_x={0};
+  CoglSpanIter iter_y={0};
   float slice_coords[4];
   float span_virtual_coords[4];
 
