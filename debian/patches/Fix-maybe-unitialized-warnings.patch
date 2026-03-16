@@ -1,0 +1,32 @@
+From: Carlos Nihelton <carlos.santanadeoliveira@canonical.com>
+Date: Wed, 11 Mar 2026 14:35:13 -0300
+Subject: Fix maybe unitialized warnings
+
+Such as:
+
+cogl-texture.c: In function '_cogl_texture_spans_foreach_in_region':
+cogl-texture.c:1333:12: error: 'iter_x.pos' may be used uninitialized [-Werror=maybe-uninitialized]
+ 1333 |            (&iter_x);
+      |            ^
+cogl-texture.c:1290:16: note: 'iter_x.pos' was declared here
+ 1290 |   CoglSpanIter iter_x;
+      |                ^
+---
+ cogl/cogl-texture.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cogl/cogl-texture.c b/cogl/cogl-texture.c
+index d93db22..83e6388 100644
+--- a/cogl/cogl-texture.c
++++ b/cogl/cogl-texture.c
+@@ -1287,8 +1287,8 @@ _cogl_texture_spans_foreach_in_region (CoglSpan *x_spans,
+                                        CoglMetaTextureCallback callback,
+                                        void *user_data)
+ {
+-  CoglSpanIter iter_x;
+-  CoglSpanIter iter_y;
++  CoglSpanIter iter_x={0};
++  CoglSpanIter iter_y={0};
+   float slice_coords[4];
+   float span_virtual_coords[4];
+ 

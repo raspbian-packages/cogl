@@ -1,0 +1,50 @@
+From: Carlos Nihelton <carlos.santanadeoliveira@canonical.com>
+Date: Wed, 11 Mar 2026 14:49:50 -0300
+Subject: Fix maybe uninitialized warnings in cogl-pipeline-layer-state.c
+
+Such as:
+
+cogl-pipeline-layer-state.c: In function 'cogl_pipeline_get_layer_mag_filter':
+cogl-pipeline-layer-state.c:1558:10: error: 'mag_filter' may be used uninitialized [-Werror=maybe-uninitialized]
+ 1558 |   return mag_filter;
+      |          ^
+cogl-pipeline-layer-state.c:1554:22: note: 'mag_filter' was declared here
+ 1554 |   CoglPipelineFilter mag_filter;
+      |                      ^
+cogl-pipeline-layer-state.c: In function 'cogl_pipeline_get_layer_min_filter':
+cogl-pipeline-layer-state.c:1546:10: error: 'min_filter' may be used uninitialized [-Werror=maybe-uninitialized]
+ 1546 |   return min_filter;
+      |          ^
+cogl-pipeline-layer-state.c:1541:22: note: 'min_filter' was declared here
+ 1541 |   CoglPipelineFilter min_filter;
+      |                      ^
+---
+ cogl/cogl-pipeline-layer-state.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/cogl/cogl-pipeline-layer-state.c b/cogl/cogl-pipeline-layer-state.c
+index fb20192..4f068b0 100644
+--- a/cogl/cogl-pipeline-layer-state.c
++++ b/cogl/cogl-pipeline-layer-state.c
+@@ -1538,8 +1538,8 @@ CoglPipelineFilter
+ cogl_pipeline_get_layer_min_filter (CoglPipeline *pipeline,
+                                     int layer_index)
+ {
+-  CoglPipelineFilter min_filter;
+-  CoglPipelineFilter mag_filter;
++  CoglPipelineFilter min_filter={0};
++  CoglPipelineFilter mag_filter={0};
+ 
+   _cogl_pipeline_get_layer_filters (pipeline, layer_index,
+                                     &min_filter, &mag_filter);
+@@ -1550,8 +1550,8 @@ CoglPipelineFilter
+ cogl_pipeline_get_layer_mag_filter (CoglPipeline *pipeline,
+                                     int layer_index)
+ {
+-  CoglPipelineFilter min_filter;
+-  CoglPipelineFilter mag_filter;
++  CoglPipelineFilter min_filter={0};
++  CoglPipelineFilter mag_filter={0};
+ 
+   _cogl_pipeline_get_layer_filters (pipeline, layer_index,
+                                     &min_filter, &mag_filter);
